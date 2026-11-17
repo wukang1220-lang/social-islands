@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Tripod bronze cauldron and scroll</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M20 85Q31 78 46 80Q65 77 79 81Q97 81 101 88Q103 94 85 97Q56 102 31 96Q15 93 20 85Z" fill="var(--fig-sand)"/><path d="M20 85Q31 78 46 80Q65 77 79 81Q97 81 101 88Q88 93 63 93Q36 94 20 85Z" fill="var(--fig-land)"/>
+<path d="M30 42Q18 41 22 28Q25 23 32 28V36M72 42Q84 41 80 28Q77 23 70 28V36" fill="none"/><path d="M31 66L28 84H37L42 68M61 68L65 84H74L70 65Z" fill="var(--ic)"/><path d="M27 37H75L72 63Q69 74 51 74Q33 74 30 63Z" fill="var(--ic)"/><ellipse cx="51" cy="37" rx="24" ry="6" fill="var(--fig-paper)"/><path d="M36 50Q51 58 67 50M39 62H64" fill="none" stroke="var(--fig-paper)"/><path d="M79 48H94V81H78Q72 81 72 76V52Q72 47 79 48Z" fill="var(--fig-paper)"/><path d="M79 48Q83 52 79 56H95Q101 52 95 48Z" fill="var(--ic)"/><path d="M80 64H90M80 70H88" fill="none" stroke="var(--fig-line)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

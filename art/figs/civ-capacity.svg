@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 274" role="img">
+<title>民法行為能力與刑法責任能力依年齡分段並標明監護宣告的規則。</title>
+<defs><marker id="civ-capacity-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<text x="12" y="25" font-size="14" text-anchor="start" fill="var(--fig-ink)" font-weight="600">民法：行為能力</text>
+<text x="347" y="25" font-size="11" text-anchor="end" fill="var(--fig-soft)">不依比例</text>
+<rect x="14" y="46" width="110" height="31" rx="0" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="69.0" y="66" font-size="12" text-anchor="middle" fill="var(--fig-ink)">無行為能力</text>
+<rect x="124" y="46" width="110" height="31" rx="0" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="179.0" y="66" font-size="12" text-anchor="middle" fill="var(--fig-ink)">限制行為能力</text>
+<rect x="234" y="46" width="112" height="31" rx="0" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="290.0" y="66" font-size="12" text-anchor="middle" fill="var(--fig-ink)">完全行為能力</text>
+<path d="M14 77H346" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 77V84" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="14" y="99" font-size="12" text-anchor="middle" fill="var(--fig-ink)">0</text>
+<path d="M124 77V84" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="124" y="99" font-size="12" text-anchor="middle" fill="var(--fig-ink)">7</text>
+<path d="M234 77V84" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="234" y="99" font-size="12" text-anchor="middle" fill="var(--fig-ink)">18</text>
+<text x="16" y="126" font-size="12" text-anchor="start" fill="var(--fig-soft)">受監護宣告者：無行為能力</text>
+<text x="12" y="158" font-size="14" text-anchor="start" fill="var(--fig-ink)" font-weight="600">刑法：責任能力</text>
+<rect x="14" y="177" width="83" height="44" rx="0" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="55.5" y="204" font-size="11.5" text-anchor="middle" fill="var(--fig-ink)">無責任能力</text>
+<rect x="97" y="177" width="83" height="44" rx="0" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="138.5" y="194" font-size="11.5" text-anchor="middle" fill="var(--fig-ink)">限制</text>
+<text x="138.5" y="211" font-size="11.5" text-anchor="middle" fill="var(--fig-ink)">（得減輕）</text>
+<rect x="180" y="177" width="83" height="44" rx="0" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="221.5" y="204" font-size="11.5" text-anchor="middle" fill="var(--fig-ink)">完全責任能力</text>
+<rect x="263" y="177" width="83" height="44" rx="0" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="304.5" y="194" font-size="11.5" text-anchor="middle" fill="var(--fig-ink)">限制</text>
+<text x="304.5" y="211" font-size="11.5" text-anchor="middle" fill="var(--fig-ink)">（得減輕）</text>
+<path d="M14 221H346" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 221V228" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="14" y="246" font-size="12" text-anchor="middle" fill="var(--fig-ink)">0</text>
+<path d="M97 221V228" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="97" y="246" font-size="12" text-anchor="middle" fill="var(--fig-ink)">14</text>
+<path d="M180 221V228" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="180" y="246" font-size="12" text-anchor="middle" fill="var(--fig-ink)">18</text>
+<path d="M263 221V228" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="263" y="246" font-size="12" text-anchor="middle" fill="var(--fig-ink)">80</text>
+<text x="346" y="246" font-size="12" text-anchor="end" fill="var(--fig-soft)">歲</text>
+</svg>

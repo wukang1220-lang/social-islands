@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M24 5.5V12"/>
+<ellipse cx="24" cy="24" rx="15" ry="12" fill="var(--ic)"/>
+<path d="M20 13C12 19 12 29 20 35M28 13C36 19 36 29 28 35M24 14V34"/>
+<path d="M19 11H29V15H19ZM20 33H28V37H20Z" fill="var(--fig-warm)"/>
+<path d="M24 37V42M20 40V42M28 40V42" stroke="var(--fig-warm)"/>
+</g>
+</svg>

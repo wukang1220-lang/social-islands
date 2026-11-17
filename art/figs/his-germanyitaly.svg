@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>德國與義大利統一在阻礙、基礎、人物、過程與完成上各有特色。</title>
+<rect x="8" y="10" width="344" height="258" rx="6" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<path d="M52 10H202V42H52Z" fill="var(--fig-cool)"/><path d="M202 10H352V42H202Z" fill="var(--fig-sand)"/>
+<g fill="none" stroke="var(--fig-line)" stroke-width="1.5"><path d="M52 10V268M202 10V268M8 42H352M8 74H352M8 119H352M8 168H352M8 217H352"/></g>
+<g fill="var(--fig-ink)" text-anchor="middle">
+<g font-size="14" font-weight="600"><text x="127" y="31">德國統一</text><text x="277" y="31">義大利統一</text></g>
+<g font-size="12">
+<text x="30" y="63">阻礙</text><text x="127" y="63">小國林立・奧國</text><text x="277" y="63">奧國與法國</text>
+<text x="30" y="101">基礎</text><text x="127" y="92">普魯士推動</text><text x="127" y="110">關稅同盟</text><text x="277" y="92">馬志尼：恢復</text><text x="277" y="110">古羅馬光榮</text>
+<text x="30" y="148">人物</text><text x="127" y="140">威廉一世・</text><text x="127" y="158">俾斯麥</text><text x="277" y="133">伊曼紐二世・</text><text x="277" y="148">加富爾・</text><text x="277" y="163">加里波底</text>
+<text x="30" y="197">過程</text><text x="127" y="188">戰勝奧國 →</text><text x="127" y="207">德法戰爭</text><text x="277" y="188">排除奧國 →</text><text x="277" y="207">1861 義大利王國</text>
+<text x="30" y="246">完成</text><text x="127" y="239">1871 德意志</text><text x="127" y="258">帝國成立</text><text x="277" y="239">1870 收復羅馬</text><text x="277" y="258">定都</text>
+</g>
+</g>
+</svg>

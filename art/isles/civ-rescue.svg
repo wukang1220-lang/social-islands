@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Shield protecting a child</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M17 88Q20 82 35 82Q52 76 68 80Q91 77 101 87Q106 94 85 97Q61 100 38 97Q19 98 17 88Z" fill="var(--fig-sand)"/><path d="M17 88Q20 82 35 82Q52 76 68 80Q91 77 101 87Q89 93 61 93Q32 94 17 88Z" fill="var(--fig-land)"/>
+<path d="M60 22Q74 33 91 33V56Q91 75 60 89Q29 75 29 56V33Q46 33 60 22Z" fill="var(--ic)"/><path d="M60 31Q71 39 82 40V56Q82 69 60 80Q38 69 38 56V40Q49 39 60 31Z" fill="var(--fig-paper)"/><circle cx="60" cy="49" r="8" fill="var(--ic)"/><path d="M45 68Q45 60 53 59L60 66L67 59Q75 60 75 68L60 78Z" fill="var(--ic)"/><path d="M60 66V72" fill="none" stroke="var(--fig-paper)"/><path d="M45 42L50 39" fill="none" stroke="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

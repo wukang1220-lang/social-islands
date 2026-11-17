@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<g fill="var(--ic)" stroke="var(--fig-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M16 7H32L30 15C29 19 37 23 37 29C37 36 33 42 24 42C15 42 11 36 11 29C11 23 19 19 18 15Z"/>
+<path d="M16 7H32V12H16Z" fill="var(--fig-sand)"/>
+<path d="M11.7 25H36.3Q37.7 29 36.6 33H11.4Q10.3 29 11.7 25Z" fill="var(--fig-sand)"/>
+<path d="M17 29H31" fill="none"/>
+</g>
+</svg>

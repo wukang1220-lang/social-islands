@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 270" role="img">
+<title>民國初年的政治事件由武昌起事延伸到南北分裂。</title>
+<defs><marker id="his-earlyroc-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<line x1="17" y1="21" x2="17" y2="249" stroke="var(--fig-line)" stroke-width="1.5"/>
+<circle cx="17" cy="24" r="3" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="31" y="28" font-size="12" text-anchor="start" fill="var(--fig-ink)">1911</text>
+<text x="111" y="28" font-size="12" text-anchor="start" fill="var(--fig-ink)">保路運動，10 月 10 日</text>
+<text x="111" y="45" font-size="12" text-anchor="start" fill="var(--fig-ink)">武昌起事</text>
+<circle cx="17" cy="60" r="3" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="31" y="64" font-size="12" text-anchor="start" fill="var(--fig-ink)">民國元年</text>
+<text x="111" y="64" font-size="12" text-anchor="start" fill="var(--fig-ink)">中華民國臨時政府</text>
+<text x="111" y="81" font-size="12" text-anchor="start" fill="var(--fig-ink)">在南京成立</text>
+<circle cx="17" cy="96" r="3" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="31" y="100" font-size="12" text-anchor="start" fill="var(--fig-ink)">民國元年</text>
+<text x="111" y="100" font-size="12" text-anchor="start" fill="var(--fig-ink)">清帝退位，袁世凱接任</text>
+<text x="111" y="117" font-size="12" text-anchor="start" fill="var(--fig-ink)">臨時大總統</text>
+<circle cx="17" cy="132" r="3" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="31" y="136" font-size="12" text-anchor="start" fill="var(--fig-ink)">民國 2 年</text>
+<text x="111" y="136" font-size="12" text-anchor="start" fill="var(--fig-ink)">宋教仁遇刺，二次革命</text>
+<circle cx="17" cy="168" r="3" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="31" y="172" font-size="12" text-anchor="start" fill="var(--fig-ink)">民國 4 年</text>
+<text x="111" y="172" font-size="12" text-anchor="start" fill="var(--fig-ink)">二十一條要求</text>
+<text x="111" y="189" font-size="12" text-anchor="start" fill="var(--fig-ink)">（五九國恥）</text>
+<circle cx="17" cy="204" r="3" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="31" y="208" font-size="12" text-anchor="start" fill="var(--fig-ink)">民國 5 年</text>
+<text x="111" y="208" font-size="12" text-anchor="start" fill="var(--fig-ink)">洪憲帝制，撤銷後</text>
+<text x="111" y="225" font-size="12" text-anchor="start" fill="var(--fig-ink)">袁世凱病逝</text>
+<circle cx="17" cy="240" r="3" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="31" y="244" font-size="12" text-anchor="start" fill="var(--fig-ink)">民國 6 年</text>
+<text x="111" y="244" font-size="12" text-anchor="start" fill="var(--fig-ink)">護法運動，南北分裂</text>
+</svg>

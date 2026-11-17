@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Cargo crate and stacked coins</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 87Q23 80 39 81Q57 77 72 80Q93 78 102 88Q102 95 85 97Q50 100 27 96Q16 93 18 87Z" fill="var(--fig-sand)"/><path d="M18 87Q23 80 39 81Q57 77 72 80Q93 78 102 88Q89 94 64 92Q35 95 18 87Z" fill="var(--fig-land)"/>
+<rect x="25" y="31" width="48" height="51" rx="2" fill="var(--ic)"/><path d="M25 31L37 23H83L73 31Z" fill="var(--fig-paper)"/><path d="M73 31L83 23V72L73 82Z" fill="var(--ic)"/><rect x="32" y="39" width="34" height="35" rx="0" fill="none"/><path d="M33 40L65 73M65 40L33 73" fill="none" stroke="var(--fig-paper)"/><path d="M71 64H94V83Q82 91 71 83Z" fill="var(--fig-warm)"/><ellipse cx="82.5" cy="64" rx="11.5" ry="4" fill="var(--fig-warm)"/><path d="M72 72Q82 77 93 72M72 78Q82 83 93 78" fill="none" stroke="var(--fig-ink)"/><ellipse cx="59" cy="86" rx="11" ry="4" fill="var(--fig-warm)"/><ellipse cx="59" cy="80" rx="11" ry="4" fill="var(--fig-warm)"/><path d="M79 61H86" fill="none" stroke="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

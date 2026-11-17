@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" role="img">
+<title>國際分工選擇機會成本最低的組合並透過進出口交換資金。</title>
+<defs><marker id="civ-intltrade-arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L6 3.5 L0 7" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<text x="180" y="21" font-size="13" text-anchor="middle" fill="var(--fig-ink)">國際分工：</text>
+<text x="180" y="40" font-size="13" text-anchor="middle" fill="var(--fig-ink)">選擇機會成本最低的組合</text>
+<rect x="8" y="57" width="104" height="69" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="60" y="83" font-size="14" text-anchor="middle" fill="var(--fig-ink)">原料</text>
+<text x="60" y="108" font-size="11" text-anchor="middle" fill="var(--fig-ink)">資源多的國家</text>
+<rect x="128" y="57" width="104" height="69" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="83" font-size="14" text-anchor="middle" fill="var(--fig-ink)">研發</text>
+<text x="180" y="108" font-size="11" text-anchor="middle" fill="var(--fig-ink)">人才多的國家</text>
+<rect x="248" y="57" width="104" height="69" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="300" y="83" font-size="14" text-anchor="middle" fill="var(--fig-ink)">製造</text>
+<text x="300" y="108" font-size="11" text-anchor="middle" fill="var(--fig-ink)">勞工多的國家</text>
+<path d="M113 91 L126 91" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-intltrade-arr)"/>
+<path d="M233 91 L246 91" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-intltrade-arr)"/>
+<rect x="24" y="164" width="144" height="58" rx="7" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="192" y="164" width="144" height="58" rx="7" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="96" y="186" font-size="14" text-anchor="middle" fill="var(--fig-ink)">出口</text>
+<text x="264" y="186" font-size="14" text-anchor="middle" fill="var(--fig-ink)">進口</text>
+<text x="96" y="209" font-size="11" text-anchor="middle" fill="var(--fig-ink)">外國資金 → 本國</text>
+<text x="264" y="209" font-size="11" text-anchor="middle" fill="var(--fig-ink)">本國資金 → 外國</text>
+<path d="M169 181 L190 181" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-intltrade-arr)"/>
+<path d="M191 205 L170 205" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-intltrade-arr)"/>
+<text x="180" y="249" font-size="12" text-anchor="middle" fill="var(--fig-soft)">出口成本：生產・運輸・關稅</text>
+</svg>

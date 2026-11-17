@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>有機農產品、產銷履歷與地產地消可降低農藥化肥及食物里程造成的食安風險。</title>
+<text x="180" y="23" text-anchor="middle" font-size="14" fill="var(--fig-ink)">降低食安風險</text>
+<rect x="12" y="35" width="336" height="44" rx="6" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<g fill="var(--fig-ink)" text-anchor="middle" font-size="12"><text x="180" y="53">食安問題：農藥化肥大量使用・</text><text x="180" y="71">食物里程增加</text></g>
+<g fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5">
+<rect x="12" y="91" width="336" height="52" rx="6"/><rect x="12" y="153" width="336" height="52" rx="6"/><rect x="12" y="215" width="336" height="52" rx="6"/>
+</g>
+<path d="M18 92H132V142H18Q13 142 13 137V97Q13 92 18 92Z" fill="var(--fig-land)"/>
+<path d="M18 154H132V204H18Q13 204 13 199V159Q13 154 18 154Z" fill="var(--fig-cool)"/>
+<path d="M18 216H132V266H18Q13 266 13 261V221Q13 216 18 216Z" fill="var(--fig-warm)"/>
+<path d="M132 92V142M132 154V204M132 216V266" fill="none" stroke="var(--fig-line)" stroke-width="1.5"/>
+<g text-anchor="middle" font-size="13" font-weight="600" fill="var(--fig-ink)"><text x="72" y="122">有機農產品</text><text x="72" y="184">產銷履歷</text><text x="72" y="246">地產地消</text></g>
+<g font-size="12" fill="var(--fig-ink)">
+<text x="145" y="112">不用農藥、化肥</text><text x="145" y="131">生產成本較高</text>
+<text x="145" y="174">知道生產來源</text><text x="145" y="193">和生產過程</text>
+<text x="145" y="236">在地：縮短食物里程</text><text x="145" y="255">當季：減少保鮮能源</text>
+</g>
+</svg>

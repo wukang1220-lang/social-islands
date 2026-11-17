@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Snowy volcano and blossom branch</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M19 86Q27 79 44 81Q63 75 79 81Q96 80 101 88Q105 94 84 97Q56 101 32 96Q17 94 19 86Z" fill="var(--fig-sand)"/><path d="M19 86Q27 79 44 81Q63 75 79 81Q96 80 101 88Q85 94 61 93Q32 94 19 86Z" fill="var(--fig-land)"/>
+<path d="M23 83L54 30L86 83Z" fill="var(--ic)"/><path d="M42 51L54 30L67 52L56 47L50 53Z" fill="var(--fig-paper)"/><path d="M35 75L43 62" fill="none" stroke="var(--fig-paper)"/><path d="M81 84Q78 55 90 28M81 57L96 47M83 45L73 35" fill="none" stroke="var(--fig-ink)"/><path d="M83 29Q81 20 88 22Q93 16 96 24Q104 26 98 32Q98 40 91 36Q83 39 83 29Z" fill="var(--fig-paper)"/><circle cx="92" cy="29" r="2.5" fill="var(--fig-warm)" stroke="none"/><path d="M66 38Q61 32 67 29Q68 22 74 27Q81 26 79 33Q84 39 77 41Q73 47 69 41Z" fill="var(--fig-paper)"/><circle cx="72" cy="35" r="2.5" fill="var(--fig-warm)" stroke="none"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

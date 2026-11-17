@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>沿經緯線劃界可能造成一國多族或一族分屬多國。</title>
+<defs><marker id="geo-borders-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<rect x="12" y="12" width="138" height="138" rx="0" fill="var(--fig-paper)" stroke="var(--fig-ink)" stroke-width="1.5"/>
+<path d="M13 13L149 13L149 67Q115 88 91 70T54 82Q28 112 13 91Z" fill="var(--fig-warm)" stroke="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M13 91Q28 112 54 82T91 70Q115 88 149 67L149 149L13 149Z" fill="var(--fig-cool)" stroke="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M13 91Q28 112 54 82T91 70Q115 88 149 67" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="81" y1="13" x2="81" y2="149" stroke="var(--fig-ink)" stroke-width="1.5"/>
+<line x1="13" y1="57" x2="149" y2="57" stroke="var(--fig-ink)" stroke-width="1.5"/>
+<line x1="13" y1="106" x2="149" y2="106" stroke="var(--fig-ink)" stroke-width="1.5"/>
+<text x="44" y="41" font-size="12" text-anchor="middle" fill="var(--fig-ink)">甲族</text>
+<text x="113" y="133" font-size="12" text-anchor="middle" fill="var(--fig-ink)">乙族</text>
+<text x="251" y="58" font-size="12" text-anchor="middle" fill="var(--fig-ink)">沿經緯線劃的國界</text>
+<path d="M211 69L177 69L151 106" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="348" y="145" font-size="11" text-anchor="end" fill="var(--fig-soft)">示意圖</text>
+<rect x="8" y="166" width="344" height="47" rx="4" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="20" y="185" font-size="12" text-anchor="start" fill="var(--fig-ink)" font-weight="600">一國多族 → 爭權、內戰</text>
+<text x="20" y="204" font-size="11" text-anchor="start" fill="var(--fig-ink)">例：盧安達（胡圖族、圖西族）</text>
+<rect x="8" y="222" width="344" height="47" rx="4" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="20" y="241" font-size="12" text-anchor="start" fill="var(--fig-ink)" font-weight="600">一族分屬多國 → 領土紛爭</text>
+<text x="20" y="260" font-size="11" text-anchor="start" fill="var(--fig-ink)">例：索馬利人</text>
+</svg>

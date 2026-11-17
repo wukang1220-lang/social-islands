@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>農產品經集貨、批發與零售到消費者，地產地消可縮短食物里程。</title>
+<defs><marker id="geo-foodchain-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L5 3L0 6" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker><marker id="geo-foodchain-long" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L5 3L0 6" fill="none" stroke="var(--ic)" stroke-width="1.5"/></marker></defs>
+<text x="180" y="24" text-anchor="middle" font-size="14" fill="var(--fig-ink)">農產品怎麼到餐桌？</text>
+<g fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5">
+<rect x="12" y="47" width="96" height="38" rx="6" fill="var(--fig-land)"/>
+<rect x="132" y="47" width="96" height="38" rx="6"/>
+<rect x="252" y="47" width="96" height="38" rx="6"/>
+<rect x="12" y="110" width="96" height="38" rx="6"/>
+<rect x="132" y="110" width="96" height="38" rx="6" fill="var(--fig-warm)"/>
+<rect x="58" y="212" width="65" height="34" rx="6" fill="var(--fig-land)"/>
+<rect x="237" y="212" width="65" height="34" rx="6" fill="var(--fig-warm)"/>
+</g>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#geo-foodchain-arr)">
+<path d="M111 66H128"/><path d="M231 66H248"/><path d="M300 85V98H60V106"/>
+<path d="M111 129H128"/><path d="M130 229H230"/>
+</g>
+<path d="M16 169H344" fill="none" stroke="var(--ic)" stroke-width="1.5" marker-end="url(#geo-foodchain-long)"/>
+<g text-anchor="middle" font-size="13" fill="var(--fig-ink)">
+<text x="60" y="71">產地農民</text><text x="180" y="71">集貨市場</text><text x="300" y="71">批發市場</text>
+<text x="60" y="134">零售商</text><text x="180" y="134">消費者</text>
+<text x="90.5" y="234">產地</text><text x="269.5" y="234">餐桌</text>
+</g>
+<text x="180" y="189" text-anchor="middle" font-size="12" fill="var(--fig-soft)">食物里程變長</text>
+<text x="180" y="270" text-anchor="middle" font-size="13" fill="var(--fig-ink)">地產地消：縮短食物里程</text>
+</svg>

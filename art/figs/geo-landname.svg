@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 252" role="img">
+<title>山仔腳、崎、潭、崁頂、崁腳、崙、崙頂與崙後分別對應不同地形位置。</title>
+<defs><marker id="geo-landname-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L5 3L0 6" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<text x="346" y="22" text-anchor="end" font-size="11" fill="var(--fig-soft)">示意圖</text>
+<path d="M8 179L25 134L44 76L63 122L82 174H108L113 179H145L161 117H205V179H247Q262 178 276 155Q285 144 293 154Q304 175 319 181H352V220H8Z" fill="var(--fig-land)" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M247 179Q262 178 276 155Q285 144 293 154Q304 175 319 181L247 181Z" fill="var(--fig-sand)"/>
+<ellipse cx="126" cy="178" rx="13" ry="4" fill="var(--fig-sea)" stroke="var(--fig-ink)" stroke-width="1.5"/>
+<g stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round">
+<path d="M83 162L89 155L95 162Z" fill="var(--fig-sand)"/><path d="M83 162H95V174H83Z" fill="var(--fig-paper)"/>
+<path d="M97 164L102 158L107 164Z" fill="var(--fig-sand)"/><path d="M97 164H107V174H97Z" fill="var(--fig-paper)"/>
+</g>
+<g fill="none" stroke="var(--fig-soft)" stroke-width="1.5">
+<path d="M55 192L88 178"/><path d="M96 103L68 132"/><path d="M122 136L126 172"/>
+<path d="M184 75V113"/><path d="M220 195L209 181"/><path d="M286 85V145"/>
+<path d="M246 120L259 168"/><path d="M328 182L309 173"/>
+</g>
+<path d="M346 117H306" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#geo-landname-arr)"/>
+<g fill="var(--fig-ink)" font-size="13" text-anchor="middle">
+<text x="50" y="207">山仔腳</text><text x="99" y="97">崎</text><text x="122" y="129">潭</text>
+<text x="184" y="68">崁頂</text><text x="225" y="210">崁腳</text>
+<text x="286" y="78">崙頂</text><text x="246" y="113">崙後</text><text x="334" y="198">崙</text><text x="332" y="103">風</text>
+</g>
+<text x="180" y="240" text-anchor="middle" font-size="12" fill="var(--fig-soft)">崙頂不易淹水，崙後可以避風</text>
+</svg>

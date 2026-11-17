@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<g fill="var(--ic)" stroke="var(--fig-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M14 30C3 30 3 16 13 15C14 4 30 3 33 15C44 13 47 30 35 30Z"/>
+<path d="M16 13C18 10 22 9 25 11" fill="none" stroke="var(--fig-paper)"/>
+<path d="M15 35L12 41M25 35L22 41M35 35L32 41" fill="none" stroke="var(--fig-sea)"/>
+</g>
+</svg>

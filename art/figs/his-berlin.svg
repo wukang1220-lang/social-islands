@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+  <title>柏林位於東德境內並分為東西兩區，下方列出分裂與統一的重要年份。</title>
+  <text x="12" y="13" font-size="11" fill="var(--fig-soft)">示意圖</text>
+  <path d="M12 22 H162 V168 H12 Z" fill="var(--fig-cool)"/>
+  <path d="M162 22 H348 V168 H162 Z" fill="var(--fig-sand)"/>
+  <rect x="12" y="22" width="336" height="146" rx="0" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/>
+  <path d="M162 22 V168" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/>
+  <g text-anchor="middle" fill="var(--fig-ink)">
+    <text x="87" y="49" font-size="14">西德</text>
+    <text x="87" y="70" font-size="11">（美、英、法占領區）</text>
+    <text x="255" y="42" font-size="14">東德</text>
+    <text x="255" y="62" font-size="11">（蘇聯占領區）</text>
+  </g>
+  <path d="M255 82 A38 38 0 0 0 255 158 Z" fill="var(--fig-cool)"/>
+  <path d="M255 82 A38 38 0 0 1 255 158 Z" fill="var(--fig-warm)"/>
+  <circle cx="255" cy="120" r="38" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/>
+  <path d="M255 82 V158" fill="none" stroke="var(--ic)" stroke-width="4"/>
+  <text x="235" y="124" text-anchor="middle" font-size="11" fill="var(--fig-ink)">西柏林</text>
+  <text x="275" y="124" text-anchor="middle" font-size="11" fill="var(--fig-ink)">東柏林</text>
+  <text x="187" y="101" font-size="12" fill="var(--fig-ink)">柏林</text>
+  <path d="M213 98 H224 M255 159 V172" fill="none" stroke="var(--fig-soft)" stroke-width="1.5"/>
+  <text x="255" y="188" text-anchor="middle" font-size="12" fill="var(--fig-ink)">柏林圍牆</text>
+  <path d="M28 214 H332 M48 209 V220 M136 209 V220 M224 209 V220 M312 209 V220" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/>
+  <g text-anchor="middle" font-size="12" fill="var(--fig-ink)">
+    <text x="48" y="239">1948</text><text x="48" y="258">封鎖西柏林</text>
+    <text x="136" y="239">1961</text><text x="136" y="258">興建圍牆</text>
+    <text x="224" y="239">1989</text><text x="224" y="258">推倒圍牆</text>
+    <text x="312" y="239">1990</text><text x="312" y="258">東西德統一</text>
+  </g>
+</svg>

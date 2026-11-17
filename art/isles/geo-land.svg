@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Mountains above a cliff coast</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 87Q25 79 41 80Q63 76 77 81Q96 80 102 88Q102 95 82 98Q49 101 25 95Q15 93 18 87Z" fill="var(--fig-sand)"/><path d="M18 87Q25 79 41 80Q63 76 77 81Q96 80 102 88Q85 94 58 93Q33 95 18 87Z" fill="var(--fig-land)"/>
+<path d="M23 65L43 28L67 64Z" fill="var(--fig-soft)"/><path d="M40 66L68 23L96 67Z" fill="var(--ic)"/><path d="M58 39L68 23L79 40L69 36L65 41Z" fill="var(--fig-paper)"/><path d="M23 64Q40 57 56 65Q76 59 96 66L90 85L76 90L60 83L43 88L26 81Z" fill="var(--fig-sand)"/><path d="M23 64Q40 57 56 65Q76 59 96 66L91 73L74 77L58 71L42 76L25 71Z" fill="var(--fig-land)"/><path d="M42 77L43 87M60 74V82M78 79L77 86" fill="none" stroke="var(--fig-ink)"/><path d="M84 89Q92 85 99 89" fill="none" stroke="var(--fig-deep)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

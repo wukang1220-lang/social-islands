@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>冷戰時期的共產與反共陣營在東亞形成對峙並出現韓戰與越戰。</title>
+<defs><marker id="his-coldwar-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<rect x="10" y="8" width="164" height="100" rx="5" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="186" y="8" width="164" height="100" rx="5" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="92" y="30" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">共產陣營</text>
+<text x="268" y="30" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">反共陣營</text>
+<text x="92" y="53" font-size="12" text-anchor="middle" fill="var(--fig-ink)">蘇聯・中華人民共和國</text>
+<text x="92" y="73" font-size="12" text-anchor="middle" fill="var(--fig-ink)">・北韓・北越</text>
+<text x="268" y="53" font-size="12" text-anchor="middle" fill="var(--fig-ink)">美國・日本・南韓・臺灣</text>
+<text x="268" y="73" font-size="12" text-anchor="middle" fill="var(--fig-ink)">菲律賓・澳洲・紐西蘭</text>
+<text x="268" y="97" font-size="11" text-anchor="middle" fill="var(--fig-soft)">亞太圍堵</text>
+<path d="M174 84H186" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M180 84V115" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="180" y="133" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">冷戰：較勁但避免全面戰爭</text>
+<rect x="10" y="147" width="340" height="59" rx="5" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="22" y="164" font-size="13" text-anchor="start" fill="var(--fig-ink)" font-weight="600">韓戰 1950～1953</text>
+<text x="22" y="183" font-size="12" text-anchor="start" fill="var(--fig-ink)">北韓 vs 南韓（聯合國部隊）</text>
+<text x="22" y="200" font-size="11.5" text-anchor="start" fill="var(--fig-soft)">停戰線約在北緯 38 度</text>
+<rect x="10" y="216" width="340" height="57" rx="5" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="22" y="233" font-size="13" text-anchor="start" fill="var(--fig-ink)" font-weight="600">越戰 1961～1975</text>
+<text x="22" y="252" font-size="12" text-anchor="start" fill="var(--fig-ink)">北越 vs 南越（美國）</text>
+<text x="22" y="268" font-size="11.5" text-anchor="start" fill="var(--fig-soft)">1976 年越南統一</text>
+</svg>

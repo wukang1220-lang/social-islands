@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Globe and orbiting satellite</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M19 86Q27 79 44 81Q63 75 79 81Q96 80 101 88Q105 94 84 97Q56 101 32 96Q17 94 19 86Z" fill="var(--fig-sand)"/><path d="M19 86Q27 79 44 81Q63 75 79 81Q96 80 101 88Q85 94 61 93Q32 94 19 86Z" fill="var(--fig-land)"/>
+<ellipse cx="59.1" cy="58.3" rx="35.7" ry="15.3" fill="none" stroke="var(--fig-soft)"/><circle cx="56.6" cy="57.4" r="23.8" fill="var(--ic)"/><ellipse cx="56.6" cy="57.4" rx="10.2" ry="23.8" fill="none" stroke="var(--fig-paper)"/><path d="M 33.6 57.4 H 79.5 M 37.9 44.7 Q 56.6 50.6 75.3 44.7 M 37.9 70.2 Q 56.6 64.2 75.3 70.2" fill="none" stroke="var(--fig-paper)"/><path d="M 65.9 37.9 L 73.6 30.2 L 83.8 39.6 L 76.1 47.2 Z" fill="var(--fig-paper)"/><path d="M 53.2 29.4 L 60.9 21.8 L 71 31.1 L 63.4 38.8 Z" fill="var(--ic)"/><path d="M 78.7 50.6 L 86.3 43 L 96.5 52.4 L 88.9 60 Z" fill="var(--ic)"/><path d="M 60.9 26.8 L 65.9 31.9 M 86.3 48.9 L 91.5 54" fill="none" stroke="var(--fig-paper)"/><path d="M 83 39.6 L 88.9 33.6 M 88 29.4 Q 94.8 30.2 94.8 37" fill="none" stroke="var(--fig-deep)"/><circle cx="89.8" cy="32.8" r="1.7" fill="var(--fig-warm)" stroke="none"/><path d="M 28.6 77.8 Q 38.8 84.6 49.8 83" fill="none" stroke="var(--fig-soft)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

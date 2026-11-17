@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+  <title>難民與移民的原因及依據比較，下方列出全球化的挑戰。</title>
+  <rect x="10" y="12" width="340" height="150" rx="5" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+  <path d="M58 13 H204 V48 H58 Z" fill="var(--fig-warm)"/>
+  <path d="M204 13 H349 V48 H204 Z" fill="var(--fig-cool)"/>
+  <path d="M58 12 V162 M204 12 V162 M10 48 H350 M10 118 H350" fill="none" stroke="var(--fig-line)" stroke-width="1.5"/>
+  <g text-anchor="middle" fill="var(--fig-ink)">
+    <text x="131" y="36" font-size="14">難民</text><text x="277" y="36" font-size="14">移民</text>
+    <g font-size="12">
+      <text x="34" y="85">原因</text><text x="131" y="74">迫害、戰爭、暴力，</text><text x="131" y="95">被迫離開</text>
+      <text x="277" y="74">工作、教育，</text><text x="277" y="95">改善生活</text>
+      <text x="34" y="144">依據</text><text x="131" y="144">國際公約保護</text><text x="277" y="144">移入國法令批准</text>
+    </g>
+  </g>
+  <text x="180" y="188" text-anchor="middle" font-size="14" fill="var(--fig-ink)">全球化的挑戰</text>
+  <g fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5">
+    <rect x="10" y="200" width="165" height="30" rx="6"/><rect x="185" y="200" width="165" height="30" rx="6"/>
+    <rect x="10" y="240" width="165" height="30" rx="6"/><rect x="185" y="240" width="165" height="30" rx="6"/>
+  </g>
+  <g text-anchor="middle" font-size="12" fill="var(--fig-ink)">
+    <text x="92.5" y="220">貧富不均（血汗工廠）</text><text x="267.5" y="220">文化單一化・文化衝突</text>
+    <text x="92.5" y="260">疾病傳染</text><text x="267.5" y="260">跨國犯罪</text>
+  </g>
+</svg>

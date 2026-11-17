@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Ballot box above container ship</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M17 88Q20 82 35 82Q52 76 68 80Q91 77 101 87Q106 94 85 97Q61 100 38 97Q19 98 17 88Z" fill="var(--fig-sand)"/><path d="M17 88Q20 82 35 82Q52 76 68 80Q91 77 101 87Q89 93 61 93Q32 94 17 88Z" fill="var(--fig-land)"/>
+<path d="M34 41L69 35L82 46L47 53Z" fill="var(--ic)"/><path d="M34 41L47 53V75L34 66Z" fill="var(--ic)"/><path d="M47 53L82 46V68L47 75Z" fill="var(--ic)"/><path d="M49 44L66 41" fill="none" stroke="var(--fig-ink)"/><path d="M48 25L63 22L70 39L55 43Z" fill="var(--fig-paper)"/><path d="M54 30L61 29" fill="none" stroke="var(--fig-line)"/><rect x="25" y="71" width="18" height="10" rx="1" fill="var(--fig-cool)"/><rect x="44" y="72" width="19" height="9" rx="1" fill="var(--ic)"/><rect x="65" y="69" width="17" height="12" rx="1" fill="var(--ic)"/><rect x="84" y="65" width="11" height="16" rx="1" fill="var(--fig-paper)"/><path d="M20 81H100L91 91H32Z" fill="var(--ic)"/><path d="M34 76V79M51 76V80M74 73V78" fill="none" stroke="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

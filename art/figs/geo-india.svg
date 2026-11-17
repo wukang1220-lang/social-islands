@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>南亞南北地形剖面與印度的三季呈現地形和氣候特色。</title>
+<defs><marker id="geo-india-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<text x="12" y="19" font-size="12" text-anchor="start" fill="var(--fig-ink)">北</text>
+<text x="348" y="19" font-size="12" text-anchor="end" fill="var(--fig-ink)">南</text>
+<text x="66" y="37" font-size="11" text-anchor="middle" fill="var(--fig-ink)">喜馬拉雅山</text>
+<text x="66" y="54" font-size="11" text-anchor="middle" fill="var(--fig-ink)">板塊交界・多地震</text>
+<text x="181" y="37" font-size="11" text-anchor="middle" fill="var(--fig-ink)">印度大平原</text>
+<text x="181" y="54" font-size="11" text-anchor="middle" fill="var(--fig-ink)">恆河・印度河沖積</text>
+<path d="M10 144L19 117L31 129L43 85L56 110L66 77L82 119L98 134L112 144L180 144L194 119L247 119L268 151L350 151L350 171L10 171Z" fill="var(--fig-sand)" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M112 144L180 144L180 171L112 171Z" fill="var(--fig-land)" stroke="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="269" y="151" width="81" height="20" rx="0" fill="var(--fig-sea)" stroke="none" stroke-width="1.5"/>
+<line x1="67" y1="59" x2="66" y2="74" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<line x1="180" y1="60" x2="155" y2="139" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="218" y="78" font-size="11" text-anchor="middle" fill="var(--fig-ink)">德干高原</text>
+<text x="218" y="95" font-size="11" text-anchor="middle" fill="var(--fig-ink)">古老陸塊</text>
+<line x1="218" y1="99" x2="218" y2="115" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="302" y="98" font-size="11" text-anchor="middle" fill="var(--fig-ink)">馬爾地夫</text>
+<text x="302" y="115" font-size="11" text-anchor="middle" fill="var(--fig-ink)">低平珊瑚礁島</text>
+<path d="M291 151Q302 143 313 151" fill="var(--fig-land)" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="302" y1="120" x2="302" y2="144" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="307" y="168" font-size="11" text-anchor="middle" fill="var(--fig-ink)">印度洋</text>
+<line x1="8" y1="182" x2="352" y2="182" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="12" y="205" width="28" height="18" rx="0" fill="var(--fig-cool)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="26" y="198" font-size="11" text-anchor="middle" fill="var(--fig-ink)">1月</text>
+<rect x="40" y="205" width="28" height="18" rx="0" fill="var(--fig-cool)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="54" y="198" font-size="11" text-anchor="middle" fill="var(--fig-ink)">2月</text>
+<rect x="68" y="205" width="28" height="18" rx="0" fill="var(--fig-warm)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="82" y="198" font-size="11" text-anchor="middle" fill="var(--fig-ink)">3月</text>
+<rect x="96" y="205" width="28" height="18" rx="0" fill="var(--fig-warm)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="110" y="198" font-size="11" text-anchor="middle" fill="var(--fig-ink)">4月</text>
+<rect x="124" y="205" width="28" height="18" rx="0" fill="var(--fig-warm)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="138" y="198" font-size="11" text-anchor="middle" fill="var(--fig-ink)">5月</text>
+<rect x="152" y="205" width="28" height="18" rx="0" fill="var(--fig-deep)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="166" y="198" font-size="11" text-anchor="middle" fill="var(--fig-ink)">6月</text>
+<rect x="180" y="205" width="28" height="18" rx="0" fill="var(--fig-deep)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="194" y="198" font-size="11" text-anchor="middle" fill="var(--fig-ink)">7月</text>
+<rect x="208" y="205" width="28" height="18" rx="0" fill="var(--fig-deep)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="222" y="198" font-size="11" text-anchor="middle" fill="var(--fig-ink)">8月</text>
+<rect x="236" y="205" width="28" height="18" rx="0" fill="var(--fig-deep)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="250" y="198" font-size="11" text-anchor="middle" fill="var(--fig-ink)">9月</text>
+<rect x="264" y="205" width="28" height="18" rx="0" fill="var(--fig-deep)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="278" y="198" font-size="11" text-anchor="middle" fill="var(--fig-ink)">10月</text>
+<rect x="292" y="205" width="28" height="18" rx="0" fill="var(--fig-cool)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="306" y="198" font-size="11" text-anchor="middle" fill="var(--fig-ink)">11月</text>
+<rect x="320" y="205" width="28" height="18" rx="0" fill="var(--fig-cool)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="334" y="198" font-size="11" text-anchor="middle" fill="var(--fig-ink)">12月</text>
+<text x="16" y="243" font-size="11" text-anchor="start" fill="var(--fig-ink)">涼季</text>
+<text x="16" y="260" font-size="11" text-anchor="start" fill="var(--fig-ink)">11～2 月</text>
+<text x="108" y="243" font-size="11" text-anchor="middle" fill="var(--fig-ink)">熱季</text>
+<text x="108" y="260" font-size="11" text-anchor="middle" fill="var(--fig-ink)">3～5 月</text>
+<text x="222" y="243" font-size="11" text-anchor="middle" fill="var(--fig-ink)">雨季</text>
+<text x="222" y="260" font-size="11" text-anchor="middle" fill="var(--fig-ink)">6～10 月</text>
+<text x="320" y="243" font-size="11" text-anchor="middle" fill="var(--fig-ink)">涼季</text>
+<text x="320" y="260" font-size="11" text-anchor="middle" fill="var(--fig-ink)">11～2 月</text>
+<text x="348" y="276" font-size="11" text-anchor="end" fill="var(--fig-soft)">示意圖</text>
+</svg>

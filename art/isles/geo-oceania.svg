@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Iceberg, penguin and coral</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 87Q23 80 39 81Q57 77 72 80Q93 78 102 88Q102 95 85 97Q50 100 27 96Q16 93 18 87Z" fill="var(--fig-sand)"/><path d="M18 87Q23 80 39 81Q57 77 72 80Q93 78 102 88Q89 94 64 92Q35 95 18 87Z" fill="var(--fig-land)"/>
+<path d="M22 83L31 58L43 60L51 43L72 46L86 66L95 84Z" fill="var(--fig-cool)"/><path d="M31 58L43 60L51 43L56 65L68 60L72 46L86 66L78 72L66 67L55 75L42 67L34 74Z" fill="var(--fig-paper)"/><path d="M52 49V35Q52 23 62 23Q73 23 73 35V49Q63 58 52 49Z" fill="var(--ic)"/><ellipse cx="63" cy="42" rx="7" ry="10" fill="var(--fig-paper)"/><circle cx="59" cy="31" r="1.5" fill="var(--fig-ink)" stroke="none"/><circle cx="67" cy="31" r="1.5" fill="var(--fig-ink)" stroke="none"/><path d="M61 35H66L63 39Z" fill="var(--fig-warm)"/><path d="M56 53L52 56M69 53L73 56" fill="none" stroke="var(--fig-ink)"/><path d="M88 88V76M88 82L80 78V72M88 79L96 74V69" fill="none" stroke="var(--ic)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

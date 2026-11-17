@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>刑罰分為主刑與從刑並以處罰、預防及矯正為目的。</title>
+<defs><marker id="civ-penalty-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<text x="180" y="22" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">刑罰的目的</text>
+<rect x="35" y="34" width="82" height="25" rx="5" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="76" y="52" font-size="12" text-anchor="middle" fill="var(--fig-ink)">處罰</text>
+<rect x="139" y="34" width="82" height="25" rx="5" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="52" font-size="12" text-anchor="middle" fill="var(--fig-ink)">預防</text>
+<rect x="243" y="34" width="82" height="25" rx="5" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="284" y="52" font-size="12" text-anchor="middle" fill="var(--fig-ink)">矯正</text>
+<rect x="12" y="86" width="54" height="32" rx="5" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="39" y="107" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">刑罰</text>
+<path d="M66 102H88" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-penalty-arr)"/>
+<path d="M78 102V68H299V119" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-penalty-arr)"/>
+<rect x="92" y="76" width="140" height="157" rx="5" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="148" y="98" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">主刑</text>
+<text x="145" y="123" font-size="12" text-anchor="middle" fill="var(--fig-ink)">死刑</text>
+<text x="145" y="146" font-size="12" text-anchor="middle" fill="var(--fig-ink)">無期徒刑</text>
+<text x="145" y="169" font-size="12" text-anchor="middle" fill="var(--fig-ink)">有期徒刑</text>
+<text x="145" y="192" font-size="12" text-anchor="middle" fill="var(--fig-ink)">拘役</text>
+<text x="145" y="215" font-size="12" text-anchor="middle" fill="var(--fig-ink)">罰金</text>
+<path d="M197 116V218" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-penalty-arr)"/>
+<text x="218" y="137" font-size="11" text-anchor="middle" fill="var(--fig-soft)">由</text>
+<text x="218" y="156" font-size="11" text-anchor="middle" fill="var(--fig-soft)">重</text>
+<text x="218" y="175" font-size="11" text-anchor="middle" fill="var(--fig-soft)">到</text>
+<text x="218" y="194" font-size="11" text-anchor="middle" fill="var(--fig-soft)">輕</text>
+<rect x="250" y="124" width="98" height="71" rx="5" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="299" y="146" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">從刑</text>
+<text x="299" y="174" font-size="12" text-anchor="middle" fill="var(--fig-ink)">褫奪公權</text>
+<rect x="12" y="246" width="336" height="28" rx="5" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="265" font-size="13" text-anchor="middle" fill="var(--fig-ink)">沒收：不法所得可單獨宣告</text>
+</svg>

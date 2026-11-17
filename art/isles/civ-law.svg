@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Signed paper, pen and gavel</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M19 85Q29 78 47 81Q58 76 74 79Q94 79 100 87Q106 93 86 97Q52 102 29 96Q16 93 19 85Z" fill="var(--fig-sand)"/><path d="M19 85Q29 78 47 81Q58 76 74 79Q94 79 100 87Q80 94 57 92Q33 94 19 85Z" fill="var(--fig-land)"/>
+<path d="M28 24H65L76 35V84H28Z" fill="var(--fig-paper)"/><path d="M65 24V36H76Z" fill="var(--ic)"/><path d="M37 42H64M37 51H61M37 60H56" fill="none" stroke="var(--fig-line)"/><path d="M37 73Q41 65 44 73Q47 78 51 70" fill="none" stroke="var(--fig-ink)"/><path d="M60 68L76 37L83 41L67 72L58 78Z" fill="var(--ic)"/><path d="M60 68L67 72L58 78Z" fill="var(--fig-sand)"/><path d="M78 72L84 65L99 78L93 85Z" fill="var(--ic)"/><path d="M75 70L82 62L87 66L80 74Z" fill="var(--ic)"/><path d="M91 84L98 76L103 80L96 88Z" fill="var(--ic)"/><path d="M88 77L78 88" fill="none" stroke="var(--fig-ink)"/><rect x="65" y="88" width="26" height="4" rx="1" fill="var(--ic)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>十二歲以上未滿十八歲少年的曝險行為、保護事件與刑事案件採取不同處理方式。</title>
+<defs><marker id="civ-juvenile-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<rect x="54" y="8" width="252" height="30" rx="5" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="28" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">少年：12 歲以上未滿 18 歲</text>
+<path d="M180 38V48H62V59" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-juvenile-arr)"/>
+<path d="M180 48V59" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-juvenile-arr)"/>
+<path d="M180 48H298V59" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-juvenile-arr)"/>
+<rect x="8" y="63" width="108" height="184" rx="5" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="126" y="63" width="108" height="184" rx="5" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="244" y="63" width="108" height="184" rx="5" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="62" y="83" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">曝險行為</text>
+<path d="M62 97V112" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-juvenile-arr)"/>
+<text x="62" y="134" font-size="12" text-anchor="middle" fill="var(--fig-ink)">少年輔導</text>
+<text x="62" y="154" font-size="12" text-anchor="middle" fill="var(--fig-ink)">委員會輔導</text>
+<text x="180" y="83" font-size="12" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">少年保護事件</text>
+<path d="M180 97V112" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-juvenile-arr)"/>
+<text x="180" y="131" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">保護處分</text>
+<text x="180" y="153" font-size="12" text-anchor="middle" fill="var(--fig-ink)">訓誡</text>
+<text x="180" y="173" font-size="12" text-anchor="middle" fill="var(--fig-ink)">假日生活輔導</text>
+<text x="180" y="193" font-size="12" text-anchor="middle" fill="var(--fig-ink)">保護管束</text>
+<text x="180" y="213" font-size="12" text-anchor="middle" fill="var(--fig-ink)">安置輔導</text>
+<text x="180" y="233" font-size="12" text-anchor="middle" fill="var(--fig-ink)">感化教育</text>
+<text x="298" y="83" font-size="12" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">少年刑事案件</text>
+<text x="298" y="103" font-size="11.5" text-anchor="middle" fill="var(--fig-soft)">14 歲以上・重罪</text>
+<path d="M298 114V130" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-juvenile-arr)"/>
+<text x="298" y="151" font-size="12" text-anchor="middle" fill="var(--fig-ink)">檢察官起訴</text>
+<path d="M298 164V181" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-juvenile-arr)"/>
+<text x="298" y="203" font-size="12" text-anchor="middle" fill="var(--fig-ink)">少年法院審判</text>
+<rect x="8" y="255" width="344" height="22" rx="5" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="271" font-size="12" text-anchor="middle" fill="var(--fig-ink)">保護教化優先於懲罰・媒體不得揭露身分</text>
+</svg>

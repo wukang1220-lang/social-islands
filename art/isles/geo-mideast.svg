@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Oil pump over dunes</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 87Q25 79 41 80Q63 76 77 81Q96 80 102 88Q102 95 82 98Q49 101 25 95Q15 93 18 87Z" fill="var(--fig-sand)"/><path d="M18 87Q25 79 41 80Q63 76 77 81Q96 80 102 88Q85 94 58 93Q33 95 18 87Z" fill="var(--fig-land)"/>
+<path d="M20 86Q36 66 56 78Q74 64 100 86Z" fill="var(--fig-sand)"/>
+<circle cx="93" cy="22" r="9" fill="var(--fig-warm)"/><path d="M93 8V10M108 22H106M103.5 11.5L102 13" stroke="var(--fig-warm)"/>
+<rect x="24" y="80" width="66" height="6" rx="1.5" fill="var(--fig-soft)"/>
+<path d="M50 81L59 47L68 81Z" fill="var(--ic)"/><path d="M55 77L59 60L63 77Z" fill="var(--fig-paper)"/>
+<path d="M31 51L86 40L87 47L32 58Z" fill="var(--ic)"/>
+<path d="M32 50Q20 49 20 60L23 68L32 58Z" fill="var(--ic)"/>
+<path d="M22 67V81"/><rect x="18" y="78" width="9" height="5" rx="1" fill="var(--fig-soft)"/>
+<path d="M83 46L82 66"/><circle cx="81" cy="69" r="7" fill="var(--fig-soft)"/><circle cx="81" cy="69" r="2" fill="var(--fig-paper)"/>
+<circle cx="59" cy="48" r="3.5" fill="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" stroke="var(--fig-deep)"/>
+</g>
+</svg>

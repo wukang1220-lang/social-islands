@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 276" role="img">
+<title>東非大裂谷的斷層使地塊陷落並形成湖泊。</title>
+<defs><marker id="geo-rift-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<text x="180" y="21" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">東非大裂谷：世界最長的裂谷帶</text>
+<text x="53" y="57" font-size="12" text-anchor="middle" fill="var(--fig-ink)">東非高原</text>
+<text x="300" y="57" font-size="12" text-anchor="middle" fill="var(--fig-ink)">東非高原</text>
+<path d="M9 128L62 128L79 89L98 128L115 128L147 220L214 220L246 128L351 128L351 253L9 253Z" fill="var(--fig-sand)" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M115 128L147 220M246 128L214 220" fill="none" stroke="var(--fig-ink)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M147 208Q180 203 218 208L214 220L147 220Z" fill="var(--fig-sea)" stroke="var(--fig-deep)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M72 106L79 89L87 106L80 103Z" fill="var(--fig-warm)" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="79" y="76" font-size="12" text-anchor="middle" fill="var(--fig-ink)">火山</text>
+<text x="72" y="167" font-size="11" text-anchor="middle" fill="var(--fig-ink)">例：吉力馬札羅山</text>
+<line x1="79" y1="153" x2="79" y2="135" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="180" y="88" font-size="12" text-anchor="middle" fill="var(--fig-ink)">地塹</text>
+<text x="180" y="105" font-size="12" text-anchor="middle" fill="var(--fig-ink)">（斷層陷落）</text>
+<line x1="180" y1="117" x2="180" y2="185" stroke="var(--fig-soft)" stroke-width="1.5" stroke-dasharray="4 4"/>
+<path d="M125 139L144 193" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#geo-rift-arr)"/>
+<path d="M236 139L219 193" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#geo-rift-arr)"/>
+<text x="286" y="198" font-size="12" text-anchor="middle" fill="var(--fig-ink)">湖泊</text>
+<line x1="267" y1="202" x2="225" y2="211" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="286" y="230" font-size="11" text-anchor="middle" fill="var(--fig-ink)">例：馬拉威湖</text>
+<text x="348" y="270" font-size="11" text-anchor="end" fill="var(--fig-soft)">示意圖</text>
+</svg>

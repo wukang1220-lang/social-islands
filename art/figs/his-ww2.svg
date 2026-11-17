@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+  <title>第二次世界大戰的重要事件依年份由上而下排列。</title>
+  <path d="M20 23 V253" fill="none" stroke="var(--fig-line)" stroke-width="1.5"/>
+  <g fill="var(--fig-paper)" stroke="var(--fig-ink)" stroke-width="1.5">
+    <circle cx="20" cy="25" r="4"/><circle cx="20" cy="57" r="4"/>
+    <circle cx="20" cy="89" r="4"/><circle cx="20" cy="121" r="4"/>
+    <circle cx="20" cy="153" r="4"/><circle cx="20" cy="185" r="4"/>
+    <circle cx="20" cy="217" r="4"/>
+  </g>
+  <circle cx="20" cy="249" r="4" fill="var(--ic)"/>
+  <g font-size="12" fill="var(--fig-soft)">
+    <text x="35" y="29">1937</text><text x="35" y="61">1938</text>
+    <text x="35" y="93">1939</text><text x="35" y="125">1941</text>
+    <text x="35" y="157">1941</text><text x="35" y="189">1944</text>
+    <text x="35" y="221">1945.5</text><text x="35" y="253">1945.8</text>
+  </g>
+  <g font-size="12" fill="var(--fig-ink)">
+    <text x="100" y="29">盧溝橋事變（亞洲戰場）</text>
+    <text x="100" y="61">慕尼黑協定（姑息政策）</text>
+    <text x="100" y="93">德國入侵波蘭（歐洲戰場）</text>
+    <text x="100" y="125">德國攻擊蘇聯</text>
+    <text x="100" y="157">珍珠港事件，美國參戰</text>
+    <text x="100" y="189">盟軍登陸諾曼第</text>
+    <text x="100" y="221">德國投降</text>
+    <text x="100" y="253">原子彈，日本無條件投降</text>
+  </g>
+</svg>

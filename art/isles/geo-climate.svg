@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Rain cloud and winding river</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M19 85Q29 78 47 81Q58 76 74 79Q94 79 100 87Q106 93 86 97Q52 102 29 96Q16 93 19 85Z" fill="var(--fig-sand)"/><path d="M19 85Q29 78 47 81Q58 76 74 79Q94 79 100 87Q80 94 57 92Q33 94 19 85Z" fill="var(--fig-land)"/>
+<path d="M31 47C19 45 22 31 34 31C36 18 55 20 60 29C74 25 84 35 78 44Q76 49 65 49H36Z" fill="var(--ic)"/><path d="M33 37Q36 32 41 34" fill="none" stroke="var(--fig-paper)"/><path d="M34 56L30 63M51 56L47 63M68 56L64 63" fill="none" stroke="var(--fig-cool)"/><path d="M73 56C51 62 84 67 62 73C47 77 36 79 44 87L71 90C57 83 74 81 82 77C100 68 63 65 80 59Z" fill="var(--fig-sea)"/><path d="M58 84Q53 81 64 78" fill="none" stroke="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

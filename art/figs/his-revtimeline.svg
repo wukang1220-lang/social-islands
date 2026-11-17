@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 275" role="img">
+<title>時間軸呈現美國獨立與法國大革命相關事件。</title>
+<defs><marker id="his-revtimeline-arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L6 3.5 L0 7" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<path d="M20 20 L20 252" fill="none" stroke="var(--fig-line)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="20" cy="18" r="3.5" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="38" y="22" font-size="12" text-anchor="start" fill="var(--fig-ink)">1773</text>
+<rect x="309" y="8" width="41" height="23" rx="7" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="329.5" y="24" font-size="11" text-anchor="middle" fill="var(--fig-ink)">美國</text>
+<text x="116" y="22" font-size="11" text-anchor="start" fill="var(--fig-ink)">波士頓茶葉事件</text>
+<circle cx="20" cy="53" r="3.5" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="38" y="57" font-size="12" text-anchor="start" fill="var(--fig-ink)">1776</text>
+<rect x="309" y="43" width="41" height="23" rx="7" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="329.5" y="59" font-size="11" text-anchor="middle" fill="var(--fig-ink)">美國</text>
+<text x="116" y="57" font-size="11" text-anchor="start" fill="var(--fig-ink)">發表《獨立宣言》</text>
+<circle cx="20" cy="88" r="3.5" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="38" y="92" font-size="12" text-anchor="start" fill="var(--fig-ink)">1787</text>
+<rect x="309" y="78" width="41" height="23" rx="7" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="329.5" y="94" font-size="11" text-anchor="middle" fill="var(--fig-ink)">美國</text>
+<text x="116" y="92" font-size="11" text-anchor="start" fill="var(--fig-ink)">制定第一部成文憲法</text>
+<circle cx="20" cy="123" r="3.5" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="38" y="127" font-size="12" text-anchor="start" fill="var(--fig-ink)">1789</text>
+<rect x="309" y="113" width="41" height="23" rx="7" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="329.5" y="129" font-size="11" text-anchor="middle" fill="var(--fig-ink)">法國</text>
+<text x="116" y="127" font-size="11" text-anchor="start" fill="var(--fig-ink)">攻陷巴士底監獄・</text>
+<text x="116" y="143" font-size="11" text-anchor="start" fill="var(--fig-ink)">《人權宣言》</text>
+<circle cx="20" cy="174" r="3.5" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="38" y="178" font-size="12" text-anchor="start" fill="var(--fig-ink)">1804</text>
+<rect x="309" y="164" width="41" height="23" rx="7" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="329.5" y="180" font-size="11" text-anchor="middle" fill="var(--fig-ink)">法國</text>
+<text x="116" y="178" font-size="11" text-anchor="start" fill="var(--fig-ink)">拿破崙稱帝</text>
+<circle cx="20" cy="209" r="3.5" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="38" y="213" font-size="12" text-anchor="start" fill="var(--fig-ink)">1814～1815</text>
+<rect x="309" y="199" width="41" height="23" rx="7" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="329.5" y="215" font-size="11" text-anchor="middle" fill="var(--fig-ink)">歐洲</text>
+<text x="116" y="213" font-size="11" text-anchor="start" fill="var(--fig-ink)">維也納會議</text>
+<circle cx="20" cy="244" r="3.5" fill="var(--ic)" stroke="none" stroke-width="1.5"/>
+<text x="38" y="248" font-size="12" text-anchor="start" fill="var(--fig-ink)">1815</text>
+<rect x="309" y="234" width="41" height="23" rx="7" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="329.5" y="250" font-size="11" text-anchor="middle" fill="var(--fig-ink)">法國</text>
+<text x="116" y="248" font-size="11" text-anchor="start" fill="var(--fig-ink)">滑鐵盧戰役，拿破崙戰敗</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M24 6C18 10 12 11 7 12V25C7 33 14 39 24 42C34 39 41 33 41 25V12C36 11 30 10 24 6Z" fill="var(--ic)"/>
+<path d="M13 24L18 19L23 24L32 15L37 20L23 34Z" fill="var(--fig-paper)"/>
+</g>
+</svg>

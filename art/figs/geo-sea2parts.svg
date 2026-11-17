@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 245" role="img">
+<title>中南半島與南洋群島的地形、氣候及重點不同。</title>
+<defs><marker id="geo-sea2parts-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<rect x="8" y="12" width="344" height="218" rx="4" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<line x1="51" y1="12" x2="51" y2="230" stroke="var(--fig-line)" stroke-width="1.5"/>
+<line x1="201.5" y1="12" x2="201.5" y2="230" stroke="var(--fig-line)" stroke-width="1.5"/>
+<line x1="8" y1="48" x2="352" y2="48" stroke="var(--fig-line)" stroke-width="1.5"/>
+<line x1="8" y1="107" x2="352" y2="107" stroke="var(--fig-line)" stroke-width="1.5"/>
+<line x1="8" y1="166" x2="352" y2="166" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="126" y="35" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">中南半島</text>
+<text x="277" y="35" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">南洋群島</text>
+<text x="29" y="79" font-size="12" text-anchor="middle" fill="var(--fig-ink)">地形</text>
+<text x="126" y="71" font-size="12" text-anchor="middle" fill="var(--fig-ink)">山脈、河川</text>
+<text x="126" y="88" font-size="12" text-anchor="middle" fill="var(--fig-ink)">南北走向</text>
+<text x="277" y="71" font-size="12" text-anchor="middle" fill="var(--fig-ink)">島嶼眾多、</text>
+<text x="277" y="88" font-size="12" text-anchor="middle" fill="var(--fig-ink)">多火山地震</text>
+<text x="29" y="138" font-size="12" text-anchor="middle" fill="var(--fig-ink)">氣候</text>
+<text x="126" y="130" font-size="12" text-anchor="middle" fill="var(--fig-ink)">熱帶季風：</text>
+<text x="126" y="147" font-size="12" text-anchor="middle" fill="var(--fig-ink)">夏雨冬乾</text>
+<text x="277" y="130" font-size="12" text-anchor="middle" fill="var(--fig-ink)">熱帶雨林：</text>
+<text x="277" y="147" font-size="12" text-anchor="middle" fill="var(--fig-ink)">全年高溫多雨</text>
+<text x="29" y="199" font-size="12" text-anchor="middle" fill="var(--fig-ink)">重點</text>
+<text x="126" y="191" font-size="12" text-anchor="middle" fill="var(--fig-ink)">人口集中</text>
+<text x="126" y="208" font-size="12" text-anchor="middle" fill="var(--fig-ink)">河口三角洲</text>
+<text x="277" y="191" font-size="12" text-anchor="middle" fill="var(--fig-ink)">麻六甲海峽：</text>
+<text x="277" y="208" font-size="12" text-anchor="middle" fill="var(--fig-ink)">交通要道</text>
+</svg>

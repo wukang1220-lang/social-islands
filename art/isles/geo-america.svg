@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Desert mesa and corn</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M20 85Q31 78 46 80Q65 77 79 81Q97 81 101 88Q103 94 85 97Q56 102 31 96Q15 93 20 85Z" fill="var(--fig-sand)"/><path d="M20 85Q31 78 46 80Q65 77 79 81Q97 81 101 88Q88 93 63 93Q36 94 20 85Z" fill="var(--fig-land)"/>
+<path d="M21 83L30 61L35 59L38 38H64L68 59L75 65L80 83Z" fill="var(--ic)"/><path d="M38 38H64L66 47H36Z" fill="var(--fig-sand)"/><path d="M32 64H65M27 75H69" fill="none" stroke="var(--fig-sand)"/><path d="M85 85V34" fill="none" stroke="var(--fig-ink)"/><path d="M84 64Q71 62 72 48Q83 49 85 60Z" fill="var(--ic)"/><path d="M86 74Q101 69 99 57Q87 59 86 69Z" fill="var(--ic)"/><path d="M78 40Q77 30 85 27Q93 30 92 40L90 57Q85 64 80 56Z" fill="var(--fig-warm)"/><path d="M84 33V53M79 42H91" fill="none" stroke="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

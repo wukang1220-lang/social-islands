@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Resting helmet beneath an olive branch</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M17 88Q20 82 35 82Q52 76 68 80Q91 77 101 87Q106 94 85 97Q61 100 38 97Q19 98 17 88Z" fill="var(--fig-sand)"/><path d="M17 88Q20 82 35 82Q52 76 68 80Q91 77 101 87Q89 93 61 93Q32 94 17 88Z" fill="var(--fig-land)"/>
+<path d="M31 71Q31 43 58 43Q84 43 84 71L91 75L87 82H28L23 76Z" fill="var(--ic)"/><path d="M26 74Q56 82 88 74L91 78L87 83H28L23 78Z" fill="var(--fig-soft)"/><path d="M41 58Q47 50 56 51" fill="none" stroke="var(--fig-paper)"/><path d="M27 41Q58 18 91 40" fill="none" stroke="var(--fig-land)"/><path d="M35 35Q28 25 37 24Q45 25 44 31Z" fill="var(--fig-land)"/><path d="M48 29Q45 18 54 20Q61 22 60 28Z" fill="var(--fig-land)"/><path d="M62 29Q64 18 72 24Q76 29 72 32Z" fill="var(--fig-land)"/><path d="M77 34Q83 24 89 32Q91 38 86 40Z" fill="var(--fig-land)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

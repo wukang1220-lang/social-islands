@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+  <title>全球化連結經濟、政治與文化，並以臺灣加入世界貿易組織為例。</title>
+  <defs><marker id="civ-globalization-arr" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0 0 L5 2.5 L0 5" fill="var(--fig-ink)"/></marker></defs>
+  <rect x="92" y="10" width="176" height="48" rx="6" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+  <text x="180" y="30" text-anchor="middle" font-size="13" fill="var(--fig-ink)">經濟全球化</text>
+  <text x="180" y="49" text-anchor="middle" font-size="12" fill="var(--fig-ink)">國際貿易・國際分工</text>
+  <path d="M180 78 V61 M125 135 L94 150 M235 135 L266 150" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#civ-globalization-arr)"/>
+  <rect x="75" y="78" width="210" height="57" rx="6" fill="var(--fig-paper)" stroke="var(--ic)" stroke-width="1.5"/>
+  <text x="180" y="98" text-anchor="middle" font-size="14" fill="var(--fig-ink)">全球化</text>
+  <text x="180" y="116" text-anchor="middle" font-size="12" fill="var(--fig-ink)">人才・資金・商品・資訊</text>
+  <text x="180" y="131" text-anchor="middle" font-size="12" fill="var(--fig-ink)">快速流動</text>
+  <rect x="10" y="153" width="165" height="48" rx="6" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+  <rect x="185" y="153" width="165" height="48" rx="6" fill="var(--fig-warm)" stroke="var(--fig-line)" stroke-width="1.5"/>
+  <g text-anchor="middle" fill="var(--fig-ink)">
+    <text x="92.5" y="174" font-size="13">政治全球化</text><text x="92.5" y="193" font-size="12">國際組織・公約約束</text>
+    <text x="267.5" y="174" font-size="13">文化全球化</text><text x="267.5" y="193" font-size="12">音樂・飲食・漫畫流通</text>
+  </g>
+  <rect x="10" y="211" width="340" height="68" rx="6" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+  <text x="24" y="228" font-size="13" fill="var(--fig-ink)">例：臺灣加入 WTO</text>
+  <g font-size="12" fill="var(--fig-ink)">
+    <text x="24" y="245">市場開放（經濟）</text>
+    <text x="24" y="260">修法、產地標章（政治）</text>
+    <text x="24" y="275">進口肉品增加（文化）</text>
+  </g>
+</svg>

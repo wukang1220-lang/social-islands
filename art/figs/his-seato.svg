@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>東南亞公約組織與東協的成立、發起、重點及結果互相比較。</title>
+<defs><marker id="his-seato-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<rect x="10" y="8" width="340" height="263" rx="0" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="10" y="8" width="340" height="43" rx="0" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<path d="M52 8V271" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M200 8V271" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 51H350" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 90H350" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 153H350" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 211H350" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="126" y="34" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">東南亞公約組織</text>
+<text x="275" y="25" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">東南亞國家協會</text>
+<text x="275" y="43" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">（東協）</text>
+<text x="31" y="75" font-size="12" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">成立</text>
+<text x="31" y="125" font-size="12" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">發起</text>
+<text x="31" y="188" font-size="12" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">重點</text>
+<text x="31" y="246" font-size="12" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">結果</text>
+<text x="126" y="75" font-size="12" text-anchor="middle" fill="var(--fig-ink)">1955 年</text>
+<text x="275" y="75" font-size="12" text-anchor="middle" fill="var(--fig-ink)">1967 年</text>
+<text x="126" y="115" font-size="12" text-anchor="middle" fill="var(--fig-ink)">美國，防堵</text>
+<text x="126" y="134" font-size="12" text-anchor="middle" fill="var(--fig-ink)">共產勢力</text>
+<text x="275" y="108" font-size="12" text-anchor="middle" fill="var(--fig-ink)">印尼・馬來西亞・</text>
+<text x="275" y="126" font-size="12" text-anchor="middle" fill="var(--fig-ink)">菲律賓・新加坡・</text>
+<text x="275" y="144" font-size="12" text-anchor="middle" fill="var(--fig-ink)">泰國</text>
+<text x="126" y="188" font-size="12" text-anchor="middle" fill="var(--fig-ink)">軍事防衛</text>
+<text x="275" y="178" font-size="12" text-anchor="middle" fill="var(--fig-ink)">冷戰：政治協商；</text>
+<text x="275" y="198" font-size="12" text-anchor="middle" fill="var(--fig-ink)">冷戰後：經貿合作</text>
+<text x="126" y="246" font-size="12" text-anchor="middle" fill="var(--fig-ink)">1977 年解散</text>
+<text x="275" y="235" font-size="12" text-anchor="middle" fill="var(--fig-ink)">11 個會員國・</text>
+<text x="275" y="255" font-size="12" text-anchor="middle" fill="var(--fig-ink)">東協經濟共同體</text>
+</svg>

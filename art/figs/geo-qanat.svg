@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 278" role="img">
+<title>坎井將融雪滲入的地下水經水道引到綠洲。</title>
+<defs><marker id="geo-qanat-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<text x="348" y="18" font-size="11" text-anchor="end" fill="var(--fig-soft)">示意圖</text>
+<path d="M8 172L30 108L59 51L88 117L110 151L155 170L210 185L260 198L302 209L352 209L352 252L8 252Z" fill="var(--fig-sand)" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M43 83L59 51L73 82L63 77L55 86L50 77Z" fill="var(--fig-cool)" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="63" y="31" font-size="12" text-anchor="middle" fill="var(--fig-ink)">高山融雪</text>
+<text x="125" y="81" font-size="12" text-anchor="middle" fill="var(--fig-ink)">滲入地下</text>
+<path d="M61 106L67 162" fill="none" stroke="var(--fig-deep)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#geo-qanat-arr)"/>
+<path d="M80 128L87 176" fill="none" stroke="var(--fig-deep)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#geo-qanat-arr)"/>
+<path d="M83 188L302 209" fill="none" stroke="var(--fig-deep)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M110 152L110 191M116 152L116 191" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="107" y1="152" x2="119" y2="152" stroke="var(--fig-ink)" stroke-width="1.5"/>
+<path d="M145 167L145 194M151 167L151 194" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="142" y1="167" x2="154" y2="167" stroke="var(--fig-ink)" stroke-width="1.5"/>
+<path d="M180 178L180 198M186 178L186 198" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="177" y1="178" x2="189" y2="178" stroke="var(--fig-ink)" stroke-width="1.5"/>
+<path d="M215 187L215 201M221 187L221 201" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="212" y1="187" x2="224" y2="187" stroke="var(--fig-ink)" stroke-width="1.5"/>
+<path d="M250 196L250 204M256 196L256 204" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="247" y1="196" x2="259" y2="196" stroke="var(--fig-ink)" stroke-width="1.5"/>
+<text x="205" y="128" font-size="12" text-anchor="middle" fill="var(--fig-ink)">豎井</text>
+<path d="M205 135L218 145L218 181" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="182" y="237" font-size="12" text-anchor="middle" fill="var(--fig-ink)">地下水道</text>
+<line x1="182" y1="223" x2="182" y2="205" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<ellipse cx="320" cy="211" rx="27" ry="5" fill="var(--fig-sea)" stroke="var(--fig-deep)" stroke-width="1.5"/>
+<path d="M312 207Q316 197 314 185" fill="none" stroke="var(--fig-ink)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M314 185Q303 174 296 184M314 185Q324 173 331 183M314 185Q309 170 303 174M314 185Q321 170 326 174" fill="none" stroke="var(--fig-land)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M314 185Q303 174 296 184M314 185Q324 173 331 183" fill="none" stroke="var(--fig-ink)" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M335 207Q339 197 337 190" fill="none" stroke="var(--fig-ink)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M337 190Q326 179 319 189M337 190Q347 178 354 188M337 190Q332 175 326 179M337 190Q344 175 349 179" fill="none" stroke="var(--fig-land)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M337 190Q326 179 319 189M337 190Q347 178 354 188" fill="none" stroke="var(--fig-ink)" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="305" y="155" font-size="12" text-anchor="middle" fill="var(--fig-ink)">綠洲</text>
+<line x1="305" y1="161" x2="313" y2="168" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<rect x="34" y="257" width="292" height="20" rx="4" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="271" font-size="12" text-anchor="middle" fill="var(--fig-ink)">坎井：伊朗高原、亞特拉斯山</text>
+</svg>

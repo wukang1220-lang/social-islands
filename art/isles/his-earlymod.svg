@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Telescope and caravel</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M19 85Q29 78 47 81Q58 76 74 79Q94 79 100 87Q106 93 86 97Q52 102 29 96Q16 93 19 85Z" fill="var(--fig-sand)"/><path d="M19 85Q29 78 47 81Q58 76 74 79Q94 79 100 87Q80 94 57 92Q33 94 19 85Z" fill="var(--fig-land)"/>
+<path d="M27 40L70 23L76 39L33 56Z" fill="var(--ic)"/><path d="M61 26L72 22L79 39L68 43Z" fill="var(--fig-paper)"/><path d="M23 42L29 40L35 54L29 57Z" fill="var(--fig-paper)"/><circle cx="49" cy="49" r="4" fill="var(--fig-paper)"/><path d="M49 54L33 84M49 54L61 84M49 54V81" fill="none" stroke="var(--fig-ink)"/><path d="M79 78V47" fill="none" stroke="var(--fig-ink)"/><path d="M79 48Q91 53 95 68H79Z" fill="var(--fig-paper)"/><path d="M75 52Q64 56 65 69H75Z" fill="var(--ic)"/><path d="M63 78H102L95 86H72Z" fill="var(--ic)"/><path d="M38 75H57" fill="none" stroke="var(--fig-ink)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

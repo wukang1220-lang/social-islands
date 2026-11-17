@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<g fill="var(--ic)" stroke="var(--fig-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M6 11L18 6L30 11L42 6V37L30 42L18 37L6 42Z"/>
+<path d="M18 6L30 11V42L18 37Z" fill="var(--fig-paper)"/>
+<path d="M11 32C12 21 20 31 24 23S32 17 37 15" fill="none" stroke-dasharray="0 4.5"/>
+<circle cx="37" cy="15" r="2.5" fill="var(--fig-warm)"/>
+</g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Terraced hills and a long river</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 87Q23 80 39 81Q57 77 72 80Q93 78 102 88Q102 95 85 97Q50 100 27 96Q16 93 18 87Z" fill="var(--fig-sand)"/><path d="M18 87Q23 80 39 81Q57 77 72 80Q93 78 102 88Q89 94 64 92Q35 95 18 87Z" fill="var(--fig-land)"/>
+<path d="M22 74Q22 57 39 55Q33 38 50 37Q53 21 70 25Q86 30 83 46Q98 53 96 77L91 85H28Z" fill="var(--ic)"/><path d="M44 43Q63 50 83 42M34 56Q57 65 86 54M25 69Q53 80 94 68" fill="none" stroke="var(--fig-paper)"/><path d="M65 30C48 44 83 48 66 59C47 71 77 76 60 88H78C94 76 63 70 80 59C96 46 61 42 73 32Z" fill="var(--fig-sea)"/><path d="M74 65Q66 70 76 76" fill="none" stroke="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

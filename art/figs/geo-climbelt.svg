@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>緯度梯呈現氣壓、盛行風與各氣候帶的分布。</title>
+<defs><marker id="geo-climbelt-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<line x1="50" y1="18" x2="50" y2="258" stroke="var(--fig-ink)" stroke-width="1.5"/>
+<line x1="46" y1="20" x2="55" y2="20" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="42" y="24" font-size="11" text-anchor="end" fill="var(--fig-soft)">90°</text>
+<line x1="46" y1="54" x2="55" y2="54" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="42" y="58" font-size="11" text-anchor="end" fill="var(--fig-soft)">66.5°</text>
+<line x1="46" y1="72" x2="55" y2="72" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="42" y="76" font-size="11" text-anchor="end" fill="var(--fig-soft)">60°</text>
+<line x1="46" y1="124" x2="55" y2="124" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="42" y="128" font-size="11" text-anchor="end" fill="var(--fig-soft)">40°</text>
+<line x1="46" y1="166" x2="55" y2="166" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="42" y="170" font-size="11" text-anchor="end" fill="var(--fig-soft)">30°</text>
+<line x1="46" y1="204" x2="55" y2="204" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="42" y="208" font-size="11" text-anchor="end" fill="var(--fig-soft)">23.5°</text>
+<line x1="46" y1="257" x2="55" y2="257" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="42" y="261" font-size="11" text-anchor="end" fill="var(--fig-soft)">0° 赤道</text>
+<line x1="160" y1="12" x2="160" y2="264" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="64" y="158" width="88" height="43" rx="4" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="108" y="175" font-size="11" text-anchor="middle" fill="var(--fig-ink)">副熱帶高氣壓</text>
+<text x="108" y="192" font-size="11" text-anchor="middle" fill="var(--fig-ink)">（下沉少雨）</text>
+<text x="108" y="91" font-size="12" text-anchor="middle" fill="var(--fig-ink)">西風</text>
+<path d="M78 109L139 109" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#geo-climbelt-arr)"/>
+<text x="113" y="231" font-size="12" text-anchor="middle" fill="var(--fig-ink)">信風</text>
+<path d="M73 216L73 249" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#geo-climbelt-arr)"/>
+<rect x="168" y="14" width="184" height="42" rx="4" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="260" y="31" font-size="11" text-anchor="middle" fill="var(--fig-ink)">寒帶</text>
+<text x="260" y="48" font-size="11" text-anchor="middle" fill="var(--fig-ink)">（66.5° 以上）</text>
+<rect x="168" y="65" width="89" height="56" rx="4" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="212.5" y="81" font-size="11" text-anchor="middle" fill="var(--fig-ink)">溫帶海洋性</text>
+<text x="212.5" y="97" font-size="11" text-anchor="middle" fill="var(--fig-ink)">（西岸）</text>
+<rect x="263" y="65" width="89" height="56" rx="4" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="307.5" y="81" font-size="11" text-anchor="middle" fill="var(--fig-ink)">溫帶大陸性</text>
+<text x="307.5" y="97" font-size="11" text-anchor="middle" fill="var(--fig-ink)">（內陸到</text>
+<text x="307.5" y="113" font-size="11" text-anchor="middle" fill="var(--fig-ink)">東岸）</text>
+<rect x="168" y="128" width="184" height="33" rx="4" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="260" y="142" font-size="11" text-anchor="middle" fill="var(--fig-ink)">地中海型</text>
+<text x="260" y="157" font-size="11" text-anchor="middle" fill="var(--fig-ink)">（30–40° 西岸）</text>
+<rect x="168" y="167" width="184" height="36" rx="4" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="260" y="181" font-size="11" text-anchor="middle" fill="var(--fig-ink)">熱帶沙漠</text>
+<text x="260" y="196" font-size="11" text-anchor="middle" fill="var(--fig-ink)">（回歸線附近）</text>
+<rect x="168" y="209" width="184" height="23" rx="4" fill="var(--fig-warm)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="260" y="225" font-size="12" text-anchor="middle" fill="var(--fig-ink)">熱帶莽原</text>
+<rect x="168" y="238" width="184" height="25" rx="4" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="260" y="255" font-size="12" text-anchor="middle" fill="var(--fig-ink)">熱帶雨林</text>
+<text x="348" y="276" font-size="11" text-anchor="end" fill="var(--fig-soft)">示意圖</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" role="img">
+  <title>戰間期經濟大恐慌後各國的政治發展與蘇聯成立。</title>
+  <defs><marker id="his-interwar-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="var(--fig-ink)"/></marker></defs>
+  <text x="180" y="22" text-anchor="middle" font-size="14" fill="var(--fig-ink)">戰間期（1918～1939）</text>
+  <rect x="104" y="36" width="152" height="34" rx="6" fill="var(--fig-paper)" stroke="var(--ic)" stroke-width="1.5"/>
+  <text x="180" y="58" text-anchor="middle" font-size="13" fill="var(--fig-ink)">1929 經濟大恐慌</text>
+  <g fill="none" stroke="var(--fig-ink)" stroke-width="1.5">
+    <path d="M180 70 V83 H64 V96" marker-end="url(#his-interwar-arr)"/>
+    <path d="M180 83 V96" marker-end="url(#his-interwar-arr)"/>
+    <path d="M180 83 H296 V96" marker-end="url(#his-interwar-arr)"/>
+  </g>
+  <g stroke="var(--fig-line)" stroke-width="1.5">
+    <rect x="10" y="99" width="108" height="70" rx="6" fill="var(--fig-cool)"/>
+    <rect x="126" y="99" width="108" height="70" rx="6" fill="var(--fig-sand)"/>
+    <rect x="242" y="99" width="108" height="70" rx="6" fill="var(--fig-warm)"/>
+  </g>
+  <g text-anchor="middle" font-size="12" fill="var(--fig-ink)">
+    <text x="64" y="120">美國：</text><text x="64" y="143">羅斯福新政</text>
+    <text x="180" y="120">義大利：</text><text x="180" y="140">墨索里尼・</text><text x="180" y="158">法西斯黨</text>
+    <text x="296" y="120">德國：</text><text x="296" y="140">希特勒・</text><text x="296" y="158">納粹黨</text>
+  </g>
+  <rect x="10" y="187" width="340" height="34" rx="6" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+  <text x="180" y="209" text-anchor="middle" font-size="12" fill="var(--fig-ink)">俄國：1917 革命 → 1922 成立蘇聯</text>
+  <text x="180" y="246" text-anchor="middle" font-size="12" fill="var(--fig-soft)">極權政治興起，埋下二戰的種子</text>
+</svg>

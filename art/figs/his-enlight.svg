@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>科學革命重視理性並推動啟蒙運動與美法革命。</title>
+<defs><marker id="his-enlight-arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L6 3.5 L0 7" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<rect x="8" y="10" width="156" height="198" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="196" y="10" width="156" height="198" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="86" y="29" font-size="14" text-anchor="middle" fill="var(--fig-ink)">科學革命</text>
+<text x="86" y="48" font-size="11" text-anchor="middle" fill="var(--fig-ink)">（16、17 世紀）</text>
+<text x="274" y="29" font-size="14" text-anchor="middle" fill="var(--fig-ink)">啟蒙運動</text>
+<text x="274" y="48" font-size="11" text-anchor="middle" fill="var(--fig-ink)">（18 世紀）</text>
+<path d="M166 73 L193 73" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#his-enlight-arr)"/>
+<text x="180" y="103" font-size="11" text-anchor="middle" fill="var(--fig-ink)">重視</text>
+<text x="180" y="119" font-size="11" text-anchor="middle" fill="var(--fig-ink)">理性</text>
+<text x="18" y="75" font-size="11" text-anchor="start" fill="var(--fig-ink)">哥白尼：</text>
+<text x="18" y="91" font-size="11" text-anchor="start" fill="var(--fig-ink)">太陽為宇宙中心</text>
+<text x="18" y="116" font-size="11" text-anchor="start" fill="var(--fig-ink)">伽利略：望遠鏡證實</text>
+<text x="18" y="142" font-size="11" text-anchor="start" fill="var(--fig-ink)">培根：歸納法</text>
+<text x="18" y="168" font-size="11" text-anchor="start" fill="var(--fig-ink)">笛卡兒：演繹法</text>
+<text x="18" y="194" font-size="11" text-anchor="start" fill="var(--fig-ink)">牛頓：萬有引力定律</text>
+<text x="206" y="75" font-size="11" text-anchor="start" fill="var(--fig-ink)">洛克：天賦人權</text>
+<text x="206" y="101" font-size="11" text-anchor="start" fill="var(--fig-ink)">孟德斯鳩：三權分立</text>
+<text x="206" y="126" font-size="11" text-anchor="start" fill="var(--fig-ink)">伏爾泰：宗教寬容・</text>
+<text x="206" y="142" font-size="11" text-anchor="start" fill="var(--fig-ink)">言論自由</text>
+<text x="206" y="168" font-size="11" text-anchor="start" fill="var(--fig-ink)">盧梭：主權在民</text>
+<text x="206" y="194" font-size="11" text-anchor="start" fill="var(--fig-ink)">狄德羅：百科全書</text>
+<path d="M274 208 L274 232" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#his-enlight-arr)"/>
+<rect x="56" y="234" width="270" height="33" rx="7" fill="var(--fig-paper)" stroke="var(--ic)" stroke-width="1.5"/>
+<text x="191" y="255" font-size="13" text-anchor="middle" fill="var(--fig-ink)">美國獨立・法國大革命</text>
+</svg>

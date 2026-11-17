@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>地名中的房屋與山谷用語呈現族群特色，也保存移民原鄉名稱。</title>
+<text x="180" y="23" text-anchor="middle" font-size="14" fill="var(--fig-ink)">地名裡的族群</text>
+<rect x="8" y="37" width="344" height="181" rx="6" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<path d="M52 37H152V66H52Z" fill="var(--fig-land)"/>
+<path d="M152 37H252V66H152Z" fill="var(--fig-sand)"/>
+<path d="M252 37H352V66H252Z" fill="var(--fig-cool)"/>
+<g fill="none" stroke="var(--fig-line)" stroke-width="1.5">
+<path d="M52 37V218M152 37V218M252 37V218M8 66H352M8 110H352M8 162H352"/>
+</g>
+<g fill="var(--fig-ink)" text-anchor="middle">
+<g font-size="12" font-weight="600"><text x="102" y="56">閩南語</text><text x="202" y="56">客家語</text><text x="302" y="56">原住民族語</text></g>
+<g font-size="11">
+<text x="30" y="92">房屋</text><text x="102" y="84">厝：</text><text x="102" y="101">陳厝・張厝</text>
+<text x="202" y="84">屋：</text><text x="202" y="101">黃屋・宋屋</text>
+<text x="30" y="139">山與谷</text><text x="202" y="125">崠：山頂・</text><text x="202" y="141">窩：山凹</text><text x="202" y="157">小河谷</text>
+<text x="30" y="191">例</text><text x="202" y="191">多在桃竹苗</text>
+<text x="302" y="179">鵝鑾鼻</text><text x="302" y="195">（排灣族語</text><text x="302" y="211">「船帆」）</text>
+</g>
+</g>
+<rect x="8" y="228" width="344" height="50" rx="6" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="20" y="243" font-size="12" font-weight="600" fill="var(--fig-ink)">移民原鄉</text>
+<g font-size="11" fill="var(--fig-ink)">
+<text x="20" y="259">泉州：泉州・同安・東石</text><text x="200" y="259">漳州：南靖</text>
+<text x="20" y="274">惠州：陸豐</text><text x="200" y="274">潮州：潮州</text>
+</g>
+</svg>

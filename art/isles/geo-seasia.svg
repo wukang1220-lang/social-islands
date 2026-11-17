@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Palm and monsoon paddies</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 86Q21 79 38 81Q51 75 67 79Q87 77 100 86Q104 92 91 95Q59 103 28 96Q14 93 18 86Z" fill="var(--fig-sand)"/><path d="M18 86Q21 79 38 81Q51 75 67 79Q87 77 100 86Q87 93 61 93Q32 94 18 86Z" fill="var(--fig-land)"/>
+<path d="M30 83Q42 61 40 37L47 37Q51 61 42 84Z" fill="var(--ic)"/><path d="M43 36Q30 20 20 32Q30 31 36 40Q21 34 17 47Q28 41 40 44Q50 52 60 45Q51 44 48 38Q60 33 68 40Q64 24 46 32Q51 18 39 22Z" fill="var(--ic)"/><path d="M72 44C61 43 62 32 72 32C77 20 92 24 94 34C105 37 99 46 91 46Z" fill="var(--fig-cool)"/><path d="M76 52L72 59M91 52L87 59" fill="none" stroke="var(--fig-deep)"/><path d="M50 70Q70 59 95 68L94 84H47Z" fill="var(--fig-land)"/><path d="M53 76Q72 68 94 75M59 82L67 71M76 84L83 72" fill="none" stroke="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

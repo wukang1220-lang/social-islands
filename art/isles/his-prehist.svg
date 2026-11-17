@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Three-masted ship and clay pot</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 86Q21 79 38 81Q51 75 67 79Q87 77 100 86Q104 92 91 95Q59 103 28 96Q14 93 18 86Z" fill="var(--fig-sand)"/><path d="M18 86Q21 79 38 81Q51 75 67 79Q87 77 100 86Q87 93 61 93Q32 94 18 86Z" fill="var(--fig-land)"/>
+<path d="M32 64V28M52 63V22M72 62V29" fill="none" stroke="var(--fig-ink)"/><path d="M32 29Q41 32 45 49H32Z" fill="var(--fig-paper)"/><path d="M52 24Q65 29 67 49H52Z" fill="var(--ic)"/><path d="M72 31Q83 35 85 50H72Z" fill="var(--fig-paper)"/><path d="M33 44H41M53 41H63" fill="none" stroke="var(--fig-line)"/><path d="M20 63H89L78 80H35Z" fill="var(--ic)"/><path d="M35 70H73" fill="none" stroke="var(--fig-paper)"/><path d="M83 67H96L94 74Q104 85 95 89H82Q73 85 85 74Z" fill="var(--fig-sand)"/><ellipse cx="89" cy="67" rx="7" ry="2.5" fill="var(--fig-paper)"/><path d="M82 82Q89 85 97 82" fill="none" stroke="var(--fig-ink)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

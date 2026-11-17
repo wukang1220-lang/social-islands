@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Civic hall and ballot box</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 87Q25 79 41 80Q63 76 77 81Q96 80 102 88Q102 95 82 98Q49 101 25 95Q15 93 18 87Z" fill="var(--fig-sand)"/><path d="M18 87Q25 79 41 80Q63 76 77 81Q96 80 102 88Q85 94 58 93Q33 95 18 87Z" fill="var(--fig-land)"/>
+<path d="M23 39L57 22L91 39Z" fill="var(--ic)"/><rect x="25" y="40" width="65" height="7" rx="2" fill="var(--ic)"/><rect x="31" y="48" width="9" height="31" rx="0" fill="var(--fig-paper)"/><rect x="51" y="48" width="9" height="31" rx="0" fill="var(--fig-paper)"/><rect x="72" y="48" width="9" height="31" rx="0" fill="var(--fig-paper)"/><rect x="22" y="79" width="68" height="7" rx="2" fill="var(--ic)"/><path d="M66 65L89 61L101 68L78 74Z" fill="var(--ic)"/><path d="M66 65L78 74V88L66 80Z" fill="var(--ic)"/><path d="M78 74L101 68V83L78 88Z" fill="var(--ic)"/><path d="M78 66L87 64" fill="none" stroke="var(--fig-ink)"/><path d="M76 50L88 48L93 61L81 65Z" fill="var(--fig-paper)"/><path d="M43 33H70" fill="none" stroke="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

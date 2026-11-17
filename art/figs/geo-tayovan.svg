@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>臺灣之名由平埔族稱呼經荷蘭人、漢人、鄭氏到清帝國逐步演變。</title>
+<defs><marker id="geo-tayovan-arr" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0 0L4 2.5L0 5" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<text x="180" y="23" font-size="14" text-anchor="middle" fill="var(--fig-ink)">「臺灣」這個名字</text>
+<g stroke="var(--fig-line)" stroke-width="1.5" fill="var(--fig-paper)">
+<rect x="12" y="37" width="222" height="36" rx="6"/>
+<rect x="12" y="84" width="222" height="36" rx="6"/>
+<rect x="12" y="131" width="222" height="32" rx="6"/>
+<rect x="12" y="174" width="222" height="43" rx="6"/>
+<rect x="12" y="228" width="222" height="42" rx="6"/>
+<rect x="246" y="37" width="104" height="79" rx="6" fill="var(--fig-cool)"/>
+</g>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#geo-tayovan-arr)">
+<path d="M123 74V81"/><path d="M123 121V128"/><path d="M123 164V171"/><path d="M123 218V225"/>
+</g>
+<g fill="var(--fig-ink)" text-anchor="middle" font-size="12">
+<text x="123" y="52">平埔族：Tavoan</text><text x="123" y="67">（交會之地）</text>
+<text x="123" y="99">荷蘭人：地圖標為</text><text x="123" y="114">Tayovan</text>
+<text x="123" y="151">漢人：大員・台員・臺灣</text>
+<text x="123" y="192">鄭氏：改稱安平，</text><text x="123" y="209">民間以「臺灣」稱全島</text>
+<text x="123" y="245">清帝國：臺灣府・臺灣縣・</text><text x="123" y="262">臺灣省</text>
+<text x="298" y="58">西方水手：</text><text x="298" y="80">福爾摩沙</text><text x="298" y="102">（美麗之島）</text>
+</g>
+</svg>

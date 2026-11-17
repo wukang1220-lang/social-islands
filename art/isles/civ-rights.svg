@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Open hand holding a heart</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M20 85Q31 78 46 80Q65 77 79 81Q97 81 101 88Q103 94 85 97Q56 102 31 96Q15 93 20 85Z" fill="var(--fig-sand)"/><path d="M20 85Q31 78 46 80Q65 77 79 81Q97 81 101 88Q88 93 63 93Q36 94 20 85Z" fill="var(--fig-land)"/>
+<path d="M42 85L40 69L29 57Q26 52 30 49Q33 47 37 51L43 57V34Q43 28 48 29Q52 29 52 34V48V27Q52 21 57 22Q62 22 62 27V47V30Q62 25 67 26Q72 26 72 31V49V39Q72 33 77 34Q82 34 82 39V61Q82 71 73 79V85Z" fill="var(--ic)"/><path d="M53 49C46 40 34 44 36 54C37 61 47 67 53 72C59 67 69 61 70 54C72 44 60 40 53 49Z" fill="var(--fig-paper)"/><path d="M45 80H70" fill="none" stroke="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

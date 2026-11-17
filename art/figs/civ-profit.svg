@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 235" role="img">
+<title>銷貨收入扣除生產成本後得到利潤。</title>
+<defs><marker id="civ-profit-arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L6 3.5 L0 7" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<text x="180" y="23" font-size="14" text-anchor="middle" fill="var(--fig-ink)">利潤怎麼算？</text>
+<text x="180" y="51" font-size="13" text-anchor="middle" fill="var(--fig-ink)">銷貨收入＝價格 × 銷售量</text>
+<rect x="20" y="64" width="320" height="50" rx="7" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="94" font-size="13" text-anchor="middle" fill="var(--fig-ink)">50 元 × 200 個＝10,000 元</text>
+<path d="M20 115 L20 136" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M340 115 L340 136" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="20" y="137" width="192" height="57" rx="0" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="212" y="137" width="128" height="57" rx="0" fill="var(--fig-land)" stroke="var(--ic)" stroke-width="1.5"/>
+<text x="116" y="159" font-size="12" text-anchor="middle" fill="var(--fig-ink)">生產成本 6,000 元</text>
+<text x="116" y="181" font-size="11" text-anchor="middle" fill="var(--fig-ink)">地租・薪資・利息</text>
+<text x="276" y="170" font-size="12" text-anchor="middle" fill="var(--fig-ink)">利潤 4,000 元</text>
+<text x="180" y="222" font-size="12" text-anchor="middle" fill="var(--fig-soft)">利潤＝銷貨收入－生產成本</text>
+</svg>

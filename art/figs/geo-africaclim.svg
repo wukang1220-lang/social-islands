@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>非洲氣候以赤道為中心呈現南北大致對稱的分布。</title>
+<defs><marker id="geo-africaclim-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<rect x="77" y="18" width="145" height="44" rx="0" fill="var(--fig-sand)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="149.5" y="35" font-size="12" text-anchor="middle" fill="var(--fig-ink)">熱帶沙漠</text>
+<text x="149.5" y="52" font-size="11" text-anchor="middle" fill="var(--fig-ink)">撒哈拉沙漠</text>
+<rect x="77" y="62" width="145" height="44" rx="0" fill="var(--fig-warm)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="149.5" y="79" font-size="12" text-anchor="middle" fill="var(--fig-ink)">熱帶莽原</text>
+<text x="149.5" y="96" font-size="11" text-anchor="middle" fill="var(--fig-ink)">夏雨冬乾・疏林高草</text>
+<rect x="77" y="106" width="145" height="44" rx="0" fill="var(--fig-land)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="149.5" y="123" font-size="12" text-anchor="middle" fill="var(--fig-ink)">熱帶雨林</text>
+<text x="149.5" y="140" font-size="11" text-anchor="middle" fill="var(--fig-ink)">全年高溫多雨</text>
+<rect x="77" y="150" width="145" height="44" rx="0" fill="var(--fig-warm)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="149.5" y="177" font-size="12" text-anchor="middle" fill="var(--fig-ink)">熱帶莽原</text>
+<rect x="77" y="194" width="145" height="44" rx="0" fill="var(--fig-sand)" stroke="var(--fig-paper)" stroke-width="1.5"/>
+<text x="149.5" y="211" font-size="12" text-anchor="middle" fill="var(--fig-ink)">熱帶沙漠</text>
+<text x="149.5" y="228" font-size="11" text-anchor="middle" fill="var(--fig-ink)">納米比沙漠</text>
+<text x="8" y="44" font-size="11" text-anchor="start" fill="var(--fig-ink)">北回歸線</text>
+<line x1="57" y1="40" x2="77" y2="40" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="8" y="132" font-size="11" text-anchor="start" fill="var(--fig-ink)">赤道</text>
+<line x1="57" y1="128" x2="77" y2="128" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<line x1="77" y1="128" x2="222" y2="128" stroke="var(--fig-soft)" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="8" y="220" font-size="11" text-anchor="start" fill="var(--fig-ink)">南回歸線</text>
+<line x1="57" y1="216" x2="77" y2="216" stroke="var(--fig-soft)" stroke-width="1.5"/>
+<text x="290" y="35" font-size="11" text-anchor="middle" fill="var(--fig-ink)">南北大致對稱</text>
+<rect x="230" y="66" width="122" height="48" rx="4" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="291" y="85" font-size="11" text-anchor="middle" fill="var(--fig-ink)">東部高原：</text>
+<text x="291" y="102" font-size="11" text-anchor="middle" fill="var(--fig-ink)">高地氣候</text>
+<rect x="230" y="126" width="122" height="48" rx="4" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="291" y="145" font-size="11" text-anchor="middle" fill="var(--fig-ink)">東南隅：</text>
+<text x="291" y="162" font-size="11" text-anchor="middle" fill="var(--fig-ink)">夏雨型暖溫帶</text>
+<rect x="230" y="186" width="122" height="48" rx="4" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="291" y="205" font-size="11" text-anchor="middle" fill="var(--fig-ink)">西南隅：</text>
+<text x="291" y="222" font-size="11" text-anchor="middle" fill="var(--fig-ink)">地中海型</text>
+<text x="348" y="266" font-size="11" text-anchor="end" fill="var(--fig-soft)">示意圖</text>
+</svg>

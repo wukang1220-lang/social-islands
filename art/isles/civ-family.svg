@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>House sheltering three people</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 87Q23 80 39 81Q57 77 72 80Q93 78 102 88Q102 95 85 97Q50 100 27 96Q16 93 18 87Z" fill="var(--fig-sand)"/><path d="M18 87Q23 80 39 81Q57 77 72 80Q93 78 102 88Q89 94 64 92Q35 95 18 87Z" fill="var(--fig-land)"/>
+<path d="M27 48L59 24L94 48V84H27Z" fill="var(--ic)"/><path d="M21 48L59 20L100 48L94 54L59 30L27 54Z" fill="var(--fig-paper)"/><circle cx="42" cy="56" r="6" fill="var(--fig-paper)"/><circle cx="76" cy="56" r="6" fill="var(--fig-paper)"/><circle cx="59" cy="64" r="5" fill="var(--fig-paper)"/><path d="M32 83V72Q32 64 42 64Q52 64 52 72V83Z" fill="var(--fig-paper)"/><path d="M66 83V72Q66 64 76 64Q86 64 86 72V83Z" fill="var(--fig-paper)"/><path d="M50 84V78Q50 71 59 71Q68 71 68 78V84Z" fill="var(--ic)"/><path d="M38 73V79M80 73V79" fill="none" stroke="var(--fig-ink)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

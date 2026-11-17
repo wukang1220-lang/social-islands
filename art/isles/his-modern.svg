@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Sailing junk meeting steam power</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 87Q23 80 39 81Q57 77 72 80Q93 78 102 88Q102 95 85 97Q50 100 27 96Q16 93 18 87Z" fill="var(--fig-sand)"/><path d="M18 87Q23 80 39 81Q57 77 72 80Q93 78 102 88Q89 94 64 92Q35 95 18 87Z" fill="var(--fig-land)"/>
+<path d="M39 63V26M63 63V30" fill="none" stroke="var(--fig-ink)"/><path d="M39 28Q23 35 25 58H39Z" fill="var(--ic)"/><path d="M42 29Q58 34 57 57H42Z" fill="var(--ic)"/><path d="M63 32Q78 38 78 56H63Z" fill="var(--fig-paper)"/><path d="M28 41H39M25 50H39M43 42H54M43 50H56M64 45H74" fill="none" stroke="var(--fig-paper)"/><path d="M21 64Q42 68 81 62L73 79H34Z" fill="var(--ic)"/><rect x="79" y="53" width="9" height="22" rx="2" fill="var(--ic)"/><path d="M77 45C69 42 75 35 80 38C84 31 94 36 91 42C101 43 96 50 87 47Z" fill="var(--fig-soft)"/><path d="M65 75H99L94 85H73Z" fill="var(--ic)"/><path d="M37 72H61" fill="none" stroke="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

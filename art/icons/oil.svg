@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<rect x="9" y="6" width="28" height="36" rx="5" fill="var(--ic)"/>
+<path d="M9 16H37V20H9ZM9 29H37V33H9Z" fill="var(--fig-soft)"/>
+<path d="M17 11H29"/>
+<path d="M36 26C34 30 30 34 30 37A6 6 0 0 0 42 37C42 34 38 30 36 26Z" fill="var(--fig-ink)"/>
+</g>
+</svg>

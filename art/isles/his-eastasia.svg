@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Dove over a cracked wall</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 86Q21 79 38 81Q51 75 67 79Q87 77 100 86Q104 92 91 95Q59 103 28 96Q14 93 18 86Z" fill="var(--fig-sand)"/><path d="M18 86Q21 79 38 81Q51 75 67 79Q87 77 100 86Q87 93 61 93Q32 94 18 86Z" fill="var(--fig-land)"/>
+<rect x="26" y="59" width="68" height="27" rx="2" fill="var(--ic)"/><path d="M26 72H51M65 72H94M43 59V71M78 73V85" fill="none" stroke="var(--fig-paper)"/><path d="M57 59L62 67L56 73L63 79L59 86H67L71 78L63 72L69 65L64 59Z" fill="var(--fig-paper)" stroke="none"/><path d="M28 41L42 44Q42 27 53 23Q52 38 62 41Q72 31 80 38L85 43L93 46L83 49Q79 62 63 61L46 56L34 60L39 50Z" fill="var(--fig-paper)"/><path d="M47 44Q55 32 66 30Q63 45 54 49Z" fill="var(--ic)"/><circle cx="78" cy="42" r="1.5" fill="var(--fig-ink)" stroke="none"/><path d="M84 52L96 58" fill="none" stroke="var(--fig-land)"/><path d="M88 54Q88 47 94 48Q97 54 88 54Z" fill="var(--fig-land)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

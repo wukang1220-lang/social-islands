@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>行政區名可來自方位、自然環境、原住民族名稱與歷史事件，也會隨政權更迭而改。</title>
+<text x="180" y="23" text-anchor="middle" font-size="14" fill="var(--fig-ink)">行政區名怎麼來？</text>
+<g stroke="var(--fig-line)" stroke-width="1.5">
+<rect x="10" y="35" width="165" height="84" rx="7" fill="var(--fig-paper)"/>
+<rect x="185" y="35" width="165" height="84" rx="7" fill="var(--fig-paper)"/>
+<rect x="10" y="128" width="165" height="101" rx="7" fill="var(--fig-paper)"/>
+<rect x="185" y="128" width="165" height="101" rx="7" fill="var(--fig-paper)"/>
+<rect x="10" y="237" width="340" height="38" rx="6" fill="var(--fig-sand)"/>
+</g>
+<g text-anchor="middle" fill="var(--fig-ink)">
+<g font-size="13" font-weight="600">
+<text x="92.5" y="55">依方位</text>
+<text x="267.5" y="55">與自然環境有關</text>
+<text x="92.5" y="147">取自原住民族名稱</text>
+<text x="267.5" y="147">與歷史事件有關</text>
+</g>
+<g font-size="12">
+<text x="92.5" y="88">臺北・臺中・臺南・臺東</text>
+<text x="267.5" y="76">桃仔園 → 桃園</text>
+<text x="267.5" y="94">洄瀾 → 花蓮・</text>
+<text x="267.5" y="111">平湖 → 澎湖</text>
+<text x="92.5" y="170">雞籠社 → 基隆・</text>
+<text x="92.5" y="190">打狗社 → 高雄</text>
+<text x="92.5" y="212">噶瑪蘭族 → 宜蘭</text>
+<text x="267.5" y="166">半線 → 彰化</text>
+<text x="267.5" y="183">（彰顯教化）</text>
+<text x="267.5" y="204">諸羅 → 嘉義</text>
+<text x="267.5" y="221">（嘉許忠義）</text>
+</g>
+<g font-size="11">
+<text x="180" y="251">隨政權更迭而改：打狗 → 高雄（日治）・</text>
+<text x="180" y="268">吉野 → 吉安（戰後）</text>
+</g>
+</g>
+</svg>

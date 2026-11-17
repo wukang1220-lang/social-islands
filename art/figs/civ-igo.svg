@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+  <title>政府間國際組織與國際非政府組織的比較及我國參與例子。</title>
+  <rect x="10" y="10" width="165" height="180" rx="6" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+  <rect x="185" y="10" width="165" height="180" rx="6" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+  <path d="M11 70 H174 M186 70 H349" fill="none" stroke="var(--fig-line)" stroke-width="1.5"/>
+  <g text-anchor="middle" fill="var(--fig-ink)">
+    <text x="92.5" y="34" font-size="13">政府間國際組織</text><text x="267.5" y="34" font-size="13">國際非政府組織</text>
+    <text x="92.5" y="55" font-size="11">主權國家簽約・官方</text><text x="267.5" y="55" font-size="11">民間・非營利・志願</text>
+  </g>
+  <g fill="var(--fig-soft)">
+    <circle cx="24" cy="95" r="2"/><circle cx="24" cy="128" r="2"/><circle cx="24" cy="161" r="2"/>
+    <circle cx="199" cy="95" r="2"/><circle cx="199" cy="128" r="2"/><circle cx="199" cy="161" r="2"/>
+  </g>
+  <g font-size="12" fill="var(--fig-ink)">
+    <text x="35" y="99">聯合國</text><text x="35" y="132">世界貿易組織</text><text x="35" y="165">亞太經濟合作會議</text>
+    <text x="210" y="99">國際特赦組織</text><text x="210" y="132">國際反地雷組織</text><text x="210" y="165">無國界醫生</text>
+  </g>
+  <rect x="10" y="204" width="340" height="66" rx="6" fill="var(--fig-cool)"/>
+  <text x="23" y="223" font-size="13" fill="var(--fig-ink)">我國的參與</text>
+  <text x="23" y="243" font-size="12" fill="var(--fig-ink)">1991 以「中華臺北」參與 APEC</text>
+  <text x="23" y="261" font-size="12" fill="var(--fig-ink)">2002 以「臺澎金馬個別關稅領域」加入 WTO</text>
+</svg>

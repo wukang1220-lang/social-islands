@@ -1,0 +1,4 @@
+# build.py 和內容檔都用 LF 換行；在 Windows 取出時也保持 LF
+* text=auto eol=lf
+*.png binary
+*.jpg binary

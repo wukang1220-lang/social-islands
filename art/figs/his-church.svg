@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>基督教經歷分裂與宗教改革形成不同教派。</title>
+<defs><marker id="his-church-arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L6 3.5 L0 7" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<rect x="111" y="5" width="138" height="29" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="25" font-size="13" text-anchor="middle" fill="var(--fig-ink)">基督教（1 世紀）</text>
+<path d="M180 34 L180 40" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="180" y="54" font-size="12" text-anchor="middle" fill="var(--fig-ink)">11 世紀第一次分裂</text>
+<path d="M180 60 H90 V69 M180 60 H270 V69" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="8" y="69" width="164" height="53" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="188" y="69" width="164" height="62" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="90" y="87" font-size="12" text-anchor="middle" fill="var(--fig-ink)">羅馬公教（天主教）</text>
+<text x="90" y="108" font-size="11" text-anchor="middle" fill="var(--fig-ink)">羅馬・政教分離・教宗</text>
+<text x="270" y="87" font-size="12" text-anchor="middle" fill="var(--fig-ink)">希臘正教（東正教）</text>
+<text x="270" y="106" font-size="11" text-anchor="middle" fill="var(--fig-ink)">君士坦丁堡・政教合一・</text>
+<text x="270" y="122" font-size="11" text-anchor="middle" fill="var(--fig-ink)">拜占庭皇帝</text>
+<path d="M90 122 L90 129" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="94" y="145" font-size="12" text-anchor="middle" fill="var(--fig-ink)">16 世紀宗教改革</text>
+<path d="M90 150 V154 H61 V160 M90 154 H251 V160" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="16" y="160" width="90" height="28" rx="7" fill="var(--fig-paper)" stroke="var(--ic)" stroke-width="1.5"/>
+<text x="61" y="179" font-size="13" text-anchor="middle" fill="var(--fig-ink)">新教</text>
+<rect x="151" y="160" width="194" height="28" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="248" y="179" font-size="12" text-anchor="middle" fill="var(--fig-ink)">舊教改革：耶穌會</text>
+<path d="M61 188 V204 H300 M61 204 V224 M180 204 V224 M300 204 V224" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="8" y="224" width="104" height="31" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="60" y="244" font-size="12" text-anchor="middle" fill="var(--fig-ink)">路德教派</text>
+<rect x="128" y="224" width="104" height="31" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="244" font-size="12" text-anchor="middle" fill="var(--fig-ink)">喀爾文教派</text>
+<rect x="248" y="224" width="104" height="31" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="300" y="244" font-size="12" text-anchor="middle" fill="var(--fig-ink)">英國國教派</text>
+</svg>

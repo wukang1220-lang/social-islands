@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>新文化運動透過刊物、大學、白話文與新思想傳播。</title>
+<defs><marker id="his-newculture-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<rect x="8" y="10" width="164" height="80" rx="4" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="188" y="10" width="164" height="80" rx="4" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="8" y="169" width="164" height="80" rx="4" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="188" y="169" width="164" height="80" rx="4" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<path d="M90 90L130 108M270 90L230 108M130 152L90 169M230 152L270 169" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="110" y="108" width="140" height="44" rx="4" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="126" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">新文化運動</text>
+<text x="180" y="144" font-size="12" text-anchor="middle" fill="var(--fig-ink)">民國 4 年起</text>
+<text x="90" y="33" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">刊物</text>
+<text x="90" y="63" font-size="12" text-anchor="middle" fill="var(--fig-ink)">《新青年》陳獨秀</text>
+<text x="270" y="33" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">重鎮</text>
+<text x="270" y="63" font-size="12" text-anchor="middle" fill="var(--fig-ink)">北京大學・蔡元培</text>
+<text x="90" y="190" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">白話文</text>
+<text x="90" y="213" font-size="12" text-anchor="middle" fill="var(--fig-ink)">胡適・魯迅</text>
+<text x="90" y="234" font-size="12" text-anchor="middle" fill="var(--fig-ink)">〈狂人日記〉</text>
+<text x="270" y="190" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">思想</text>
+<text x="270" y="213" font-size="12" text-anchor="middle" fill="var(--fig-ink)">民主（德先生）・</text>
+<text x="270" y="234" font-size="12" text-anchor="middle" fill="var(--fig-ink)">科學（賽先生）</text>
+<rect x="22" y="258" width="316" height="21" rx="4" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="273" font-size="11" text-anchor="middle" fill="var(--fig-ink)">共產主義傳入 → 民國 10 年中共成立</text>
+</svg>

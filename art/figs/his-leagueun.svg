@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 238" role="img">
+  <title>國際聯盟與聯合國在成立、倡議者、美國參與及制裁侵略方面的比較。</title>
+  <rect x="12" y="14" width="336" height="210" rx="6" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+  <path d="M84 15 H216 V54 H84 Z" fill="var(--fig-cool)"/>
+  <path d="M216 15 H347 V54 H216 Z" fill="var(--fig-land)"/>
+  <g fill="none" stroke="var(--fig-line)" stroke-width="1.5">
+    <path d="M84 14 V224 M216 14 V224 M12 54 H348 M12 90 H348 M12 126 H348 M12 162 H348"/>
+  </g>
+  <g text-anchor="middle" fill="var(--fig-ink)">
+    <text x="150" y="39" font-size="14">國際聯盟</text><text x="282" y="39" font-size="14">聯合國</text>
+    <g font-size="12">
+      <text x="48" y="77">成立</text><text x="150" y="77">1920 年</text><text x="282" y="77">1945 年</text>
+      <text x="48" y="113">倡議者</text><text x="150" y="113">威爾遜</text><text x="282" y="113">羅斯福</text>
+      <text x="48" y="149">美國</text><text x="150" y="149">拒絕加入</text><text x="282" y="149">主導運作</text>
+      <text x="48" y="198">制裁侵略</text><text x="150" y="198">缺乏武力</text>
+      <text x="282" y="189">可要求會員國</text><text x="282" y="207">提供武力</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>民法規範身分與財產關係且買賣契約由雙方意思表示一致成立。</title>
+<defs><marker id="civ-contract-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<rect x="144" y="9" width="72" height="31" rx="5" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="30" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">民法</text>
+<path d="M180 40V49H90V60" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-contract-arr)"/>
+<path d="M180 49H270V60" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-contract-arr)"/>
+<rect x="12" y="64" width="156" height="58" rx="5" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="90" y="85" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">身分關係</text>
+<text x="90" y="108" font-size="12" text-anchor="middle" fill="var(--fig-ink)">親屬・繼承</text>
+<rect x="192" y="64" width="156" height="58" rx="5" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="270" y="85" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">財產關係</text>
+<text x="270" y="108" font-size="12" text-anchor="middle" fill="var(--fig-ink)">買賣・租賃・借貸</text>
+<rect x="22" y="153" width="69" height="66" rx="5" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="56.5" y="191" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">買方</text>
+<rect x="269" y="153" width="69" height="66" rx="5" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="303.5" y="191" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">賣方</text>
+<text x="180" y="157" font-size="12" text-anchor="middle" fill="var(--fig-ink)">價金</text>
+<path d="M103 169H257" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-contract-arr)"/>
+<text x="180" y="198" font-size="12" text-anchor="middle" fill="var(--fig-ink)">商品</text>
+<path d="M257 209H103" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-contract-arr)"/>
+<text x="180" y="245" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">意思表示一致 → 契約成立</text>
+<text x="180" y="267" font-size="12" text-anchor="middle" fill="var(--fig-soft)">履行完畢 → 債的關係消滅</text>
+</svg>

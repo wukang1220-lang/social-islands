@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" role="img">
+<title>其他條件不變時價格與消費數量反向變動而與生產數量同向變動。</title>
+<defs><marker id="civ-demandsupply-arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L6 3.5 L0 7" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<text x="93" y="24" font-size="14" text-anchor="middle" fill="var(--fig-ink)">消費者</text>
+<text x="273" y="24" font-size="14" text-anchor="middle" fill="var(--fig-ink)">生產者</text>
+<path d="M180 12 L180 231" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="32" y="47" font-size="12" text-anchor="middle" fill="var(--fig-ink)">價格</text>
+<text x="211" y="47" font-size="12" text-anchor="middle" fill="var(--fig-ink)">價格</text>
+<path d="M32 64 V207 H160" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-demandsupply-arr)"/>
+<path d="M32 207 L32 62" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-demandsupply-arr)"/>
+<path d="M211 64 V207 H339" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-demandsupply-arr)"/>
+<path d="M211 207 L211 62" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-demandsupply-arr)"/>
+<text x="147" y="226" font-size="12" text-anchor="middle" fill="var(--fig-ink)">數量</text>
+<text x="326" y="226" font-size="12" text-anchor="middle" fill="var(--fig-ink)">數量</text>
+<path d="M52 89 L139 178" fill="none" stroke="var(--ic)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M230 178 L317 89" fill="none" stroke="var(--ic)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="95" y="68" font-size="11" text-anchor="middle" fill="var(--fig-ink)">價格高 → 少買</text>
+<text x="100" y="194" font-size="11" text-anchor="middle" fill="var(--fig-ink)">價格低 → 多買</text>
+<text x="279" y="68" font-size="11" text-anchor="middle" fill="var(--fig-ink)">價格高 → 多生產</text>
+<text x="279" y="194" font-size="11" text-anchor="middle" fill="var(--fig-ink)">價格低 → 少生產</text>
+<text x="180" y="251" font-size="11" text-anchor="middle" fill="var(--fig-soft)">其他條件不變時</text>
+</svg>

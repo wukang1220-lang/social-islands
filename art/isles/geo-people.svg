@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Three people and rice sprouts</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M17 88Q20 82 35 82Q52 76 68 80Q91 77 101 87Q106 94 85 97Q61 100 38 97Q19 98 17 88Z" fill="var(--fig-sand)"/><path d="M17 88Q20 82 35 82Q52 76 68 80Q91 77 101 87Q89 93 61 93Q32 94 17 88Z" fill="var(--fig-land)"/>
+<circle cx="34" cy="37" r="8" fill="var(--fig-paper)"/><circle cx="56" cy="31" r="9" fill="var(--fig-paper)"/><circle cx="76" cy="40" r="7" fill="var(--fig-paper)"/><path d="M23 77V59Q23 49 34 49Q45 49 45 59V77Z" fill="var(--ic)"/><path d="M43 80V55Q43 44 56 44Q69 44 69 55V80Z" fill="var(--ic)"/><path d="M68 78V61Q68 51 76 51Q85 51 85 61V78Z" fill="var(--ic)"/><path d="M31 57V68M53 53V69M76 59V69" fill="none" stroke="var(--fig-paper)"/><path d="M91 85V64M91 75Q79 76 81 67Q89 67 91 75M91 69Q101 69 100 61Q92 61 91 69" fill="none" stroke="var(--fig-land)"/><path d="M42 81V85M61 81V85" fill="none" stroke="var(--fig-ink)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

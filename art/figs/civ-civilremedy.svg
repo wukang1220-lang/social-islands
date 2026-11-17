@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 272" role="img">
+<title>訴訟外和解、調解與民事訴訟的協助者、效力與特色各有不同。</title>
+<defs><marker id="civ-civilremedy-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<rect x="10" y="12" width="340" height="201" rx="0" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="10" y="12" width="340" height="33" rx="0" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<path d="M54 12V213" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M152 12V213" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250 12V213" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 45H350" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 91H350" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 155H350" fill="none" stroke="var(--fig-line)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="103" y="34" font-size="12" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">訴訟外和解</text>
+<text x="201" y="34" font-size="12" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">調解</text>
+<text x="300" y="34" font-size="12" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">民事訴訟</text>
+<text x="32" y="73" font-size="11.5" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">誰協助</text>
+<text x="32" y="127" font-size="11.5" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">效力</text>
+<text x="32" y="188" font-size="11.5" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">特色</text>
+<text x="103" y="73" font-size="12" text-anchor="middle" fill="var(--fig-ink)">雙方自己</text>
+<text x="201" y="63" font-size="12" text-anchor="middle" fill="var(--fig-ink)">公所調解</text>
+<text x="201" y="81" font-size="12" text-anchor="middle" fill="var(--fig-ink)">委員會</text>
+<text x="300" y="73" font-size="12" text-anchor="middle" fill="var(--fig-ink)">法院法官</text>
+<text x="103" y="116" font-size="12" text-anchor="middle" fill="var(--fig-ink)">契約，</text>
+<text x="103" y="136" font-size="12" text-anchor="middle" fill="var(--fig-ink)">無強制執行力</text>
+<text x="201" y="116" font-size="12" text-anchor="middle" fill="var(--fig-ink)">法院核定後</text>
+<text x="201" y="136" font-size="12" text-anchor="middle" fill="var(--fig-ink)">等同判決</text>
+<text x="300" y="116" font-size="12" text-anchor="middle" fill="var(--fig-ink)">判決可</text>
+<text x="300" y="136" font-size="12" text-anchor="middle" fill="var(--fig-ink)">強制執行</text>
+<text x="103" y="188" font-size="12" text-anchor="middle" fill="var(--fig-ink)">最簡便</text>
+<text x="201" y="177" font-size="12" text-anchor="middle" fill="var(--fig-ink)">免費・</text>
+<text x="201" y="197" font-size="12" text-anchor="middle" fill="var(--fig-ink)">不成仍可起訴</text>
+<text x="300" y="177" font-size="12" text-anchor="middle" fill="var(--fig-ink)">當事人舉證・</text>
+<text x="300" y="197" font-size="12" text-anchor="middle" fill="var(--fig-ink)">耗時</text>
+<text x="180" y="239" font-size="12" text-anchor="middle" fill="var(--fig-soft)">訴訟上和解：在法官面前達成，</text>
+<text x="180" y="259" font-size="12" text-anchor="middle" fill="var(--fig-soft)">效力等同判決</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Balance scale and speech bubble</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 86Q21 79 38 81Q51 75 67 79Q87 77 100 86Q104 92 91 95Q59 103 28 96Q14 93 18 86Z" fill="var(--fig-sand)"/><path d="M18 86Q21 79 38 81Q51 75 67 79Q87 77 100 86Q87 93 61 93Q32 94 18 86Z" fill="var(--fig-land)"/>
+<path d="M62 25H91Q98 25 98 32V44Q98 51 91 51H79L70 58V51H62Q56 51 56 44V32Q56 25 62 25Z" fill="var(--fig-paper)"/><path d="M66 35H87M66 42H80" fill="none" stroke="var(--fig-line)"/><rect x="50" y="39" width="7" height="43" rx="2" fill="var(--ic)"/><path d="M38 83H70L74 87H34Z" fill="var(--ic)"/><path d="M25 48L82 42M31 48L21 67M31 48L41 67M77 44L67 64M77 44L87 64" fill="none" stroke="var(--fig-ink)"/><path d="M18 67H44Q40 78 31 78Q22 78 18 67Z" fill="var(--ic)"/><path d="M64 64H90Q86 75 77 75Q68 75 64 64Z" fill="var(--ic)"/><circle cx="54" cy="45" r="4" fill="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

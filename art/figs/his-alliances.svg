@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>三國同盟與三國協約對峙，塞拉耶佛事件引發大戰，直到一九一八年停戰。</title>
+<defs><marker id="his-alliances-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L5 3L0 6" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<text x="180" y="23" text-anchor="middle" font-size="13" fill="var(--fig-ink)">第一次世界大戰前的兩大陣營</text>
+<rect x="12" y="39" width="162" height="61" rx="7" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="186" y="39" width="162" height="61" rx="7" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<g fill="var(--fig-ink)" text-anchor="middle" font-size="13"><text x="93" y="61" font-weight="600">三國同盟</text><text x="267" y="61" font-weight="600">三國協約</text><text x="93" y="84">德・奧・義</text><text x="267" y="84">英・法・俄</text></g>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#his-alliances-arr)"><path d="M93 100V118H156L164 127"/><path d="M267 100V118H204L196 127"/></g>
+<path d="M176 107L179 115L185 110L182 118L189 121M171 117L177 120L173 125" fill="none" stroke="var(--ic)" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="59" y="131" width="242" height="51" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<g fill="var(--fig-ink)" text-anchor="middle" font-size="13"><text x="180" y="151">巴爾幹半島：歐洲火藥庫</text><text x="180" y="172">1914 塞拉耶佛事件</text></g>
+<path d="M25 211H338" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#his-alliances-arr)"/>
+<path d="M38 207V218M180 207V218M322 207V218" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/>
+<g fill="var(--fig-ink)" text-anchor="middle" font-size="12"><text x="38" y="234">1914</text><text x="38" y="253">大戰爆發</text><text x="180" y="234">1917</text><text x="180" y="253">美國參戰・</text><text x="180" y="270">俄國革命</text><text x="322" y="234">1918</text><text x="322" y="253">停戰</text></g>
+</svg>

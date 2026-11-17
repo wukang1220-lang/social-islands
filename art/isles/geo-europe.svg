@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Windmill before alpine peaks</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M17 88Q20 82 35 82Q52 76 68 80Q91 77 101 87Q106 94 85 97Q61 100 38 97Q19 98 17 88Z" fill="var(--fig-sand)"/><path d="M17 88Q20 82 35 82Q52 76 68 80Q91 77 101 87Q89 93 61 93Q32 94 17 88Z" fill="var(--fig-land)"/>
+<path d="M21 77L42 34L64 77Z" fill="var(--fig-cool)"/><path d="M58 77L80 29L99 77Z" fill="var(--fig-cool)"/><path d="M34 50L42 34L51 52L43 48Z" fill="var(--fig-paper)"/><path d="M72 47L80 29L88 49L79 44Z" fill="var(--fig-paper)"/><path d="M44 84L49 47H68L74 84Z" fill="var(--ic)"/><path d="M44 47L58 33L73 47Z" fill="var(--ic)"/><path d="M55 51L31 40L27 49L52 58ZM62 59L86 70L90 61L65 52ZM54 58L43 80L51 84L62 61ZM63 51L74 29L66 25L55 48Z" fill="var(--fig-paper)"/><circle cx="59" cy="55" r="5" fill="var(--ic)"/><rect x="55" y="72" width="9" height="12" rx="4" fill="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

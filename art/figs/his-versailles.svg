@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>巴黎和會的凡爾賽條約、民族自決與國際聯盟影響戰後局勢。</title>
+<defs><marker id="his-versailles-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L5 3L0 6" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#his-versailles-arr)"><path d="M140 47V59H91V71"/><path d="M220 47V59H269V71"/><path d="M180 47V218"/><path d="M91 143V159"/><path d="M269 143V159"/></g>
+<rect x="100" y="12" width="160" height="35" rx="7" fill="var(--fig-paper)" stroke="var(--ic)" stroke-width="1.5"/>
+<g stroke="var(--fig-line)" stroke-width="1.5">
+<rect x="10" y="75" width="162" height="68" rx="7" fill="var(--fig-sand)"/><rect x="188" y="75" width="162" height="68" rx="7" fill="var(--fig-cool)"/>
+<rect x="10" y="163" width="162" height="32" rx="6" fill="var(--fig-paper)"/><rect x="188" y="163" width="162" height="32" rx="6" fill="var(--fig-paper)"/>
+<rect x="22" y="222" width="316" height="49" rx="7" fill="var(--fig-paper)"/>
+</g>
+<g fill="var(--fig-ink)" text-anchor="middle">
+<g font-size="13"><text x="180" y="34">巴黎和會（1919）</text><text x="91" y="99">《凡爾賽條約》</text><text x="269" y="95">十四點原則</text><text x="269" y="113">（威爾遜）</text><text x="180" y="242">國際聯盟（1920）</text></g>
+<g font-size="12"><text x="91" y="128">割地・賠款・裁軍</text><text x="269" y="134">民族自決</text><text x="91" y="184">埋下二戰禍因</text><text x="269" y="184">東歐出現新興國家</text><text x="180" y="261">缺乏武力・美國未加入 → 名存實亡</text></g>
+</g>
+</svg>

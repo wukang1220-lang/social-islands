@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Blank signpost and rice bowl</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M19 86Q27 79 44 81Q63 75 79 81Q96 80 101 88Q105 94 84 97Q56 101 32 96Q17 94 19 86Z" fill="var(--fig-sand)"/><path d="M19 86Q27 79 44 81Q63 75 79 81Q96 80 101 88Q85 94 61 93Q32 94 19 86Z" fill="var(--fig-land)"/>
+<rect x="42" y="25" width="7" height="59" rx="1" fill="var(--ic)"/><path d="M25 30H67L75 39L67 48H25Z" fill="var(--ic)"/><path d="M25 54H60L67 62L60 70H25L18 62Z" fill="var(--fig-paper)"/><path d="M33 38H55" fill="none" stroke="var(--fig-paper)"/><path d="M31 62H49" fill="none" stroke="var(--fig-line)"/><path d="M61 68Q63 55 73 58Q80 48 87 60Q99 58 100 70Z" fill="var(--fig-paper)"/><path d="M57 70H102Q99 87 81 88Q62 88 57 70Z" fill="var(--ic)"/><path d="M68 76Q78 82 90 77" fill="none" stroke="var(--fig-paper)"/><rect x="73" y="87" width="16" height="4" rx="1" fill="var(--ic)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

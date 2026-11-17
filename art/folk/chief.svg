@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M16 89V72Q16 56 34 55H58Q77 57 79 74L80 89Z" fill="var(--ic)"/>
+<path d="M39 55L46 62L53 55L55 89H37Z" fill="var(--fig-paper)"/>
+<path d="M34 56L30 65L37 70M58 56L62 65L55 70M46 63V89"/>
+<circle cx="28" cy="73" r="5" fill="var(--fig-warm)"/>
+<circle cx="44" cy="33" r="21" fill="var(--fig-sand)"/>
+<path d="M23 33C18 20 25 12 35 13Q44 7 52 13C65 12 70 25 64 34L59 28L59 22Q53 25 48 20Q40 25 34 21L29 25V31Z" fill="var(--fig-soft)"/>
+<path d="M32 29L38 28M50 28L56 29" stroke="var(--fig-soft)"/>
+<g fill="var(--fig-ink)" stroke="none">
+<circle cx="36" cy="34" r="2"/><circle cx="52" cy="34" r="2"/>
+</g>
+<g fill="var(--fig-warm)" fill-opacity=".5" stroke="none">
+<circle cx="30" cy="42" r="3.5"/><circle cx="58" cy="42" r="3.5"/>
+</g>
+<path d="M38 44Q44 51 50 44"/>
+<path d="M23 85Q23 77 30 78H35Q40 81 35 86H28" fill="var(--fig-sand)"/>
+<path d="M64 63L67 78H74L70 61Z" fill="var(--ic)"/>
+<path d="M59 57L85 46V71L59 63Z" fill="var(--fig-paper)"/>
+<rect x="56" y="56" width="9" height="9" rx="3" fill="var(--ic)"/>
+<ellipse cx="85" cy="58.5" rx="4" ry="12.5" fill="var(--ic)"/>
+<path d="M67 72Q72 68 76 73L77 79Q74 85 69 81L65 78" fill="var(--fig-sand)"/>
+</g>
+</svg>

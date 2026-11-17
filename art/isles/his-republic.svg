@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Open book and paper lantern</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M19 86Q27 79 44 81Q63 75 79 81Q96 80 101 88Q105 94 84 97Q56 101 32 96Q17 94 19 86Z" fill="var(--fig-sand)"/><path d="M19 86Q27 79 44 81Q63 75 79 81Q96 80 101 88Q85 94 61 93Q32 94 19 86Z" fill="var(--fig-land)"/>
+<path d="M23 52Q42 45 59 55Q76 45 96 52V82Q77 75 59 86Q42 75 23 82Z" fill="var(--ic)"/><path d="M28 47Q43 42 59 51Q75 42 91 47V76Q76 71 59 81Q44 71 28 76Z" fill="var(--fig-paper)"/><path d="M59 52V80M35 57Q44 55 51 59M35 66Q43 64 51 68M67 59Q75 55 84 57" fill="none" stroke="var(--fig-line)"/><path d="M75 20V26M75 48V55" fill="none" stroke="var(--fig-ink)"/><rect x="68" y="24" width="14" height="5" rx="1" fill="var(--ic)"/><ellipse cx="75" cy="38" rx="14" ry="12" fill="var(--ic)"/><path d="M71 29Q66 38 71 47M79 29Q84 38 79 47" fill="none" stroke="var(--fig-paper)"/><rect x="69" y="48" width="12" height="4" rx="1" fill="var(--ic)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M10 21H38V42H10Z" fill="var(--ic)"/>
+<path d="M5.5 22L24 6L42.5 22Z" fill="var(--fig-sand)"/>
+<path d="M17 42V28H25V42" fill="var(--fig-paper)"/>
+<rect x="29" y="28" width="6" height="7" rx="1" fill="var(--fig-paper)"/>
+</g>
+</svg>

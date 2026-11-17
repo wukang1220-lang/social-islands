@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img">
+<title>金錢與非金錢誘因可依提高利益或提高損害分成正向與負向誘因。</title>
+<defs><marker id="civ-incentive-arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L6 3.5 L0 7" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<text x="125" y="24" font-size="13" text-anchor="middle" fill="var(--fig-ink)">正向誘因</text>
+<text x="125" y="43" font-size="12" text-anchor="middle" fill="var(--fig-ink)">（提高利益）</text>
+<text x="275" y="24" font-size="13" text-anchor="middle" fill="var(--fig-ink)">負向誘因</text>
+<text x="275" y="43" font-size="12" text-anchor="middle" fill="var(--fig-ink)">（提高損害）</text>
+<rect x="50" y="62" width="150" height="68" rx="0" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="200" y="62" width="150" height="68" rx="0" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="50" y="130" width="150" height="68" rx="0" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="200" y="130" width="150" height="68" rx="0" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="26" y="102" font-size="12" text-anchor="middle" fill="var(--fig-ink)">金錢</text>
+<text x="26" y="170" font-size="12" text-anchor="middle" fill="var(--fig-ink)">非金錢</text>
+<text x="125" y="102" font-size="12" text-anchor="middle" fill="var(--fig-ink)">做家事給零用錢</text>
+<text x="275" y="94" font-size="12" text-anchor="middle" fill="var(--fig-ink)">功課沒寫好</text>
+<text x="275" y="113" font-size="12" text-anchor="middle" fill="var(--fig-ink)">扣零用錢</text>
+<text x="125" y="159" font-size="12" text-anchor="middle" fill="var(--fig-ink)">主動回答，</text>
+<text x="125" y="178" font-size="12" text-anchor="middle" fill="var(--fig-ink)">平時成績加分</text>
+<text x="275" y="170" font-size="12" text-anchor="middle" fill="var(--fig-ink)">上課吵鬧，記點</text>
+</svg>

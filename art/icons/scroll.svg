@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<g fill="var(--ic)" stroke="var(--fig-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 7H36Q42 7 42 13V17H33V34Q33 41 26 41H12Z"/>
+<path d="M36 7Q31 7 31 13V17H42V13Q42 7 36 7Z" fill="var(--fig-paper)"/>
+<path d="M12 7Q6 7 6 13V17H17V13Q17 7 12 7Z" fill="var(--fig-sand)"/>
+<path d="M6 34H21V36Q21 41 26 41H12Q6 41 6 36Z" fill="var(--fig-paper)"/>
+<path d="M19 21H27M16 27H27" fill="none"/>
+</g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<title>Folded map and compass</title>
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="60" cy="100" rx="47" ry="8" fill="var(--fig-sea)" stroke="none"/><path d="M18 86Q21 79 38 81Q51 75 67 79Q87 77 100 86Q104 92 91 95Q59 103 28 96Q14 93 18 86Z" fill="var(--fig-sand)"/><path d="M18 86Q21 79 38 81Q51 75 67 79Q87 77 100 86Q87 93 61 93Q32 94 18 86Z" fill="var(--fig-land)"/>
+<path d="M27 32L47 26L68 33L88 27V78L68 84L47 77L27 83Z" fill="var(--ic)"/><path d="M47 26L68 33V84L47 77Z" fill="var(--fig-paper)"/><path d="M47 26V77M68 33V84M28 49L47 43L68 50L87 44M28 65L47 59L68 66L87 60" fill="none" stroke="var(--fig-line)"/><path d="M37 29V80M78 30V80" fill="none" stroke="var(--fig-line)"/><circle cx="84" cy="72" r="13" fill="var(--fig-paper)"/><path d="M84 61L87 69L94 72L87 75L84 83L81 75L74 72L81 69Z" fill="var(--ic)"/><path d="M84 61V72H74L81 69Z" fill="var(--fig-paper)"/>
+<path d="M12 103Q20 107 28 103M92 103Q100 107 108 103M35 109Q43 113 51 109Q59 105 67 109Q75 113 83 109" fill="none" stroke="var(--fig-deep)"/>
+</g>
+</svg>

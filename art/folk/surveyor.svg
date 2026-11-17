@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+<g fill="none" stroke="var(--fig-ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M19 89V71Q19 56 36 55H60Q77 56 77 71V89Z" fill="var(--ic)"/>
+<path d="M41 55H55L53 89H43Z" fill="var(--fig-paper)"/>
+<path d="M36 56L41 66L34 70M60 56L55 66L62 70"/>
+<rect x="31" y="73" width="9" height="9" rx="2"/>
+<rect x="56" y="73" width="9" height="9" rx="2"/>
+<circle cx="48" cy="36" r="20" fill="var(--fig-sand)"/>
+<path d="M25 23L31 10Q48 6 65 10L71 23" fill="var(--fig-sand)"/>
+<path d="M29 17Q48 20 67 17L71 23H25Z" fill="var(--ic)"/>
+<ellipse cx="48" cy="25" rx="37" ry="5" fill="var(--fig-sand)"/>
+<g fill="var(--fig-ink)" stroke="none">
+<circle cx="40" cy="37" r="2"/><circle cx="56" cy="37" r="2"/>
+</g>
+<g fill="var(--fig-warm)" fill-opacity=".5" stroke="none">
+<circle cx="35" cy="44" r="3.5"/><circle cx="61" cy="44" r="3.5"/>
+</g>
+<path d="M42 46Q48 52 54 46"/>
+<path d="M9 58V83C9 88 24 88 24 83V58Z" fill="var(--fig-sand)"/>
+<ellipse cx="16.5" cy="58" rx="7.5" ry="4" fill="var(--fig-paper)"/>
+<path d="M13 70L19 66V77L14 80"/>
+<path d="M24 69C31 65 34 74 28 78L23 78Q18 74 24 69Z" fill="var(--fig-sand)"/>
+<path d="M65 75Q60 80 66 84Q73 87 77 79" fill="var(--fig-sand)"/>
+<circle cx="76" cy="68" r="11" fill="var(--fig-paper)"/>
+<path d="M80 62L77 72L72 75L75 65Z" fill="var(--ic)"/>
+</g>
+</svg>

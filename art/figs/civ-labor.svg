@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>勞動可分有酬與無酬而勞動力包含就業者與失業者。</title>
+<defs><marker id="civ-labor-arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L6 3.5 L0 7" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<rect x="136" y="5" width="88" height="29" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="25" font-size="14" text-anchor="middle" fill="var(--fig-ink)">勞動</text>
+<path d="M180 34 V42 H90 V51 M180 42 H270 V51" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="8" y="51" width="164" height="42" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="188" y="51" width="164" height="42" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="90" y="68" font-size="13" text-anchor="middle" fill="var(--fig-ink)">有酬勞動</text>
+<text x="90" y="85" font-size="12" text-anchor="middle" fill="var(--fig-ink)">（市場勞動）</text>
+<text x="270" y="68" font-size="13" text-anchor="middle" fill="var(--fig-ink)">無酬勞動</text>
+<text x="270" y="85" font-size="12" text-anchor="middle" fill="var(--fig-ink)">（非市場勞動）</text>
+<path d="M90 93 V102 H17 V150 M17 121 H24 M17 149 H24" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M270 93 V102 H197 V150 M197 121 H204 M197 149 H204" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="28" y="125" font-size="12" text-anchor="start" fill="var(--fig-ink)">雇主：獲取利潤</text>
+<text x="28" y="153" font-size="12" text-anchor="start" fill="var(--fig-ink)">受僱者：賺取薪資</text>
+<text x="210" y="125" font-size="12" text-anchor="start" fill="var(--fig-ink)">家務勞動</text>
+<text x="210" y="153" font-size="12" text-anchor="start" fill="var(--fig-ink)">志工服務</text>
+<rect x="8" y="181" width="344" height="91" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="200" font-size="14" text-anchor="middle" fill="var(--fig-ink)">勞動力</text>
+<text x="180" y="220" font-size="12" text-anchor="middle" fill="var(--fig-ink)">年滿 15 歲・有能力・有意願工作</text>
+<path d="M180 224 V231 H95 V239 M180 231 H265 V239" fill="none" stroke="var(--fig-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="20" y="240" width="150" height="24" rx="7" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="190" y="240" width="150" height="24" rx="7" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="95" y="257" font-size="11" text-anchor="middle" fill="var(--fig-ink)">就業者：有工作</text>
+<text x="265" y="257" font-size="11" text-anchor="middle" fill="var(--fig-ink)">失業者：正在找工作</text>
+</svg>

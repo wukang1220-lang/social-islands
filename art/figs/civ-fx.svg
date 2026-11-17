@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 242" role="img">
+<title>美元兌新臺幣匯率變動影響進口商品價格與進出口利益。</title>
+<defs><marker id="civ-fx-arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L6 3.5 L0 7" fill="none" stroke="var(--fig-ink)" stroke-width="1.5"/></marker></defs>
+<text x="180" y="22" font-size="14" text-anchor="middle" fill="var(--fig-ink)">匯率變動（美元：新臺幣）</text>
+<rect x="140" y="40" width="80" height="33" rx="7" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="62" font-size="14" text-anchor="middle" fill="var(--fig-ink)">1：30</text>
+<path d="M139 56 H109 Q90 56 90 90" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-fx-arr)"/>
+<path d="M221 56 H251 Q270 56 270 90" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#civ-fx-arr)"/>
+<rect x="8" y="94" width="164" height="136" rx="7" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<rect x="188" y="94" width="164" height="136" rx="7" fill="var(--fig-warm)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="90" y="116" font-size="14" text-anchor="middle" fill="var(--fig-ink)">1：28</text>
+<text x="270" y="116" font-size="14" text-anchor="middle" fill="var(--fig-ink)">1：32</text>
+<text x="90" y="140" font-size="13" text-anchor="middle" fill="var(--fig-ink)">新臺幣升值</text>
+<text x="270" y="140" font-size="13" text-anchor="middle" fill="var(--fig-ink)">新臺幣貶值</text>
+<text x="90" y="164" font-size="12" text-anchor="middle" fill="var(--fig-ink)">1,000 美元商品</text>
+<text x="90" y="183" font-size="12" text-anchor="middle" fill="var(--fig-ink)">＝28,000 元</text>
+<text x="270" y="164" font-size="12" text-anchor="middle" fill="var(--fig-ink)">1,000 美元商品</text>
+<text x="270" y="183" font-size="12" text-anchor="middle" fill="var(--fig-ink)">＝32,000 元</text>
+<text x="90" y="212" font-size="11" text-anchor="middle" fill="var(--fig-ink)">有利進口・出國旅遊</text>
+<text x="270" y="212" font-size="11" text-anchor="middle" fill="var(--fig-ink)">有利出口</text>
+</svg>

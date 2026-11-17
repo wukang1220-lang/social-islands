@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img">
+<title>《建國大綱》以軍政、訓政與憲政三個時期逐步建國並推動十年建設。</title>
+<defs><marker id="his-3stages-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="var(--fig-ink)"/></marker></defs>
+<text x="180" y="24" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">《建國大綱》三時期</text>
+<rect x="12" y="100" width="108" height="80" rx="0" fill="var(--fig-land)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="66" y="125" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">軍政</text>
+<text x="66" y="149" font-size="12" text-anchor="middle" fill="var(--fig-ink)">北伐統一全國</text>
+<rect x="126" y="70" width="108" height="110" rx="0" fill="var(--fig-sand)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="95" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">訓政</text>
+<text x="180" y="119" font-size="12" text-anchor="middle" fill="var(--fig-ink)">訓政時期約法・</text>
+<text x="180" y="138" font-size="12" text-anchor="middle" fill="var(--fig-ink)">以黨領政</text>
+<rect x="240" y="40" width="108" height="140" rx="0" fill="var(--fig-cool)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="294" y="65" font-size="14" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">憲政</text>
+<text x="294" y="89" font-size="12" text-anchor="middle" fill="var(--fig-ink)">民國 36 年</text>
+<text x="294" y="108" font-size="12" text-anchor="middle" fill="var(--fig-ink)">施行憲法</text>
+<path d="M15 180H348" fill="none" stroke="var(--fig-ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="12" y="195" width="336" height="77" rx="5" fill="var(--fig-paper)" stroke="var(--fig-line)" stroke-width="1.5"/>
+<text x="180" y="217" font-size="13" text-anchor="middle" fill="var(--fig-ink)" font-weight="600">十年建設（民國 17～26 年）</text>
+<text x="180" y="240" font-size="12" text-anchor="middle" fill="var(--fig-ink)">收回關稅自主權・發行法幣・</text>
+<text x="180" y="259" font-size="12" text-anchor="middle" fill="var(--fig-ink)">廣設學校・鐵公路與航空</text>
+</svg>

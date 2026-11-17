@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# 本機預覽與備份
+preview.html
+*.bak
+*.tmp
+
+# Windows
+Thumbs.db
+desktop.ini
