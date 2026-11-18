@@ -231,7 +231,9 @@ body.open .sheet{transform:none}
 .stamp.t3{background:linear-gradient(135deg,#fff4b8,#e0a21f 45%,#fff0a0 62%,#c5870e);filter:drop-shadow(0 0 5px rgba(255,200,40,.75))}
 .stamp.t3::after,.medal::after,.mu.shiny::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.75) 50%,transparent 62%);background-size:260% 100%;animation:shine 2.8s linear infinite;pointer-events:none}
 @keyframes shine{0%{background-position:130% 0}100%{background-position:-30% 0}}
-.stamp.pop{animation:pop .7s cubic-bezier(.2,1.5,.4,1)}
+.stamp.pop{animation:stampIn .6s cubic-bezier(.2,1.4,.4,1)}
+/* 蓋章：從大印縮下來，壓一下再回彈 */
+@keyframes stampIn{0%{transform:scale(2.3) rotate(-16deg);opacity:0}55%{transform:scale(.88) rotate(3deg);opacity:1}78%{transform:scale(1.06)}100%{transform:none}}
 .tw1{color:var(--brz)}.tw2{color:var(--slv)}.tw3{color:var(--gld)}
 @keyframes pop{0%{transform:scale(.3) rotate(-25deg)}100%{transform:none}}
 .kpt{font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--ic);margin-bottom:6px}
@@ -743,12 +745,35 @@ button.cr-c:hover{box-shadow:inset 0 0 0 2px var(--fig-ink)}
 
 @media (min-width:760px){.hero{padding-block:44px 84px}}
 @media (prefers-reduced-motion:reduce){.isle .bob,.stamp.pop,.flash{animation:none}.sheet,.bar i,.sky,.ocean,.scrim,.isle .top,.card .seal,.toast{transition:none}}
+
+/* ---------- 作答回饋：點擊小動畫、答對發光、飛幣（花瓣在 #petalCv 用 canvas 畫） ---------- */
+.op:active:not(:disabled),:is(.pbtn,.tod,.ivback,.chip-ch,.w-btn,.ord-it,.mebtn,.redo):active:not(:disabled){scale:.96}
+.op.ok{animation:opOk .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes opOk{0%{scale:.96;box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 50%,transparent)}55%{scale:1.035}100%{scale:1;box-shadow:0 0 0 12px transparent}}
+.op.ok i{animation:opOkI .5s cubic-bezier(.2,1.8,.4,1)}
+@keyframes opOkI{0%{scale:.4}100%{scale:1}}
+.op.ok::after{content:"✓";margin-left:auto;padding-left:6px;flex:none;font-weight:900;color:var(--ok)}
+.op.no{animation:shake .32s}
+.qs{position:relative;isolation:isolate}
+.qs.hl::after{content:"";position:absolute;z-index:-1;left:-4px;right:-4px;bottom:.12em;height:.6em;border-radius:6px;background:color-mix(in srgb,var(--ic,#e9a23b) 30%,transparent);transform-origin:left center;animation:qsHl 1.1s ease-out forwards;pointer-events:none}
+@keyframes qsHl{0%{transform:scaleX(0);opacity:1}40%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+.cchip.bump{animation:cBump .4s cubic-bezier(.2,1.8,.4,1)}
+@keyframes cBump{40%{scale:1.3}}
+.flyc{position:fixed;z-index:39;width:22px;height:22px;margin:-11px 0 0 -11px;pointer-events:none;--ic:#e0a92a}
+.flyc svg{width:100%;height:100%;display:block}
+.isle.tap .top{animation:isleTap .38s ease-out;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes isleTap{35%{transform:translateY(2px) scale(.93)}70%{transform:translateY(-6px) scale(1.04)}}
+#petalCv{position:fixed;inset:0;width:100%;height:100%;z-index:38;pointer-events:none}
+/* 省電模式：關掉一直重複的裝飾動畫（天空和海面在程式裡停止） */
+.lite .isle .bob,.lite .stamp.t3::after,.lite .medal::after,.lite .mu.shiny::after,.lite .hx .isle.glow .top{animation:none}
+@media (prefers-reduced-motion:reduce){.op.ok,.op.ok i,.op.no,.cchip.bump,.isle.tap .top{animation:none}.qs.hl::after{display:none}
+  .op:active:not(:disabled),:is(.pbtn,.tod,.ivback,.chip-ch,.w-btn,.ord-it,.mebtn,.redo):active:not(:disabled){scale:none}}
 </style>
 
 <header class="sky" id="sky">
   <canvas id="skyCv" aria-hidden="true"></canvas>
   <div class="hero">
-    <div class="greet"><span id="greet">午安，風平浪靜，適合出航</span><button class="tod" id="tod" type="button" aria-label="切換時段">跟著真實時間</button><button class="tod" type="button" data-snd aria-pressed="false">音效 關</button></div>
+    <div class="greet"><span id="greet">午安，風平浪靜，適合出航</span><button class="tod" id="tod" type="button" aria-label="切換時段">跟著真實時間</button><button class="tod" type="button" data-snd aria-pressed="false">音效 關</button><button class="tod" type="button" data-fx aria-pressed="false" title="減少動畫，比較省電">省電 關</button></div>
     <div class="mebar"><button type="button" class="mebtn" id="meBtn"></button><button type="button" class="tod mesw" id="meSw">換玩家</button></div>
     <h1>社會科島嶼</h1>
     <p class="sub" id="heroSub">地理、歷史、公民三科，三十五座島，對應國中社會課本的每一節。每一節有重點整理和練習題，答對整節就能蓋上那座島的島章。</p>
@@ -1029,7 +1054,9 @@ function buildMap(){const S=SUBJ[cur],N=S.isles.length,wide=mapwrap.clientWidth-
   geom={W,H,R,pos,wide};
   if(sheetId)markOn(sheetId);
   sizeSea();still()}
-map.addEventListener("click",e=>{const g=e.target.closest(".isle");if(g)openSheet(g.dataset.id)});
+map.addEventListener("click",e=>{const g=e.target.closest(".isle");if(!g)return;
+  if(!reduce){g.classList.remove("tap");void g.getBoundingClientRect();g.classList.add("tap");g.addEventListener("animationend",()=>g.classList.remove("tap"),{once:true})}
+  openSheet(g.dataset.id)});
 map.addEventListener("keydown",e=>{const g=e.target.closest(".isle");if(g&&(e.key==="Enter"||e.key===" ")){e.preventDefault();openSheet(g.dataset.id)}});
 const markOn=id=>map.querySelectorAll(".isle").forEach(g=>g.classList.toggle("on",g.dataset.id===id));
 
@@ -1081,7 +1108,7 @@ function paintSky(T){if(!KW)return;const g=kg,p=PAL[tod],night=tod==="night";g.c
   g.fillStyle=night?"rgba(20,30,60,.6)":"rgba(70,110,110,.33)";[[.08,40],[.58,24],[.92,34]].forEach(([fx,w])=>{const x=fx*KW;g.beginPath();g.moveTo(x-w,hy);g.quadraticCurveTo(x,hy-w*.45,x+w,hy);g.fill()})}
 
 let running=false;
-function frame(t){if(!ivOpen&&!wbOpen&&!gmOpen){const T=t/1000;paintSea(T);paintSky(T)}if(!reduce)requestAnimationFrame(frame)}
+function frame(t){if(!ivOpen&&!wbOpen&&!gmOpen){const T=t/1000;paintSea(T);paintSky(T)}if(!reduce&&!fxLite)requestAnimationFrame(frame);else running=false}
 function still(){if(reduce||!running){paintSea(0);paintSky(0)}}
 
 /* ---------- 學期航線：一章一列 ---------- */
@@ -1234,7 +1261,7 @@ function quizClick(e,after){
       let mat=0;if(first){st.ans[id]=1;delete st.wrong[id];if(secDone(s))st.stamp[s.id]=1;coins=(fix?2:1)*evMult(s);st.coins+=coins;if(fix)st.fix++;mat=evMult(s);addMat(st,s.subj,mat)}
       const up=upgrade(s,t0);save();renderMe();
       sfx(up?(up.t>=3?"gold":"stamp"):"ok");
-      after(s,{first,t0,s0,up,coins,mat,fix,newItem:!wasDone&&secDone(s)&&!st.mus[s.id]})}
+      const r={first,t0,s0,up,coins,mat,fix,newItem:!wasDone&&secDone(s)&&!st.mus[s.id]};after(s,r);cheer(op,s,r)}
     else{op.classList.add("no");op.disabled=true;delete st.cl[id];if(!st.ans[id])st.wrong[id]=1;save();sfx("no");
       fb.hidden=false;fb.className="fb bad";fb.innerHTML=`<b>不是這個答案。</b>再想想，或<button type="button" class="reveal">直接看解析</button>。`}
     return true}
@@ -1724,6 +1751,56 @@ const SFX={ok:[[660,.09],[990,.16]],no:[[196,.2,"square",.05]],coin:[[1047,.06],
 const sfx=k=>tone(SFX[k]||[]);
 function renderSnd(){document.querySelectorAll("[data-snd]").forEach(b=>{b.textContent=sndOn?"音效 開":"音效 關";b.setAttribute("aria-pressed",String(sndOn))})}
 document.addEventListener("click",e=>{const b=e.target.closest("[data-snd]");if(!b)return;sndOn=!sndOn;try{localStorage.setItem("socialIsles.snd",sndOn?"1":"0")}catch(err){}renderSnd();if(sndOn)sfx("coin")});
+
+/* ---------- 省電模式：記在這台裝置。開啟時花瓣減半、不灑大花瓣、不飛金幣，天空和海面停在當下的畫面 ---------- */
+let fxLite=false;try{fxLite=localStorage.getItem("socialIsles.fx")==="lite"}catch(e){}
+function renderFx(){document.documentElement.classList.toggle("lite",fxLite);
+  document.querySelectorAll("[data-fx]").forEach(b=>{b.textContent=fxLite?"省電 開":"省電 關";b.setAttribute("aria-pressed",String(fxLite))})}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-fx]");if(!b)return;fxLite=!fxLite;try{localStorage.setItem("socialIsles.fx",fxLite?"lite":"full")}catch(err){}renderFx();
+  if(!fxLite&&!reduce&&!running){running=true;requestAnimationFrame(frame)}
+  toast(fxLite?"省電模式開啟：動畫變少，天空和海面暫停。":"省電模式關閉：動畫恢復。",2600)});
+
+/* ---------- 答對花瓣：一張全螢幕 canvas，用完就停。小灑從選項兩側噴出，大灑（集章、升章）從畫面上緣兩側落下 ---------- */
+const PETAL={geo:["#1a8aa0","#4fb8cc","#8fd6e2","#ff9fb6","#ffd166"],his:["#b8452a","#e07a4f","#f2ab85","#ff9fb6","#ffd166"],civ:["#6a4bb0","#8f73d6","#bba8ec","#ff9fb6","#ffd166"]};
+let petCv=null,petG=null,petD=1,petList=[],petRq=0,petLast=0;
+function petals(big,subj,rect){if(reduce||document.hidden)return;if(fxLite)big=false;
+  if(!petCv){petCv=document.createElement("canvas");petCv.id="petalCv";petCv.setAttribute("aria-hidden","true");document.body.appendChild(petCv);petG=petCv.getContext("2d")}
+  const W=innerWidth,H=innerHeight;petD=fxLite?1:Math.min(2,devicePixelRatio||1);
+  if(petCv.width!==Math.round(W*petD)||petCv.height!==Math.round(H*petD)){petCv.width=Math.round(W*petD);petCv.height=Math.round(H*petD)}
+  const C=PETAL[subj]||PETAL.geo,R=Math.random;
+  if(big){for(let k=0;k<64;k++){const left=k%2===0;
+      petList.push({x:left?R()*W*.32:W-R()*W*.32,y:-10-R()*60,vx:(left?1:-1)*(15+R()*55),vy:120+R()*150,g:160,sw:20+R()*24,f:1.6+R()*1.8,ph:R()*6.3,r:R()*6.3,vr:(R()-.5)*6,s:6.5+R()*6.5,c:C[k%C.length],t:-R()*.3,life:1.3+R()*.7,fl:R()<.2})}}
+  else{const n=fxLite?8:16,cy=rect.top+rect.height/2;
+    for(let k=0;k<n;k++){const left=k%2===0;
+      petList.push({x:left?rect.left+10:rect.right-10,y:cy+(R()-.5)*rect.height*.6,vx:(left?-1:1)*(100+R()*190),vy:-(180+R()*240),g:620,sw:8,f:3+R()*2,ph:R()*6.3,r:R()*6.3,vr:(R()-.5)*9,s:5.5+R()*4.5,c:C[k%C.length],t:0,life:.5+R()*.28,fl:R()<.15})}}
+  if(!petRq){petLast=performance.now();petRq=requestAnimationFrame(petalStep)}}
+function petalStep(now){const dt=Math.min(.05,(now-petLast)/1000);petLast=now;
+  petG.setTransform(1,0,0,1,0,0);petG.clearRect(0,0,petCv.width,petCv.height);petG.setTransform(petD,0,0,petD,0,0);
+  petList=petList.filter(p=>{p.t+=dt;if(p.t<0)return true;if(p.t>p.life)return false;
+    p.vy+=p.g*dt;p.vx*=1-.9*dt;p.x+=(p.vx+Math.cos(p.ph+p.t*p.f)*p.sw)*dt;p.y+=p.vy*dt;p.r+=p.vr*dt;
+    drawPetal(p,Math.min(1,(p.life-p.t)/(p.life*.35)));return true});
+  if(petList.length)petRq=requestAnimationFrame(petalStep);else{petRq=0;petG.setTransform(1,0,0,1,0,0);petG.clearRect(0,0,petCv.width,petCv.height)}}
+function drawPetal(p,a){const g=petG,s=p.s;g.save();g.globalAlpha=a*.92;g.translate(p.x,p.y);g.rotate(p.r);g.fillStyle=p.c;
+  if(p.fl){for(let k=0;k<5;k++){g.rotate(1.2566);g.beginPath();g.ellipse(0,-s*.55,s*.32,s*.55,0,0,6.283);g.fill()}
+    g.fillStyle="#ffe08a";g.beginPath();g.arc(0,0,s*.24,0,6.283);g.fill()}
+  else{g.scale(.3+.7*Math.abs(Math.cos(p.ph+p.t*p.f)),1);
+    g.beginPath();g.moveTo(0,-s);g.bezierCurveTo(s*.95,-s*.55,s*.6,s*.75,0,s);g.bezierCurveTo(-s*.6,s*.75,-s*.95,-s*.55,0,-s);g.fill();
+    g.globalAlpha=a*.4;g.strokeStyle="#fff";g.lineWidth=.8;g.beginPath();g.moveTo(0,-s*.6);g.lineTo(0,s*.55);g.stroke()}
+  g.restore()}
+/* 金幣從答對的選項飛到上方的知識幣；省電時只讓數字跳一下 */
+function bump(el){if(reduce||!el)return;el.classList.remove("bump");void el.offsetWidth;el.classList.add("bump")}
+function flyCoins(from,k){const host=from.closest(".iv"),chip=host&&host.querySelector(".iv-bar .cchip");if(!chip||reduce)return;
+  if(fxLite||!chip.animate){bump(chip);return}
+  const a=from.getBoundingClientRect(),b=chip.getBoundingClientRect(),x0=a.left+a.width/2,y0=a.top+a.height/2,dx=b.left+12-x0,dy=b.top+b.height/2-y0;
+  for(let j=0;j<k;j++){const c=document.createElement("span");c.className="flyc";c.setAttribute("aria-hidden","true");c.innerHTML=ICON("coin");c.style.left=x0+"px";c.style.top=y0+"px";document.body.appendChild(c);
+    const an=c.animate([{transform:"translate(0,0) scale(.5)",opacity:0},{transform:`translate(${dx*.2+(j-1)*16}px,${Math.min(-40,dy*.15)-30}px) scale(1.15)`,opacity:1,offset:.3},{transform:`translate(${dx}px,${dy}px) scale(.7)`,opacity:.95}],
+      {duration:720,delay:j*110,easing:"ease-in",fill:"backwards"});
+    an.onfinish=()=>{c.remove();bump(chip)};an.oncancel=()=>c.remove()}}
+/* 答對的慶祝：每題小灑；這題讓章升級（銅、銀、金）就大灑。港口慶典開場時讓給煙火 */
+function cheer(op,s,r){if(!fw.hidden)return;petals(!!r.up,s.subj,op.getBoundingClientRect());
+  const n=(r.coins||0)+(r.up?r.up.c:0);if(n>0)flyCoins(op,r.up?3:Math.min(2,n))}
+/* 點題目：題目下方畫一道螢光筆，提醒「從這題開始」 */
+document.addEventListener("click",e=>{const q=e.target.closest(".q .qs");if(!q||reduce)return;q.classList.remove("hl");void q.offsetWidth;q.classList.add("hl")});
 
 /* ---------- 知識幣 ---------- */
 const coinChip=()=>`<span class="cchip" title="知識幣"><span class="ci">${ICON("coin")}</span><b data-coins>${st.coins}</b></span>`;
@@ -2367,10 +2444,10 @@ let rq=0;
 new ResizeObserver(()=>{cancelAnimationFrame(rq);rq=requestAnimationFrame(()=>{const w=mapwrap.clientWidth-32>=700;if(!geom||w!==geom.wide)buildMap();else{sizeSea();still()}})}).observe(mapwrap);
 new ResizeObserver(()=>{sizeSky();still()}).observe(sky);
 
-applyTod();renderFilters();refresh();renderSnd();sizeSky();routeHash();
+applyTod();renderFilters();refresh();renderSnd();renderFx();sizeSky();routeHash();
 if(WELCOME||WELCOME_M)setTimeout(()=>toast(WELCOME?`歡迎來到島嶼樂園！依照你之前的進度，送你 ${WELCOME} 枚知識幣${WELCOME_M?"，還有蓋營地用的建材":""}`
   :`島民送來蓋營地的建材：${ORDER.map(k=>MAT[k][0]+" "+(+st.mat[k]||0)).join("、")}。到「營地」把帳篷升級吧！`,5200),900);
 setInterval(()=>{if(st.tod==="auto"){const was=tod;applyTod();if(was!==tod)buildMap()}},60000);
-if(!reduce){running=true;requestAnimationFrame(frame)}else still();
+if(!reduce&&!fxLite){running=true;requestAnimationFrame(frame)}else still();
 </script>
 </body></html>
