@@ -808,6 +808,19 @@ button.cr-c:hover{box-shadow:inset 0 0 0 2px var(--fig-ink)}
 .folk-tip .tbtn{flex:none;min-height:36px;padding:6px 10px;font-size:13px;margin-left:auto}
 @media (prefers-reduced-motion:reduce){.gd-box.in,.gd-fig.in{animation:none}.gd-spot{transition:none}}
 
+/* ---------- 灑花鼓勵按鈕（右下角，每一頁都有；島卡打開時先藏起來） ---------- */
+.cheerfab{position:fixed;z-index:34;right:max(14px,env(safe-area-inset-right,0px));bottom:max(14px,calc(env(safe-area-inset-bottom,0px) + 14px));display:inline-flex;align-items:center;gap:6px;
+  border:0;border-radius:99px;padding:7px 14px 7px 8px;background:var(--paper);color:var(--ink);font-weight:800;font-size:14px;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.22),inset 0 0 0 2px #ff9fb6;--ic:#e0628a}
+.cheerfab .ci{width:30px;height:30px}
+.cheerfab:active{scale:.94}
+.cheerfab:hover .ci,.cheerfab:focus-visible .ci{animation:bob 1.2s ease-in-out infinite}
+body.open .cheerfab{display:none}
+.iv-in{padding-bottom:88px}
+@media (max-width:560px){.cheerfab{padding:6px 12px 6px 6px;font-size:13px}.cheerfab .ci{width:26px;height:26px}.toast{bottom:calc(env(safe-area-inset-bottom,0px) + 66px)}}
+@media print{.cheerfab{display:none}}
+@media (prefers-reduced-motion:reduce){.cheerfab:active{scale:none}.cheerfab:hover .ci,.cheerfab:focus-visible .ci{animation:none}}
+
 /* ---------- 闖關航線 ---------- */
 .lv-sems{margin-bottom:10px}
 .lv-sum{margin:0 0 14px;color:var(--ink-soft);font-size:calc(14px*var(--fz));line-height:1.75}
@@ -962,6 +975,7 @@ button.cr-c:hover{box-shadow:inset 0 0 0 2px var(--fig-ink)}
 </div>
 <div class="fw" id="fw" hidden role="dialog" aria-modal="true" aria-labelledby="fwH"><canvas id="fwCv" aria-hidden="true"></canvas><div class="fw-card" id="fwCard"></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button type="button" class="cheerfab" id="cheerFab" title="灑花鼓勵"><span class="ci" aria-hidden="true"></span><span>灑花鼓勵</span></button>
 <div class="gd" id="gd" hidden role="dialog" aria-modal="true" aria-labelledby="gdT" aria-describedby="gdP">
   <div class="gd-spot" id="gdSpot" hidden aria-hidden="true"></div>
   <div class="gd-row">
@@ -1855,19 +1869,26 @@ document.addEventListener("click",e=>{const b=e.target.closest("[data-fx]");if(!
   if(!fxLite&&!reduce&&!running){running=true;requestAnimationFrame(frame)}
   toast(fxLite?"省電模式開啟：動畫變少，天空和海面暫停。":"省電模式關閉：動畫恢復。",2600)});
 
-/* ---------- 答對花瓣：一張全螢幕 canvas，用完就停。小灑從選項兩側噴出，大灑（集章、升章）從畫面上緣兩側落下 ---------- */
+/* ---------- 花瓣：一張全螢幕 canvas，用完就停 ----------
+   小灑（每題答對）：從選項兩側噴出 28 片；大灑（集章、升銀章）120 片、金灑（升金章）150 片：整個畫面上方落下，兩個下角再往上噴；
+   鼓勵（右下角「灑花鼓勵」按鈕）160 片。省電模式大約減到三分之一，不噴下角 */
 const PETAL={geo:["#1a8aa0","#4fb8cc","#8fd6e2","#ff9fb6","#ffd166"],his:["#b8452a","#e07a4f","#f2ab85","#ff9fb6","#ffd166"],civ:["#6a4bb0","#8f73d6","#bba8ec","#ff9fb6","#ffd166"]};
+const GOLDS=["#ffd166","#ffe08a","#f2c94c","#fff4b8"];
 let petCv=null,petG=null,petD=1,petList=[],petRq=0,petLast=0;
-function petals(big,subj,rect){if(reduce||document.hidden)return;if(fxLite)big=false;
+function petals(mode,subj,rect){if(reduce||document.hidden)return;
   if(!petCv){petCv=document.createElement("canvas");petCv.id="petalCv";petCv.setAttribute("aria-hidden","true");document.body.appendChild(petCv);petG=petCv.getContext("2d")}
-  const W=innerWidth,H=innerHeight;petD=fxLite?1:Math.min(2,devicePixelRatio||1);
+  if(petList.length>380)return;
+  const W=innerWidth,H=innerHeight,lite=fxLite;petD=lite?1:Math.min(2,devicePixelRatio||1);
   if(petCv.width!==Math.round(W*petD)||petCv.height!==Math.round(H*petD)){petCv.width=Math.round(W*petD);petCv.height=Math.round(H*petD)}
-  const C=PETAL[subj]||PETAL.geo,R=Math.random;
-  if(big){for(let k=0;k<64;k++){const left=k%2===0;
-      petList.push({x:left?R()*W*.32:W-R()*W*.32,y:-10-R()*60,vx:(left?1:-1)*(15+R()*55),vy:120+R()*150,g:160,sw:20+R()*24,f:1.6+R()*1.8,ph:R()*6.3,r:R()*6.3,vr:(R()-.5)*6,s:6.5+R()*6.5,c:C[k%C.length],t:-R()*.3,life:1.3+R()*.7,fl:R()<.2})}}
-  else{const n=fxLite?8:16,cy=rect.top+rect.height/2;
+  const base=PETAL[subj]||PETAL.geo,C=mode==="gold"?base.concat(GOLDS):base,R=Math.random;
+  const add=o=>petList.push(Object.assign({sw:8,f:3+R()*2,ph:R()*6.3,r:R()*6.3,vr:(R()-.5)*8,c:C[petList.length%C.length],t:0,fl:R()<.18},o));
+  if(!mode){const n=lite?12:28,cy=rect.top+rect.height/2;
     for(let k=0;k<n;k++){const left=k%2===0;
-      petList.push({x:left?rect.left+10:rect.right-10,y:cy+(R()-.5)*rect.height*.6,vx:(left?-1:1)*(100+R()*190),vy:-(180+R()*240),g:620,sw:8,f:3+R()*2,ph:R()*6.3,r:R()*6.3,vr:(R()-.5)*9,s:5.5+R()*4.5,c:C[k%C.length],t:0,life:.5+R()*.28,fl:R()<.15})}}
+      add({x:left?rect.left+10:rect.right-10,y:cy+(R()-.5)*rect.height*.7,vx:(left?-1:1)*(110+R()*230),vy:-(200+R()*300),g:620,s:5.5+R()*5,life:.6+R()*.4})}}
+  else{const n=mode==="all"?(lite?45:160):mode==="gold"?(lite?40:150):(lite?30:120);
+    for(let k=0;k<n;k++)add({x:R()*W,y:-12-R()*80,vx:(R()-.5)*70,vy:110+R()*170,g:160,sw:18+R()*26,f:1.5+R()*1.8,vr:(R()-.5)*6,s:6.5+R()*7,t:-R()*.5,life:1.5+R()*.9,fl:R()<.22});
+    if(!lite){const m=mode==="all"?36:mode==="gold"?30:20;
+      for(let k=0;k<m;k++){const left=k%2===0;add({x:left?-6:W+6,y:H*.92,vx:(left?1:-1)*(160+R()*260),vy:-(520+R()*380),g:640,s:6+R()*6,t:-R()*.25,life:1.2+R()*.5})}}}
   if(!petRq){petLast=performance.now();petRq=requestAnimationFrame(petalStep)}}
 function petalStep(now){const dt=Math.min(.05,(now-petLast)/1000);petLast=now;
   petG.setTransform(1,0,0,1,0,0);petG.clearRect(0,0,petCv.width,petCv.height);petG.setTransform(petD,0,0,petD,0,0);
@@ -1892,8 +1913,15 @@ function flyCoins(from,k){const host=from.closest(".iv"),chip=host&&host.querySe
       {duration:720,delay:j*110,easing:"ease-in",fill:"backwards"});
     an.onfinish=()=>{c.remove();bump(chip)};an.oncancel=()=>c.remove()}}
 /* 答對的慶祝：每題小灑；這題讓章升級（銅、銀、金）就大灑。港口慶典開場時讓給煙火 */
-function cheer(op,s,r){if(!fw.hidden)return;petals(!!r.up,s.subj,op.getBoundingClientRect());
+function cheer(op,s,r){if(!fw.hidden)return;petals(r.up?(r.up.t>=3?"gold":"big"):false,s.subj,op.getBoundingClientRect());
   const n=(r.coins||0)+(r.up?r.up.c:0);if(n>0)flyCoins(op,r.up?3:Math.min(2,n))}
+/* 灑花鼓勵：右下角的按鈕，按一次就灑滿花瓣、說一句鼓勵的話（老師上課投影時也可以按） */
+const CHEERS=["做得好！繼續加油！","你很棒，再挑戰下一題！","一步一步來，一定會越來越熟！","認真的樣子最帥氣！","錯了也沒關係，弄懂就是進步！","今天也辛苦了，給自己一個掌聲！","離下一個章又更近一步了！","相信自己，你做得到！"];
+let cheerT=0;
+$("cheerFab").querySelector(".ci").innerHTML=ICON("flower");
+$("cheerFab").onclick=()=>{const now=performance.now();if(now-cheerT<700)return;cheerT=now;
+  let m;do{m=CHEERS[Math.floor(Math.random()*CHEERS.length)]}while(m===$("toast").textContent);
+  toast(m,2600);sfx("stamp");petals("all",ivOpen&&ivIsle?ivIsle.subj:cur)};
 /* 點題目：題目下方畫一道螢光筆，提醒「從這題開始」 */
 document.addEventListener("click",e=>{const q=e.target.closest(".q .qs");if(!q||reduce)return;q.classList.remove("hl");void q.offsetWidth;q.classList.add("hl")});
 
