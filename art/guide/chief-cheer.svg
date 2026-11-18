@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+  <g fill="none" stroke="var(--fig-ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M54 105Q44 91 37 77L31 58L17 63L24 87Q31 111 46 126Z" fill="var(--ic)"/>
+    <path d="M106 105Q118 90 124 76L131 57L145 62L138 86Q130 112 114 126Z" fill="var(--ic)"/>
+    <path d="M40 203L42 132Q41 111 54 105L68 98H92L107 103Q119 108 120 130L123 203Z" fill="var(--ic)"/>
+    <path d="M70 101L82 111L94 101L98 203H67Z" fill="var(--fig-paper)"/>
+    <path d="M69 85H91L92 99L82 109L69 99Z" fill="var(--fig-sand)"/>
+    <path d="M66 100L60 113L69 120M96 100L104 113L95 121M82 111V203"/>
+    <circle cx="53" cy="130" r="7" fill="var(--fig-warm)"/>
+    <circle cx="80" cy="61" r="30" fill="var(--fig-sand)"/>
+    <path d="M50 61C43 42 53 31 67 32Q80 23 92 32C111 31 118 49 109 63L102 54V46Q94 50 86 42Q74 50 66 44L59 50V58Z" fill="var(--fig-soft)"/>
+    <path d="M63 55L72 53M89 53L98 55" stroke="var(--fig-soft)" stroke-width="4"/>
+    <g fill="var(--fig-warm)" fill-opacity=".5" stroke="none">
+      <circle cx="60" cy="74" r="5"/>
+      <circle cx="100" cy="74" r="5"/>
+    </g>
+    <path d="M63 65Q68 57 73 65M87 65Q92 57 97 65"/>
+    <path d="M69 73Q80 77 91 73Q89 86 80 86Q71 86 69 73Z" fill="var(--fig-ink)"/>
+    <path d="M75 83Q80 79 85 83Q80 87 75 83Z" fill="var(--fig-warm)" stroke="none"/>
+    <path d="M18 63L16 55Q12 52 13 47L14 42Q15 39 18 39Q19 35 23 36Q25 33 28 36Q31 36 32 40L33 49Q33 54 29 57L30 59Z" fill="var(--fig-sand)"/>
+    <path d="M17 48Q19 44 24 45L27 47"/>
+    <g transform="translate(119 27) rotate(-12)">
+      <path d="M11 5L13 19H20L17 6Z" fill="var(--ic)"/>
+      <path d="M1 -4L24 -13V13L1 4Z" fill="var(--fig-paper)"/>
+      <rect x="-4" y="-5" width="8" height="10" rx="2" fill="var(--ic)"/>
+      <ellipse cx="24" cy="0" rx="4" ry="13" fill="var(--ic)"/>
+    </g>
+    <path d="M132 58L132 52Q129 49 131 45L134 41Q136 39 139 40L144 42Q148 45 145 49L142 56L143 61Z" fill="var(--fig-sand)"/>
+    <path d="M134 48L138 49"/>
+    <g fill="var(--fig-warm)" stroke="none">
+      <path d="M0 -5Q1 -1 5 0Q1 1 0 5Q-1 1 -5 0Q-1 -1 0 -5Z" transform="translate(9 63)"/>
+      <path d="M0 -5Q1 -1 5 0Q1 1 0 5Q-1 1 -5 0Q-1 -1 0 -5Z" transform="translate(35 23)"/>
+      <path d="M0 -5Q1 -1 5 0Q1 1 0 5Q-1 1 -5 0Q-1 -1 0 -5Z" transform="translate(108 17)"/>
+      <path d="M0 -5Q1 -1 5 0Q1 1 0 5Q-1 1 -5 0Q-1 -1 0 -5Z" transform="translate(150 51)"/>
+    </g>
+  </g>
+</svg>

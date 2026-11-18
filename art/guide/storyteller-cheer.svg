@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+  <g fill="none" stroke="var(--fig-ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M56 107L34 54L19 61Q27 95 42 125L57 124Z" fill="var(--ic)"/>
+    <path d="M105 106L126 60L141 66Q136 92 119 126L101 121Z" fill="var(--ic)"/>
+    <path d="M19 61L34 54L38 64L22 71ZM126 60L141 66L139 76L122 70Z" fill="var(--fig-warm)"/>
+
+    <path d="M39 205L40 134Q41 110 57 104L66 100H97L108 103Q121 109 121 133L125 205Z" fill="var(--ic)"/>
+    <path d="M56 106L67 102L64 205H49L54 152ZM95 102L106 105L114 205H99L98 152Z" fill="var(--fig-warm)"/>
+
+    <circle cx="80" cy="60" r="30" fill="var(--fig-sand)"/>
+    <path d="M50 54C46 35 59 25 73 28C67 22 72 16 81 15Q76 22 85 28C101 21 114 37 110 54L99.5 48L95 39Q75.5 52.5 56 45Z" fill="var(--fig-ink)"/>
+    <g fill="var(--fig-warm)" fill-opacity=".5" stroke="none">
+      <circle cx="57.5" cy="73.5" r="5.25"/>
+      <circle cx="102.5" cy="73.5" r="5.25"/>
+    </g>
+    <circle cx="66.5" cy="60" r="10.5"/>
+    <circle cx="93.5" cy="60" r="10.5"/>
+    <path d="M77 60H83M50 57L56 58.5M104 58.5L110 57"/>
+    <path d="M61.5 62Q66.5 54 71.5 62M88.5 62Q93.5 54 98.5 62"/>
+    <path d="M69 75Q80 79 91 75Q89 89 80 89Q71 89 69 75Z" fill="var(--fig-ink)"/>
+    <path d="M74 84Q80 80 86 84Q84 87 80 87Q76 87 74 84Z" fill="var(--fig-warm)" stroke="none"/>
+    <path d="M53 88.5Q80 99 107 88.5L105.5 103.5Q80 112.5 54.5 103.5Z" fill="var(--fig-warm)"/>
+
+    <path d="M19 27Q30 27 42 23L47 45Q35 49 23 49Z" fill="var(--fig-sand)"/>
+    <path d="M23 49C15 51 11 29 19 27Q24 26 24 32L20 33M47 45C55 43 50 21 42 23Q37 24 40 29L44 28" fill="var(--fig-paper)"/>
+    <path d="M28 33L37 31M29 40L39 38"/>
+    <path d="M20 60Q15 55 16 49Q17 45 21 46L23 50Q24 43 28 43Q33 44 34 50L34 55Z" fill="var(--fig-sand)"/>
+
+    <path d="M133 58L115 30Q129 17 151 30Z" fill="var(--fig-sand)"/>
+    <path d="M133 58L126 24M133 58L139 24"/>
+    <path d="M126 61L124 55Q123 51 126 49Q129 47 132 52Q137 48 141 52Q144 55 140 66Z" fill="var(--fig-sand)"/>
+
+    <g fill="var(--fig-warm)" stroke="none">
+      <path d="M12 64L14 69L19 71L14 73L12 78L10 73L5 71L10 69Z"/>
+      <path d="M47 7L49 12L54 14L49 16L47 21L45 16L40 14L45 12Z"/>
+      <path d="M113 8L115 13L120 15L115 17L113 22L111 17L106 15L111 13Z"/>
+      <path d="M147 47L149 51L153 53L149 55L147 59L145 55L141 53L145 51Z"/>
+    </g>
+  </g>
+</svg>

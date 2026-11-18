@@ -4,6 +4,7 @@ python check_svg.py isles      -> checks isles/*.svg
 python check_svg.py figs       -> checks figs/*.svg
 python check_svg.py icons      -> checks icons/*.svg (48 x 48 museum / avatar icons)
 python check_svg.py folk       -> checks folk/*.svg (96 x 96 islander portraits)
+python check_svg.py guide      -> checks guide/*.svg (160 x 200 half-body islander guides)
 python check_svg.py <file.svg> -> checks one file
 
 Rules (both kinds):
@@ -15,6 +16,7 @@ Rules (both kinds):
   * file size limit: isles 3.5 KB, figs 9 KB, icons 1.6 KB
 Extra rules for icons: viewBox 0 0 48 48, no <text>/<title>
 Extra rules for folk: viewBox 0 0 96 96, no <text>/<title>, 4 KB
+Extra rules for guide: viewBox 0 0 160 200, no <text>/<title>, 7 KB
 Extra rules for figs:
   * viewBox width is exactly 360, height between 140 and 280
   * has a <title>
@@ -60,7 +62,7 @@ def check(path, kind):
     errs = []
     name = os.path.splitext(os.path.basename(path))[0]
     raw = open(path, encoding="utf-8").read()
-    limit = {"isles": 3500, "icons": 1600, "folk": 4000}.get(kind, 9000)
+    limit = {"isles": 3500, "icons": 1600, "folk": 4000, "guide": 7000}.get(kind, 9000)
     if len(raw.encode("utf-8")) > limit:
         errs.append(f"file is {len(raw.encode('utf-8'))} bytes, limit {limit}")
     if re.search(r"<\?xml|<!DOCTYPE|<!--|<script|<style|javascript:|href", raw, re.I):
@@ -86,6 +88,11 @@ def check(path, kind):
             errs.append(f"{kind} viewBox must be 0 0 {side} {side}")
         if root.find(".//" + NS + "text") is not None or root.find(".//" + NS + "title") is not None:
             errs.append(f"{kind} have no <text> or <title>")
+    if kind == "guide":
+        if (vx, vy, vw, vh) != (0, 0, 160, 200):
+            errs.append("guide viewBox must be 0 0 160 200")
+        if root.find(".//" + NS + "text") is not None or root.find(".//" + NS + "title") is not None:
+            errs.append("guide portraits have no <text> or <title>")
     if kind == "figs":
         if vw != 360 or not 140 <= vh <= 280:
             errs.append("figs viewBox must be 0 0 360 H with 140 <= H <= 280")
@@ -149,10 +156,10 @@ def check(path, kind):
 def main():
     arg = sys.argv[1]
     here = os.path.dirname(os.path.abspath(__file__))
-    if arg in ("isles", "figs", "icons", "folk"):
+    if arg in ("isles", "figs", "icons", "folk", "guide"):
         kind, files = arg, sorted(os.path.join(here, arg, f) for f in os.listdir(os.path.join(here, arg)) if f.endswith(".svg"))
     else:
-        kind = next((k for k in ("isles", "icons", "folk") if os.sep + k + os.sep in os.path.abspath(arg)), "figs")
+        kind = next((k for k in ("isles", "icons", "folk", "guide") if os.sep + k + os.sep in os.path.abspath(arg)), "figs")
         files = [arg]
     bad = 0
     for f in files:

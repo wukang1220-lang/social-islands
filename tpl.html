@@ -768,6 +768,45 @@ button.cr-c:hover{box-shadow:inset 0 0 0 2px var(--fig-ink)}
 .lite .isle .bob,.lite .stamp.t3::after,.lite .medal::after,.lite .mu.shiny::after,.lite .hx .isle.glow .top{animation:none}
 @media (prefers-reduced-motion:reduce){.op.ok,.op.ok i,.op.no,.cchip.bump,.isle.tap .top{animation:none}.qs.hl::after{display:none}
   .op:active:not(:disabled),:is(.pbtn,.tod,.ivback,.chip-ch,.w-btn,.ord-it,.mebtn,.redo):active:not(:disabled){scale:none}}
+
+/* ---------- 引導者：島民對話框＋聚光燈。電腦版左下角站半身立繪，手機版縮成對話框左上角的小頭像 ---------- */
+.gd{position:fixed;inset:0;z-index:36;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;box-sizing:border-box;
+  padding:12px max(12px,env(safe-area-inset-right,0px)) max(12px,calc(env(safe-area-inset-bottom,0px) + 12px)) max(12px,env(safe-area-inset-left,0px))}
+.gd[hidden]{display:none}
+.gd.dim{background:rgba(10,25,35,.55)}
+.gd.top{justify-content:flex-start;padding-top:max(12px,calc(env(safe-area-inset-top,0px) + 12px))}
+.gd-spot{position:fixed;border-radius:14px;pointer-events:none;box-shadow:0 0 0 200vmax rgba(10,25,35,.55),0 0 0 3px #ffd166,0 0 24px 6px rgba(255,209,102,.7);
+  transition:left .3s,top .3s,width .3s,height .3s}
+.gd-row{position:relative;display:flex;align-items:flex-end;gap:6px;width:100%;max-width:780px}
+.gd.top .gd-row{align-items:flex-start}
+.gd-fig{display:none}
+.gimg{display:block}.gimg svg{width:100%;height:100%;display:block}
+.gd-box{position:relative;flex:1;min-width:0;background:var(--paper);color:var(--ink);border-radius:20px;padding:14px 16px 12px;
+  box-shadow:0 14px 40px rgba(0,0,0,.35),inset 0 0 0 2px color-mix(in srgb,var(--ic) 55%,transparent)}
+.gd-box.in{animation:gdIn .3s cubic-bezier(.2,1.2,.4,1)}
+@keyframes gdIn{0%{opacity:0;transform:translateY(14px) scale(.97)}100%{opacity:1;transform:none}}
+.gd.top .gd-box.in{animation-name:gdInTop}
+@keyframes gdInTop{0%{opacity:0;transform:translateY(-14px) scale(.97)}100%{opacity:1;transform:none}}
+.gd-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.gd-mini{flex:none;width:56px;height:56px;border-radius:14px;overflow:hidden;background:#fffaf3;box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--ic) 50%,#fff)}
+.gd-mini .gimg{width:96px;height:120px;margin:-6px 0 0 -20px}
+.gd-name{background:var(--ic);color:#fff;font-weight:800;border-radius:99px;padding:3px 11px;font-size:13px}
+.gd-step{font:700 12px var(--f-mono);color:var(--ink-soft)}
+.gd-head h2{margin:0;flex-basis:100%;font-size:calc(17px*var(--fz));line-height:1.4}
+#gdP{margin:8px 0 12px;font-size:calc(15px*var(--fz));line-height:1.75}
+.gd-ctl{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.gd-skip{border:0;background:none;color:var(--ink-soft);font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:6px 4px;margin-right:auto}
+#gdFs .fsz{margin:0}
+@media (max-width:560px){#gdFs{order:-1;flex-basis:100%;display:flex;justify-content:flex-end}}
+@media (min-width:760px){
+  .gd-fig{display:block;flex:none;width:176px;height:220px;margin:0 -8px -12px 0;filter:drop-shadow(0 0 1.5px rgba(255,250,243,.95)) drop-shadow(0 8px 16px rgba(0,0,0,.35))}
+  .gd-fig.in{animation:gdFig .45s cubic-bezier(.2,1.4,.4,1)}
+  .gd-fig .gimg{width:100%;height:100%}
+  .gd-mini{display:none}
+  .gd-head h2{flex-basis:auto}}
+@keyframes gdFig{0%{opacity:0;transform:translateY(24px) scale(.92)}100%{opacity:1;transform:none}}
+.folk-tip .tbtn{flex:none;min-height:36px;padding:6px 10px;font-size:13px;margin-left:auto}
+@media (prefers-reduced-motion:reduce){.gd-box.in,.gd-fig.in{animation:none}.gd-spot{transition:none}}
 </style>
 
 <header class="sky" id="sky">
@@ -850,6 +889,7 @@ button.cr-c:hover{box-shadow:inset 0 0 0 2px var(--fig-ink)}
     <div class="filters" id="flt" role="group" aria-label="依年級篩選"></div>
     <div class="cards" id="cards"></div>
     <p class="foot" id="foot">章節依國中社會課本（115 學年度）整理；每一節的重點和練習題由本站撰寫。<br>學習紀錄只存在這台裝置的瀏覽器。</p>
+    <p class="foot"><button type="button" class="tbtn" id="gdAgain">重看導覽</button></p>
   </div>
 </section>
 
@@ -880,6 +920,17 @@ button.cr-c:hover{box-shadow:inset 0 0 0 2px var(--fig-ink)}
 </div>
 <div class="fw" id="fw" hidden role="dialog" aria-modal="true" aria-labelledby="fwH"><canvas id="fwCv" aria-hidden="true"></canvas><div class="fw-card" id="fwCard"></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="gd" id="gd" hidden role="dialog" aria-modal="true" aria-labelledby="gdT" aria-describedby="gdP">
+  <div class="gd-spot" id="gdSpot" hidden aria-hidden="true"></div>
+  <div class="gd-row">
+    <div class="gd-fig" id="gdFig" aria-hidden="true"></div>
+    <div class="gd-box" id="gdBox">
+      <div class="gd-head"><span class="gd-mini" id="gdMini" aria-hidden="true"></span><span class="gd-name" id="gdName"></span><span class="gd-step" id="gdStep"></span><h2 id="gdT"></h2></div>
+      <p id="gdP"></p>
+      <div class="gd-ctl"><button type="button" class="gd-skip" id="gdSkip">跳過</button><span id="gdFs"></span><button type="button" class="pbtn alt" id="gdPrev">← 上一步</button><button type="button" class="pbtn" id="gdNext">下一步 →</button></div>
+    </div>
+  </div>
+</div>
 
 <script>
 const RAW=/*@DATA@*/null;
@@ -919,7 +970,7 @@ const NQ=ALLSECS.reduce((a,s)=>a+s.q.length,0);
 const RK="socialIsles.roster",keyOf=id=>id==="p1"?"socialIsles.v2":"socialIsles.v2."+id;
 const DEF=()=>({visited:{},ans:{},wrong:{},last:{},sem:{},stamp:{},qv:{},subj:"geo",tod:"auto",fs:0,
   coins:0,tier:{},tday:{},cl:{},mus:{},own:{},dig:{},bat:{},qq:{},ap:{},ev:{},day:{},ttl:"",tseen:{},fix:0,cover:0,exam:{},cap:"",mig:0,
-  mat:{geo:0,his:0,civ:0},camp:{},quest:{},deco:{},fest:{},isl:{n:"",g:{}},cre:0,mig2:0});
+  mat:{geo:0,his:0,civ:0},camp:{},quest:{},deco:{},fest:{},isl:{n:"",g:{}},cre:0,mig2:0,tour:{},intro:{}});
 let WELCOME=0,WELCOME_M=0;
 let roster={cur:"p1",list:[{id:"p1",n:"",g:"",c:0,ic:""}]};
 try{const r=JSON.parse(localStorage.getItem(RK)||"null");
@@ -1232,7 +1283,8 @@ function showIV(i){closeSheet(true);ivOpen=true;ivIsle=i;st.visited[i.key]=1;st.
   const t=ivTarget;ivTarget=null;
   requestAnimationFrame(()=>{let el=null;if(t&&t.sec)el=$("sec-"+t.sec);else if(t&&t.ch)el=$("ch-"+t.ch);
     if(el){scrollIV(el);if(t.sec&&!reduce)el.classList.add("flash")}else iv.scrollTop=0;
-    const h=$("ivT");if(h)h.focus({preventScroll:true})})}
+    const h=$("ivT");if(h)h.focus({preventScroll:true});
+    if(!st.intro[i.key]&&!GD)setTimeout(()=>{if(ivOpen&&ivIsle===i&&!GD)introIsle(i)},reduce?60:450)})}
 function closeIV(){if(!ivOpen)return;const id=ivIsle&&ivIsle.id;ivOpen=false;ivIsle=null;iv.hidden=true;iv.innerHTML="";document.documentElement.classList.remove("ivopen");refresh();
   const g=id&&map.querySelector(`.isle[data-id="${id}"]`);if(g)g.focus({preventScroll:true})}
 /* r：{first 第一次答對, t0 答題前的章級, up 升級結果, coins 這題的幣, fix 錯題復活, newItem 博物館新展品, s0 答題前的島星等} */
@@ -1276,6 +1328,7 @@ iv.addEventListener("click",e=>{
   const fg=e.target.closest(".fig");if(fg){openFigZ(fg);return}
   if(quizClick(e,ivProgress))return;
   if(e.target.closest('[data-act="print"]')){openHO(ivIsle);return}
+  if(e.target.closest('[data-act="intro"]')){introIsle(ivIsle,true);return}
   const rd=e.target.closest(".redo");
   if(rd){const se=$("sec-"+rd.dataset.sec);SECBY[rd.dataset.sec].qids.forEach(q=>delete st.cl[q]);save();
     se.querySelectorAll(".q").forEach(qe=>{qe.classList.remove("lock");
@@ -1802,6 +1855,94 @@ function cheer(op,s,r){if(!fw.hidden)return;petals(!!r.up,s.subj,op.getBoundingC
 /* 點題目：題目下方畫一道螢光筆，提醒「從這題開始」 */
 document.addEventListener("click",e=>{const q=e.target.closest(".q .qs");if(!q||reduce)return;q.classList.remove("hl");void q.offsetWidth;q.classList.add("hl")});
 
+/* ---------- 引導者：新手導覽（首頁一次、第一次登島一次）和每座島的登島簡介，都由該科島民帶 ----------
+   步驟 {t:選擇器或回傳元素的函式（聚光燈目標，可省略）, pose:idle|point|cheer, h:標題, p:內文, end:最後一步按鈕字}
+   看過就記在玩家紀錄 st.tour（h 首頁、i 島頁）和 st.intro[島 key]，跳過也算看過 */
+const INTRO={
+ "geo-map":["先學會說「我在哪裡」：經緯度、方位和比例尺，再看臺灣在世界上的位置。","看地圖先找方向標、比例尺和圖例；經度分東西、緯度分南北，別弄反了。"],
+ "geo-land":["從高山走到海邊：地形怎麼被塑造出來，臺灣的山脈、平原和四段海岸各是什麼樣子。","等高線越密，坡就越陡；海岸可以照北、東、西、南四段，各記一個特色。"],
+ "geo-climate":["天氣是今天的樣子，氣候是長期的平均；再看水怎麼循環、臺灣的河川怎麼流。","看氣候圖先看雨量長條、再看氣溫折線；臺灣河川「短、急、豐枯差距大」，要記得原因。"],
+ "geo-people":["人口怎麼成長、分布和遷移，臺灣有哪些族群文化，還有農漁牧業怎麼轉型。","人口金字塔先看形狀：底部寬是年輕的人口，底部變窄、上面變寬就是高齡化。"],
+ "geo-city":["工業和貿易把臺灣連上世界；聚落怎麼變成都市，城鄉和區域之間又有哪些差異。","先分清楚三級產業：第一級取自自然，第二級加工製造，第三級提供服務。"],
+ "geo-china":["中國的地勢西高東低，像三層階梯；氣候、人口和經濟也跟著有東西、南北的差異。","把地形、氣候和人口分布疊在一起看，就會懂為什麼人口集中在東部。"],
+ "geo-neasia":["日本群島和朝鮮半島：多山又多地震的自然環境，以及兩地不同的經濟發展路線。","比較日本、南韓、北韓時，用同一張表列出地形、產業和經濟特色，差異一看就懂。"],
+ "geo-seasia":["季風吹過的地方：東南亞的多元文化和區域結盟，南亞的人口、宗教與經濟發展。","季風帶來雨季和乾季；讀東南亞和南亞時，先想季風怎麼影響農業和生活。"],
+ "geo-mideast":["乾燥的沙漠與綠洲、伊斯蘭文化，還有石油帶來的財富和衝突。","讀這一區的衝突，先找爭的是水、石油、宗教還是民族。"],
+ "geo-africa":["赤道兩側從雨林、莽原到沙漠，多元的族群文化，以及資源豐富卻發展受限的挑戰。","漠南非洲的氣候大致以赤道為中心、南北對稱排列，先記這個規律再看各區。"],
+ "geo-europe":["西風和暖流照顧的歐洲，分成幾個各有特色的區域，再加上橫跨歐亞的俄羅斯。","記歐洲氣候時從西岸往內陸走：越往東越乾、冬天越冷。"],
+ "geo-america":["北美洲的大平原和工業帶，中南美洲的高山、雨林和拉丁文化，兩邊的發展大不相同。","南、北美洲的地形都是「西邊高山、中間平原、東邊高地」，先記這個排列。"],
+ "geo-oceania":["太平洋上的三大群島、澳洲和紐西蘭，最後到南北兩極，看氣候變遷帶來的衝擊。","三大群島用名字記：美拉尼西亞是「黑」、密克羅尼西亞是「小」、玻里尼西亞是「多」。"],
+ "geo-taiwan":["回到臺灣：地名裡藏著自然環境、族群和歷史的故事，還有農業發展和食品安全議題。","看到一個地名，先猜它跟方位、自然環境、族群還是歷史事件有關。"],
+ "his-prehist":["從考古挖出的遺址說起，認識臺灣原住民族，再看大航海時代各方勢力怎麼來到臺灣。","史前文化先分舊石器、新石器和金屬器時代，再把各個遺址放進去。"],
+ "his-qing":["清帝國統治臺灣兩百多年：治臺政策怎麼從消極變積極，農商業和社會文化又怎麼改變。","抓住轉折點：開港通商和牡丹社事件以後，清廷對臺灣的態度明顯不同。"],
+ "his-japan":["日本統治臺灣五十年：殖民體制、經濟建設，以及臺灣人爭取權利的社會運動。","把日治分成前、中、後三期，每期記一個政策重點，就不容易混。"],
+ "his-postwar":["從二二八事件、戒嚴到解嚴和民主化，再看臺灣的外交處境、經濟和社會變遷。","戰後事件很多，先排出時間線：戒嚴、解嚴、總統直選，再把其他事件放進去。"],
+ "his-ancient":["從商周的封建到秦漢的郡縣，經過隋唐的科舉，再到宋元多民族並立的時代。","每個朝代問三件事：怎麼統治、怎麼選人才、和周邊民族怎麼往來。"],
+ "his-modern":["明清帝國和全球貿易；西方勢力來到東亞後，中國和日本做出不同的回應。","比較自強運動和明治維新：改革的範圍差在哪裡，結果就差在哪裡。"],
+ "his-republic":["辛亥革命建立民國，經過軍閥割據、新文化運動和五四運動，國民政府也面對內憂外患。","新文化運動和五四運動常被搞混：一個是思想文化運動，一個是愛國的群眾運動。"],
+ "his-eastasia":["中日戰爭、國共內戰和政府遷臺，中華人民共和國的發展，以及冷戰下的東亞局勢。","讀中國共產黨政權時，照「建國、文化大革命、改革開放」三個階段整理。"],
+ "his-classic":["兩河流域和埃及的古文明、希臘羅馬的政治與文化，以及佛教、基督教、伊斯蘭教的誕生。","三大宗教各記四件事：誰創立、在哪裡、主要主張、怎麼傳出去。"],
+ "his-earlymod":["文藝復興和大航海揭開近代，宗教改革、科學革命、啟蒙運動改變了思想，最後是美國和法國的革命。","這些運動像一條連鎖：重視人、懷疑權威、相信理性，最後追求自由和平等。"],
+ "his-worldwar":["民主革命和民族建國之後，帝國主義引爆兩次世界大戰，戰後進入冷戰，再走向多元的世界。","兩次大戰各記原因、陣營和戰後安排（國際聯盟、聯合國），用表格比較最清楚。"],
+ "civ-rights":["什麼是公民、好公民需要哪些德性，以及每個人都有的人性尊嚴和人權。","讀人權的題目先問：這個權利保護的是誰？可能被誰侵害？"],
+ "civ-family":["從家庭的親屬關係和功能，到學生在校園裡的權利，再到部落的意義和公民參與。","家庭和校園的題目常考權利和義務，兩個要一起看。"],
+ "civ-culture":["尊重不同的文化、了解社會規範從哪裡來，以及大家為什麼要組成團體。","分辨不同的社會規範時，看違反以後會受到什麼樣的制裁。"],
+ "civ-justice":["公共意見怎麼形成、社會上有哪些不公平，政府又怎麼用社會福利保障大家。","遇到公平正義的題目，想想是給每個人一樣的，還是依照不同處境給予協助。"],
+ "civ-demo":["國家和民主、憲法保障的權利、權力分立，再到中央和地方政府，以及怎麼投票參與。","中央政府和地方政府的職權，最好畫成一張組織圖，誰監督誰一看就懂。"],
+ "civ-law":["生活中的契約、民事糾紛怎麼解決，以及刑法怎麼處罰犯罪。","先分清楚民事和刑事：民事是私人之間的糾紛，刑事是國家追訴犯罪。"],
+ "civ-rescue":["刑事案件怎麼一步步追訴，對政府的處分不服時怎麼救濟，以及法律怎麼保護兒少。","行政救濟記順序：先提訴願，不服再提行政訴訟。"],
+ "civ-market":["每個選擇都有機會成本；生產者怎麼追求利潤，市場又怎麼競爭。","機會成本是放棄的選項裡價值最高的那一個，不是全部加起來。"],
+ "civ-trade":["勞動參與和勞工保障、貨幣怎麼演變，以及國際分工、貿易和匯率。","匯率題先想清楚：新臺幣升值，代表同樣的新臺幣能換到更多外幣。"],
+ "civ-global":["科技帶來的便利和風險、智慧財產權、全球化的影響，以及臺灣怎麼參與國際社會。","全球化的題目常問一體兩面，讀的時候把好處和挑戰各列一欄。"]};
+const gd=$("gd");let GD=null;
+const guideImg=(k,pose)=>{const F=FOLK[k];return `<span class="gimg" style="${FOLKPAL};--ic:${META[k].flag}">${ICON("guide-"+F.f+"-"+pose)||ICON("folk-"+F.f)||""}</span>`};
+const folkName=k=>FOLK[k].r+FOLK[k].n;
+function homeTour(){const F=FOLK[cur];return [
+  {pose:"cheer",h:"歡迎來到社會科島嶼！",p:`我是${F.r}${F.n}。這裡有地理、歷史、公民三科，一共 35 座島、245 節。跟我走一圈，一分鐘就知道怎麼開始。`},
+  {t:"#subj",pose:"point",h:"先選一科",p:`三科各有自己的群島和島民：地理是${folkName("geo")}，歷史是${folkName("his")}，公民是${folkName("civ")}。`},
+  {t:".sails",pose:"point",h:"從這裡出發",p:"不知道從哪裡開始？按左邊的大按鈕，會帶你到下一節還沒集章的地方；「抽一節複習」會隨機挑一節。上面一排記著你登過幾座島、集了幾個章。"},
+  {t:"#mapwrap",pose:"point",h:"沿著航線挑一座島",p:"白色虛線是學習航線，順序跟課本一樣。點一座島會先看到島卡，再按登島就能開始讀。"},
+  {t:"#playCard",pose:"point",h:"島嶼樂園",p:"答對題目會得到知識幣和建材，可以逛商店、看博物館、升級營地，也能和同學雙人對戰。"},
+  {t:".pc-wrong",pose:"point",h:"錯題本",p:"答錯的題目會自動收進錯題本。回來重新作答，答對就會移出去，還能多拿知識幣。"},
+  {t:".greet",pose:"cheer",h:"準備出航！",p:"最上面這排可以切換時段、開關音效和省電模式。想再看一次導覽，按頁面最下面的「重看導覽」。現在挑一座島出發吧！",end:"出發！"}]}
+function isleIntro(i){const I=INTRO[i.key]||["",FOLK[i.subj].tips[0]],chs=i.chs.map(c=>`「${chTitle(c)}」`).join("、");
+  return [{pose:"point",h:`歡迎來到${i.name}`,p:`這座島有 ${i.chs.length} 章：${chs}。${I[0]}`},{pose:"idle",h:"讀的時候注意",p:I[1],end:"開始讀！"}]}
+function isleTour(i){const sec=()=>$("sec-"+i.secs[0].id);return [
+  {t:"#ivNav",pose:"point",h:"章節分頁",p:"點上面的章名，可以直接跳到那一章；後面的數字是這一章已經集章的節數。"},
+  {t:()=>sec().querySelector(".kp"),pose:"point",h:"先讀重點",p:"每一節先讀重點，紅字是最關鍵的詞。有圖解的節，點圖可以放大。"},
+  {t:()=>sec().querySelector(".qz .q"),pose:"point",h:"再做練習",p:"讀完做練習題。答錯可以再想想，或直接看解析；沒答對的題目會收進錯題本。"},
+  {t:()=>sec().querySelector(".stamp"),pose:"cheer",h:"整節答對就集章",p:"整節都答對就蓋上銅章；每題都第一次就答對升銀章；隔天以後再全部一次答對，就升金章。",end:"開始讀！"}]}
+function startGuide(k,steps,onEnd){if(GD||!steps.length)return;GD={k,steps,i:0,from:document.activeElement,onEnd};gd.hidden=false;showStep()}
+function showStep(){const s=GD.steps[GD.i],k=GD.k,n=GD.steps.length,last=GD.i===n-1,pose=s.pose||"idle";
+  gd.style.setProperty("--ic",META[k].flag);
+  $("gdFig").innerHTML=guideImg(k,pose);$("gdMini").innerHTML=guideImg(k,pose);$("gdName").textContent=folkName(k);
+  $("gdStep").textContent=n>1?`${GD.i+1} / ${n}`:"";$("gdT").textContent=s.h;$("gdP").textContent=s.p;
+  $("gdPrev").hidden=GD.i===0;$("gdNext").textContent=last?(s.end||"知道了"):"下一步 →";$("gdFs").innerHTML=fszHTML();
+  let el=null;try{el=typeof s.t==="function"?s.t():s.t?document.querySelector(s.t):null}catch(e){}
+  GD.el=el&&el.getClientRects().length?el:null;
+  if(GD.el)GD.el.scrollIntoView({block:"center",behavior:reduce?"auto":"smooth"});
+  placeGuide();if(GD.el&&!reduce)setTimeout(placeGuide,420);
+  if(!reduce)["gdBox","gdFig"].forEach(id=>{const b=$(id);b.classList.remove("in");void b.offsetWidth;b.classList.add("in")});
+  $("gdNext").focus({preventScroll:true})}
+function placeGuide(){if(!GD)return;const sp=$("gdSpot"),el=GD.el;let top=false;
+  if(el&&el.isConnected){const r=el.getBoundingClientRect(),vw=innerWidth,vh=innerHeight,x=Math.max(4,r.left-8),y=Math.max(4,r.top-8);
+    sp.style.left=x+"px";sp.style.top=y+"px";sp.style.width=Math.max(0,Math.min(vw-4,r.right+8)-x)+"px";sp.style.height=Math.max(0,Math.min(vh-4,r.bottom+8)-y)+"px";
+    sp.hidden=false;top=(Math.max(0,r.top)+Math.min(vh,r.bottom))/2>vh*.55}
+  else sp.hidden=true;
+  gd.classList.toggle("top",top);gd.classList.toggle("dim",sp.hidden)}
+function guideGo(d){if(!GD)return;const j=GD.i+d;if(j<0)return;if(j>=GD.steps.length){endGuide();return}GD.i=j;showStep()}
+function endGuide(){if(!GD)return false;const g=GD;GD=null;gd.hidden=true;if(g.onEnd)g.onEnd();if(g.from&&g.from.isConnected)g.from.focus({preventScroll:true});return true}
+$("gdNext").onclick=()=>guideGo(1);$("gdPrev").onclick=()=>guideGo(-1);$("gdSkip").onclick=()=>endGuide();
+gd.addEventListener("keydown",e=>{if(e.target.closest(".fsz"))return;
+  if(e.key==="ArrowRight"){e.preventDefault();guideGo(1)}else if(e.key==="ArrowLeft"){e.preventDefault();guideGo(-1)}
+  else if(e.key==="Tab"){const f=[...gd.querySelectorAll("button")].filter(b=>!b.hidden&&b.offsetParent);const a=f[0],z=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
+addEventListener("resize",()=>{if(GD)placeGuide()});document.addEventListener("scroll",()=>{if(GD)placeGuide()},true);
+const tourHome=()=>startGuide(cur,homeTour(),()=>{st.tour.h=1;save()});
+function introIsle(i,again){const steps=isleIntro(i).concat(again||!st.tour.i?isleTour(i):[]);
+  startGuide(i.subj,steps,()=>{st.intro[i.key]=1;st.tour.i=1;save()})}
+$("gdAgain").onclick=()=>{scrollTo({top:0,behavior:"auto"});tourHome()};
+
 /* ---------- 知識幣 ---------- */
 const coinChip=()=>`<span class="cchip" title="知識幣"><span class="ci">${ICON("coin")}</span><b data-coins>${st.coins}</b></span>`;
 /* 每天有上限的獎勵：P 是玩家紀錄，kind 是活動名稱 */
@@ -2320,7 +2461,7 @@ function folkIsleTip(i){const k=i.subj,F=FOLK[k],t=i.secs.map(tierOf),n=t.length
   else if(sN<4)m="三顆星了！隔天以後再重做一次、全部一次答對，就會升金章，整座島會閃耀。";
   else m="整座島都在發光，謝謝你把這裡照顧得這麼好！";
   if(lv<3&&campReady(i))m+=`營地可以升級成${CAMP[lv+1][0]}了，回航海圖打開「營地」。`;
-  return `<div class="folk-tip">${folkImg(k)}<p><b>${F.r}${F.n}：</b>${esc(m)}</p></div>`}
+  return `<div class="folk-tip">${folkImg(k)}<p><b>${F.r}${F.n}：</b>${esc(m)}</p><button type="button" class="tbtn" data-act="intro">島民介紹</button></div>`}
 
 /* ---------- 港口慶典：一個學期的島全部三顆星 ---------- */
 const SEMS=["七上","七下","八上","八下","九上","九下"];
@@ -2438,13 +2579,15 @@ function routeHash(){closeHO();const g=location.hash.slice(1);
   const i=h.id&&SUBJ[h.s].byId[h.id];if(i)showIV(i);else closeIV()}
 document.querySelectorAll("#subj button").forEach(b=>b.onclick=()=>{closeSheet();setSubj(b.dataset.s,true)});
 addEventListener("hashchange",routeHash);
-addEventListener("keydown",e=>{if(e.key!=="Escape")return;if(closeFest())return;if(BT&&BT.phase!=="end")return;if(closeFigZ())return;if(closeHO())return;if(ivOpen||wbOpen||gmOpen)location.hash=cur;else closeSheet()});
+addEventListener("keydown",e=>{if(e.key!=="Escape")return;if(endGuide())return;if(closeFest())return;if(BT&&BT.phase!=="end")return;if(closeFigZ())return;if(closeHO())return;if(ivOpen||wbOpen||gmOpen)location.hash=cur;else closeSheet()});
 
 let rq=0;
 new ResizeObserver(()=>{cancelAnimationFrame(rq);rq=requestAnimationFrame(()=>{const w=mapwrap.clientWidth-32>=700;if(!geom||w!==geom.wide)buildMap();else{sizeSea();still()}})}).observe(mapwrap);
 new ResizeObserver(()=>{sizeSky();still()}).observe(sky);
 
 applyTod();renderFilters();refresh();renderSnd();renderFx();sizeSky();routeHash();
+/* 第一次來（或新功能上線後第一次）：首頁新手導覽。直接開島嶼頁的，改由登島簡介帶 */
+if(!st.tour.h)setTimeout(()=>{if(!ivOpen&&!wbOpen&&!gmOpen&&!GD&&fw.hidden)tourHome()},WELCOME||WELCOME_M?6400:700);
 if(WELCOME||WELCOME_M)setTimeout(()=>toast(WELCOME?`歡迎來到島嶼樂園！依照你之前的進度，送你 ${WELCOME} 枚知識幣${WELCOME_M?"，還有蓋營地用的建材":""}`
   :`島民送來蓋營地的建材：${ORDER.map(k=>MAT[k][0]+" "+(+st.mat[k]||0)).join("、")}。到「營地」把帳篷升級吧！`,5200),900);
 setInterval(()=>{if(st.tod==="auto"){const was=tod;applyTod();if(was!==tod)buildMap()}},60000);

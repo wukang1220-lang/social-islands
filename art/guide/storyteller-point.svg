@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+  <g fill="none" stroke="var(--fig-ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M53 106C38 108 27 123 23 143Q19 160 29 170L43 175L51 157L42 151L60 122Z" fill="var(--ic)"/>
+    <path d="M104 107L126 85L138 95Q128 113 114 127L101 122Z" fill="var(--ic)"/>
+    <path d="M29 168L40 173L48 157L39 153ZM119 92L126 85L138 95L132 104Z" fill="var(--fig-warm)"/>
+
+    <path d="M39 205L40 134Q41 110 57 104L66 100H97L108 103Q121 109 121 133L125 205Z" fill="var(--ic)"/>
+    <path d="M56 106L67 102L64 205H49L54 152ZM95 102L106 105L114 205H99L98 152Z" fill="var(--fig-warm)"/>
+
+    <circle cx="80" cy="60" r="30" fill="var(--fig-sand)"/>
+    <path d="M50 54C46 35 59 25 73 28C67 22 72 16 81 15Q76 22 85 28C101 21 114 37 110 54L99.5 48L95 39Q75.5 52.5 56 45Z" fill="var(--fig-ink)"/>
+    <g fill="var(--fig-warm)" fill-opacity=".5" stroke="none">
+      <circle cx="57.5" cy="73.5" r="5.25"/>
+      <circle cx="102.5" cy="73.5" r="5.25"/>
+    </g>
+    <circle cx="66.5" cy="60" r="10.5"/>
+    <circle cx="93.5" cy="60" r="10.5"/>
+    <path d="M77 60H83M50 57L56 58.5M104 58.5L110 57"/>
+    <g fill="var(--fig-ink)" stroke="none">
+      <circle cx="66.5" cy="60" r="2.7"/>
+      <circle cx="93.5" cy="60" r="2.7"/>
+    </g>
+    <path d="M73 76.5Q80 79.5 87 76.5Q81 88 74 80.5Z" fill="var(--fig-ink)"/>
+    <path d="M53 88.5Q80 99 107 88.5L105.5 103.5Q80 112.5 54.5 103.5Z" fill="var(--fig-warm)"/>
+
+    <path d="M134 91L145 65Q149 64 153 69L139 94Z" fill="var(--fig-sand)"/>
+    <path d="M139 86L149 69"/>
+    <path d="M126 85Q126 80 130 77L138 70Q141 68 143 71Q144 73 142 75L136 81Q141 79 144 82Q147 86 141 92L137 96Z" fill="var(--fig-sand)"/>
+    <path d="M135 86L140 83"/>
+    <path d="M38 148Q63 152 87 149V176Q64 180 38 176Z" fill="var(--fig-sand)"/>
+    <path d="M38 176C29 176 29 148 38 148Q45 148 43 155H38M87 176C96 176 96 149 87 149Q80 149 82 156H87" fill="var(--fig-paper)"/>
+    <path d="M52 157H74M52 164H77M52 171H67"/>
+    <path d="M30 166Q33 162 39 162Q44 162 44 167Q43 171 37 172L41 172Q45 173 43 177Q40 181 33 179L27 176Z" fill="var(--fig-sand)"/>
+  </g>
+</svg>

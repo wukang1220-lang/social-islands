@@ -8,7 +8,8 @@ questions whose options are all numbers (years, ages, counts) keep their order.
 
 museum.tsv gives every section one museum exhibit, in section order: "<subj> <isle> <no>|<icon>|<name>|<label>".
 Icons come from art/icons/<icon>.svg (museum exhibits, avatars, camp buildings, decorations)
-and art/folk/<name>.svg (islander portraits, emitted as "folk-<name>").
+and art/folk/<name>.svg (islander portraits, emitted as "folk-<name>"), and art/guide/<name>.svg
+(half-body islander guides for the tour and island intros, emitted as "guide-<name>").
 extras.json maps a section id to {"fig": [diagram ids], "w": widget name, "wd": widget data}.
 Diagrams come from art/figs/<id>.svg and island emblems from art/isles/<subj>-<id>.svg.
 Every SVG must pass art/check_svg.py (no scripts, links or foreign colours); a file that
@@ -78,6 +79,16 @@ for f in sorted(glob.glob(os.path.join(HERE, "art", "folk", "*.svg"))):
     t = open(f, encoding="utf-8").read().strip()
     t = re.sub(r">\s+<", "><", re.sub(r"\s+", " ", t))
     icons["folk-" + n] = t.replace("<svg ", '<svg aria-hidden="true" focusable="false" ', 1)
+# half-body guide portraits (160 x 200), "<islander>-<idle|point|cheer>", emitted as "guide-<name>"
+for f in sorted(glob.glob(os.path.join(HERE, "art", "guide", "*.svg"))):
+    n = os.path.splitext(os.path.basename(f))[0]
+    errs = check(f, "guide")
+    if errs:
+        warn.append(f"skipped art/guide/{n}.svg: {errs[0]}")
+        continue
+    t = open(f, encoding="utf-8").read().strip()
+    t = re.sub(r">\s+<", "><", re.sub(r"\s+", " ", t))
+    icons["guide-" + n] = t.replace("<svg ", '<svg aria-hidden="true" focusable="false" ', 1)
 mus_i = 0
 numeric = re.compile(r"^[0-9０-９]")
 spread = [0, 0, 0, 0]

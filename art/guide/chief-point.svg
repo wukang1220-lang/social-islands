@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+  <g fill="none" stroke="var(--fig-ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M54 105Q44 104 37 116L24 140Q19 150 25 156Q30 161 43 158L48 145L40 143L55 127Z" fill="var(--ic)"/>
+    <path d="M107 104Q115 101 122 93L132 81L144 90L134 105Q124 119 114 128Z" fill="var(--ic)"/>
+    <path d="M40 203L42 132Q41 111 54 105L68 98H92L107 103Q119 108 120 130L123 203Z" fill="var(--ic)"/>
+    <path d="M70 101L82 111L94 101L98 203H67Z" fill="var(--fig-paper)"/>
+    <path d="M69 85H91L92 99L82 109L69 99Z" fill="var(--fig-sand)"/>
+    <path d="M66 100L60 113L69 120M96 100L104 113L95 121M82 111V203"/>
+    <circle cx="53" cy="130" r="7" fill="var(--fig-warm)"/>
+    <circle cx="80" cy="61" r="30" fill="var(--fig-sand)"/>
+    <path d="M50 61C43 42 53 31 67 32Q80 23 92 32C111 31 118 49 109 63L102 54V46Q94 50 86 42Q74 50 66 44L59 50V58Z" fill="var(--fig-soft)"/>
+    <path d="M63 55L72 53M89 53L98 55" stroke="var(--fig-soft)" stroke-width="4"/>
+    <g fill="var(--fig-warm)" fill-opacity=".5" stroke="none">
+      <circle cx="60" cy="74" r="5"/>
+      <circle cx="100" cy="74" r="5"/>
+    </g>
+    <g fill="var(--fig-ink)" stroke="none">
+      <circle cx="68" cy="63" r="3"/>
+      <circle cx="92" cy="63" r="3"/>
+    </g>
+    <path d="M73 75Q80 78 87 75Q85 83 80 83Q75 83 73 75Z" fill="var(--fig-ink)"/>
+    <g transform="translate(38 129) scale(-1 1)">
+      <path d="M11 5L13 19H20L17 6Z" fill="var(--ic)"/>
+      <path d="M1 -4L24 -13V13L1 4Z" fill="var(--fig-paper)"/>
+      <rect x="-4" y="-5" width="8" height="10" rx="2" fill="var(--ic)"/>
+      <ellipse cx="24" cy="0" rx="4" ry="13" fill="var(--ic)"/>
+    </g>
+    <path d="M32 148L30 142Q29 138 25 139L20 141Q16 142 18 147L21 152Q25 157 30 154Z" fill="var(--fig-sand)"/>
+    <path d="M131 83L135 78Q133 75 137 71L146 62Q149 59 151 61Q153 63 150 66L142 74Q146 73 148 76Q150 78 147 80Q150 82 146 86L141 92Z" fill="var(--fig-sand)"/>
+    <path d="M141 78L145 76"/>
+  </g>
+</svg>
