@@ -910,6 +910,17 @@ body.open .cheerfab,#ex:not([hidden]) ~ .cheerfab{display:none}
 @keyframes sfSlam{0%{transform:scale(2.6) rotate(-20deg);opacity:0}60%{transform:scale(.9) rotate(-6deg);opacity:1}100%{transform:rotate(-8deg)}}
 @media (prefers-reduced-motion:reduce){.sealfx.on .sf-seal{animation:none}.sealfx{transition:none}}
 
+/* ---------- 常見迷思、會考題型 ---------- */
+.myth{background:color-mix(in srgb,#e0a21f 11%,var(--paper));border-radius:16px;padding:12px 14px}
+.myth ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.myth li{display:flex;flex-direction:column;gap:4px}
+.myth p{margin:0;display:flex;gap:8px;align-items:flex-start;font-size:calc(14.5px*var(--fz));line-height:1.7}
+.myth p b{flex:none;font-size:12px;line-height:1.5;border-radius:6px;padding:1px 7px;margin-top:3px;color:#fff}
+.my-x{color:var(--ink-soft)}.my-x b{background:#c0281f}
+.my-o b{background:var(--ok)}
+.qzc .kpt small{margin-left:8px;font-weight:700;color:var(--ink-soft);letter-spacing:0}
+.qc .qs b{color:#b8452a}
+
 /* ---------- 闖關航線 ---------- */
 .lv-sems{margin-bottom:10px}
 .lv-sum{margin:0 0 14px;color:var(--ink-soft);font-size:calc(14px*var(--fz));line-height:1.75}
@@ -1101,7 +1112,7 @@ ORDER.forEach(k=>{const r=RAW[k],S={key:k,...META[k]};
   S.isles=r.isles.map(i=>({...i,subj:k,key:`${k}-${i.id}`,g:GLYPH[i.id]||i.name[0],chs:[],secs:[]}));
   S.byId=Object.fromEntries(S.isles.map(i=>[i.id,i]));
   S.chs=r.ch.map(c=>{const isle=S.byId[c.isle],ch={...c,subj:k,isleObj:isle,uid:`${k}-${c.b}-${c.ch}`};
-    ch.secs=c.secs.map(s=>({...s,subj:k,isleObj:isle,chObj:ch,qids:s.q.map((_,qi)=>s.id+"."+qi)}));
+    ch.secs=c.secs.map(s=>({...s,subj:k,isleObj:isle,chObj:ch,qids:s.q.map((_,qi)=>s.id+"."+qi),cids:(s.c||[]).map((_,ci)=>s.id+".c"+ci)}));
     isle.chs.push(ch);isle.secs.push(...ch.secs);return ch});
   S.isles.forEach(i=>{i.sem=i.chs[0].sem;i.nq=i.secs.reduce((a,s)=>a+s.q.length,0)});
   S.secs=S.chs.flatMap(c=>c.secs);S.nq=S.secs.reduce((a,s)=>a+s.q.length,0);
@@ -1123,7 +1134,7 @@ const NQ=ALLSECS.reduce((a,s)=>a+s.q.length,0);
 const RK="socialIsles.roster",keyOf=id=>id==="p1"?"socialIsles.v2":"socialIsles.v2."+id;
 const DEF=()=>({visited:{},ans:{},wrong:{},last:{},sem:{},stamp:{},qv:{},subj:"geo",tod:"auto",fs:0,
   coins:0,tier:{},tday:{},cl:{},mus:{},own:{},dig:{},bat:{},qq:{},ap:{},ev:{},day:{},ttl:"",tseen:{},fix:0,cover:0,exam:{},cap:"",mig:0,
-  mat:{geo:0,his:0,civ:0},camp:{},quest:{},deco:{},fest:{},isl:{n:"",g:{}},cre:0,mig2:0,tour:{},intro:{},lvSem:"",tw:{},mk:[],tr:{},trm:0,inv:{cut:2,hint:2},sp:0,mkTo:""});
+  mat:{geo:0,his:0,civ:0},camp:{},quest:{},deco:{},fest:{},isl:{n:"",g:{}},cre:0,mig2:0,tour:{},intro:{},lvSem:"",tw:{},mk:[],tr:{},trm:0,inv:{cut:2,hint:2},sp:0,mkTo:"",ca:{}});
 let WELCOME=0,WELCOME_M=0;
 let roster={cur:"p1",list:[{id:"p1",n:"",g:"",c:0,ic:""}]};
 try{const r=JSON.parse(localStorage.getItem(RK)||"null");
@@ -1166,6 +1177,9 @@ loadSt(roster.cur);
 const $=id=>document.getElementById(id);
 const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const splitQ=id=>{const k=id.lastIndexOf(".");return[id.slice(0,k),+id.slice(k+1)]};
+/* 題目代號：練習題「節.n」、會考題型「節.cN」 */
+const qRef=id=>{const k=String(id).lastIndexOf("."),s=SECBY[String(id).slice(0,k)],x=String(id).slice(k+1);if(!s)return null;
+  if(x[0]==="c"){const n=+x.slice(1),q=s.c&&s.c[n];return q?{s,q,isC:true,n}:null}const n=+x,q=s.q[n];return q?{s,q,isC:false,n}:null};
 
 /* ---------- 字級 ---------- */
 const FSN=["標準","大","特大"];
@@ -1405,6 +1419,20 @@ $("sail").onclick=()=>openIsle(cur,$("sail").dataset.id);
 const iv=$("iv");let ivOpen=false,ivIsle=null,ivTarget=null,ivFrom=null;
 function openIsle(subj,id,target){ivTarget=target||null;const h=`#${subj}-${id}`;if(location.hash===h)routeHash();else location.hash=h}
 const fbGood=q=>`<b>答對了。</b>${esc(q[3])}`;
+const toolsHTML=ok=>`<div class="qtools"${ok?" hidden":""}><button type="button" class="qtool" data-use="hint">提示卡 <b data-inv="hint">${st.inv.hint|0}</b></button><button type="button" class="qtool" data-use="cut">刪去卡 <b data-inv="cut">${st.inv.cut|0}</b></button></div><div class="qhint" hidden></div>`;
+const mythHTML=s=>s.m&&s.m.length?`<div class="myth"><div class="kpt">常見迷思</div><ul>${s.m.map(([a,b])=>`<li><p class="my-x"><b>迷思</b><span>${esc(a)}</span></p><p class="my-o"><b>正解</b><span>${esc(b)}</span></p></li>`).join("")}</ul></div>`:"";
+/* 會考題型：答對記在 st.ca（第一次答對 +1 幣），不影響集章；答錯收進錯題本 */
+function cHTML(s,q,ci){const id=s.id+".c"+ci,ok=!!st.ca[id]&&!st.wrong[id];
+  return `<div class="q qc${ok?" lock":""}" data-q="${id}"><p class="qs"><b>會考 ${ci+1}.</b> ${esc(q[0])}</p><div class="opts" role="group" aria-label="會考題型第 ${ci+1} 題選項">${q[1].map((o,oi)=>`<button type="button" class="op${ok&&oi===q[2]?" ok":""}" data-o="${oi}"${ok?" disabled":""}><i>${L[oi]}</i><span>${esc(o)}</span></button>`).join("")}</div>${toolsHTML(ok)}<div class="fb${ok?" good":""}" aria-live="polite"${ok?"":" hidden"}>${ok?fbGood(q):""}</div></div>`}
+function cClick(qe,op){const id=qe.dataset.q,R=qRef(id);if(!R||!R.isC)return false;const q=R.q,o=+op.dataset.o,fb=qe.querySelector(".fb"),inWB=!!qe.closest("#wb");
+  if(!qe.dataset.tk&&!qe.dataset.aid&&!qe.querySelector(".op.no")){qe.dataset.tk="1";track(id,o===q[2])}
+  if(o===q[2]){qe.classList.add("lock");op.classList.add("ok");qe.querySelectorAll(".op").forEach(b=>b.disabled=true);const tl=qe.querySelector(".qtools");if(tl)tl.hidden=true;
+    fb.hidden=false;fb.className="fb good";fb.innerHTML=fbGood(q);const first=!st.ca[id];if(first){st.ca[id]=1;st.coins+=1}delete st.wrong[id];save();renderMe();sfx("ok");
+    petals(false,R.s.subj,op.getBoundingClientRect());if(first)flyCoins(op,1);
+    if(inWB){const n=wrongIds().length;$("wbStat").textContent=`待訂正 ${n} 題`;toast(n?`會考題型訂正成功！還有 ${n} 題待訂正`:"錯題全部訂正完了！",2600)}}
+  else{op.classList.add("no");op.disabled=true;st.wrong[id]=1;save();sfx("no");
+    fb.hidden=false;fb.className="fb bad";fb.innerHTML=`<b>不是這個答案。</b>再想想，或<button type="button" class="reveal">直接看解析</button>。`}
+  return true}
 function qHTML(s,q,qi){const id=s.id+"."+qi,ok=!!st.ans[id];
   return `<div class="q${ok?" lock":""}" data-q="${id}"><p class="qs"><b>${qi+1}.</b> ${esc(q[0])}</p><div class="opts" role="group" aria-label="第 ${qi+1} 題選項">${q[1].map((o,oi)=>`<button type="button" class="op${ok&&oi===q[2]?" ok":""}" data-o="${oi}"${ok?" disabled":""}><i>${L[oi]}</i><span>${esc(o)}</span></button>`).join("")}</div><div class="qtools"${ok?" hidden":""}><button type="button" class="qtool" data-use="hint">提示卡 <b data-inv="hint">${st.inv.hint|0}</b></button><button type="button" class="qtool" data-use="cut">刪去卡 <b data-inv="cut">${st.inv.cut|0}</b></button></div><div class="qhint" hidden></div><div class="fb${ok?" good":""}" aria-live="polite"${ok?"":" hidden"}>${ok?fbGood(q):""}</div></div>`}
 function stampHTML(s,i){const t=tierOf(s),tip=t?TN[t]+(t<3?"："+TNEXT[t]:""):"尚未集章：答對本節全部題目就能集章";
@@ -1414,7 +1442,9 @@ function secHTML(s,i){
   ${s.fig&&s.fig.length?`<div class="figs">${s.fig.map(f=>`<figure class="fig" tabindex="0" role="button" aria-label="放大圖解">${f}<figcaption aria-hidden="true">點圖放大 ⤢</figcaption></figure>`).join("")}</div>`:""}
   <div class="kp"><div class="kpt">重點</div><ul>${s.k.map(t=>`<li>${esc(t).replace(/\*\*(.+?)\*\*/g,'<strong class="kw">$1</strong>')}</li>`).join("")}</ul></div>
   ${s.w&&WIDGETS[s.w]?`<div class="wg" data-w="${s.w}" data-s="${s.id}"></div>`:""}
+  ${mythHTML(s)}
   <div class="qz"><div class="kpt">練習 ${s.q.length} 題</div>${s.q.map((q,qi)=>qHTML(s,q,qi)).join("")}</div>
+  ${s.c&&s.c.length?`<div class="qz qzc"><div class="kpt">會考題型 ${s.c.length} 題<small>情境判讀・不影響集章</small></div>${s.c.map((q,ci)=>cHTML(s,q,ci)).join("")}</div>`:""}
   <div class="secf"><button type="button" class="redo" data-sec="${s.id}">重做這一節</button></div></article>`}
 function chipsHTML(i){return `<button type="button" class="chip-ch tw" data-gotw="1">會考塔</button>`+i.chs.map(c=>{const a=c.secs.filter(secDone).length,t=c.secs.length;return `<button type="button" class="chip-ch${a===t?" done":""}" data-goch="${c.uid}">${c.ch?c.ch+". ":""}${esc(chTitle(c))}<small>${a}/${t}</small></button>`}).join("")}
 function renderIV(i){const S=SUBJ[cur],k=S.isles.indexOf(i),prev=S.isles[k-1],next=S.isles[k+1],a=isleStamps(i),b=i.secs.length,x=isleRight(i);
@@ -1461,7 +1491,7 @@ function quizClick(e,after){
   const us=e.target.closest("[data-use]");
   if(us){const qe=us.closest(".q");if(qe&&!qe.classList.contains("lock"))useItem(qe,us.dataset.use,us);return true}
   const op=e.target.closest(".op");
-  if(op){const qe=op.closest(".q");if(qe.classList.contains("lock")||op.disabled)return true;
+  if(op){const qe=op.closest(".q");if(qe.classList.contains("lock")||op.disabled)return true;if(cClick(qe,op))return true;
     const id=qe.dataset.q,[sid,qi]=splitQ(id),s=SECBY[sid],q=s.q[qi],o=+op.dataset.o,fb=qe.querySelector(".fb"),inWB=!!qe.closest("#wb");
     const firstTry=!qe.dataset.tk&&!qe.dataset.aid&&!qe.querySelector(".op.no");if(firstTry){qe.dataset.tk="1";track(id,o===q[2])}
     if(o===q[2]){const t0=tierOf(s),s0=isleStars(s.isleObj),wasDone=secDone(s),first=!st.ans[id],fix=first&&!!st.wrong[id]&&!qe.querySelector(".op.no");
@@ -1477,7 +1507,7 @@ function quizClick(e,after){
       fb.hidden=false;fb.className="fb bad";fb.innerHTML=`<b>不是這個答案。</b>再想想，或<button type="button" class="reveal">直接看解析</button>。`}
     return true}
   const rv=e.target.closest(".reveal");
-  if(rv){const qe=rv.closest(".q"),id=qe.dataset.q,[sid,qi]=splitQ(id),q=SECBY[sid].q[qi];qe.classList.add("lock");
+  if(rv){const qe=rv.closest(".q"),id=qe.dataset.q,q=qRef(id).q;qe.classList.add("lock");
     qe.querySelectorAll(".op").forEach((b,oi)=>{b.disabled=true;if(oi===q[2])b.classList.add("rev")});{const tl=qe.querySelector(".qtools");if(tl)tl.hidden=true}
     delete st.cl[id];if(!st.ans[id])st.wrong[id]=1;save()
     const fb=qe.querySelector(".fb");fb.className="fb";fb.innerHTML=`<b>正確答案是 (${L[q[2]]})。</b>${esc(q[3])} ${qe.closest("#wb")?"這題會留在錯題本，下次再挑戰。":"這題已收進錯題本；按「重做這一節」可以再挑戰一次。"}`;return true}
@@ -1811,13 +1841,13 @@ const WIDGETS={
 /* ---------- 錯題本：答錯、還沒答對的題目 ---------- */
 const PRINTICON=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>`;
 const wb=$("wb");let wbOpen=false,wbTab="all";
-const wrongIds=()=>Object.keys(st.wrong).filter(id=>{const[sid,qi]=splitQ(id),s=SECBY[sid];return st.wrong[id]&&s&&qi>=0&&qi<s.q.length&&!st.ans[id]});
+const wrongIds=()=>Object.keys(st.wrong).filter(id=>{const R=st.wrong[id]&&qRef(id);return !!R&&(R.isC||!st.ans[id])});
 function wrongCount(){const ids=wrongIds(),by={geo:0,his:0,civ:0};ids.forEach(id=>by[SECBY[splitQ(id)[0]].subj]++);return{n:ids.length,by,ids}}
 function renderWrongCard(){const{n,by}=wrongCount();
   $("wbT").textContent=n?`還有 ${n} 題待訂正`:"目前沒有待訂正的題目";
   $("wbP").textContent=n?ORDER.map(k=>`${SUBJ[k].name} ${by[k]} 題`).join("・")+"。重新作答，答對就會移出錯題本。":"答錯、還沒答對的題目會自動收進錯題本。重新作答，答對就會移出去。"}
 function renderWB(){const{n,by,ids}=wrongCount(),qs={};
-  ids.forEach(id=>{const[sid,qi]=splitQ(id);(qs[sid]=qs[sid]||[]).push(qi)});
+  ids.forEach(id=>{const R=qRef(id);(qs[R.s.id]=qs[R.s.id]||[]).push(R)});
   if(wbTab!=="all"&&!by[wbTab])wbTab="all";
   const secs=ALLSECS.filter(s=>qs[s.id]&&(wbTab==="all"||s.subj===wbTab));
   const tabs=[["all","全部",n],...ORDER.map(k=>[k,SUBJ[k].name,by[k]])].map(([k,l,c])=>`<button type="button" data-wbt="${k}" aria-pressed="${wbTab===k}">${l}<small>${c}</small></button>`).join("");
@@ -1828,7 +1858,7 @@ function renderWB(){const{n,by,ids}=wrongCount(),qs={};
   <div class="ivtools"><div class="wbtabs" role="group" aria-label="選科目">${tabs}</div>${fszHTML()}<button type="button" class="tbtn" data-act="xch"><span class="sealic" aria-hidden="true">章</span>集章兌換所 <b data-sp>${stampPts().left}</b></button></div>
   ${n?secs.map(s=>{const i=s.isleObj,c=s.chObj;
     return `<article class="sec wbsec" style="--c:${i.c}"><header class="sech"><span class="sn">${s.no||"導"}</span><h4>${esc(s.t)}<span class="wbm">${SUBJ[s.subj].name}・${esc(i.name)}・${chLabel(c)}</span></h4><button type="button" class="wbgo" data-go="${s.id}">到這一節 →</button></header>
-    <div class="qz">${qs[s.id].sort((a,b)=>a-b).map(qi=>qHTML(s,s.q[qi],qi)).join("")}</div></article>`}).join("")
+    <div class="qz">${qs[s.id].sort((a,b)=>(a.isC-b.isC)||(a.n-b.n)).map(R=>R.isC?cHTML(s,R.q,R.n):qHTML(s,R.q,R.n)).join("")}</div></article>`}).join("")
   :`<div class="wbempty"><b>錯題本是空的</b><p>答錯的題目會自動收進來，答對以後就會移出去。</p></div>`}</div>`}
 function showWB(){closeSheet(true);wbOpen=true;renderWB();wb.hidden=false;document.documentElement.classList.add("ivopen");wb.scrollTop=0;
   requestAnimationFrame(()=>{const h=$("wbH");if(h)h.focus({preventScroll:true})})}
@@ -2508,7 +2538,7 @@ $("xch").addEventListener("click",e=>{if(e.target===$("xch")||e.target.closest('
 $("xch").addEventListener("close",()=>{xchPend=null});
 function invRefresh(){const P=stampPts();document.querySelectorAll("[data-inv]").forEach(b=>b.textContent=st.inv[b.dataset.inv]|0);document.querySelectorAll("[data-sp]").forEach(b=>b.textContent=P.left)}
 /* 練習題裡使用道具：刪去兩個錯誤選項，或顯示重點提示 */
-function useItem(qe,kind,btn){if(!CARDS[kind]||btn.disabled)return;const[sid,qi]=splitQ(qe.dataset.q),q=SECBY[sid].q[qi];
+function useItem(qe,kind,btn){if(!CARDS[kind]||btn.disabled)return;const R=qRef(qe.dataset.q);if(!R)return;const q=R.q;
   if((st.inv[kind]|0)<1){toast(`${CARDS[kind].n}用完了，用章點換新的吧！`,2600);openXch();return}
   if(kind==="cut"){const wr=[...qe.querySelectorAll(".op")].filter(b=>+b.dataset.o!==q[2]&&!b.disabled);if(!wr.length){toast("已經沒有可以刪去的選項了",2200);return}
     shuf(wr).slice(0,2).forEach(b=>{b.classList.add("cut");b.disabled=true})}
@@ -2532,21 +2562,21 @@ const mmss=s=>`${Math.floor(s/60)}:${String(s%60).padStart(2,"0")}`;
 const fmtDur=s=>s>=60?`${Math.floor(s/60)} 分${s%60?` ${s%60} 秒`:""}`:`${s} 秒`;
 const ISLEBY={};ORDER.forEach(k=>SUBJ[k].isles.forEach(i=>{ISLEBY[i.key]=i}));
 /* 先依權重抽一節，再從那一節抽一題沒用過的 */
-function drawQs(secs,n,wf){const pool=secs.map(s=>({w:wf(s),q:shuf(s.qids)})),out=[];
-  while(out.length<n){const live=pool.filter(x=>x.q.length);if(!live.length)break;
+function drawQs(secs,n,wf,cFirst){const pool=secs.map(s=>({w:wf(s),c:shuf(s.cids||[]),q:shuf(s.qids)})),out=[];
+  while(out.length<n){let live=pool.filter(x=>x.c.length);if(!cFirst||!live.length)live=pool.filter(x=>x.c.length||x.q.length);if(!live.length)break;
     let r=Math.random()*live.reduce((a,x)=>a+x.w,0),x=live[live.length-1];for(const y of live){r-=y.w;if(r<=0){x=y;break}}
-    out.push(x.q.pop())}
+    out.push(x.c.length?x.c.pop():x.q.pop())}
   return shuf(out)}
 const mkIdx=()=>{const k=SEMS.indexOf(st.mkTo);return k<0?SEMS.length-1:k};
 const mkSecs=()=>{const k=mkIdx();return ALLSECS.filter(s=>SEMS.indexOf(s.chObj.sem)<=k)};
 function towerHTML(i){const t=st.tw[i.key],n=Math.min(12,i.nq);
   return `<section class="tower" id="tower" style="--c:${i.c}"><div class="tw-in"><div class="pey">會考塔</div><h3>登上${esc(i.name.replace(/島$/,""))}會考塔</h3>
-  <p>從這座島抽 ${n} 題，歷屆會考常考的小節抽得比較多（這座島歷屆會考考過 ${i.cap} 題，${heatHTML(i)}）。建議時間 ${fmtDur(n*SEC_T)}，交卷後才看對錯和詳解。</p>
+  <p>從這座島抽 ${n} 題${i.secs.some(s=>s.cids.length)?"，會考題型優先":""}，歷屆會考常考的小節抽得比較多（這座島歷屆會考考過 ${i.cap} 題，${heatHTML(i)}）。建議時間 ${fmtDur(n*SEC_T)}，交卷後才看對錯和詳解。</p>
   ${t&&t.t?`<p class="twrec">最佳 <b>${t.b}/${t.n}</b>・挑戰 ${t.t} 次</p>`:""}<div class="prow"><button type="button" class="pbtn" data-act="tower">登塔挑戰 →</button></div></div>
   <span class="tw-art" aria-hidden="true" style="${MAPPAL}">${ICON("lighthouse")}</span></section>`}
 function showEx(kind,arg){if(exOpen&&EXS&&EXS.kind===kind&&EXS.arg===arg)return;closeSheet(true);let o;
   if(kind==="tower"){const i=ISLEBY[arg];if(!i){location.hash=cur;return}
-    o={kind,arg,isle:i,ids:drawQs(i.secs,Math.min(12,i.nq),s=>1+(s.cap||0)/2),title:`${i.name.replace(/島$/,"")}會考塔`,c:i.c}}
+    o={kind,arg,isle:i,ids:drawQs(i.secs,Math.min(12,i.nq),s=>1+(s.cap||0)/2,true),title:`${i.name.replace(/島$/,"")}會考塔`,c:i.c}}
   else{const n=Math.max(5,Math.min(50,parseInt(arg,10)||10));
     o={kind:"mock",arg:String(n),ids:drawQs(mkSecs(),n,s=>.3+(s.cap||0)),title:`模擬會考・${n} 題`,sub:`範圍：七上～${SEMS[mkIdx()]}`,c:"#2f6fb5"}}
   stopEx();EXS=o;o.pick={};o.lim=o.ids.length*SEC_T;o.t0=Date.now();o.left=o.lim;o.done=false;o.warn=false;
@@ -2557,13 +2587,13 @@ function closeEx(){if(!exOpen)return;stopEx();exOpen=false;EXS=null;exEl.hidden=
 function exitEx(){const E=EXS;location.hash=E&&E.kind==="tower"?E.isle.key:cur}
 function exTick(){const E=EXS;if(!E||E.done)return;E.left=Math.max(0,E.lim-Math.floor((Date.now()-E.t0)/1000));const t=$("exTime");
   if(t){t.textContent=mmss(E.left);t.classList.toggle("low",E.left<=60)}if(!E.left)submitEx(true)}
-function exQHTML(id,k){const E=EXS,[sid,qi]=splitQ(id),s=SECBY[sid],q=s.q[qi],p=E.pick[id],dn=E.done,ok=p===q[2];
+function exQHTML(id,k){const E=EXS,R=qRef(id),s=R.s,q=R.q,p=E.pick[id],dn=E.done,ok=p===q[2];
   return `<div class="q exq${dn?" lock":""}" data-q="${id}"><p class="qs"><b>${k+1}.</b> ${esc(q[0])}</p><div class="opts" role="group" aria-label="第 ${k+1} 題選項">${q[1].map((o,oi)=>{
     let c="op";if(dn){if(oi===q[2])c+=p===oi?" ok":" rev";else if(oi===p)c+=" no"}else if(p===oi)c+=" pick";
     return `<button type="button" class="${c}" data-o="${oi}" aria-pressed="${!dn&&p===oi}"${dn?" disabled":""}><i>${L[oi]}</i><span>${esc(o)}</span></button>`}).join("")}</div>
     ${dn?`<p class="exsrc">${SUBJ[s.subj].name}・${esc(s.isleObj.name)}・${esc(s.t)}<button type="button" class="exgo" data-sec="${s.id}">到這一節 →</button></p><div class="fb ${ok?"good":"bad"}"><b>${ok?"答對了。":p==null?`沒有作答，正確答案是 (${L[q[2]]})。`:`正確答案是 (${L[q[2]]})。`}</b>${esc(q[3])}</div>`:""}</div>`}
 function exResultHTML(){const E=EXS,n=E.ids.length,r=E.r,pct=Math.round(r/n*100),sec=E.kind==="tower",by={};
-  E.ids.forEach(id=>{const[sid,qi]=splitQ(id),s=SECBY[sid],key=sec?s.id:s.isleObj.key,o=by[key]||(by[key]={s,n:0,r:0});o.n++;if(E.pick[id]===s.q[qi][2])o.r++});
+  E.ids.forEach(id=>{const R=qRef(id),s=R.s,key=sec?s.id:s.isleObj.key,o=by[key]||(by[key]={s,n:0,r:0});o.n++;if(E.pick[id]===R.q[2])o.r++});
   const rows=Object.values(by).sort((a,b)=>a.r/a.n-b.r/b.n),tw=sec?st.tw[E.isle.key]:null;
   return `<div class="exres"><div class="exsc"><b>${r}</b><span>/ ${n}</span></div><div class="exsm"><p>答對率 <b>${pct}%</b>・用時 ${fmtDur(E.used)}${tw?`・最佳 ${tw.b}/${tw.n}・第 ${tw.t} 次挑戰`:""}${E.coins?`・+${E.coins} 幣`:""}</p>
   <p>${pct>=85?"很穩！":pct>=60?"不錯，把答錯的題目再看一遍。":"先回島上讀重點，再來挑戰一次。"}答錯、而且還沒在島上答對的題目，已經收進錯題本。</p></div></div>
@@ -2580,7 +2610,7 @@ function renderEx(){const E=EXS,n=E.ids.length,a=Object.keys(E.pick).length,back
 function exCnt(){const E=EXS,n=E.ids.length,a=Object.keys(E.pick).length,c=$("exCnt"),b=exEl.querySelector('[data-xa="submit"]');
   if(c)c.textContent=E.warn?`還有 ${n-a} 題沒作答，確定要交卷嗎？`:`已作答 ${a}/${n}`;if(b)b.textContent=E.warn?"確定交卷":"交卷"}
 function submitEx(auto){const E=EXS;if(!E||E.done)return;stopEx();E.done=true;E.used=Math.min(E.lim,Math.round((Date.now()-E.t0)/1000));
-  let r=0;E.ids.forEach(id=>{const[sid,qi]=splitQ(id),ok=E.pick[id]===SECBY[sid].q[qi][2];track(id,ok);if(ok){r++;delete st.wrong[id]}else if(!st.ans[id])st.wrong[id]=1});
+  let r=0;E.ids.forEach(id=>{const R=qRef(id),ok=E.pick[id]===R.q[2];track(id,ok);if(ok){r++;delete st.wrong[id]}else if(R.isC||!st.ans[id])st.wrong[id]=1});
   E.r=r;let coins=0;
   if(E.kind==="tower"){const k=E.isle.key,t=st.tw[k]&&typeof st.tw[k]==="object"?st.tw[k]:{b:0,n:0,t:0};coins=Math.max(0,r-(+t.b||0));t.t=(+t.t||0)+1;t.n=E.ids.length;t.b=Math.max(+t.b||0,r);t.d=today();st.tw[k]=t}
   else{coins=capped(st,"mock",20,Math.floor(r/5));st.mk=[{d:today(),n:E.ids.length,r,s:E.used,to:SEMS[mkIdx()]}].concat(Array.isArray(st.mk)?st.mk:[]).slice(0,10)}
@@ -2601,7 +2631,7 @@ exEl.addEventListener("click",e=>{const E=EXS;if(!E)return;
 
 /* ---------- 弱點診斷 ---------- */
 function trStat(ids){let a=0,r=0;ids.forEach(id=>{const t=st.tr[id];if(Array.isArray(t)){a+=+t[0]||0;r+=+t[1]||0}});return{a,r,p:a?r/a:0}}
-function diagStats(){return ORDER.flatMap(k=>SUBJ[k].isles).map(i=>({i,...trStat(i.secs.flatMap(s=>s.qids)),secs:i.secs.map(s=>({s,...trStat(s.qids)}))}))}
+function diagStats(){return ORDER.flatMap(k=>SUBJ[k].isles).map(i=>({i,...trStat(i.secs.flatMap(s=>s.qids.concat(s.cids))),secs:i.secs.map(s=>({s,...trStat(s.qids.concat(s.cids))}))}))}
 const dgLvl=p=>p<.6?["需要加強","bad"]:p<.8?["再複習一次","mid"]:["掌握得不錯","good"];
 const pctT=p=>Math.round(p*100)+"%";
 function dgRowHTML(x,g){const[t,c]=dgLvl(x.p),k=x.i.key;

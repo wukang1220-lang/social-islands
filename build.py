@@ -123,7 +123,7 @@ for f in sorted(glob.glob(os.path.join(HERE, "art", "guide", "*.svg"))):
 mus_i = 0
 numeric = re.compile(r"^[0-9０-９]")
 spread = [0, 0, 0, 0]
-nsec = nq = nfig = nw = nisle = npts = nkey = 0
+nsec = nq = nfig = nw = nisle = npts = nkey = nc = nm = 0
 for subj, sd in st.items():
     for isle in sd["isles"]:
         a = svg("isles", f"{subj}-{isle['id']}")
@@ -159,6 +159,27 @@ for subj, sd in st.items():
             s["mu"] = [ic, mn, md]
             if cap.get(s["id"]):
                 s["cap"] = cap[s["id"]]
+            # 會考題型 c: exactly 2 original scenario questions [stem, options, answer, explanation]
+            if c.get("c"):
+                assert len(c["c"]) == 2, f"{s['id']}: 會考題型 must be exactly 2"
+                cs = []
+                for ci, (stem, opts, ans, exp) in enumerate(c["c"]):
+                    assert len(opts) == 4 and len(set(opts)) == 4 and all(o.strip() for o in opts), f"{s['id']} c{ci}: need 4 different options"
+                    assert ans in (0, 1, 2, 3) and stem.strip() and exp.strip(), f"{s['id']} c{ci}: answer/stem/explanation"
+                    order = list(range(4))
+                    if not all(numeric.match(o) for o in opts):
+                        random.Random(zlib.crc32(f"{s['id']}.c{ci}".encode())).shuffle(order)
+                    spread[order.index(ans)] += 1
+                    cs.append([stem, [opts[i] for i in order], order.index(ans), exp, make_hint(stem, opts[ans], c["k"])])
+                s["c"] = cs
+                nc += len(cs)
+            # 常見迷思 m: 2–3 [misconception, correction] pairs, plain text
+            if c.get("m"):
+                assert 2 <= len(c["m"]) <= 3, f"{s['id']}: 常見迷思 must be 2–3 pairs"
+                for a, b in c["m"]:
+                    assert a.strip() and b.strip() and "**" not in a + b, f"{s['id']}: 迷思/正解 must be plain non-empty text"
+                s["m"] = c["m"]
+                nm += len(c["m"])
             ex = extras.get(s["id"], {})
             figs = [f for f in (svg("figs", n) for n in ex.get("fig", [])) if f]
             if figs:
@@ -192,7 +213,7 @@ html = tpl.replace("/*@DATA@*/null", data).replace("/*@ICONS@*/null", icon_js)
 open(OUT, "w", encoding="utf-8", newline="\n").write(html)
 for w in warn:
     print("warning:", w)
-print(f"wrote {os.path.normpath(OUT)}: {len(html):,} chars, {nsec} sections, {npts} key points ({nkey} red terms), {nq} questions, "
+print(f"wrote {os.path.normpath(OUT)}: {len(html):,} chars, {nsec} sections, {npts} key points ({nkey} red terms), {nq} questions, {nc} 會考題型, {nm} 迷思, "
       f"{nfig} diagrams, {nw} widgets, {nisle} emblems, {len(icons)} icons, {mus_i} exhibits, answer spread A–D {spread}")
 
 os.makedirs(os.path.dirname(DOCS), exist_ok=True)
