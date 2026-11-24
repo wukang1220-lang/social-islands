@@ -815,11 +815,100 @@ button.cr-c:hover{box-shadow:inset 0 0 0 2px var(--fig-ink)}
 .cheerfab .ci{width:30px;height:30px}
 .cheerfab:active{scale:.94}
 .cheerfab:hover .ci,.cheerfab:focus-visible .ci{animation:bob 1.2s ease-in-out infinite}
-body.open .cheerfab{display:none}
+body.open .cheerfab,#ex:not([hidden]) ~ .cheerfab{display:none}
 .iv-in{padding-bottom:88px}
-@media (max-width:560px){.cheerfab{padding:6px 12px 6px 6px;font-size:13px}.cheerfab .ci{width:26px;height:26px}.toast{bottom:calc(env(safe-area-inset-bottom,0px) + 66px)}}
+@media (max-width:560px){.cheerfab{padding:6px 12px 6px 6px;font-size:13px}.cheerfab .ci{width:26px;height:26px}.toast{bottom:calc(env(safe-area-inset-bottom,0px) + 66px)}.toast:not(.on){transform:translate(-50%,calc(100% + 90px))}}
 @media print{.cheerfab{display:none}}
 @media (prefers-reduced-motion:reduce){.cheerfab:active{scale:none}.cheerfab:hover .ci,.cheerfab:focus-visible .ci{animation:none}}
+
+/* ---------- 會考準備：會考熱度、提示卡、刪去卡、會考塔、模擬會考、弱點診斷、集章認證 ---------- */
+.heat{display:inline-flex;align-items:center;gap:4px;font-weight:800;white-space:nowrap}
+.heat i{font-style:normal;letter-spacing:1px;color:#e0562a;font-size:.85em}
+.heat.h1 i{color:var(--ink-soft)}
+.tgh{white-space:nowrap}
+.capb{display:inline-block;margin-left:8px;vertical-align:middle;font:700 11.5px var(--f-mono);color:#b8452a;background:color-mix(in srgb,#e0562a 12%,var(--paper));border-radius:99px;padding:2px 8px;white-space:nowrap}
+.sealic{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:5px;background:#c0281f;color:#fff6ee;font:900 12px var(--f-display,inherit);flex:none;transform:rotate(-6deg)}
+.sealic.big{width:42px;height:42px;font-size:24px;border-radius:9px}
+.tbtn .sealic{margin-right:2px}.tbtn b[data-sp]{font-family:var(--f-mono);margin-left:4px}
+.ivtools .prow{display:flex;gap:8px;flex-wrap:wrap}
+.qtools{display:flex;gap:6px;flex-wrap:wrap}
+.qtool{border:1.5px dashed var(--line);background:none;color:var(--ink-soft);border-radius:99px;padding:4px 11px;font-size:13px;font-weight:700;cursor:pointer;min-height:32px}
+.qtool b{font-family:var(--f-mono);color:var(--ink)}
+.qtool:hover:not(:disabled){border-color:var(--ic);color:var(--ink)}
+.qtool:disabled{opacity:.45;cursor:default}
+.qhint{display:flex;gap:8px;align-items:flex-start;background:color-mix(in srgb,#ffd166 22%,var(--paper));border-radius:12px;padding:9px 12px;font-size:calc(14.5px*var(--fz));line-height:1.7}
+.qhint b{flex:none;color:#9a6a00}
+.op.cut{opacity:.35;text-decoration:line-through}
+.chip-ch.tw{border-color:#e0562a;color:#b8452a}
+.tower{position:relative;overflow:hidden;border-radius:20px;padding:18px 18px 16px;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 22%,var(--paper)),color-mix(in srgb,var(--c) 6%,var(--paper)));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--c) 40%,transparent)}
+.tw-in{position:relative;z-index:1;max-width:calc(100% - 70px)}
+.tower h3{margin:2px 0 6px;font-size:calc(19px*var(--fz))}
+.tower p{margin:0 0 10px;font-size:calc(14.5px*var(--fz));line-height:1.7;color:var(--ink-soft)}
+.twrec b{color:var(--ink);font-family:var(--f-mono)}
+.tw-art{position:absolute;right:10px;bottom:6px;width:84px;height:84px;opacity:.9}
+.tw-art svg{width:100%;height:100%}
+.ex .exqs{display:flex;flex-direction:column;gap:18px}
+.exq{border-top:1.5px dashed var(--line);padding-top:12px}
+.exq .op.pick,.exq .op[aria-pressed="true"]{border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,var(--paper))}
+.exq .op.pick i{background:var(--c);color:#fff}
+.extime{font:800 15px var(--f-mono);font-variant-numeric:tabular-nums;background:var(--paper-2);border-radius:99px;padding:4px 10px}
+.extime.low{background:#c0281f;color:#fff}
+.exbar{position:sticky;bottom:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:var(--paper);border-top:1.5px solid var(--line);padding:10px 0 calc(env(safe-area-inset-bottom,0px) + 10px)}
+.exbar span{font-weight:700;color:var(--ink-soft)}
+.exsrc{margin:0;font-size:13px;color:var(--ink-soft);display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.exgo{border:0;background:none;color:var(--c);font-weight:800;cursor:pointer;padding:2px 0;text-decoration:underline;text-underline-offset:3px}
+.exres{display:flex;gap:16px;align-items:center;flex-wrap:wrap;background:var(--paper-2);border-radius:18px;padding:14px 16px}
+.exsc{display:flex;align-items:baseline;gap:4px}.exsc b{font:900 44px var(--f-mono);color:var(--c)}.exsc span{font:700 18px var(--f-mono);color:var(--ink-soft)}
+.exsm{flex:1;min-width:200px}.exsm p{margin:2px 0;font-size:calc(14.5px*var(--fz));line-height:1.7}
+.exby{display:flex;flex-direction:column;gap:6px}
+.exrow{display:grid;grid-template-columns:minmax(0,1fr) 34% auto;align-items:center;gap:10px;border:0;background:var(--paper-2);border-radius:12px;padding:8px 12px;cursor:pointer;color:var(--ink);text-align:left;font-weight:700}
+.exrow span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pb{display:block;height:8px;border-radius:99px;background:var(--line);overflow:hidden}.pb b{display:block;height:100%;border-radius:99px;background:var(--c)}
+.pn{font:700 13px var(--f-mono)}
+.exend{display:flex;gap:8px;flex-wrap:wrap}
+.pc-cap .capp{margin:0 0 10px;color:var(--ink-soft);font-size:calc(14px*var(--fz));line-height:1.7}
+.mk-to{margin:4px 0 10px}.mk-to button{font-size:13px;padding:5px 10px}
+.mkrec{margin:8px 0 0;font-size:13px;color:var(--ink-soft)}
+.pc-cap .kpt{margin-top:14px}
+.dglist{display:flex;flex-direction:column;gap:6px;margin:6px 0 10px}
+.dgr{display:flex;align-items:center;gap:10px;width:100%;border:0;background:var(--paper-2);border-radius:14px;padding:8px 12px;cursor:pointer;color:var(--ink);text-align:left}
+.dgr .sn{flex:none;width:34px;height:38px;font-size:16px;font-family:var(--f-display,inherit)}
+.dgx{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.dgx b{font-size:15px}
+.dgm{font-size:12.5px;color:var(--ink-soft);font-weight:700}
+.dgr.bad .pb b{background:#c0281f}.dgr.mid .pb b{background:#e0a21f}.dgr.good .pb b{background:var(--ok)}
+.dgsec{display:flex;flex-direction:column;gap:8px}
+.dgss{display:flex;flex-direction:column;gap:4px}
+.dgs{display:flex;justify-content:space-between;align-items:center;gap:8px;border:0;border-left:4px solid var(--line);background:none;padding:6px 10px;cursor:pointer;color:var(--ink);text-align:left;font-size:14px;font-weight:700}
+.dgs.bad{border-left-color:#c0281f}.dgs.mid{border-left-color:#e0a21f}.dgs.good{border-left-color:var(--ok)}
+.dgs .capb{margin-left:6px}
+.dghot{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}.dghot .tbtn small{margin-left:6px;color:var(--ink-soft);font-weight:700}
+.xch{border:0;border-radius:22px;padding:0;max-width:min(460px,calc(100vw - 24px));width:100%;background:var(--paper);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.xch::backdrop{background:rgba(10,25,35,.55)}
+.xch-in{padding:16px 18px 18px;display:flex;flex-direction:column;gap:12px}
+.xch-h{display:flex;align-items:center;justify-content:space-between}.xch-h h2{margin:0;font-size:20px}
+.xch-x{border:0;background:var(--paper-2);border-radius:50%;width:36px;height:36px;font-size:16px;cursor:pointer;color:var(--ink)}
+.xch-pts{display:flex;gap:12px;align-items:center;background:var(--paper-2);border-radius:14px;padding:10px 12px}
+.xch-pts b[data-sp]{font:900 26px var(--f-mono)}.xch-pts small{display:block;color:var(--ink-soft);font-size:12.5px;line-height:1.6}
+.xch-list{display:flex;flex-direction:column;gap:8px}
+.xch-it{display:flex;gap:10px;align-items:center;justify-content:space-between;border:1.5px solid var(--line);border-radius:14px;padding:10px 12px}
+.xch-it small{display:block;color:var(--ink-soft);font-size:13px;line-height:1.6}
+.xch-it .pbtn{flex:none}.pbtn.pend{background:#c0281f;color:#fff}
+.xch-note{margin:0;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+.sealfx{position:fixed;inset:0;z-index:37;display:grid;place-items:center;background:rgba(10,20,30,.45);cursor:pointer;opacity:0;transition:opacity .25s}
+.sealfx.on{opacity:1}.sealfx.out{opacity:0}
+.sf-in{display:flex;flex-direction:column;align-items:center;gap:6px;color:#fff;text-align:center;padding:16px}
+.sf-seal{width:150px;height:150px;border-radius:26px;border:7px double #fff3e8;background:#c0281f;display:grid;place-items:center;align-content:center;box-shadow:0 10px 40px rgba(0,0,0,.45);transform:rotate(-8deg)}
+.sf-seal.t2{background:linear-gradient(135deg,#ffffff,#97a3ae 50%,#eef2f5);color:#3b2a20;border-color:#fff}
+.sf-seal.t3{background:linear-gradient(135deg,#fff4b8,#e0a21f 45%,#fff0a0 62%,#c5870e);color:#5a3b00;border-color:#fff7d6}
+.sf-seal b{font:900 76px/1 var(--f-display,inherit)}
+.sf-seal small{font-size:15px;font-weight:900;letter-spacing:4px}
+.sf-t{font-size:24px;font-weight:900;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.sf-s{font-size:15px;font-weight:700;opacity:.92}
+.sf-p{display:flex;align-items:center;gap:6px;font-weight:800;background:rgba(0,0,0,.35);border-radius:99px;padding:4px 12px}
+.sealfx.on .sf-seal{animation:sfSlam .55s cubic-bezier(.2,1.5,.4,1)}
+@keyframes sfSlam{0%{transform:scale(2.6) rotate(-20deg);opacity:0}60%{transform:scale(.9) rotate(-6deg);opacity:1}100%{transform:rotate(-8deg)}}
+@media (prefers-reduced-motion:reduce){.sealfx.on .sf-seal{animation:none}.sealfx{transition:none}}
 
 /* ---------- 闖關航線 ---------- */
 .lv-sems{margin-bottom:10px}
@@ -926,6 +1015,7 @@ body.open .cheerfab{display:none}
         <p id="wbP">答錯、還沒答對的題目會自動收進錯題本。重新作答，答對就會移出去。</p>
         <div class="prow"><button class="pbtn" id="wbGo" type="button">打開錯題本</button></div>
       </div>
+      <div class="pc pc-cap" id="capCard"></div>
       <div class="pc pc-save">
         <div class="pey">我的航海日誌</div>
         <h2>把進度帶著走</h2>
@@ -975,6 +1065,8 @@ body.open .cheerfab{display:none}
 </div>
 <div class="fw" id="fw" hidden role="dialog" aria-modal="true" aria-labelledby="fwH"><canvas id="fwCv" aria-hidden="true"></canvas><div class="fw-card" id="fwCard"></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<section class="iv ex" id="ex" hidden aria-label="會考練習"></section>
+<dialog class="xch" id="xch" aria-labelledby="xchT"></dialog>
 <button type="button" class="cheerfab" id="cheerFab" title="灑花鼓勵"><span class="ci" aria-hidden="true"></span><span>灑花鼓勵</span></button>
 <div class="gd" id="gd" hidden role="dialog" aria-modal="true" aria-labelledby="gdT" aria-describedby="gdP">
   <div class="gd-spot" id="gdSpot" hidden aria-hidden="true"></div>
@@ -1016,6 +1108,11 @@ ORDER.forEach(k=>{const r=RAW[k],S={key:k,...META[k]};
   S.sems=[...new Set(S.chs.map(c=>c.sem))];
   SUBJ[k]=S});
 const ALLSECS=ORDER.flatMap(k=>SUBJ[k].secs);
+/* 會考熱度：題庫裡每一節歷屆會考的題數（只統計題數），加總成每座島；依多寡排成三級 */
+ORDER.forEach(k=>SUBJ[k].isles.forEach(i=>{i.cap=i.secs.reduce((a,s)=>a+(s.cap||0),0)}));
+{const all=ORDER.flatMap(k=>SUBJ[k].isles).sort((a,b)=>b.cap-a.cap),n=all.length;all.forEach((i,r)=>{i.heat=r<n/3?3:r<2*n/3?2:1})}
+const HEATN=["","偶爾考","常考","最常考"];
+const heatHTML=i=>`<span class="heat h${i.heat}" title="歷屆會考考過 ${i.cap} 題"><i aria-hidden="true">${"●".repeat(i.heat)}${"○".repeat(3-i.heat)}</i>會考${HEATN[i.heat]}</span>`;
 const SECBY=Object.fromEntries(ALLSECS.map(s=>[s.id,s]));
 const CHBY=Object.fromEntries(ORDER.flatMap(k=>SUBJ[k].chs).map(c=>[c.uid,c]));
 const ISLEKEYS=new Set(ORDER.flatMap(k=>SUBJ[k].isles.map(i=>i.key)));
@@ -1026,7 +1123,7 @@ const NQ=ALLSECS.reduce((a,s)=>a+s.q.length,0);
 const RK="socialIsles.roster",keyOf=id=>id==="p1"?"socialIsles.v2":"socialIsles.v2."+id;
 const DEF=()=>({visited:{},ans:{},wrong:{},last:{},sem:{},stamp:{},qv:{},subj:"geo",tod:"auto",fs:0,
   coins:0,tier:{},tday:{},cl:{},mus:{},own:{},dig:{},bat:{},qq:{},ap:{},ev:{},day:{},ttl:"",tseen:{},fix:0,cover:0,exam:{},cap:"",mig:0,
-  mat:{geo:0,his:0,civ:0},camp:{},quest:{},deco:{},fest:{},isl:{n:"",g:{}},cre:0,mig2:0,tour:{},intro:{},lvSem:""});
+  mat:{geo:0,his:0,civ:0},camp:{},quest:{},deco:{},fest:{},isl:{n:"",g:{}},cre:0,mig2:0,tour:{},intro:{},lvSem:"",tw:{},mk:[],tr:{},trm:0,inv:{cut:2,hint:2},sp:0,mkTo:""});
 let WELCOME=0,WELCOME_M=0;
 let roster={cur:"p1",list:[{id:"p1",n:"",g:"",c:0,ic:""}]};
 try{const r=JSON.parse(localStorage.getItem(RK)||"null");
@@ -1057,7 +1154,9 @@ function migrate(){
   /* 第三階段：把之前的進度換成建材（答對一題 1 份、一枚島章 3 份） */
   if(!st.mig2){st.mig2=1;if(!st.mat||typeof st.mat!=="object"||Array.isArray(st.mat))st.mat={};let tot=0;
     ORDER.forEach(k=>{const ss=SUBJ[k].secs,n=ss.reduce((a,s)=>a+s.qids.filter(q=>st.ans[q]).length,0)+3*ss.filter(s=>st.stamp[s.id]||s.qids.every(q=>st.ans[q])).length;st.mat[k]=(+st.mat[k]||0)+n;tot+=n});
-    if(tot)WELCOME_M=tot}}
+    if(tot)WELCOME_M=tot}
+  /* 弱點診斷：第一次作答的紀錄（tr）；舊紀錄先用錯題和「第一次就答對」補上 */
+  if(!st.trm){st.trm=1;for(const id in st.wrong)if(st.wrong[id]&&!st.tr[id])st.tr[id]=[1,0];for(const id in st.cl)if(st.cl[id]&&!st.tr[id])st.tr[id]=[1,1]}}
 function loadSt(id){SK=keyOf(id);Object.keys(st).forEach(k=>delete st[k]);Object.assign(st,DEF());
   try{const o=JSON.parse(localStorage.getItem(SK)||"null");if(o)loadInto(o,Object.keys(st));
     else if(id==="p1")loadInto(JSON.parse(localStorage.getItem("socialIsles.v1")||"null"),["visited","last","subj","tod"])}catch(e){}
@@ -1288,7 +1387,7 @@ function openSheet(id){const S=SUBJ[cur],i=S.byId[id];if(!i)return;
   $("bS").textContent=`${i.tag}。這座島有 ${nums.length} 章、${t} 節，對應課本${i.sem}第 ${c0===c1?c0:c0+"～"+c1} 章，共 ${i.nq} 題練習。`;
   $("bBar").style.width=(d/t*100)+"%";
   const tc=tierCounts(i.secs),sN=isleStars(i);$("bBld").innerHTML=visited(i)?ICON(CAMP[campLv(i)][1]):"";$("bBld").setAttribute("style",MAPPAL);
-  $("bMeta").innerHTML=[`集章 ${d}/${t}`,`例題答對 ${isleRight(i)}/${i.nq}`,`銀章 ${tc[2]}・金章 ${tc[3]}`,visited(i)?"已登島":"還沒登島"].map(x=>`<span class="tg">${x}</span>`).join("")+`<span class="tg tgs" aria-label="${STARN[sN]}">${starHTML(sN)}</span>`;
+  $("bMeta").innerHTML=[`集章 ${d}/${t}`,`例題答對 ${isleRight(i)}/${i.nq}`,`銀章 ${tc[2]}・金章 ${tc[3]}`,visited(i)?"已登島":"還沒登島"].map(x=>`<span class="tg">${x}</span>`).join("")+`<span class="tg tgh">${heatHTML(i)}・歷屆 ${i.cap} 題</span>`+`<span class="tg tgs" aria-label="${STARN[sN]}">${starHTML(sN)}</span>`;
   $("bCh").innerHTML=i.chs.map(c=>{const a=c.secs.filter(secDone).length;
     return `<li><button type="button" class="chr" data-ch="${c.uid}"><span class="chx"><span class="chn">${chLabel(c)}</span><b>${esc(chTitle(c))}</b><span class="chm">${c.secs.length} 節・集章 ${a}/${c.secs.length}</span></span><span class="chgo" aria-hidden="true">→</span></button></li>`}).join("");
   $("bGo").textContent=`登上${i.name} →`;
@@ -1307,26 +1406,27 @@ const iv=$("iv");let ivOpen=false,ivIsle=null,ivTarget=null,ivFrom=null;
 function openIsle(subj,id,target){ivTarget=target||null;const h=`#${subj}-${id}`;if(location.hash===h)routeHash();else location.hash=h}
 const fbGood=q=>`<b>答對了。</b>${esc(q[3])}`;
 function qHTML(s,q,qi){const id=s.id+"."+qi,ok=!!st.ans[id];
-  return `<div class="q${ok?" lock":""}" data-q="${id}"><p class="qs"><b>${qi+1}.</b> ${esc(q[0])}</p><div class="opts" role="group" aria-label="第 ${qi+1} 題選項">${q[1].map((o,oi)=>`<button type="button" class="op${ok&&oi===q[2]?" ok":""}" data-o="${oi}"${ok?" disabled":""}><i>${L[oi]}</i><span>${esc(o)}</span></button>`).join("")}</div><div class="fb${ok?" good":""}" aria-live="polite"${ok?"":" hidden"}>${ok?fbGood(q):""}</div></div>`}
+  return `<div class="q${ok?" lock":""}" data-q="${id}"><p class="qs"><b>${qi+1}.</b> ${esc(q[0])}</p><div class="opts" role="group" aria-label="第 ${qi+1} 題選項">${q[1].map((o,oi)=>`<button type="button" class="op${ok&&oi===q[2]?" ok":""}" data-o="${oi}"${ok?" disabled":""}><i>${L[oi]}</i><span>${esc(o)}</span></button>`).join("")}</div><div class="qtools"${ok?" hidden":""}><button type="button" class="qtool" data-use="hint">提示卡 <b data-inv="hint">${st.inv.hint|0}</b></button><button type="button" class="qtool" data-use="cut">刪去卡 <b data-inv="cut">${st.inv.cut|0}</b></button></div><div class="qhint" hidden></div><div class="fb${ok?" good":""}" aria-live="polite"${ok?"":" hidden"}>${ok?fbGood(q):""}</div></div>`}
 function stampHTML(s,i){const t=tierOf(s),tip=t?TN[t]+(t<3?"："+TNEXT[t]:""):"尚未集章：答對本節全部題目就能集章";
   return `<span class="stamp${t?" got t"+t:""}" role="img" aria-label="${tip}" title="${tip}"><i>${i.g}</i></span>`}
 function secHTML(s,i){
-  return `<article class="sec" id="sec-${s.id}"><header class="sech"><span class="sn">${s.no||"導"}</span><h4>${esc(s.t)}</h4>${stampHTML(s,i)}</header>
+  return `<article class="sec" id="sec-${s.id}"><header class="sech"><span class="sn">${s.no||"導"}</span><h4>${esc(s.t)}${s.cap?`<span class="capb" title="歷屆會考考過 ${s.cap} 題">會考 ${s.cap} 題</span>`:""}</h4>${stampHTML(s,i)}</header>
   ${s.fig&&s.fig.length?`<div class="figs">${s.fig.map(f=>`<figure class="fig" tabindex="0" role="button" aria-label="放大圖解">${f}<figcaption aria-hidden="true">點圖放大 ⤢</figcaption></figure>`).join("")}</div>`:""}
   <div class="kp"><div class="kpt">重點</div><ul>${s.k.map(t=>`<li>${esc(t).replace(/\*\*(.+?)\*\*/g,'<strong class="kw">$1</strong>')}</li>`).join("")}</ul></div>
   ${s.w&&WIDGETS[s.w]?`<div class="wg" data-w="${s.w}" data-s="${s.id}"></div>`:""}
   <div class="qz"><div class="kpt">練習 ${s.q.length} 題</div>${s.q.map((q,qi)=>qHTML(s,q,qi)).join("")}</div>
   <div class="secf"><button type="button" class="redo" data-sec="${s.id}">重做這一節</button></div></article>`}
-function chipsHTML(i){return i.chs.map(c=>{const a=c.secs.filter(secDone).length,t=c.secs.length;return `<button type="button" class="chip-ch${a===t?" done":""}" data-goch="${c.uid}">${c.ch?c.ch+". ":""}${esc(chTitle(c))}<small>${a}/${t}</small></button>`}).join("")}
+function chipsHTML(i){return `<button type="button" class="chip-ch tw" data-gotw="1">會考塔</button>`+i.chs.map(c=>{const a=c.secs.filter(secDone).length,t=c.secs.length;return `<button type="button" class="chip-ch${a===t?" done":""}" data-goch="${c.uid}">${c.ch?c.ch+". ":""}${esc(chTitle(c))}<small>${a}/${t}</small></button>`}).join("")}
 function renderIV(i){const S=SUBJ[cur],k=S.isles.indexOf(i),prev=S.isles[k-1],next=S.isles[k+1],a=isleStamps(i),b=i.secs.length,x=isleRight(i);
   iv.style.setProperty("--c",i.c);iv.setAttribute("aria-label",i.name);
   iv.innerHTML=`<div class="iv-bar"><button class="ivback" type="button">${ivFrom==="route"?"← 回闖關航線":"← 回航海圖"}</button><span class="ivbn">${esc(i.name)}</span>${coinChip()}<span class="ivbs" id="ivStat">集章 ${a}/${b}</span></div>
-  <div class="iv-hero"><span class="wm" aria-hidden="true">${i.g}</span><div class="iv-hin">${sealHTML(i,"div")}<div class="ivh"><div class="ive">${S.name}・${i.sem}${S.semLabel?"・"+S.semLabel[i.sem]:""}</div><h2 id="ivT" tabindex="-1">${esc(i.name)}</h2><p>${esc(i.tag)}</p><div class="ivchips"><span>集章 <b id="ivA">${a}</b>/${b}</span><span>例題答對 <b id="ivX">${x}</b>/${i.nq}</span><span id="ivS">${ivStarsHTML(i)}</span><span>營地 <b>${CAMP[campLv(i)][0]}</b></span></div></div></div></div>
+  <div class="iv-hero"><span class="wm" aria-hidden="true">${i.g}</span><div class="iv-hin">${sealHTML(i,"div")}<div class="ivh"><div class="ive">${S.name}・${i.sem}${S.semLabel?"・"+S.semLabel[i.sem]:""}</div><h2 id="ivT" tabindex="-1">${esc(i.name)}</h2><p>${esc(i.tag)}</p><div class="ivchips"><span>集章 <b id="ivA">${a}</b>/${b}</span><span>例題答對 <b id="ivX">${x}</b>/${i.nq}</span><span>歷屆會考 <b>${i.cap}</b> 題</span><span id="ivS">${ivStarsHTML(i)}</span><span>營地 <b>${CAMP[campLv(i)][0]}</b></span></div></div></div></div>
   <div class="iv-in"><nav class="ivnav" id="ivNav" aria-label="跳到章節">${chipsHTML(i)}</nav>
-  <div class="ivtools">${fszHTML()}<button type="button" class="tbtn" data-act="print">${PRINTICON}列印講義</button></div>
+  <div class="ivtools">${fszHTML()}<div class="prow"><button type="button" class="tbtn" data-act="xch"><span class="sealic" aria-hidden="true">章</span>集章兌換所 <b data-sp>${stampPts().left}</b></button><button type="button" class="tbtn" data-act="print">${PRINTICON}列印講義</button></div></div>
   <p class="ivhow">每一節先讀重點，再做練習。答對本節全部題目，節名旁蓋上「${i.g}」字<b class="tw1">銅章</b>；每一題都第一次就答對，升級<b class="tw2">銀章</b>；拿到銀章的隔天以後，按「重做這一節」再全部一次答對，升級<b class="tw3">金章</b>。</p>
   ${folkIsleTip(i)}
   ${i.chs.map(c=>`<section class="chap" id="ch-${c.uid}"><h3 class="chh"><span>${chLabel(c)}</span>${esc(chTitle(c))}</h3>${c.secs.map(s=>secHTML(s,i)).join("")}</section>`).join("")}
+  ${towerHTML(i)}
   <div class="ivfoot"><div class="ivpn">${prev?`<button type="button" data-isle="${prev.id}"><small>← 上一座島</small><b>${esc(prev.name)}</b></button>`:""}${next?`<button type="button" class="nx" data-isle="${next.id}"><small>下一座島 →</small><b>${esc(next.name)}</b></button>`:""}</div>
   <p class="ivnote">重點與練習題由本站依課本範圍撰寫，圖解為本站繪製的示意圖。</p></div></div>
   <div class="figz" id="figz" role="dialog" aria-modal="true" aria-label="放大的圖解" hidden><button type="button" class="figzx">關閉 ✕</button><div id="figzin"></div></div>`}
@@ -1347,7 +1447,7 @@ function closeIV(){if(!ivOpen)return;const id=ivIsle&&ivIsle.id;ivOpen=false;ivI
 function ivProgress(s,r){const i=ivIsle;if(!i)return;const a=isleStamps(i),b=i.secs.length;
   $("ivA").textContent=a;$("ivX").textContent=isleRight(i);$("ivStat").textContent=`集章 ${a}/${b}`;$("ivS").innerHTML=ivStarsHTML(i);
   const msg=rewardMsg(s,r);
-  if(r.up){const sp=$("sec-"+s.id).querySelector(".stamp");sp.outerHTML=stampHTML(s,i);if(!reduce)$("sec-"+s.id).querySelector(".stamp").classList.add("pop");$("ivNav").innerHTML=chipsHTML(i)}
+  if(r.up){sealShow(i,s,r);const sp=$("sec-"+s.id).querySelector(".stamp");sp.outerHTML=stampHTML(s,i);if(!reduce)$("sec-"+s.id).querySelector(".stamp").classList.add("pop");$("ivNav").innerHTML=chipsHTML(i)}
   const s1=isleStars(i);
   if(s1>r.s0)toast((msg?msg+"　":"")+(s1>=4?`${i.name}全部金章，整座島閃耀起來了！`:`${i.name}升到${STARN[s1]}！`),4200);
   else if(msg)toast(msg,3600);
@@ -1358,13 +1458,16 @@ iv.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.cl
 /* 作答：島頁和錯題本共用。答對時呼叫 after(s,r)，r 見 ivProgress。
    cl 記「這一輪第一次就答對」的題目：整節都是就升銀章；重做一節會清掉這一節的 cl */
 function quizClick(e,after){
+  const us=e.target.closest("[data-use]");
+  if(us){const qe=us.closest(".q");if(qe&&!qe.classList.contains("lock"))useItem(qe,us.dataset.use,us);return true}
   const op=e.target.closest(".op");
   if(op){const qe=op.closest(".q");if(qe.classList.contains("lock")||op.disabled)return true;
     const id=qe.dataset.q,[sid,qi]=splitQ(id),s=SECBY[sid],q=s.q[qi],o=+op.dataset.o,fb=qe.querySelector(".fb"),inWB=!!qe.closest("#wb");
+    const firstTry=!qe.dataset.tk&&!qe.dataset.aid&&!qe.querySelector(".op.no");if(firstTry){qe.dataset.tk="1";track(id,o===q[2])}
     if(o===q[2]){const t0=tierOf(s),s0=isleStars(s.isleObj),wasDone=secDone(s),first=!st.ans[id],fix=first&&!!st.wrong[id]&&!qe.querySelector(".op.no");
-      qe.classList.add("lock");op.classList.add("ok");qe.querySelectorAll(".op").forEach(b=>b.disabled=true);
+      qe.classList.add("lock");op.classList.add("ok");qe.querySelectorAll(".op").forEach(b=>b.disabled=true);{const tl=qe.querySelector(".qtools");if(tl)tl.hidden=true}
       fb.hidden=false;fb.className="fb good";fb.innerHTML=fbGood(q);
-      if(!inWB){if(!qe.querySelector(".op.no"))st.cl[id]=1;else delete st.cl[id]}
+      if(!inWB){if(!qe.querySelector(".op.no")&&!qe.dataset.aid)st.cl[id]=1;else delete st.cl[id]}
       let coins=0;
       let mat=0;if(first){st.ans[id]=1;delete st.wrong[id];if(secDone(s))st.stamp[s.id]=1;coins=(fix?2:1)*evMult(s);st.coins+=coins;if(fix)st.fix++;mat=evMult(s);addMat(st,s.subj,mat)}
       const up=upgrade(s,t0);save();renderMe();
@@ -1375,7 +1478,7 @@ function quizClick(e,after){
     return true}
   const rv=e.target.closest(".reveal");
   if(rv){const qe=rv.closest(".q"),id=qe.dataset.q,[sid,qi]=splitQ(id),q=SECBY[sid].q[qi];qe.classList.add("lock");
-    qe.querySelectorAll(".op").forEach((b,oi)=>{b.disabled=true;if(oi===q[2])b.classList.add("rev")});
+    qe.querySelectorAll(".op").forEach((b,oi)=>{b.disabled=true;if(oi===q[2])b.classList.add("rev")});{const tl=qe.querySelector(".qtools");if(tl)tl.hidden=true}
     delete st.cl[id];if(!st.ans[id])st.wrong[id]=1;save()
     const fb=qe.querySelector(".fb");fb.className="fb";fb.innerHTML=`<b>正確答案是 (${L[q[2]]})。</b>${esc(q[3])} ${qe.closest("#wb")?"這題會留在錯題本，下次再挑戰。":"這題已收進錯題本；按「重做這一節」可以再挑戰一次。"}`;return true}
   return false}
@@ -1385,10 +1488,14 @@ iv.addEventListener("click",e=>{
   if(quizClick(e,ivProgress))return;
   if(e.target.closest('[data-act="print"]')){openHO(ivIsle);return}
   if(e.target.closest('[data-act="intro"]')){introIsle(ivIsle,true);return}
+  if(e.target.closest('[data-act="xch"]')){openXch();return}
+  if(e.target.closest('[data-act="tower"]')){location.hash="tower-"+ivIsle.key;return}
+  if(e.target.closest("[data-gotw]")){const tw=$("tower");if(tw)scrollIV(tw);return}
   const rd=e.target.closest(".redo");
   if(rd){const se=$("sec-"+rd.dataset.sec);SECBY[rd.dataset.sec].qids.forEach(q=>delete st.cl[q]);save();
     se.querySelectorAll(".q").forEach(qe=>{qe.classList.remove("lock");
-      qe.querySelectorAll(".op").forEach(b=>{b.disabled=false;b.classList.remove("ok","no","rev")});const fb=qe.querySelector(".fb");fb.hidden=true;fb.innerHTML=""});
+      qe.querySelectorAll(".op").forEach(b=>{b.disabled=false;b.classList.remove("ok","no","rev","cut")});const fb=qe.querySelector(".fb");fb.hidden=true;fb.innerHTML="";
+      delete qe.dataset.tk;delete qe.dataset.aid;const tl=qe.querySelector(".qtools");if(tl){tl.hidden=false;tl.querySelectorAll("button").forEach(b=>b.disabled=false)}const qh=qe.querySelector(".qhint");if(qh)qh.hidden=true});
     const f=se.querySelector(".op");if(f)f.focus();return}
   if(e.target.closest(".ivback")){const f=ivFrom;ivFrom=null;location.hash=f||cur;return}
   const gc=e.target.closest("[data-goch]");if(gc){const el=$("ch-"+gc.dataset.goch);if(el)scrollIV(el);return}
@@ -1718,7 +1825,7 @@ function renderWB(){const{n,by,ids}=wrongCount(),qs={};
   wb.innerHTML=`<div class="iv-bar"><button class="ivback" type="button">← 回航海圖</button><span class="ivbn">錯題本</span>${coinChip()}<span class="ivbs" id="wbStat">待訂正 ${n} 題</span></div>
   <div class="iv-in"><h2 class="chh" id="wbH" tabindex="-1">錯題本</h2>
   <p class="ivhow">這裡收著答錯、還沒答對的題目，依課本順序排列。答對的題目會移出錯題本，還能拿到 2 枚知識幣（錯題復活）；想先複習整節重點，按「到這一節」。</p>
-  <div class="ivtools"><div class="wbtabs" role="group" aria-label="選科目">${tabs}</div>${fszHTML()}</div>
+  <div class="ivtools"><div class="wbtabs" role="group" aria-label="選科目">${tabs}</div>${fszHTML()}<button type="button" class="tbtn" data-act="xch"><span class="sealic" aria-hidden="true">章</span>集章兌換所 <b data-sp>${stampPts().left}</b></button></div>
   ${n?secs.map(s=>{const i=s.isleObj,c=s.chObj;
     return `<article class="sec wbsec" style="--c:${i.c}"><header class="sech"><span class="sn">${s.no||"導"}</span><h4>${esc(s.t)}<span class="wbm">${SUBJ[s.subj].name}・${esc(i.name)}・${chLabel(c)}</span></h4><button type="button" class="wbgo" data-go="${s.id}">到這一節 →</button></header>
     <div class="qz">${qs[s.id].sort((a,b)=>a-b).map(qi=>qHTML(s,s.q[qi],qi)).join("")}</div></article>`}).join("")
@@ -1727,11 +1834,12 @@ function showWB(){closeSheet(true);wbOpen=true;renderWB();wb.hidden=false;docume
   requestAnimationFrame(()=>{const h=$("wbH");if(h)h.focus({preventScroll:true})})}
 function closeWB(){if(!wbOpen)return;wbOpen=false;wb.hidden=true;wb.innerHTML="";document.documentElement.classList.remove("ivopen");refresh();
   const b=$("wbGo");if(b)b.focus({preventScroll:true})}
-function wbProgress(s,r){const n=wrongIds().length;$("wbStat").textContent=`待訂正 ${n} 題`;
+function wbProgress(s,r){const n=wrongIds().length;$("wbStat").textContent=`待訂正 ${n} 題`;if(r.up)sealShow(s.isleObj,s,r);
   const m=rewardMsg(s,r)||(r.fix?`錯題復活！+${r.coins} 幣。`:"");
   toast(m+(n?`還有 ${n} 題待訂正`:"錯題全部訂正完了！"),m?3600:2600)}
 wb.addEventListener("click",e=>{
   if(quizClick(e,wbProgress))return;
+  if(e.target.closest('[data-act="xch"]')){openXch();return}
   if(e.target.closest(".ivback")){location.hash=cur;return}
   const t=e.target.closest("[data-wbt]");if(t){wbTab=t.dataset.wbt;renderWB();return}
   const g=e.target.closest("[data-go]");if(g){const s=SECBY[g.dataset.go];openIsle(s.subj,s.isleObj.id,{sec:s.id})}});
@@ -2173,8 +2281,8 @@ $("playCard").addEventListener("click",e=>{const b=e.target.closest("[data-go]")
 
 /* ---------- 島嶼樂園的全頁畫面 ---------- */
 const gm=$("gm");let gmOpen=false,gmMode=null,PASSUP=false;
-const GMT={pass:"島嶼護照",museum:"博物館",shop:"商店",players:"玩家名冊",dig:"每日挖寶",quick:"快問快答",appraise:"鑑定師",battle:"同機對戰",event:"節日活動",camp:"營地",creator:"島嶼創作家",route:"闖關航線"};
-const GMC={pass:"#1a6f86",museum:"#8a5a3c",shop:"#c98a12",players:"#3f7f57",dig:"#b8742a",quick:"#c2453a",appraise:"#6a4bb0",battle:"#c9562f",event:"#3f7f57",camp:"#a8662a",creator:"#3f8f5a",route:"#1a6f86"};
+const GMT={pass:"島嶼護照",museum:"博物館",shop:"商店",players:"玩家名冊",dig:"每日挖寶",quick:"快問快答",appraise:"鑑定師",battle:"同機對戰",event:"節日活動",camp:"營地",creator:"島嶼創作家",route:"闖關航線",diag:"弱點診斷"};
+const GMC={pass:"#1a6f86",museum:"#8a5a3c",shop:"#c98a12",players:"#3f7f57",dig:"#b8742a",quick:"#c2453a",appraise:"#6a4bb0",battle:"#c9562f",event:"#3f7f57",camp:"#a8662a",creator:"#3f8f5a",route:"#1a6f86",diag:"#2f6fb5"};
 function showGM(m){closeSheet(true);if(gmOpen&&gmMode===m)return;gmStop();btClose();gmOpen=true;gmMode=m;gm.hidden=false;document.documentElement.classList.add("ivopen");renderGM();gm.scrollTop=0;
   if(m==="route"){routeOpened();return}
   requestAnimationFrame(()=>{if(m==="pass"&&PASSUP){PASSUP=false;const u=$("ppUp");if(u){u.scrollIntoView({block:"start"});return}}const h=$("gmH");if(h)h.focus({preventScroll:true})})}
@@ -2182,7 +2290,7 @@ function closeGM(){if(!gmOpen)return;gmStop();btClose();gmOpen=false;const m=gmM
   const b=$("playCard").querySelector(`[data-go="${m}"]`);if(b)b.focus({preventScroll:true})}
 function gmStop(){if(QQ&&QQ.tm)clearInterval(QQ.tm);QQ=null;AP=null;PE=null;buyArm=null;delArm=null;crClr=false}
 function renderGM(){const m=gmMode;if(!m)return;gm.style.setProperty("--c",GMC[m]);gm.setAttribute("aria-label",GMT[m]);
-  const body={pass:passHTML,museum:museumHTML,shop:shopHTML,players:playersHTML,dig:digHTML,quick:quickHTML,appraise:apHTML,battle:btSetupHTML,event:evHTML,camp:campHTML,creator:creatorHTML,route:routeHTML}[m]();
+  const body={pass:passHTML,museum:museumHTML,shop:shopHTML,players:playersHTML,dig:digHTML,quick:quickHTML,appraise:apHTML,battle:btSetupHTML,event:evHTML,camp:campHTML,creator:creatorHTML,route:routeHTML,diag:diagHTML}[m]();
   gm.innerHTML=`<div class="iv-bar"><button class="ivback" type="button">← 回航海圖</button><span class="ivbn">${GMT[m]}</span>${coinChip()}</div><div class="iv-in gm-in"><h2 class="chh" id="gmH" tabindex="-1">${GMT[m]}</h2>${body}</div>`;
   renderSnd();if(m==="route")routeAfter()}
 /* 重畫但留在原來的位置，鍵盤焦點也放回同一顆按鈕 */
@@ -2374,6 +2482,158 @@ gm.addEventListener("input",e=>{const k=e.target.dataset&&e.target.dataset.in;
   if(!k||!PE)return;if(k==="pn")PE.n=e.target.value;else if(k==="pg")PE.g=e.target.value;
   const pv=$("pePrev");if(pv)pv.innerHTML=`${avHTML(PE)}<b>${esc(PE.n||"（還沒取名）")}</b>`});
 gm.addEventListener("change",e=>{const k=e.target.dataset&&e.target.dataset.ch;if(!k)return;if(k==="bta")BS.a=e.target.value;else if(k==="btb")BS.b=e.target.value;else if(k==="btr")BS.r=e.target.value;gmRe()});
+
+/* ---------- 弱點診斷用的作答紀錄：每一輪「第一次作答」記一次 [作答次數, 答對次數]；用了道具的那次不算 ---------- */
+function track(id,ok){const t=Array.isArray(st.tr[id])?st.tr[id]:[0,0];t[0]++;if(ok)t[1]++;st.tr[id]=t}
+
+/* ---------- 集章點與兌換所：銅章 1 點、銀章 2 點、金章 3 點，一座島全部集章再加 3 點；可以換提示卡和刪去卡 ---------- */
+function stampPts(){let n=0;ALLSECS.forEach(s=>{n+=tierOf(s)});const full=ORDER.reduce((a,k)=>a+SUBJ[k].isles.filter(i=>i.secs.every(secDone)).length,0),earn=n+3*full,used=+st.sp||0;
+  return{n,full,earn,used,left:Math.max(0,earn-used)}}
+const CARDS={hint:{n:"提示卡",d:"練習題裡使用，顯示和這題有關的一點重點，答案的字會挖空。"},cut:{n:"刪去卡",d:"練習題裡使用，刪掉兩個錯的選項。"}};
+let xchPend=null;
+function xchHTML(){const P=stampPts();
+  return `<div class="xch-in"><div class="xch-h"><h2 id="xchT">集章兌換所</h2><button type="button" class="xch-x" data-x="close" aria-label="關閉兌換所">✕</button></div>
+  <div class="xch-pts"><span class="sealic big" aria-hidden="true">章</span><div><b data-sp>${P.left}</b> 點章點<small>銅章 1 點、銀章 2 點、金章 3 點，一座島全部集章再加 3 點。已經用了 ${P.used} 點。</small></div></div>
+  <div class="xch-list">${Object.entries(CARDS).map(([k,o])=>`<div class="xch-it"><div><b>${o.n}</b><small>${o.d}你有 <b data-inv="${k}">${st.inv[k]|0}</b> 張。</small></div><button type="button" class="pbtn${xchPend===k?" pend":""}" data-buy="${k}">${xchPend===k?"再按一次確認":"1 點換 2 張"}</button></div>`).join("")}</div>
+  <p class="xch-note">用了道具答對，仍然算答對、可以集銅章；但不算「第一次就答對」，所以那一題不會幫你升銀章，也不算進弱點診斷。</p></div>`}
+function openXch(){const d=$("xch");xchPend=null;d.innerHTML=xchHTML();try{if(!d.open)d.showModal()}catch(e){d.setAttribute("open","")}const x=d.querySelector(".xch-x");if(x)x.focus({preventScroll:true})}
+function closeXch(){const d=$("xch");if(d.open){try{d.close()}catch(e){d.removeAttribute("open")}}}
+function renderXch(){const d=$("xch");if(!d.open)return;const a=document.activeElement,k=a&&a.dataset&&a.dataset.buy;d.innerHTML=xchHTML();
+  const el=(k&&d.querySelector(`[data-buy="${k}"]`))||d.querySelector(".xch-x");if(el)el.focus({preventScroll:true})}
+function xchBuy(k){if(!CARDS[k])return;const P=stampPts();
+  if(P.left<1){xchPend=null;toast("章點不夠了，答對整節、集更多章吧！",2800);renderXch();return}
+  if(xchPend!==k){xchPend=k;renderXch();return}
+  st.sp=(+st.sp||0)+1;st.inv[k]=(st.inv[k]|0)+2;xchPend=null;save();sfx("coin");toast(`換到 2 張${CARDS[k].n}！`,2400);renderXch();invRefresh()}
+$("xch").addEventListener("click",e=>{if(e.target===$("xch")||e.target.closest('[data-x="close"]')){closeXch();return}const b=e.target.closest("[data-buy]");if(b)xchBuy(b.dataset.buy)});
+$("xch").addEventListener("close",()=>{xchPend=null});
+function invRefresh(){const P=stampPts();document.querySelectorAll("[data-inv]").forEach(b=>b.textContent=st.inv[b.dataset.inv]|0);document.querySelectorAll("[data-sp]").forEach(b=>b.textContent=P.left)}
+/* 練習題裡使用道具：刪去兩個錯誤選項，或顯示重點提示 */
+function useItem(qe,kind,btn){if(!CARDS[kind]||btn.disabled)return;const[sid,qi]=splitQ(qe.dataset.q),q=SECBY[sid].q[qi];
+  if((st.inv[kind]|0)<1){toast(`${CARDS[kind].n}用完了，用章點換新的吧！`,2600);openXch();return}
+  if(kind==="cut"){const wr=[...qe.querySelectorAll(".op")].filter(b=>+b.dataset.o!==q[2]&&!b.disabled);if(!wr.length){toast("已經沒有可以刪去的選項了",2200);return}
+    shuf(wr).slice(0,2).forEach(b=>{b.classList.add("cut");b.disabled=true})}
+  else{const h=qe.querySelector(".qhint");if(!h)return;h.innerHTML=`<b>提示</b><span>想想這個重點：${esc(q[4]||"回到上面的重點再讀一次。")}</span>`;h.hidden=false}
+  st.inv[kind]--;qe.dataset.aid="1";btn.disabled=true;save();invRefresh();sfx("tick")}
+
+/* ---------- 集章認證：拿到章（或升銀章、金章）時，島的印章蓋下來；點一下或 3 秒後消失 ---------- */
+let sealT=0;
+function sealShow(i,s,r){if(!i||!s||!r||!r.up)return;let el=$("sealFx");
+  if(!el){el=document.createElement("div");el.id="sealFx";el.className="sealfx";el.hidden=true;el.setAttribute("aria-hidden","true");document.body.appendChild(el);el.addEventListener("click",sealHide)}
+  const t=r.up.t,all=t===1&&isleStamps(i)===i.secs.length,pts=Math.max(1,t-(r.t0||0))+(all?3:0);
+  el.innerHTML=`<div class="sf-in" style="--c:${i.c}"><div class="sf-seal t${t}"><b>${esc(i.g)}</b><small>${all?"全島集章":["","集章認證","銀章認證","金章認證"][t]}</small></div>
+    <div class="sf-t">${all?esc(i.name)+"全部集章！":TN[t]+"到手！"}</div><div class="sf-s">${esc(s.t)}</div><div class="sf-p"><span class="sealic" aria-hidden="true">章</span>章點 +${pts}</div></div>`;
+  el.classList.remove("on","out");el.hidden=false;void el.offsetWidth;el.classList.add("on");invRefresh();
+  clearTimeout(sealT);sealT=setTimeout(sealHide,all?3800:3000)}
+function sealHide(){const el=$("sealFx");if(!el||el.hidden)return false;clearTimeout(sealT);el.classList.add("out");setTimeout(()=>{el.hidden=true;el.classList.remove("on","out")},380);return true}
+
+/* ---------- 會考塔與模擬會考：限時作答，交卷後才看對錯和詳解。題目依題庫統計的歷屆會考題數加權抽出 ---------- */
+const exEl=$("ex"),SEC_T=75;let EXS=null,exOpen=false;
+const mmss=s=>`${Math.floor(s/60)}:${String(s%60).padStart(2,"0")}`;
+const fmtDur=s=>s>=60?`${Math.floor(s/60)} 分${s%60?` ${s%60} 秒`:""}`:`${s} 秒`;
+const ISLEBY={};ORDER.forEach(k=>SUBJ[k].isles.forEach(i=>{ISLEBY[i.key]=i}));
+/* 先依權重抽一節，再從那一節抽一題沒用過的 */
+function drawQs(secs,n,wf){const pool=secs.map(s=>({w:wf(s),q:shuf(s.qids)})),out=[];
+  while(out.length<n){const live=pool.filter(x=>x.q.length);if(!live.length)break;
+    let r=Math.random()*live.reduce((a,x)=>a+x.w,0),x=live[live.length-1];for(const y of live){r-=y.w;if(r<=0){x=y;break}}
+    out.push(x.q.pop())}
+  return shuf(out)}
+const mkIdx=()=>{const k=SEMS.indexOf(st.mkTo);return k<0?SEMS.length-1:k};
+const mkSecs=()=>{const k=mkIdx();return ALLSECS.filter(s=>SEMS.indexOf(s.chObj.sem)<=k)};
+function towerHTML(i){const t=st.tw[i.key],n=Math.min(12,i.nq);
+  return `<section class="tower" id="tower" style="--c:${i.c}"><div class="tw-in"><div class="pey">會考塔</div><h3>登上${esc(i.name.replace(/島$/,""))}會考塔</h3>
+  <p>從這座島抽 ${n} 題，歷屆會考常考的小節抽得比較多（這座島歷屆會考考過 ${i.cap} 題，${heatHTML(i)}）。建議時間 ${fmtDur(n*SEC_T)}，交卷後才看對錯和詳解。</p>
+  ${t&&t.t?`<p class="twrec">最佳 <b>${t.b}/${t.n}</b>・挑戰 ${t.t} 次</p>`:""}<div class="prow"><button type="button" class="pbtn" data-act="tower">登塔挑戰 →</button></div></div>
+  <span class="tw-art" aria-hidden="true" style="${MAPPAL}">${ICON("lighthouse")}</span></section>`}
+function showEx(kind,arg){if(exOpen&&EXS&&EXS.kind===kind&&EXS.arg===arg)return;closeSheet(true);let o;
+  if(kind==="tower"){const i=ISLEBY[arg];if(!i){location.hash=cur;return}
+    o={kind,arg,isle:i,ids:drawQs(i.secs,Math.min(12,i.nq),s=>1+(s.cap||0)/2),title:`${i.name.replace(/島$/,"")}會考塔`,c:i.c}}
+  else{const n=Math.max(5,Math.min(50,parseInt(arg,10)||10));
+    o={kind:"mock",arg:String(n),ids:drawQs(mkSecs(),n,s=>.3+(s.cap||0)),title:`模擬會考・${n} 題`,sub:`範圍：七上～${SEMS[mkIdx()]}`,c:"#2f6fb5"}}
+  stopEx();EXS=o;o.pick={};o.lim=o.ids.length*SEC_T;o.t0=Date.now();o.left=o.lim;o.done=false;o.warn=false;
+  exOpen=true;exEl.hidden=false;document.documentElement.classList.add("ivopen");exEl.style.setProperty("--c",o.c);renderEx();exEl.scrollTop=0;o.tm=setInterval(exTick,1000);
+  setTimeout(()=>{const h=$("exH");if(h)h.focus({preventScroll:true})},30)}
+function stopEx(){if(EXS&&EXS.tm){clearInterval(EXS.tm);EXS.tm=0}}
+function closeEx(){if(!exOpen)return;stopEx();exOpen=false;EXS=null;exEl.hidden=true;exEl.innerHTML="";document.documentElement.classList.remove("ivopen");refresh()}
+function exitEx(){const E=EXS;location.hash=E&&E.kind==="tower"?E.isle.key:cur}
+function exTick(){const E=EXS;if(!E||E.done)return;E.left=Math.max(0,E.lim-Math.floor((Date.now()-E.t0)/1000));const t=$("exTime");
+  if(t){t.textContent=mmss(E.left);t.classList.toggle("low",E.left<=60)}if(!E.left)submitEx(true)}
+function exQHTML(id,k){const E=EXS,[sid,qi]=splitQ(id),s=SECBY[sid],q=s.q[qi],p=E.pick[id],dn=E.done,ok=p===q[2];
+  return `<div class="q exq${dn?" lock":""}" data-q="${id}"><p class="qs"><b>${k+1}.</b> ${esc(q[0])}</p><div class="opts" role="group" aria-label="第 ${k+1} 題選項">${q[1].map((o,oi)=>{
+    let c="op";if(dn){if(oi===q[2])c+=p===oi?" ok":" rev";else if(oi===p)c+=" no"}else if(p===oi)c+=" pick";
+    return `<button type="button" class="${c}" data-o="${oi}" aria-pressed="${!dn&&p===oi}"${dn?" disabled":""}><i>${L[oi]}</i><span>${esc(o)}</span></button>`}).join("")}</div>
+    ${dn?`<p class="exsrc">${SUBJ[s.subj].name}・${esc(s.isleObj.name)}・${esc(s.t)}<button type="button" class="exgo" data-sec="${s.id}">到這一節 →</button></p><div class="fb ${ok?"good":"bad"}"><b>${ok?"答對了。":p==null?`沒有作答，正確答案是 (${L[q[2]]})。`:`正確答案是 (${L[q[2]]})。`}</b>${esc(q[3])}</div>`:""}</div>`}
+function exResultHTML(){const E=EXS,n=E.ids.length,r=E.r,pct=Math.round(r/n*100),sec=E.kind==="tower",by={};
+  E.ids.forEach(id=>{const[sid,qi]=splitQ(id),s=SECBY[sid],key=sec?s.id:s.isleObj.key,o=by[key]||(by[key]={s,n:0,r:0});o.n++;if(E.pick[id]===s.q[qi][2])o.r++});
+  const rows=Object.values(by).sort((a,b)=>a.r/a.n-b.r/b.n),tw=sec?st.tw[E.isle.key]:null;
+  return `<div class="exres"><div class="exsc"><b>${r}</b><span>/ ${n}</span></div><div class="exsm"><p>答對率 <b>${pct}%</b>・用時 ${fmtDur(E.used)}${tw?`・最佳 ${tw.b}/${tw.n}・第 ${tw.t} 次挑戰`:""}${E.coins?`・+${E.coins} 幣`:""}</p>
+  <p>${pct>=85?"很穩！":pct>=60?"不錯，把答錯的題目再看一遍。":"先回島上讀重點，再來挑戰一次。"}答錯、而且還沒在島上答對的題目，已經收進錯題本。</p></div></div>
+  ${rows.length>1?`<div class="exby"><div class="kpt">${sec?"各節得分":"各島得分"}（由弱到強）</div>${rows.map(o=>{const s=o.s,name=sec?(s.no?s.no+" ":"")+s.t:s.isleObj.name;
+    return `<button type="button" class="exrow" ${sec?`data-sec="${s.id}"`:`data-isle="${s.isleObj.key}"`} style="--c:${s.isleObj.c}"><span>${esc(name)}</span><span class="pb"><b style="width:${(o.r/o.n*100).toFixed(0)}%"></b></span><span class="pn">${o.r}/${o.n}</span></button>`}).join("")}</div>`:""}`}
+function renderEx(){const E=EXS,n=E.ids.length,a=Object.keys(E.pick).length,back=E.kind==="tower"?"回島頁":"回航海圖";
+  exEl.innerHTML=`<div class="iv-bar"><button class="ivback" type="button" data-xa="exit">← ${back}</button><span class="ivbn">${esc(E.title)}</span>${E.done?`<span class="ivbs">答對 ${E.r}/${n}</span>`:`<span class="ivbs extime" id="exTime" role="timer" aria-label="剩餘時間">${mmss(E.left)}</span>`}</div>
+  <div class="iv-in"><h2 class="chh" id="exH" tabindex="-1">${esc(E.title)}</h2>
+  ${E.done?exResultHTML():`<p class="ivhow">${E.sub?E.sub+"。":""}共 ${n} 題，建議時間 ${fmtDur(E.lim)}，時間到會自動交卷。交卷前都可以改答案，交卷後才看對錯和詳解；中途離開，這次作答不會保留。會考塔和模擬會考不會蓋章，但會記進弱點診斷。</p>`}
+  ${fszHTML()}
+  <div class="exqs">${E.ids.map(exQHTML).join("")}</div>
+  ${E.done?`<div class="exend"><button type="button" class="pbtn" data-xa="again">再挑戰一次</button><button type="button" class="pbtn alt" data-xa="wrong">打開錯題本</button><button type="button" class="pbtn alt" data-xa="exit">${back}</button></div>`
+  :`<div class="exbar"><span id="exCnt" aria-live="polite">已作答 ${a}/${n}</span><button type="button" class="pbtn" data-xa="submit">交卷</button></div>`}</div>`}
+function exCnt(){const E=EXS,n=E.ids.length,a=Object.keys(E.pick).length,c=$("exCnt"),b=exEl.querySelector('[data-xa="submit"]');
+  if(c)c.textContent=E.warn?`還有 ${n-a} 題沒作答，確定要交卷嗎？`:`已作答 ${a}/${n}`;if(b)b.textContent=E.warn?"確定交卷":"交卷"}
+function submitEx(auto){const E=EXS;if(!E||E.done)return;stopEx();E.done=true;E.used=Math.min(E.lim,Math.round((Date.now()-E.t0)/1000));
+  let r=0;E.ids.forEach(id=>{const[sid,qi]=splitQ(id),ok=E.pick[id]===SECBY[sid].q[qi][2];track(id,ok);if(ok){r++;delete st.wrong[id]}else if(!st.ans[id])st.wrong[id]=1});
+  E.r=r;let coins=0;
+  if(E.kind==="tower"){const k=E.isle.key,t=st.tw[k]&&typeof st.tw[k]==="object"?st.tw[k]:{b:0,n:0,t:0};coins=Math.max(0,r-(+t.b||0));t.t=(+t.t||0)+1;t.n=E.ids.length;t.b=Math.max(+t.b||0,r);t.d=today();st.tw[k]=t}
+  else{coins=capped(st,"mock",20,Math.floor(r/5));st.mk=[{d:today(),n:E.ids.length,r,s:E.used,to:SEMS[mkIdx()]}].concat(Array.isArray(st.mk)?st.mk:[]).slice(0,10)}
+  st.coins+=coins;E.coins=coins;save();renderMe();renderEx();exEl.scrollTop=0;setTimeout(()=>{const h=$("exH");if(h)h.focus({preventScroll:true})},30);
+  if(r/E.ids.length>=.8)petals("big",E.kind==="tower"?E.isle.subj:cur);
+  toast(`${auto?"時間到，已自動交卷":"交卷完成"}：答對 ${r}/${E.ids.length} 題${coins?`，+${coins} 幣`:""}`,3200)}
+exEl.addEventListener("click",e=>{const E=EXS;if(!E)return;
+  const op=e.target.closest(".op");
+  if(op&&!E.done){const qe=op.closest(".q"),o=+op.dataset.o;E.pick[qe.dataset.q]=o;
+    qe.querySelectorAll(".op").forEach(b=>{const on=+b.dataset.o===o;b.setAttribute("aria-pressed",String(on));b.classList.toggle("pick",on)});E.warn=false;exCnt();return}
+  if(E.done){const g=e.target.closest("[data-sec]");if(g){const s=SECBY[g.dataset.sec];if(s)openIsle(s.subj,s.isleObj.id,{sec:s.id});return}
+    const gi=e.target.closest("[data-isle]");if(gi&&ISLEBY[gi.dataset.isle]){location.hash=gi.dataset.isle;return}}
+  const a=e.target.closest("[data-xa]");if(!a)return;const act=a.dataset.xa;
+  if(act==="submit"){const left=E.ids.length-Object.keys(E.pick).length;if(left&&!E.warn){E.warn=true;exCnt();return}submitEx(false);return}
+  if(act==="exit"){exitEx();return}
+  if(act==="again"){const k=E.kind,arg=E.arg;exOpen=false;EXS=null;showEx(k,arg);return}
+  if(act==="wrong")location.hash="wrong"});
+
+/* ---------- 弱點診斷 ---------- */
+function trStat(ids){let a=0,r=0;ids.forEach(id=>{const t=st.tr[id];if(Array.isArray(t)){a+=+t[0]||0;r+=+t[1]||0}});return{a,r,p:a?r/a:0}}
+function diagStats(){return ORDER.flatMap(k=>SUBJ[k].isles).map(i=>({i,...trStat(i.secs.flatMap(s=>s.qids)),secs:i.secs.map(s=>({s,...trStat(s.qids)}))}))}
+const dgLvl=p=>p<.6?["需要加強","bad"]:p<.8?["再複習一次","mid"]:["掌握得不錯","good"];
+const pctT=p=>Math.round(p*100)+"%";
+function dgRowHTML(x,g){const[t,c]=dgLvl(x.p),k=x.i.key;
+  return `<button type="button" class="dgr ${c}" ${g?`data-a="dgi" data-v="${k}"`:`data-dgi="${k}"`} style="--c:${x.i.c}"><span class="sn">${esc(x.i.g)}</span><span class="dgx"><b>${esc(x.i.name)}</b><span class="pb"><b style="width:${pctT(x.p)}"></b></span><span class="dgm">答對率 ${pctT(x.p)}（${x.r}/${x.a}）・${t}・會考${HEATN[x.i.heat]}</span></span><span class="chgo" aria-hidden="true">→</span></button>`}
+function diagHTML(){const all=diagStats(),has=all.filter(x=>x.a>=3),none=all.filter(x=>x.a<3);
+  const pri=has.filter(x=>x.p<.8).sort((a,b)=>(1-b.p)*(1+b.i.heat)-(1-a.p)*(1+a.i.heat)).slice(0,3),hot=none.filter(x=>x.i.heat===3);
+  return `<p class="ivhow">依每一題「第一次作答」的對錯計算，島上練習、錯題本、會考塔和模擬會考都算（用了提示卡或刪去卡的那次不算）。答對率低於 60% 是「需要加強」，60%～79% 是「再複習一次」。點一座島或一節，就能直接去複習。</p>
+  ${pri.length?`<div class="kpt">先複習這幾座（常考又不熟）</div><div class="dglist">${pri.map(x=>dgRowHTML(x,1)).join("")}</div>`:""}
+  ${has.length?`<div class="kpt">各島答對率（由弱到強）</div>`+has.sort((a,b)=>a.p-b.p).map(x=>`<article class="sec dgsec" style="--c:${x.i.c}">${dgRowHTML(x,1)}<div class="dgss">${x.secs.filter(y=>y.a).sort((a,b)=>a.p-b.p).map(y=>`<button type="button" class="dgs ${dgLvl(y.p)[1]}" data-a="dgs" data-v="${y.s.id}"><span>${y.s.no||"導"}. ${esc(y.s.t)}${y.s.cap?`<small class="capb">會考 ${y.s.cap} 題</small>`:""}</span><span class="dgm">${pctT(y.p)}（${y.r}/${y.a}）</span></button>`).join("")}</div></article>`).join("")
+    :`<div class="wbempty"><b>還沒有足夠的作答紀錄</b><p>同一座島累積 3 題以上第一次作答，就會出現在這裡。</p></div>`}
+  ${hot.length?`<div class="kpt">最常考、但還沒練習的島</div><div class="dghot">${hot.map(x=>`<button type="button" class="tbtn" data-a="dgi" data-v="${x.i.key}">${esc(x.i.name)}<small>歷屆 ${x.i.cap} 題</small></button>`).join("")}</div>`:""}
+  ${none.length?`<p class="ivnote">還沒有足夠紀錄的島：${none.map(x=>esc(x.i.name)).join("、")}</p>`:""}
+  <div class="prow"><button class="pbtn" type="button" data-a="mk10">做一次 10 題模擬會考</button></div>`}
+GMA.dgi=v=>{if(ISLEBY[v])location.hash=v};
+GMA.dgs=v=>{const s=SECBY[v];if(s)openIsle(s.subj,s.isleObj.id,{sec:s.id})};
+GMA.mk10=()=>{location.hash="mock-10"};
+
+/* ---------- 首頁「會考準備」卡：選範圍和題數開始模擬會考，下面是最弱的三座島 ---------- */
+function renderCapCard(){const el=$("capCard");if(!el)return;const m=(Array.isArray(st.mk)?st.mk:[])[0],k=mkIdx(),D=diagStats().filter(x=>x.a>=3).sort((a,b)=>a.p-b.p).slice(0,3);
+  el.innerHTML=`<div class="pey">會考準備</div><h2>模擬會考・弱點診斷</h2>
+  <p class="capp">題目依各島在歷屆會考的出題多寡抽出，每題建議 ${SEC_T} 秒，交卷後看詳解和各島得分。先選範圍，再選題數。</p>
+  <div class="semtabs mk-to" role="group" aria-label="模擬會考範圍：從七上到">${SEMS.map((x,j)=>`<button type="button" data-mkto="${x}" aria-pressed="${j===k}">到${x}</button>`).join("")}</div>
+  <div class="prow"><button type="button" class="pbtn" data-mk="10">10 題</button><button type="button" class="pbtn alt" data-mk="25">25 題</button><button type="button" class="pbtn alt" data-mk="50">50 題</button></div>
+  ${m?`<p class="mkrec">上次 ${m.d.slice(5).replace("-","/")}（七上～${esc(m.to||"九下")}）：答對 ${m.r}/${m.n}，用時 ${fmtDur(m.s)}</p>`:""}
+  <div class="kpt">弱點診斷</div>
+  ${D.length?`<div class="dglist">${D.map(x=>dgRowHTML(x,0)).join("")}</div>`:`<p class="capp">在島上做練習、挑戰會考塔或模擬會考。同一座島累積 3 題以上第一次作答，就能看到哪裡要加強。</p>`}
+  <div class="prow"><button type="button" class="pbtn alt" data-dg="1">看完整診斷 →</button></div>`}
+$("capCard").addEventListener("click",e=>{const t=e.target.closest("[data-mkto]");
+  if(t){st.mkTo=t.dataset.mkto;save();renderCapCard();const b=$("capCard").querySelector(`[data-mkto="${st.mkTo}"]`);if(b)b.focus({preventScroll:true});return}
+  const m=e.target.closest("[data-mk]");if(m){location.hash="mock-"+m.dataset.mk;return}
+  if(e.target.closest("[data-dg]")){location.hash="diag";return}
+  const i=e.target.closest("[data-dgi]");if(i&&ISLEBY[i.dataset.dgi])location.hash=i.dataset.dgi});
 
 /* ---------- 闖關航線：一個學期排成三條航線（地理、歷史、公民），每一節是一顆寶石關卡，照課本順序往下走 ----------
    集到章的寶石依章級亮成銅、銀、金；站著島民的是那條航線的下一關。點寶石直接打開那一節，回來時停在原來的位置 */
@@ -2674,10 +2934,12 @@ function mergeGame(o){const ob=x=>x&&typeof x==="object"&&!Array.isArray(x)?x:{}
   st.dig.best=Math.max(+st.dig.best||0,nm(ob(o.dig).best));const cv=nm(o.cover);if(cv<COVERS.length&&(cv===0||st.own["cv"+cv]))st.cover=cv;mergeGame3(o)}
 
 /* ---------- 科目切換、路由與整頁更新 ---------- */
-function refresh(){renderStats();buildMap();renderSem();renderCards();renderDraw();renderWrongCard();renderMe();renderPlay();renderEvent();renderFolk();titleCheck();unlockCheck();festCheck()}
+function refresh(){renderCapCard();renderStats();buildMap();renderSem();renderCards();renderDraw();renderWrongCard();renderMe();renderPlay();renderEvent();renderFolk();titleCheck();unlockCheck();festCheck()}
 function setSubj(k,push){if(!SUBJ[k])return;const changed=k!==cur;cur=k;st.subj=k;save();
   if(push&&location.hash!=="#"+k)location.hash=k;if(changed){flt="all";renderFilters();refresh()}}
 function routeHash(){closeHO();const g=location.hash.slice(1);
+  const em=g.match(/^(tower|mock)-(.+)$/);if(em){closeIV();closeWB();closeGM();showEx(em[1],em[2]);return}
+  closeEx();
   if(GMT[g]){closeIV();closeWB();showGM(g);return}
   closeGM();
   if(location.hash==="#wrong"){closeIV();if(!wbOpen)showWB();return}
@@ -2686,7 +2948,7 @@ function routeHash(){closeHO();const g=location.hash.slice(1);
   const i=h.id&&SUBJ[h.s].byId[h.id];if(i)showIV(i);else closeIV()}
 document.querySelectorAll("#subj button").forEach(b=>b.onclick=()=>{closeSheet();setSubj(b.dataset.s,true)});
 addEventListener("hashchange",routeHash);
-addEventListener("keydown",e=>{if(e.key!=="Escape")return;if(endGuide())return;if(closeFest())return;if(BT&&BT.phase!=="end")return;if(closeFigZ())return;if(closeHO())return;if(ivOpen&&ivFrom){const f=ivFrom;ivFrom=null;location.hash=f}else if(ivOpen||wbOpen||gmOpen)location.hash=cur;else closeSheet()});
+addEventListener("keydown",e=>{if(e.key!=="Escape")return;if(document.querySelector("dialog[open]"))return;if(endGuide())return;if(sealHide())return;if(exOpen){exitEx();return}if(closeFest())return;if(BT&&BT.phase!=="end")return;if(closeFigZ())return;if(closeHO())return;if(ivOpen&&ivFrom){const f=ivFrom;ivFrom=null;location.hash=f}else if(ivOpen||wbOpen||gmOpen)location.hash=cur;else closeSheet()});
 
 let rq=0;
 new ResizeObserver(()=>{cancelAnimationFrame(rq);rq=requestAnimationFrame(()=>{const w=mapwrap.clientWidth-32>=700;if(!geom||w!==geom.wide)buildMap();else{sizeSea();still()}})}).observe(mapwrap);

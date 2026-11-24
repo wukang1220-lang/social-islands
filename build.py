@@ -37,6 +37,37 @@ extras = json.load(open(os.path.join(HERE, "extras.json"), encoding="utf-8"))
 qbase = json.load(open(os.path.join(HERE, "qbase.json"), encoding="utf-8"))
 # museum exhibits: one line per section, in the same order as structure.json
 mus_lines = [l.rstrip("\r\n") for l in open(os.path.join(HERE, "museum.tsv"), encoding="utf-8") if l.strip()]
+# past 會考 items per section, counted from the question bank by tally_cap.py (counts only)
+CAP_P = os.path.join(HERE, "cap.json")
+cap = json.load(open(CAP_P, encoding="utf-8")) if os.path.exists(CAP_P) else {}
+HPUNC = re.compile(r"[\s，。、；：「」『』（）()？！,.?!*]")
+
+
+def grams(t):
+    t = HPUNC.sub("", t)
+    return {t[i:i + 2] for i in range(len(t) - 1)}
+
+
+def make_hint(stem, ans, kps):
+    """提示卡的內容：和題目、答案最相關的一點重點，答案的字挖空成＿＿"""
+    tg, ag = grams(stem), grams(ans)
+    best, score = kps[0], -1
+    for kp in kps:
+        g = grams(kp)
+        sc = len(g & tg) + 2 * len(g & ag)
+        if sc > score:
+            best, score = kp, sc
+    a = ans.strip("。")
+    out, hit = best, False
+    for r in re.findall(r"\*\*(.+?)\*\*", best):
+        if r in a or (len(a) >= 2 and a in r):
+            out, hit = out.replace(f"**{r}**", "＿＿"), True
+    out = out.replace("**", "")
+    if not hit and len(a) >= 2 and a in out:
+        out = out.replace(a, "＿＿", 1)
+    return out
+
+
 WIDGETS = {"tz", "scale", "climo", "era", "kin", "meet", "growth", "pyr", "fair", "sort", "chclim", "refer", "order", "branch", "wclim", "cap", "oppc", "profit", "fx", "foodmile"}
 warn = []
 
@@ -115,7 +146,7 @@ for subj, sd in st.items():
                 new_opts = [opts[i] for i in order]
                 new_ans = order.index(ans)
                 spread[new_ans] += 1
-                qs.append([stem, new_opts, new_ans, exp])
+                qs.append([stem, new_opts, new_ans, exp, make_hint(stem, opts[ans], c["k"])])
             s["q"] = qs
             assert len(qs) >= qbase[s["id"]], f"{s['id']} lost questions; only append new ones"
             if len(qs) > qbase[s["id"]]:
@@ -126,6 +157,8 @@ for subj, sd in st.items():
             assert ic in icons, f"museum.tsv line {mus_i}: no icon {ic}"
             assert mn and md and len(mn) <= 9 and len(md) <= 34, f"museum.tsv line {mus_i}: name or label too long"
             s["mu"] = [ic, mn, md]
+            if cap.get(s["id"]):
+                s["cap"] = cap[s["id"]]
             ex = extras.get(s["id"], {})
             figs = [f for f in (svg("figs", n) for n in ex.get("fig", [])) if f]
             if figs:
