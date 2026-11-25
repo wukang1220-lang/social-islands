@@ -973,6 +973,7 @@ html.i3open .cheerfab{display:none}
 .i3 canvas{position:absolute;inset:0;width:100%;height:100%;display:block;outline:none;touch-action:none;cursor:grab}
 .i3 canvas:active{cursor:grabbing}
 .i3 .iv-bar{position:absolute;left:0;right:0;top:0;z-index:4}
+@media (max-width:420px){.i3 .iv-bar .ivbs{display:none}}
 .i3tools{position:absolute;z-index:3;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));top:calc(env(safe-area-inset-top,0px) + 64px);display:flex;flex-wrap:wrap;gap:6px;pointer-events:none}
 .i3tools>*{pointer-events:auto;position:relative;border:0;border-radius:12px;min-height:36px;padding:0 11px;display:inline-flex;align-items:center;gap:5px;background:var(--paper-glass);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);font:inherit;font-weight:800;font-size:13px;box-shadow:0 2px 10px rgba(10,30,40,.14);cursor:pointer;white-space:nowrap}
 .i3tools b{font-family:var(--f-mono)}
@@ -1181,7 +1182,7 @@ button.i3tag{pointer-events:auto;border:0;cursor:pointer;font:inherit;font-size:
   <div class="meta" id="bMeta"></div>
   <ol class="chs" id="bCh"></ol>
   <button class="go" id="bGo" type="button">登島 →</button>
-  <button class="go alt" id="bWalk" type="button" hidden>走進島（3D）</button>
+  <button class="go alt" id="bWalk" type="button" hidden>改看重點清單</button>
 </aside>
 
 <section class="iv" id="iv" hidden aria-label="島頁"></section>
@@ -1623,15 +1624,15 @@ function openSheet(id){const S=SUBJ[cur],i=S.byId[id];if(!i)return;
   $("bMeta").innerHTML=[`集章 ${d}/${t}`,`例題答對 ${isleRight(i)}/${i.nq}`,`銀章 ${tc[2]}・金章 ${tc[3]}`,visited(i)?"已登島":"還沒登島"].map(x=>`<span class="tg">${x}</span>`).join("")+`<span class="tg tgh">${heatHTML(i)}・歷屆 ${i.cap} 題</span>`+`<span class="tg tgs" aria-label="${STARN[sN]}">${starHTML(sN)}</span>`;
   $("bCh").innerHTML=i.chs.map(c=>{const a=c.secs.filter(secDone).length;
     return `<li><button type="button" class="chr" data-ch="${c.uid}"><span class="chx"><span class="chn">${chLabel(c)}</span><b>${esc(chTitle(c))}</b><span class="chm">${c.secs.length} 節・集章 ${a}/${c.secs.length}</span></span><span class="chgo" aria-hidden="true">→</span></button></li>`}).join("");
-  {const ok=canWalk(),bw=$("bWalk");bw.hidden=!ok;$("bGo").textContent=ok&&walkPref?`走進${i.name} →`:`登上${i.name} →`;bw.textContent=walkPref?"改看重點清單":"走進島（3D）"}
+  {const ok=canWalk();$("bWalk").hidden=!ok;$("bGo").textContent=ok?`走進${i.name} →`:`登上${i.name} →`}
   markOn(id);document.body.classList.add("open");sheet.inert=false;sheet.setAttribute("aria-hidden","false");sheet.scrollTop=0;
   setTimeout(()=>$("x").focus({preventScroll:true}),reduce?0:380)}
 function closeSheet(silent){if(!document.body.classList.contains("open"))return;const id=sheetId;
   document.body.classList.remove("open");sheet.inert=true;sheet.setAttribute("aria-hidden","true");sheetId=null;markOn(null);
   if(silent)return;const t=opener&&opener.isConnected?opener:map.querySelector(`.isle[data-id="${id}"]`);if(t&&t.focus)t.focus({preventScroll:true})}
 $("x").onclick=()=>closeSheet();$("scrim").onclick=()=>closeSheet();
-$("bGo").onclick=()=>{if(sheetId)openIsle(cur,sheetId)};
-$("bWalk").onclick=()=>{if(!sheetId)return;setWalk(!walkPref);openIsle(cur,sheetId)};
+$("bGo").onclick=()=>{if(!sheetId)return;if(canWalk())setWalk(1);openIsle(cur,sheetId)};
+$("bWalk").onclick=()=>{if(!sheetId)return;setWalk(0);openIsle(cur,sheetId)};
 $("bCh").addEventListener("click",e=>{const b=e.target.closest(".chr");if(!b||!sheetId)return;openIsle(cur,sheetId,{ch:b.dataset.ch})});
 $("sail").onclick=()=>openIsle(cur,$("sail").dataset.id);
 
@@ -3332,8 +3333,8 @@ const THREE_URL="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.
 let threeP=null,noWalk=false,W=null;
 const hasGL=(()=>{try{const c=document.createElement("canvas"),g=c.getContext("webgl")||c.getContext("experimental-webgl");if(!g)return false;const x=g.getExtension("WEBGL_lose_context");if(x)x.loseContext();return true}catch(e){return false}})();
 const canWalk=()=>hasGL&&!noWalk;
-/* 這台裝置上次用哪一種方式看島：1 走進島，0 重點清單（預設） */
-let walkPref=false;try{walkPref=localStorage.getItem("socialIsles.walk")==="1"}catch(e){}
+/* 這台裝置上次用哪一種方式看島：1 走進島（預設），0 重點清單。航海圖的島卡一律是「走進島」和「改看重點清單」兩個按鈕 */
+let walkPref=true;try{walkPref=localStorage.getItem("socialIsles.walk")!=="0"}catch(e){}
 function setWalk(v){walkPref=!!v;try{localStorage.setItem("socialIsles.walk",v?"1":"0")}catch(e){}}
 function loadThree(){if(window.THREE)return Promise.resolve(window.THREE);if(threeP)return threeP;
   const p=new Promise((ok,no)=>{const s=document.createElement("script");s.src=THREE_URL;s.async=true;
@@ -3357,7 +3358,7 @@ function showI3(i){if(i3Open&&wIsle===i&&W)return;disposeWorld();closeSheet(true
   const fine=matchMedia("(pointer:fine)").matches;
   el.innerHTML=`<canvas id="i3cv" tabindex="0" aria-label="${esc(i.name)}的 3D 島嶼。用方向鍵或 WASD 走動，按 E 和館主說話；也可以直接按展覽館名稱。"></canvas>
   <div class="i3labs" id="i3labs"></div>
-  <div class="iv-bar"><button class="ivback" type="button" data-act="back">← 回航海圖</button><span class="ivbn">${esc(i.name)}</span><span class="ivbs" id="i3St">集章 ${isleStamps(i)}/${i.secs.length}</span><button class="ivwalk" type="button" data-act="list">重點清單</button></div>
+  <div class="iv-bar"><button class="ivback" type="button" data-act="back">← 回航海圖</button><span class="ivbn">${esc(i.name)}</span><span class="ivbs" id="i3St">集章 ${isleStamps(i)}/${i.secs.length}</span><button class="ivwalk" type="button" data-act="list">改看重點清單</button></div>
   <div class="i3tools" id="i3tools"></div>
   <p class="i3hint" id="i3hint">${fine?"方向鍵或 WASD 走路、E 說話・":"左下角搖桿走路・"}點地面也能走・拖曳轉視角・按名牌找館主</p>
   <div class="i3joy" id="i3joy" aria-hidden="true"><i></i></div>
