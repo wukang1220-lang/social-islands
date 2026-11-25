@@ -80,6 +80,9 @@ h1{margin:0;font-family:var(--f-display);font-weight:400;font-size:clamp(46px,13
 .hx{position:relative;display:block;width:100%;height:auto;overflow:visible}
 .hx .sh1{fill:var(--shoal);opacity:.5}.hx .sh2{fill:var(--shoal);opacity:.72}
 .hx .sand{fill:var(--sand)}
+.hx .gl2{font-family:var(--f-display);font-size:15px;font-weight:900;fill:#fffaf3;text-anchor:middle}
+.hx .wv{fill:none;stroke:rgba(255,255,255,.75);stroke-width:1.3;stroke-linecap:round}
+.hx .isle.glow .grass{fill:#cfe89a}
 .hx .gl{font-family:var(--f-display);font-size:30px;fill:#fffaf3;text-anchor:middle;paint-order:stroke;stroke-width:4px;stroke-linejoin:round}
 .hx .pill rect{fill:var(--pill)}
 .hx .pill text{font-family:var(--f-body);font-weight:700;font-size:12.5px;fill:var(--pill-ink);text-anchor:middle}
@@ -1291,7 +1294,102 @@ function renderStats(){const S=SUBJ[cur];
   $("mapT").textContent=`${S.title}・${S.isles.length} 座島`;$("lead").textContent=S.lead}
 $("heroSub").textContent=`地理、歷史、公民三科，三十五座島，對應國中社會課本的 ${ALLSECS.length} 節。每一節有重點整理和練習題，答對整節就能蓋上那座島的島章。`;
 
-/* ---------- 航海圖：六角島沿蛇形航線排開 ---------- */
+/* 環島步道的半徑：展覽館多的島，步道和島都放大，館和館之間才不會擠在一起 */
+const hallRp=i=>Math.max(10.5,7.2*(i.secs.length+2)/(2*Math.PI)-3.1);
+/* 島形：每座島從上往下看的輪廓是和島名有關的圖案（x 向東、z 向南，角度 0° 朝東、-90° 朝北）。
+   中心一定留一個半徑約 17 的圓，展覽館、步道、塔的位置都不變；圖案靠往外長出去的部分辨認。
+   展覽館多的島整個等比例放大（hallRp）。用圖案、不用真實地圖輪廓，避免牽涉國界。
+   c 圓、e 橢圓（最後一個數是旋轉角度）、p 多邊形、h 從海岸挖進來的凹口 */
+const ISHAPE=(()=>{const D=Math.PI/180,C=(x,z,r)=>({c:[x,z,r]}),E=(x,z,rx,rz,d)=>({e:[x,z,rx,rz,(d||0)*D]}),P=p=>({p}),H=(x,z,r)=>({h:[x,z,r]}),
+  pol=(r,d)=>[r*Math.cos(d*D),r*Math.sin(d*D)],rect=(x1,z1,x2,z2)=>P([[x1,z1],[x2,z1],[x2,z2],[x1,z2]]),
+  fx=p=>p.map(([x,z])=>[-x,z]),
+  rot=(p,d,ox,oz)=>p.map(([x,z])=>[ox+x*Math.cos(d*D)-z*Math.sin(d*D),oz+x*Math.sin(d*D)+z*Math.cos(d*D)]),
+  kite=(d,r0,r1,w)=>P([pol(r0,d-w),pol(r1,d),pol(r0,d+w)]),
+  heart=()=>{const o=[];for(let k=0;k<80;k++){const t=k/80*Math.PI*2,x=16*Math.pow(Math.sin(t),3),y=13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t);o.push([1.85*x,-1.85*(y+2.65)])}return P(o)},
+  leaf=()=>{const o=[];for(let k=0;k<=40;k++){const x=-29+58*k/40;o.push([x,-17.5*(1-(x/29)**2)*(1+.12*x/29)])}for(let k=39;k>0;k--){const x=-29+58*k/40;o.push([x,17.5*(1-(x/29)**2)*(1+.12*x/29)])}return P(rot(o,45,0,0))},
+  /* 番薯：兩頭尖的橢圓，長軸朝北北東 */
+  potato=()=>{const o=[];for(let k=0;k<48;k++){const t=k/48*Math.PI*2,x=31*Math.cos(t),z=15.5*Math.sin(t)*(1-.32*Math.pow(Math.cos(t),2));o.push([x,z])}return P(rot(o,-62,0,0))},
+  /* 雨傘：上半是傘面，下緣有波浪 */
+  umbrella=()=>{const o=[];for(let k=0;k<=24;k++){const t=Math.PI+k/24*Math.PI;o.push([31*Math.cos(t),-3+25*Math.sin(t)])}
+    for(let k=1;k<6;k++){const x=31-k*62/6;o.push([x+5.2,1],[x,-3])}return P(o)};
+  return{
+  /* 地理 */
+  "geo-map":{s:[C(0,0,18.5),...[-90,0,90,180].map(d=>kite(d,16,32,22)),...[-135,-45,45,135].map(d=>kite(d,17,24.5,10))]},/* 羅盤 */
+  "geo-land":{s:[P([[-28,-2],[-21,-23],[-14,-13],[-5,-32],[4,-15],[12,-27],[19,-12],[28,-2],[20,8],[-20,8]]),P([pol(15,52),pol(26,62),pol(15,74)])]},/* 山脈和岬角 */
+  "geo-climate":{s:[C(0,3,19.5),P([[-16.8,-7],[0,-33],[16.8,-7]])]},/* 雨滴 */
+  "geo-people":{s:[leaf(),P([pol(26,40),pol(34,47),pol(27,52)])]},/* 葉片 */
+  "geo-city":{s:[C(0,0,19.5),...Array.from({length:10},(_,k)=>{const d=k*36-90;return P([pol(17,d-9),pol(25.5,d-6),pol(25.5,d+6),pol(17,d+9)])})]},/* 齒輪 */
+  "geo-china":{s:[rect(-31,-21,-9,21),rect(-9,-15,12,18),rect(12,-9,28,12)]},/* 西高東低的三級階梯 */
+  "geo-neasia":{s:[-90,-18,54,126,198].map(d=>C(...pol(17,d),9.6)),h:[-90,-18,54,126,198].map(d=>H(...pol(28.3,d),3))},/* 櫻花 */
+  "geo-seasia":{s:[C(0,0,18),...[-90,-38,14,66,118,170,222].map(d=>P([pol(14,d-14),pol(31,d-3),pol(29,d+6),pol(14,d+16)]))]},/* 熱帶闊葉 */
+  "geo-mideast":{s:[E(3,3,22,13),C(-4,-17,9.5),C(13,-16,9),P([[-15,-6],[-26,-21],[-20,-25],[-9,-10]]),E(-27,-24,7,4.2,-10),
+    rect(-14,12,-10.5,31),rect(-6,12,-2.5,31),rect(7,12,10.5,31),rect(15,12,18.5,31),P([[22,-2],[30,8],[27,11],[21,4]])]},/* 駱駝 */
+  "geo-africa":{s:[E(0,-14,32,9),E(-11,-20,14,5.5),E(12,-19,13,5.5),rect(-3.2,8,3.2,30),P([[-8,31],[8,31],[3.2,26],[-3.2,26]])]},/* 金合歡樹 */
+  "geo-europe":{s:[C(0,0,18),...[-135,-45,45,135].map(d=>P([pol(12,d-13),pol(32,d-6),pol(32,d+4),pol(12,d+2)])),rect(-6,12,6,27),rect(-9,26,9,29)]},/* 風車 */
+  "geo-america":{s:[rect(-6,-30,6,30),C(0,-30,6),rect(-26,-2,-12,5),rect(-26,-20,-19,5),C(-22.5,-20,3.5),rect(12,4,26,11),rect(19,-12,26,11),C(22.5,-12,3.5)]},/* 仙人掌 */
+  "geo-oceania":{s:[E(-3,1,27,15),P([[20,-1],[30,-12],[35,-10],[29,1]]),P([[20,3],[30,13],[35,11],[29,1]]),P([pol(16,-120),pol(26,-116),pol(26,-108),pol(16,-104)]),C(...pol(27.5,-122),2.6),C(...pol(27.5,-102),2.6)]},/* 鯨魚和噴水 */
+  "geo-taiwan":{s:[potato(),P([pol(26,-62),pol(33,-50),pol(30,-44),pol(24,-52)])]},/* 番薯和藤葉 */
+  /* 歷史 */
+  "his-prehist":{s:[C(0,7,21),rect(-8,-26,8,-10),rect(-12,-30,12,-25),rect(-10,26,10,30),C(-20,-6,4),C(20,-6,4)]},/* 陶罐 */
+  "his-qing":{s:[E(0,4,21,15),C(0,-12,7.5),C(0,-20,3.2),P([[17,0],[31,-14],[33,-11],[20,7]]),P([[-19,-6],[-28,-5],[-30,4],[-26,11],[-19,10]]),rect(-12,17,12,21)]},/* 茶壺 */
+  "his-japan":{s:[rect(-10,-6,26,12),C(26,3,8.5),rect(-28,-20,-8,14),rect(-31,-23,-6,-19),rect(14,-24,22,-6),C(18,-25,5),C(-18,16,6),C(0,16,7),C(16,16,7),P([[26,9],[35,18],[24,18]])]},/* 蒸汽火車頭 */
+  "his-postwar":{s:[E(0,2,24,13,-10),C(-22,-10,7),P([[-28,-12],[-34,-9],[-28,-6]]),P([[-6,-8],[2,-31],[12,-29],[10,-8]]),P([[4,-8],[18,-27],[24,-22],[14,-4]]),P([[20,-1],[33,-7],[33,8],[20,6]])]},/* 和平鴿 */
+  "his-ancient":{s:[P([[-24,-10],[24,-10],[20,10],[-20,10]]),E(0,8,20,9),rect(-27,-14,27,-9),rect(-22,-24,-15,-13),rect(15,-24,22,-13),rect(-24,-27,-13,-23),rect(13,-27,24,-23),
+    rect(-19,10,-13,29),rect(-3,12,3,31),rect(13,10,19,29),rect(-21,27,-11,31),rect(11,27,21,31)]},/* 鼎 */
+  "his-modern":{s:[rect(-5,-30,5,-18),rect(-8,-33,8,-29),E(0,-12,18,9),E(0,6,17,22),rect(-9,26,9,30)]},/* 瓷瓶 */
+  "his-republic":{s:[P([[-31,-15],[-2,-11],[0,-9],[2,-11],[31,-15],[31,17],[2,21],[0,23],[-2,21],[-31,17]])]},/* 打開的書 */
+  "his-eastasia":{s:[P([[-24,-22],[0,-27],[24,-22],[24,4],[14,20],[0,30],[-14,20],[-24,4]])]},/* 盾牌 */
+  "his-classic":{s:[P([[-34,26],[0,-30],[34,26]])]},/* 金字塔 */
+  "his-earlymod":{s:[P([[-34,0],[-25,0],[-25,8],[31,8],[25,22],[-27,22]]),P([[-12,-30],[6,-30],[9,4],[-15,4]]),P([[-26,-17],[-16,-18],[-15,0],[-27,0]]),P([[11,-25],[28,6],[11,6]]),P([[29,8],[37,0],[32,11]]),P([[-4,-30],[-4,-37],[6,-33.5]])]},/* 帆船 */
+  "his-worldwar":{s:[P([[-9,-24],[9,-24],[14,-12],[16,6],[24,16],[24,20],[-24,20],[-24,16],[-16,6],[-14,-12]]),rect(-5,-30,5,-24),C(0,-31,4),rect(-1.8,19,1.8,24),C(0,26,4.5)]},/* 自由鐘 */
+  /* 公民 */
+  "civ-rights":{s:[heart()]},/* 心：人性尊嚴 */
+  "civ-family":{s:[rect(-20,-6,20,24),P([[-29,-4],[0,-31],[29,-4]]),rect(12,-27,18,-14)],h:[H(0,26.5,4.5)]},/* 房子 */
+  "civ-culture":{s:[rect(-23,-23,23,23),C(0,-29,7),C(29,0,7)],h:[H(0,25,7),H(-25,0,7)]},/* 拼圖 */
+  "civ-justice":{s:[C(0,0,17.5),rect(-2.5,-30,2.5,22),rect(-14,22,14,28),rect(-31,-22,31,-17),rect(-26,-17,-24,-6),rect(24,-17,26,-6),E(-25,-5,8,4),E(25,-5,8,4)]},/* 天平 */
+  "civ-demo":{s:[rect(-22,-6,22,24),rect(-24,-10,24,-5),P([[-9,-8],[-11,-30],[9,-33],[11,-8]])]},/* 投票箱 */
+  "civ-law":{s:[P(rot([[-21,-8],[21,-8],[21,8],[-21,8]],-30,-5,-9)),P(rot([[-3,0],[3,0],[3,34],[-3,34]],-30,0,0)),rect(-30,16,-10,22)]},/* 法槌和底座 */
+  "civ-rescue":{s:[umbrella(),rect(-2,0,2,26),C(-4.5,27,4.5)]},/* 保護傘 */
+  "civ-market":{s:[P([[-20,-12],[20,-12],[23,24],[-23,24]]),P([[-11,-12],[-11,-26],[-6,-31],[6,-31],[11,-26],[11,-12]])]},/* 購物袋 */
+  "civ-trade":{s:[P([[-33,6],[33,6],[27,20],[-27,20]]),rect(-24,-10,-12,6),rect(-11,-16,1,6),rect(2,-10,14,6),rect(17,-22,25,6),rect(19.5,-30,22.5,-22)]},/* 貨櫃船 */
+  "civ-global":{s:[C(0,0,20),E(0,0,33,7,-20),C(...pol(33,-20),3.5)]}}})();/* 地球和衛星軌道 */
+/* 從中心往角度 a 方向，量到海岸的距離 */
+function shapeR(S,a){const ux=Math.cos(a),uz=Math.sin(a);let r=17*(1+.012*Math.sin(3*a+.7)+.008*Math.sin(5*a+2));const core=r;
+  for(const q of S.s){let t=0;
+    if(q.c){const[x,z,R]=q.c,b=ux*x+uz*z,d=R*R-(x*x+z*z-b*b);if(d>=0)t=b+Math.sqrt(d)}
+    else if(q.e){const[x,z,rx,rz,ro]=q.e,c=Math.cos(ro),s=-Math.sin(ro),ox=(-x*c+z*s)/rx,oz=(-x*s-z*c)/rz,vx=(ux*c-uz*s)/rx,vz=(ux*s+uz*c)/rz,
+      A=vx*vx+vz*vz,B=2*(ox*vx+oz*vz),Cc=ox*ox+oz*oz-1,Dd=B*B-4*A*Cc;if(Dd>=0)t=(-B+Math.sqrt(Dd))/(2*A)}
+    else{const p=q.p;for(let k=0;k<p.length;k++){const[x1,z1]=p[k],[x2,z2]=p[(k+1)%p.length],ex=x2-x1,ez=z2-z1,den=ux*ez-uz*ex;if(Math.abs(den)<1e-9)continue;
+      const tt=(x1*ez-z1*ex)/den,ss=(x1*uz-z1*ux)/den;if(ss>=-1e-9&&ss<=1+1e-9&&tt>t)t=tt}}
+    if(t>r)r=t}
+  for(const q of S.h||[]){const[x,z,R]=q.h,b=ux*x+uz*z,d=R*R-(x*x+z*z-b*b);if(d>0){const t=b-Math.sqrt(d);if(t>0&&t<r)r=Math.max(core,t)}}
+  return r}
+const SHC={};
+function isleShape(i){if(SHC[i.key])return SHC[i.key];const K=hallRp(i)/10.5,S=ISHAPE[i.key],M=360,tab=new Float32Array(M);let mx=0,area=0;
+  for(let k=0;k<M;k++){const a=k/M*Math.PI*2,r=K*(S?shapeR(S,a):17*(1+.05*Math.sin(3*a+.7)+.035*Math.sin(5*a+2)));tab[k]=r;if(r>mx)mx=r;area+=r*r*Math.PI/M}
+  const RI=a=>{const f=(((a/(2*Math.PI))%1)+1)%1*M,k=Math.floor(f),u=f-k;return tab[k%M]*(1-u)+tab[(k+1)%M]*u};
+  return SHC[i.key]={RI,maxR:mx,area,tab,M}}
+/* 海圖上的小島：照 3D 島的配置畫縮圖——環島步道、廣場和島徽、每一節一座展覽館（集章後屋頂換島色、插旗）、會考塔、碼頭和樹 */
+function miniIsle(i,x,y,R,c){const S=isleShape(i),sc=(R+3)/S.maxR,n=i.secs.length,N=n+2,Dl=2*Math.PI/N,slot=k=>-Math.PI/2+(k-(n+1))*Dl,Rp=hallRp(i),
+    P=(a,r)=>[x+r*sc*Math.cos(a),y+r*sc*Math.sin(a)],f=v=>v.toFixed(1);let h="",sd=[...i.key].reduce((a,ch)=>a*31+ch.charCodeAt(0),7)%2147483647||7;
+  const rr=()=>(sd=(sd*16807)%2147483647)/2147483647,hs=Math.min(1,2*Math.PI*(Rp+3.1)*sc/N/12.5);
+  const[dx,dy]=P(slot(0),S.RI(slot(0))+1.6),[ex,ey]=P(slot(0),S.RI(slot(0))-.6);
+  h+=`<line x1="${f(ex)}" y1="${f(ey)}" x2="${f(dx)}" y2="${f(dy)}" stroke="#a67c52" stroke-width="3.2" stroke-linecap="round"/>`;
+  [[slot(0),6,S.RI(slot(0))-.4],[slot(n+1),6,Rp]].forEach(([a,r0,r1])=>{const[a1,b1]=P(a,r0),[a2,b2]=P(a,r1);h+=`<line x1="${f(a1)}" y1="${f(b1)}" x2="${f(a2)}" y2="${f(b2)}" stroke="#f1e4c6" stroke-width="2.2"/>`});
+  h+=`<circle cx="${f(x)}" cy="${f(y)}" r="${f(Rp*sc)}" fill="none" stroke="#f1e4c6" stroke-width="2.4"/>`;
+  for(let t=0,m=0;t<160&&m<18;t++){const a=rr()*Math.PI*2,R0=S.RI(a),out=R0>Rp+7,r=out?Rp+4.6+rr()*(R0-Rp-6):7.4+rr()*Math.max(.4,Rp-9.5);if(r>R0-1.4)continue;
+    const near=[...Array(n+2).keys()].some(k=>Math.abs(((a-slot(k)+Math.PI)%(Math.PI*2)+Math.PI*2)%(Math.PI*2)-Math.PI)*r<(k===0?2.4:3.2));if(near&&r<Rp+6)continue;const[tx,ty]=P(a,r),tr=(2+rr()*1.1)*Math.min(1,sc*1.1);
+    h+=`<circle cx="${f(tx)}" cy="${f(ty+1)}" r="${f(tr)}" fill="rgba(30,60,30,.25)"/><circle cx="${f(tx)}" cy="${f(ty)}" r="${f(tr)}" fill="${["#4f9a3a","#5aa83c","#3f8f3a"][m%3]}"/><circle cx="${f(tx-tr*.3)}" cy="${f(ty-tr*.3)}" r="${f(tr*.4)}" fill="#8fd16a" opacity=".8"/>`;m++}
+  {const[tx,ty]=P(slot(n+1),Rp+2.1);h+=`<rect x="${f(tx-2.4)}" y="${f(ty-7)}" width="4.8" height="8.5" rx="1" fill="#fffaf3" stroke="${shade(c,.25)}" stroke-width=".8"/><path d="M${f(tx-3)} ${f(ty-7)}L${f(tx)} ${f(ty-10.5)}L${f(tx+3)} ${f(ty-7)}Z" fill="${c}"/><circle cx="${f(tx)}" cy="${f(ty-11.3)}" r="1.1" fill="#ffd166"/>`}
+  i.secs.forEach((sec,k)=>{const[hx,hy]=P(slot(k+1),Rp+3.1),done=secDone(sec),rc=done?c:tint(c,.5);
+    h+=`<g transform="translate(${f(hx)} ${f(hy)}) scale(${hs.toFixed(2)})"><rect x="-4.6" y="-1.6" width="9.2" height="5.6" rx=".8" fill="#fffaf3" stroke="${shade(c,.3)}" stroke-width=".7"/><rect x="-1.1" y="1" width="2.2" height="3" fill="${shade(c,.35)}"/><path d="M-5.6 -1.2L0 -5.6L5.6 -1.2Z" fill="${rc}" stroke="${shade(c,.3)}" stroke-width=".7" stroke-linejoin="round"/>`+
+      (done?`<line x1="3.8" y1="-2" x2="3.8" y2="-9.5" stroke="#6a4a34" stroke-width=".9"/><path d="M3.8 -9.5l4 1.4-4 1.4z" fill="${shade(c,.2)}"/>`:"")+`</g>`});
+  h+=`<circle cx="${f(x)}" cy="${f(y)}" r="${f(6*sc)}" fill="#f4e8cc" stroke="#e0cfa6" stroke-width="1"/><circle cx="${f(x)}" cy="${f(y)}" r="11.5" fill="${c}" stroke="#fffaf3" stroke-width="2"/>`+
+    `<text class="gl2" x="${f(x)}" y="${f(y+5.6)}">${i.g}</text>`;
+  [0,1,2].forEach(()=>{const a=rr()*Math.PI*2,[wx,wy]=P(a,S.RI(a)+3.6+rr()*2.5);h+=`<path class="wv" d="M${f(wx-4)} ${f(wy)}q2 -2.4 4 0t4 0" />`});
+  return h}
+
+/* ---------- 航海圖：小島沿蛇形航線排開；每座島的輪廓和 3D 島一樣，島上畫著展覽館的縮圖 ---------- */
 const map=$("map"),mapwrap=$("mapwrap");
 let geom=null;
 const hexP=(cx,cy,r)=>[0,1,2,3,4,5].map(k=>{const a=Math.PI/180*(60*k-90);return[cx+r*Math.cos(a),cy+r*Math.sin(a)]});
@@ -1309,14 +1407,15 @@ function buildMap(){const S=SUBJ[cur],N=S.isles.length,wide=mapwrap.clientWidth-
     return[x+((n*53)%9-4)*1.2,Y0+R+r*DY+((n*37)%11-5)*1.1]});
   map.style.aspectRatio=`${W.toFixed(1)}/${H.toFixed(1)}`;
   let s=`<svg viewBox="0 0 ${W.toFixed(1)} ${H.toFixed(1)}" class="hx" role="group" aria-label="${S.title}航海圖"><defs><filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>`;
-  S.isles.forEach(i=>{s+=`<linearGradient id="sd-${i.id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6cf9f"/><stop offset=".34" stop-color="#e6cf9f"/><stop offset=".34" stop-color="${shade(i.c,.25)}"/><stop offset="1" stop-color="${shade(i.c,.45)}"/></linearGradient><radialGradient id="tp-${i.id}" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="${tint(i.c,.3)}"/><stop offset="1" stop-color="${i.c}"/></radialGradient>`});
+  S.isles.forEach(i=>{s+=`<linearGradient id="sd-${i.id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6cf9f"/><stop offset=".34" stop-color="#e6cf9f"/><stop offset=".34" stop-color="${shade(i.c,.25)}"/><stop offset="1" stop-color="${shade(i.c,.45)}"/></linearGradient><radialGradient id="gr-${i.id}" cx=".42" cy=".36" r=".75"><stop offset="0" stop-color="${tint(mixc(i.c,[132,196,96],.74),.22)}"/><stop offset="1" stop-color="${shade(mixc(i.c,[120,186,86],.74),.06)}"/></radialGradient>`});
   s+=`</defs>`;
-  pos.forEach(([x,y])=>{s+=`<polygon class="sh1" points="${pts(hexP(x,y+7,R+17))}" filter="url(#soft)"/><polygon class="sh2" points="${pts(hexP(x,y+7,R+7))}"/>`});
-  S.isles.forEach((i,n)=>{const[x,y]=pos[n],p=hexP(x,y,R),q=hexP(x,y+11,R),d=isleStamps(i),t=i.secs.length,f=d/t,sN=isleStars(i);
+  const shp=(i,x,y,f)=>{const S=isleShape(i),sc=(R+3)/S.maxR*f,o=[];for(let k=0;k<120;k++){const a=k/120*Math.PI*2,r=S.RI(a)*sc;o.push([x+r*Math.cos(a),y+r*Math.sin(a)])}return o};
+  pos.forEach(([x,y],n)=>{const i=S.isles[n];s+=`<polygon class="sh1" points="${pts(shp(i,x,y+7,(R+15)/R))}" filter="url(#soft)"/><polygon class="sh2" points="${pts(shp(i,x,y+7,(R+6)/R))}"/>`});
+  S.isles.forEach((i,n)=>{const[x,y]=pos[n],p=shp(i,x,y,1),d=isleStamps(i),t=i.secs.length,f=d/t,sN=isleStars(i);
     s+=`<g class="isle${sN>=4?" glow":""}" data-id="${i.id}" tabindex="0" role="button" aria-label="${esc(i.name)}，${i.sem}，集章 ${d}/${t}，${STARN[sN]}${visited(i)?"，已登島":""}" style="--dl:${(-n*.6).toFixed(1)}s"><g class="bob">`;
-    s+=`<polygon points="${pts([p[2],p[3],p[4],q[4],q[3],q[2]])}" fill="url(#sd-${i.id})"/>`;
-    s+=`<g class="top"><polygon class="sand" points="${pts(p)}"/><polygon points="${pts(hexP(x,y,R-6))}" fill="url(#tp-${i.id})"/><text class="gl" x="${x.toFixed(1)}" y="${(y+(sN?6.5:10.5)).toFixed(1)}" style="stroke:${shade(i.c,.35)}">${i.g}</text>`;
-    if(sN)s+=`<text class="stars" x="${x.toFixed(1)}" y="${(y+25.5).toFixed(1)}">${"★".repeat(Math.min(3,sN))}<tspan class="soff">${"★".repeat(3-Math.min(3,sN))}</tspan></text>`;
+    s+=`<polygon points="${pts(shp(i,x,y+11,1))}" fill="url(#sd-${i.id})"/><polygon points="${pts(shp(i,x,y+4,1))}" fill="#e6cf9f"/>`;
+    s+=`<g class="top"><polygon class="sand" points="${pts(p)}"/><polygon class="grass" points="${pts(shp(i,x,y,(R-5)/R))}" fill="url(#gr-${i.id})"/>${miniIsle(i,x,y,R,i.c)}`;
+    if(sN)s+=`<text class="stars" x="${x.toFixed(1)}" y="${(y+R-8).toFixed(1)}">${"★".repeat(Math.min(3,sN))}<tspan class="soff">${"★".repeat(3-Math.min(3,sN))}</tspan></text>`;
     if(visited(i)){const bx=x-R*.8,by=y-R*.62;s+=`<circle class="rbg" cx="${bx.toFixed(1)}" cy="${by.toFixed(1)}" r="16"/>`+iconAt(CAMP[campLv(i)][1],bx-13,by-14,26,"bld")}
     s+=`</g>`;
     const Ln=splitName(i.name),w=Math.max(...Ln.map(l=>l.length))*12.6+22,ph=Ln.length*15+10;
@@ -3082,14 +3181,6 @@ const SKINS=["#f2c9a0","#e8b58c","#d9a27a","#f5d3b3"],HAIRS=["#3b302a","#5a3a24"
 const lerpAng=(a,b,f)=>{const d=((b-a+Math.PI)%(Math.PI*2)+Math.PI*2)%(Math.PI*2)-Math.PI;return a+d*f};
 const wrapA=x=>((x+Math.PI)%(Math.PI*2)+Math.PI*2)%(Math.PI*2)-Math.PI;
 const parseK=v=>/^\d+$/.test(v)?+v:v;
-/* 環島步道的半徑：展覽館多的島，步道和島都放大，館和館之間才不會擠在一起 */
-const hallRp=i=>Math.max(10.5,7.2*(i.secs.length+2)/(2*Math.PI)-3.1);
-/* 島形：先用略帶起伏的圓；島嶼造型（下一版）會換成和島名有關的輪廓 */
-const SHC={};
-function isleShape(i){if(SHC[i.key])return SHC[i.key];const K=hallRp(i)/10.5,M=360,tab=new Float32Array(M);let mx=0,area=0;
-  for(let k=0;k<M;k++){const a=k/M*Math.PI*2,r=17*K*(1+.05*Math.sin(3*a+.7)+.035*Math.sin(5*a+2));tab[k]=r;if(r>mx)mx=r;area+=r*r*Math.PI/M}
-  const RI=a=>{const f=(((a/(2*Math.PI))%1)+1)%1*M,k=Math.floor(f),u=f-k;return tab[k%M]*(1-u)+tab[(k+1)%M]*u};
-  return SHC[i.key]={RI,maxR:mx,area,tab,M}}
 const GUIDE={geo:{hat:"explorer",hs:"short",body:"#c9a86a",legs:"#5a4a3a"},his:{hat:"none",hs:"bun",body:"#8a4f9e",legs:"#3b302a"},civ:{hat:"cap",hs:"short",body:"#2f6fb3",legs:"#2f2a26"}};
 const towerLines=i=>{const t=st.tw[i.key],n=twN(i);return["這裡是會考塔。塔裡的題目仿照會考：讀情境、看圖表、做判斷。",
   `一次從整座島抽 ${n} 題，建議時間 ${fmtDur(n*SEC_T)}${t&&t.t?`；你的最佳紀錄是 ${t.b}/${t.n}`:""}。`,
