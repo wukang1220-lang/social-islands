@@ -1022,6 +1022,66 @@ button.i3tag{pointer-events:auto;border:0;cursor:pointer;font:inherit;font-size:
 .i3pb{padding:14px 16px calc(env(safe-area-inset-bottom,0px) + 30px);display:flex;flex-direction:column;gap:12px}
 @media (min-width:860px){.i3panel{left:auto;top:0;width:480px;max-height:none;border-radius:0}.i3dlg{left:auto;right:24px;transform:none;bottom:24px}}
 @media (prefers-reduced-motion:reduce){.i3load i{animation:none}}
+/* ---------- 合成工坊 ---------- */
+.mg{border:0;padding:0;border-radius:20px;width:min(480px,calc(100vw - 12px));max-height:calc(100dvh - 12px);background:var(--paper);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.mg::backdrop{background:rgba(20,16,12,.5)}
+.mg-in{padding:10px 10px 14px;display:flex;flex-direction:column;gap:8px}
+.mg-h{display:flex;align-items:center;gap:6px}
+.mg-h h2{margin:0 auto 0 4px;font:900 19px var(--f-display)}
+.mg-chip{display:inline-flex;align-items:center;gap:3px;background:var(--paper-2);border-radius:99px;padding:5px 10px;font:800 14px var(--f-mono);white-space:nowrap}
+.mg-chip small{font-size:10.5px;color:var(--ink-soft);margin-left:3px}
+.mg-tabs{display:flex;gap:6px}
+.mg-tabs button{flex:1;position:relative;border:0;border-radius:12px;padding:8px 4px;background:var(--paper-2);color:var(--ink);font:inherit;font-weight:800;font-size:13.5px;cursor:pointer}
+.mg-tabs button[aria-selected="true"]{background:var(--navy);color:var(--navy-ink)}
+.mg-tabs .dot{position:absolute;top:4px;right:8px;width:9px;height:9px;border-radius:50%;background:var(--bad)}
+.mg-od{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.mg-o{background:var(--paper-2);border-radius:12px;padding:6px 5px;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;min-width:0}
+.mg-o.ok{box-shadow:inset 0 0 0 2px #3f8a5a}
+.mg-o .who{font-size:12px;font-weight:800;display:flex;align-items:center;gap:4px;max-width:100%;white-space:nowrap;overflow:hidden}
+.mg-o .who i{font-style:normal;width:18px;height:18px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:10.5px;flex:none}
+.mg-o .need{display:flex;gap:6px;font-size:24px;line-height:1.15;font-family:"Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif}
+.mg-o .need span{position:relative}
+.mg-o .need small{position:absolute;right:-6px;bottom:-3px;font:800 9.5px var(--f-mono);background:#fffaf3;border-radius:6px;padding:0 3px;color:#6a4a34}
+.mg-o .pbtn{padding:5px 9px;font-size:12px;border-radius:10px}
+.mg-o .rw{font:800 12px var(--f-mono);color:var(--ink-soft);display:flex;align-items:center;gap:6px}
+.mg-skip{border:1px solid var(--line);background:var(--paper);color:var(--ink-soft);border-radius:8px;font:inherit;font-size:11px;font-weight:800;padding:2px 7px;cursor:pointer}
+.mg-b{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;background:#e6d6b8;padding:6px;border-radius:14px;touch-action:none;-webkit-user-select:none;user-select:none}
+.mg-c{aspect-ratio:1;border:0;border-radius:10px;background:#f8f1e3;display:grid;place-items:center;position:relative;padding:0;cursor:pointer;font-size:clamp(20px,7vw,30px);line-height:1;font-family:"Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif;color:#2f2a26}
+.mg-c.gen{background:#ffe2a6;box-shadow:inset 0 -3px 0 rgba(0,0,0,.08)}
+.mg-c.gen::after{content:"⚡";position:absolute;left:3px;top:2px;font-size:11px}
+.mg-c .lv{position:absolute;right:3px;bottom:2px;font:800 9.5px var(--f-mono);color:#8a6a4a}
+.mg-c.lk{background:repeating-linear-gradient(45deg,#d4c6ab 0 5px,#e2d6bf 5px 10px)}
+.mg-c.lk>span{opacity:.38;filter:grayscale(.7)}
+.mg-c.want{box-shadow:inset 0 0 0 2.5px #3f8a5a}
+.mg-c.sel{box-shadow:inset 0 0 0 3px #e2774a}
+.mg-c.drag{opacity:.35}
+.mg-c.pop>span{animation:mgpop .4s cubic-bezier(.2,.9,.3,1.4)}
+@keyframes mgpop{0%{transform:scale(.3)}100%{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.mg-c.pop>span{animation:none}}
+.mg-ghost{position:fixed;z-index:95;pointer-events:none;font-size:36px;transform:translate(-50%,-60%) scale(1.15);font-family:"Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif}
+.mg-info{display:flex;align-items:center;gap:10px;background:var(--paper-2);border-radius:12px;padding:8px 10px;min-height:58px}
+.mg-info>div{flex:1;min-width:0}
+.mg-info b{display:block;font-size:14px}
+.mg-info small{display:block;font-size:12px;color:var(--ink-soft);line-height:1.5}
+.mg small.mg-lvl,.mg .mg-lvl{display:inline;margin-left:6px;font-weight:700;font-size:11.5px;color:var(--ink-soft)}
+.mg-ii{font-size:30px;flex:none;font-family:"Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif}
+.mg-rc{flex:none;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;padding:6px 10px;font:inherit;font-weight:800;font-size:12.5px;cursor:pointer}
+.mg-ft{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.mg-ft small{font-size:12px;color:var(--ink-soft);font-weight:700}
+.mg-ft .pbtn:disabled{opacity:.5;cursor:default}
+.mg h3{margin:6px 0 0;font:900 15px var(--f-display)}
+.mg .shp-x{border:0;background:var(--paper-2);border-radius:99px;width:42px;height:42px;font-size:18px;cursor:pointer;color:var(--ink);flex:none}
+.mg .shp-note{margin:0;font-size:13px;color:var(--ink-soft);line-height:1.6}
+.mg .shp-list{display:flex;flex-direction:column;gap:8px}
+.mg .shp-it{display:flex;align-items:center;gap:12px;background:var(--paper-2);border-radius:14px;padding:10px 12px}
+.mg .shp-it>div{flex:1;min-width:0}
+.mg .shp-it small{display:block;font-size:12.5px;color:var(--ink-soft);line-height:1.5;margin-top:2px}
+.mg .shp-it .pbtn{flex:none;white-space:nowrap}
+.mg .shp-it .mg-ok{flex:none;font-size:13px;font-weight:800;color:var(--ok)}
+.mg .shp-ic{flex:none;width:40px;height:40px;border-radius:12px;background:var(--paper);display:grid;place-items:center;font-size:20px;font-family:"Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif}
+.mg .shp-ic.svg svg{width:32px;height:32px}
+.mg .shp-it.lock{opacity:.6}
+.mg .toast{z-index:96}
 </style>
 
 <header class="sky" id="sky">
@@ -1140,6 +1200,7 @@ button.i3tag{pointer-events:auto;border:0;cursor:pointer;font:inherit;font-size:
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <section class="iv ex" id="ex" hidden aria-label="會考練習"></section>
 <dialog class="xch" id="xch" aria-labelledby="xchT"></dialog>
+<dialog class="mg" id="mg" aria-labelledby="mgT"></dialog>
 <button type="button" class="cheerfab" id="cheerFab" title="灑花鼓勵"><span class="ci" aria-hidden="true"></span><span>灑花鼓勵</span></button>
 <div class="gd" id="gd" hidden role="dialog" aria-modal="true" aria-labelledby="gdT" aria-describedby="gdP">
   <div class="gd-spot" id="gdSpot" hidden aria-hidden="true"></div>
@@ -1196,7 +1257,7 @@ const NQ=ALLSECS.reduce((a,s)=>a+s.q.length,0);
 const RK="socialIsles.roster",keyOf=id=>id==="p1"?"socialIsles.v2":"socialIsles.v2."+id;
 const DEF=()=>({visited:{},ans:{},wrong:{},last:{},sem:{},stamp:{},qv:{},subj:"geo",tod:"auto",fs:0,
   coins:0,tier:{},tday:{},cl:{},mus:{},own:{},dig:{},bat:{},qq:{},ap:{},ev:{},day:{},ttl:"",tseen:{},fix:0,cover:0,exam:{},cap:"",mig:0,
-  mat:{geo:0,his:0,civ:0},camp:{},quest:{},deco:{},fest:{},isl:{n:"",g:{}},cre:0,mig2:0,tour:{},intro:{},lvSem:"",tw:{},mk:[],tr:{},trm:0,inv:{cut:2,hint:2},sp:0,mkTo:"",ca:{},w:{}});
+  mat:{geo:0,his:0,civ:0},camp:{},quest:{},deco:{},fest:{},isl:{n:"",g:{}},cre:0,mig2:0,tour:{},intro:{},lvSem:"",tw:{},mk:[],tr:{},trm:0,inv:{cut:2,hint:2},sp:0,mkTo:"",ca:{},w:{},mg:{},mgd:{}});
 let WELCOME=0,WELCOME_M=0;
 let roster={cur:"p1",list:[{id:"p1",n:"",g:"",c:0,ic:""}]};
 try{const r=JSON.parse(localStorage.getItem(RK)||"null");
@@ -1586,7 +1647,7 @@ function cHTML(s,q,ci){const id=s.id+".c"+ci,ok=!!st.ca[id]&&!st.wrong[id];
 function cClick(qe,op){const id=qe.dataset.q,R=qRef(id);if(!R||!R.isC)return false;const q=R.q,o=+op.dataset.o,fb=qe.querySelector(".fb"),inWB=!!qe.closest("#wb");
   if(!qe.dataset.tk&&!qe.dataset.aid&&!qe.querySelector(".op.no")){qe.dataset.tk="1";track(id,o===q[2])}
   if(o===q[2]){qe.classList.add("lock");op.classList.add("ok");qe.querySelectorAll(".op").forEach(b=>b.disabled=true);const tl=qe.querySelector(".qtools");if(tl)tl.hidden=true;
-    fb.hidden=false;fb.className="fb good";fb.innerHTML=fbGood(q);const first=!st.ca[id];if(first){st.ca[id]=1;st.coins+=1}delete st.wrong[id];save();renderMe();sfx("ok");
+    fb.hidden=false;fb.className="fb good";fb.innerHTML=fbGood(q);const first=!st.ca[id];if(first){st.ca[id]=1;st.coins+=1}delete st.wrong[id];save();renderMe();sfx("ok");mgGain(2);
     petals(false,R.s.subj,op.getBoundingClientRect());if(first)flyCoins(op,1);
     if(inWB){const n=wrongIds().length;$("wbStat").textContent=`待訂正 ${n} 題`;toast(n?`會考題型訂正成功！還有 ${n} 題待訂正`:"錯題全部訂正完了！",2600)}}
   else{op.classList.add("no");op.disabled=true;st.wrong[id]=1;save();sfx("no");
@@ -1661,7 +1722,7 @@ function quizClick(e,after){
       let mat=0;if(first){st.ans[id]=1;delete st.wrong[id];if(secDone(s))st.stamp[s.id]=1;coins=(fix?2:1)*evMult(s);st.coins+=coins;if(fix)st.fix++;mat=evMult(s);addMat(st,s.subj,mat)}
       const up=upgrade(s,t0);save();renderMe();
       sfx(up?(up.t>=3?"gold":"stamp"):"ok");
-      const r={first,t0,s0,up,coins,mat,fix,newItem:!wasDone&&secDone(s)&&!st.mus[s.id]};after(s,r);cheer(op,s,r)}
+      const r={first,t0,s0,up,coins,mat,fix,newItem:!wasDone&&secDone(s)&&!st.mus[s.id]};after(s,r);cheer(op,s,r);mgGain((qe.dataset.aid?1:2)+(up?10:0))}
     else{op.classList.add("no");op.disabled=true;delete st.cl[id];if(!st.ans[id])st.wrong[id]=1;save();sfx("no");
       fb.hidden=false;fb.className="fb bad";fb.innerHTML=`<b>不是這個答案。</b>再想想，或<button type="button" class="reveal">直接看解析</button>。`}
     return true}
@@ -2465,9 +2526,10 @@ function renderPlay(){const t=today(),dug=st.dig.done===t,c=tierCounts(),up=upgr
   ${tile("shop","coin","#c98a12","商店","換頭像和護照封面")}
   ${tile("players","people","#3f7f57","玩家名冊",`${roster.list.length} 位玩家・最多 4 位`)}
   ${tile("camp","hut","#a8662a","營地",allIsles().some(campReady)?"有營地可以升級了！":`石 ${+st.mat.geo||0}・木 ${+st.mat.his||0}・磚 ${+st.mat.civ||0}`,allIsles().some(campReady))}
-  ${tile("creator","palm","#3f8f5a","島嶼創作家",creatorOpen()?`已放 ${Object.keys(islG()).length} 個裝飾`:"拿到第一座兩星島就解鎖")}</div>
+  ${tile("creator","palm","#3f8f5a","島嶼創作家",creatorOpen()?`已放 ${Object.keys(islG()).length} 個裝飾`:"拿到第一座兩星島就解鎖")}
+  ${tile("merge","gear","#c98a12","合成工坊",`⚡ ${MG().e}・★ ${MG().s}・合成換布置`)}</div>
   ${up.g.length?`<button type="button" class="pt-up" data-go="pass">有 <b>${up.g.length}</b> 節可以挑戰金章，打開護照看清單 →</button>`:""}`}
-$("playCard").addEventListener("click",e=>{const b=e.target.closest("[data-go]");if(!b)return;if(b.classList.contains("pt-up"))PASSUP=true;location.hash=b.dataset.go});
+$("playCard").addEventListener("click",e=>{const b=e.target.closest("[data-go]");if(!b)return;if(b.dataset.go==="merge"){openMerge();return}if(b.classList.contains("pt-up"))PASSUP=true;location.hash=b.dataset.go});
 
 /* ---------- 島嶼樂園的全頁畫面 ---------- */
 const gm=$("gm");let gmOpen=false,gmMode=null,PASSUP=false;
@@ -2959,7 +3021,8 @@ const DECO={tree:{n:"大樹",c:"#3f7f57",free:1},rock:{n:"石堆",c:"#8a8f96",fr
   house:{n:"房子",c:"#2f6fb3",p:50},ship:{n:"帆船",c:"#1a8aa0",p:60},anchor:{n:"船錨",c:"#173a4a",p:30},
   hut:{n:"小屋",c:"#a8662a",camp:1},house2:{n:"雙層屋",c:"#2f6fb3",camp:2},lighthouse:{n:"燈塔",c:"#c2453a",camp:3},
   chikan:{n:"古樓模型",c:"#b8452a",fest:"七上"},tower101:{n:"摩天大樓模型",c:"#3f8f7a",fest:"七下"},lantern:{n:"燈籠",c:"#c2453a",fest:"八上"},
-  pyramid:{n:"金字塔模型",c:"#c98a12",fest:"八下"},column:{n:"神殿石柱",c:"#8a8f96",fest:"九上"},globe:{n:"地球儀",c:"#2f6fb3",fest:"九下"},fireworks:{n:"煙火",c:"#c2453a",fest:"any"}};
+  pyramid:{n:"金字塔模型",c:"#c98a12",fest:"八下"},column:{n:"神殿石柱",c:"#8a8f96",fest:"九上"},globe:{n:"地球儀",c:"#2f6fb3",fest:"九下"},fireworks:{n:"煙火",c:"#c2453a",fest:"any"},
+  train:{n:"小火車",c:"#c2453a",mg:1},telescope:{n:"望遠鏡",c:"#6a4bb0",mg:1}};
 const hasDeco=k=>!!DECO[k]&&(!!DECO[k].free||!!st.deco[k]);
 SHOP.push(...Object.keys(DECO).filter(k=>DECO[k].p).map(k=>({k:"d-"+k,kind:"deco",v:k,t:"裝飾・"+DECO[k].n,p:DECO[k].p})));
 
@@ -3073,7 +3136,7 @@ function creatorHTML(){
   <div class="cr-wrap"><div class="cr-name" id="crName">${esc(islName())}</div>${islMap(false)}<div class="cr-cnt">已放 ${n}/${CRMAX} 個</div></div>
   <div class="pe-f">裝飾<div class="cr-pal" role="group" aria-label="選裝飾">${own.map(k=>`<button type="button" class="cr-p" data-a="crp" data-v="${k}" aria-pressed="${crSel===k}" style="--ic:${DECO[k].c}"><span class="cr-i">${ICON(k)}</span><small>${DECO[k].n}</small></button>`).join("")}
    <button type="button" class="cr-p" data-a="crp" data-v="" aria-pressed="${crSel===""}"><span class="cr-x" aria-hidden="true">✕</span><small>橡皮擦</small></button></div>
-   ${lock?`<small class="fnote">還有 ${lock} 種裝飾沒得到：完成島民任務、到商店購買、升級營地或舉辦港口慶典就會拿到。</small>`:""}</div>
+   ${lock?`<small class="fnote">還有 ${lock} 種裝飾沒得到：完成島民任務、到商店購買、升級營地、舉辦港口慶典，或在合成工坊布置島嶼就會拿到。</small>`:""}</div>
   <div class="prow"><button type="button" class="pbtn alt danger" data-a="crclr" data-v="">${crClr?"再按一次，清空整座島":"清空整座島"}</button><button type="button" class="pbtn alt" data-a="go" data-v="shop">去商店買裝飾</button></div>`}
 
 /* ---------- 營地畫面 ---------- */
@@ -3123,6 +3186,143 @@ function mergeGame(o){const ob=x=>x&&typeof x==="object"&&!Array.isArray(x)?x:{}
   st.qq.best=Math.max(+st.qq.best||0,nm(ob(o.qq).best));st.ap.best=Math.max(+st.ap.best||0,Math.min(10,nm(ob(o.ap).best)));st.ap.perf=Math.max(+st.ap.perf||0,nm(ob(o.ap).perf));
   st.dig.best=Math.max(+st.dig.best||0,nm(ob(o.dig).best));const cv=nm(o.cover);if(cv<COVERS.length&&(cv===0||st.own["cv"+cv]))st.cover=cv;mergeGame3(o)}
 
+/* ===== 合成工坊：二合一合成、訂單、布置島嶼（合成類遊戲的玩法，內容全部換成社會科） =====
+   能量 ⚡：每 3 分鐘回 1 點（自然回到 30 為止）；答對練習題 +2（用了卡片 +1）、會考題型 +2、集章 +10、每日能量箱 +20。
+   點發射器花 1 ⚡ 產出第 1 級；兩個相同的拖在一起（或先點一個、再點另一個）合成高一級；
+   棋盤最上、最下兩排是蜘蛛網格，把相同的物品疊上去就解開。交付阿嶺、卷卷、阿民的訂單得 ★ 和 1 枚知識幣，
+   用 ★ 布置島嶼：走進島看得到，島嶼創作家也同時多一種裝飾。st.mg 棋盤和能量，st.mgd {島 key: {布置 id: 外觀}} */
+const MCH={
+  g:{n:"地理",s:"geo",gen:"🎒",gn:"探險背包",it:[["🧭","指南針","指南針的磁針指向南北，幫我們判斷方位。"],["📏","比例尺","比例尺表示圖上距離和實際距離的比；比例尺愈大，地圖畫得愈詳細。"],["🗺️","地圖","讀地圖先找三樣東西：方向標、比例尺和圖例。"],["🌐","經緯網","經線連接南北兩極，緯線和赤道平行，交織成標示絕對位置的經緯網。"],["🌍","地球儀","地球儀是地球的縮小模型，方向、距離和面積都能照比例呈現。"],["🛰️","人造衛星","衛星拍的遙測影像，可以用來觀察土地利用和天氣變化。"]]},
+  h:{n:"歷史",s:"his",gen:"⛏️",gn:"考古工具",it:[["🐚","貝塚","史前人類把吃剩的貝殼堆在一起，成為貝塚，是考古的重要線索。"],["🏺","陶器","新石器時代的人開始燒製陶器，用來煮食和儲存食物。"],["📜","竹簡","紙張普及以前，人們把字寫在竹片或木片上，再用繩子串起來。"],["📖","書本","東漢蔡倫改良造紙術，紙張輕便又便宜，讓知識更容易流傳。"],["🖨️","印刷機","印刷術讓書可以大量複製，加快了知識的傳播。"],["🏛️","博物館","博物館收藏、研究和展示文物，讓我們認識過去。"]]},
+  c:{n:"公民",s:"civ",gen:"📮",gn:"意見箱",it:[["💰","貨幣","貨幣是交易的媒介，也能衡量價值、儲藏價值。"],["🗳️","選票","選舉採普通、平等、直接、無記名投票，保障每個人自由選擇。"],["📃","法律條文","法律案由立法院三讀通過，經總統公布後施行。"],["⚖️","天平","天平象徵公平正義：法律之前，人人平等。"],["🏢","政府機關","政府機關依法行政，為民眾提供公共服務。"],["🤝","國際合作","各國透過交流、結盟和援助，一起解決共同的問題。"]]}};
+const MWHO={g:"geo",h:"his",c:"civ"};
+const MCELLS=42,EMAX=30,EREG=180000,TSTAR=[0,1,1,2,3,5,8];
+/* 用 ★ 蓋的布置；cr 是島嶼創作家同時解鎖的裝飾，big 放在展覽館之間的大空地 */
+const MDECO=[{id:"flower",cr:"flower",n:"環形花圃",c:2,d:"在廣場外圍種一圈花圃。",sk:["粉紅","金黃","藍紫"]},
+  {id:"flag",cr:"flag",n:"彩旗步道",c:3,d:"沿著環島步道的路燈掛起彩旗。",sk:["彩虹","島色","海軍藍"]},
+  {id:"lantern",cr:"lantern",n:"燈籠步道",c:4,d:"在每根路燈下掛上燈籠，晚上會亮。",sk:["紅色","金色","彩色"]},
+  {id:"windmill",cr:"windmill",n:"大風車",c:5,d:"葉片會慢慢轉動的大風車。",sk:["紅白","木頭","藍白"],big:1},
+  {id:"train",cr:"train",n:"環島小火車",c:6,d:"沿著步道內側的軌道繞圈的小火車。",sk:["紅色","藍色","蒸汽黑"]},
+  {id:"telescope",cr:"telescope",n:"觀景望遠鏡",c:8,d:"可以眺望海景的大型望遠鏡台。",sk:["白色","銅色","海軍藍"],big:1},
+  {id:"column",cr:"column",n:"神殿石柱",c:10,d:"一排古典石柱，像古希臘神殿的遺跡。",sk:["大理石","砂岩","玫瑰石"],big:1},
+  {id:"globe",cr:"globe",n:"大地球儀",c:12,d:"會慢慢旋轉的大地球儀。",sk:["海洋藍","古地圖","夜光"],big:1},
+  {id:"fireworks",cr:"fireworks",n:"夜空煙火",c:15,d:"島的上空會不時綻放煙火。",sk:["彩色","金色","島色"]}];
+function mgInit(){const L=[["g",1],["h",2],["c",1],["g",2],["h",1],["c",2],["g",1],["c",2],["h",3],["g",3],["c",3],["h",1]],b=Array(MCELLS).fill(null);
+  [0,1,2,3,4,5,36,37,38,39,40,41].forEach((ix,k)=>{const[c,t]=L[k];b[ix]={c,t,lk:1}});
+  b[14]={g:"g"};b[15]={g:"h"};b[26]={g:"c"};b[20]={c:"g",t:1};b[21]={c:"h",t:1};b[27]={c:"c",t:1};
+  return{b,e:20,et:Date.now(),s:0,od:[],dx:{g1:1,h1:1,c1:1},dd:"",n:0}}
+/* 訂單：三位島民各一張，第一樣要自己那一科的物品，有時再加一樣別科的 */
+function mgOrder(m,w){const best=c=>{let t=1;MCH[c].it.forEach((_,k)=>{if(m.dx[c+(k+1)])t=k+1});return t};
+  const pick=c=>{const mx=Math.min(MCH[c].it.length,Math.max(2,best(c)+1));return[c,2+((Math.random()*(mx-1))|0)]};
+  const cs=Object.keys(MCH),need=[pick(w)];if(Math.random()<.35)need.push(pick(cs[(Math.random()*cs.length)|0]));return{w,need}}
+function MG(){let m=st.mg;if(!m||typeof m!=="object"||!Array.isArray(m.b)||m.b.length!==MCELLS)m=st.mg=mgInit();
+  if(!Number.isFinite(m.e)||m.e<0)m.e=20;if(!Number.isFinite(m.et))m.et=Date.now();if(!Number.isFinite(m.s)||m.s<0)m.s=0;if(!Number.isFinite(m.n))m.n=0;
+  if(!m.dx||typeof m.dx!=="object"||Array.isArray(m.dx))m.dx={};if(!Array.isArray(m.od))m.od=[];
+  m.b=m.b.map(x=>x&&typeof x==="object"&&((x.g&&MCH[x.g])||(MCH[x.c]&&x.t>=1&&x.t<=MCH[x.c].it.length))?x:null);
+  m.od=m.od.filter(o=>o&&MCH[o.w]&&Array.isArray(o.need)&&o.need.every(([c,t])=>MCH[c]&&t>=1&&t<=MCH[c].it.length)).slice(0,3);
+  if(m.e<EMAX){const k=Math.floor((Date.now()-m.et)/EREG);if(k>0){m.e=Math.min(EMAX,m.e+k);m.et+=k*EREG}}else m.et=Date.now();
+  for(const w of Object.keys(MCH))if(!m.od.some(o=>o.w===w))m.od.push(mgOrder(m,w));
+  if(!st.mgd||typeof st.mgd!=="object"||Array.isArray(st.mgd))st.mgd={};return m}
+const mgWho=o=>FOLK[MWHO[o.w]];
+const mgItem=x=>x&&!x.g&&!x.lk;
+function mgHas(m,need){const used=new Set(),idx=[];for(const[c,t]of need){const k=m.b.findIndex((x,i)=>!used.has(i)&&mgItem(x)&&x.c===c&&x.t===t);if(k<0)return null;used.add(k);idx.push(k)}return idx}
+function mgDisc(m,c,t){const k=c+t;if(!m.dx[k]){m.dx[k]=1;toast(`新發現：${MCH[c].it[t-1][1]}！打開「圖鑑」可以領獎勵`,2600)}}
+/* 答題、集章時加能量（不跳提示） */
+function mgGain(n){const m=MG();m.e=Math.min(999,m.e+n);save();mgChips()}
+function mgChips(){const m=MG();document.querySelectorAll("[data-mge]").forEach(b=>b.textContent=m.e);document.querySelectorAll("[data-mgs]").forEach(b=>b.textContent=m.s)}
+/* 花瓣和提示要搬進開著的對話框，才不會被對話框的背景蓋住 */
+function mgFx(el,subj){const d=$("mg");petals(false,subj||cur,el.getBoundingClientRect());if(d&&d.open&&petCv&&petCv.parentNode!==d)d.appendChild(petCv)}
+let mgSel=null,mgFlash=null,mgUndo=null,mgTab="b",mgPend=null,mgDrag=null,mgTick=0;
+const mgIsle=()=>i3Open&&wIsle?wIsle:ivOpen&&ivIsle?ivIsle:null;
+function mgProduce(ix){const m=MG(),x=m.b[ix];
+  if(m.e<1){toast("能量用完了！答對練習題 +2 ⚡、集章 +10 ⚡，也可以領每日能量箱",3000);return}
+  const r0=Math.floor(ix/6),c0=ix%6,em=m.b.map((y,i)=>y?-1:i).filter(i=>i>=0);
+  if(!em.length){toast("棋盤滿了，先合成或回收一些物品",2400);return}
+  em.sort((a,b)=>(Math.abs(Math.floor(a/6)-r0)+Math.abs(a%6-c0))-(Math.abs(Math.floor(b/6)-r0)+Math.abs(b%6-c0)));
+  const to=em[(Math.random()*Math.min(3,em.length))|0],t=Math.random()<.12?2:1;
+  m.b[to]={c:x.g,t};m.e--;mgDisc(m,x.g,t);mgSel=ix;mgFlash=to;mgUndo=null;save();mgRender();sfx("tap")}
+function mgMerged(m,b){const x=m.b[b];m.n++;mgDisc(m,x.c,x.t);
+  if(x.t===MCH[x.c].it.length){m.s+=1;toast(`合成出最高級的「${MCH[x.c].it[x.t-1][1]}」！★+1`,2600)}
+  mgSel=b;mgFlash=b;mgUndo=null;save();mgRender();const el=document.querySelector(`#mg [data-ix="${b}"]`);if(el)mgFx(el,MCH[x.c].s);sfx("ok")}
+function mgMove(a,b){const m=MG(),A=m.b[a],B=m.b[b];if(a===b||!A||A.lk)return;
+  if(B&&B.lk){if(!A.g&&B.c===A.c&&B.t===A.t&&A.t<MCH[A.c].it.length){m.b[b]={c:A.c,t:A.t+1};m.b[a]=null;mgMerged(m,b)}
+    else{toast("把相同的物品疊上去，才能解開蜘蛛網格",2400);mgRender()}return}
+  if(B&&!A.g&&!B.g&&A.c===B.c&&A.t===B.t){if(A.t>=MCH[A.c].it.length){toast("已經是最高級了，可以拿去交訂單",2200);mgRender();return}
+    m.b[b]={c:A.c,t:A.t+1};m.b[a]=null;mgMerged(m,b);return}
+  m.b[a]=B||null;m.b[b]=A;mgSel=b;mgUndo=null;save();mgRender()}
+function mgCellTap(ix){const m=MG(),x=m.b[ix],A=mgSel!=null&&mgSel!==ix?m.b[mgSel]:null;
+  if(A&&!A.lk&&(!x||(!A.g&&x.c===A.c&&x.t===A.t&&!x.g))){mgMove(mgSel,ix);return}
+  if(x&&x.g){mgSel=ix;mgProduce(ix);return}
+  mgSel=x?ix:null;mgRender()}
+function mgDeliver(k){const m=MG(),o=m.od[k];if(!o)return;const idx=mgHas(m,o.need);if(!idx){toast("棋盤上還沒有訂單要的物品",2000);return}
+  idx.forEach(i=>m.b[i]=null);const n=o.need.reduce((a,[,t])=>a+TSTAR[t],0),F=mgWho(o);m.s+=n;st.coins+=1;m.od[k]=mgOrder(m,o.w);mgSel=null;mgUndo=null;save();renderMe();
+  toast(`${F.n}收到了！★+${n}、知識幣 +1`,2600);sfx("coin");mgRender();const el=document.querySelector(`#mg [data-od="${k}"]`);if(el)mgFx(el,MWHO[o.w]);if(W)i3Tools()}
+function mgClaim(key){const m=MG();if(m.dx[key]!==1)return;const t=+key.slice(1);m.dx[key]=2;m.e=Math.min(999,m.e+2*t);save();toast(`圖鑑獎勵：⚡+${2*t}`,2000);sfx("coin");mgRender()}
+function mgBuild(id){const i=mgIsle(),m=MG(),d=MDECO.find(x=>x.id===id);if(!i||!d)return;const D=st.mgd[i.key]||(st.mgd[i.key]={});
+  if(D[id]!=null){D[id]=(D[id]+1)%d.sk.length;save();mgRender();if(W&&W.deco)W.deco();toast(`${d.n}換成「${d.sk[D[id]]}」外觀`,2000);return}
+  if(m.s<d.c){mgPend=null;toast(`還差 ★${d.c-m.s}，去交訂單賺星星吧！`,2400);mgRender();return}
+  if(mgPend!==id){mgPend=id;mgRender();return}
+  m.s-=d.c;D[id]=0;mgPend=null;const nu=!hasDeco(d.cr);st.deco[d.cr]=1;save();mgRender();if(W&&W.deco)W.deco();
+  toast(`${i.name}蓋好了${d.n}！${i3Open?"":"走進島就看得到。"}${nu?`島嶼創作家也多了「${DECO[d.cr].n}」`:""}`,3400);sfx("stamp");
+  const b=document.querySelector(`#mg [data-mgbd="${id}"]`);if(b)mgFx(b,i.subj)}
+const mgIc=d=>`<span class="shp-ic svg" style="${MAPPAL}--ic:${DECO[d.cr].c}" aria-hidden="true">${ICON(d.cr)}</span>`;
+function mgHTML(){const m=MG(),i=mgIsle(),nd=Object.values(m.dx).includes(1);
+  const rg=m.e<EMAX?Math.max(0,Math.ceil((EREG-(Date.now()-m.et))/1000)):0;
+  let h=`<div class="mg-in"><div class="mg-h"><h2 id="mgT">合成工坊</h2><span class="mg-chip" title="能量">⚡<b data-mge>${m.e}</b><small data-mgrg>${rg?`${Math.floor(rg/60)}:${String(rg%60).padStart(2,"0")}`:""}</small></span><span class="mg-chip" title="建設星">★<b data-mgs>${m.s}</b></span><button type="button" class="shp-x" data-mg="close" aria-label="關閉合成工坊">✕</button></div>
+    <div class="mg-tabs" role="tablist">${[["b","合成棋盤"],["k","布置島嶼"],["d","圖鑑"]].map(([k,n])=>`<button type="button" role="tab" aria-selected="${mgTab===k}" data-mgtab="${k}">${n}${k==="d"&&nd?'<span class="dot" aria-label="有獎勵可以領"></span>':""}</button>`).join("")}</div>`;
+  if(mgTab==="b"){const want=new Set();m.od.forEach(o=>{const idx=mgHas(m,o.need);if(idx)idx.forEach(x=>want.add(x))});
+    h+=`<div class="mg-od">${m.od.map((o,k)=>{const ok=!!mgHas(m,o.need),n=o.need.reduce((a,[,t])=>a+TSTAR[t],0),F=mgWho(o);
+      return`<div class="mg-o${ok?" ok":""}" data-od="${k}"><span class="who"><i aria-hidden="true" style="background:${PETAL[MWHO[o.w]][0]}">${esc(F.n.slice(-1))}</i>${esc(F.r)}${esc(F.n)}</span><span class="need">${o.need.map(([c,t])=>`<span title="${MCH[c].it[t-1][1]}（第 ${t} 級）">${MCH[c].it[t-1][0]}<small>${t}</small></span>`).join("")}</span>
+        ${ok?`<button type="button" class="pbtn" data-mgdo="${k}">交付 ★${n}</button>`:`<span class="rw">★${n}<button type="button" class="mg-skip" data-mgsk="${k}" aria-label="換一張訂單">換</button></span>`}</div>`}).join("")}</div>`;
+    h+=`<div class="mg-b" role="grid" aria-label="合成棋盤">${m.b.map((x,ix)=>{if(!x)return`<button type="button" class="mg-c" data-ix="${ix}" aria-label="空格"></button>`;
+      if(x.g)return`<button type="button" class="mg-c gen${mgSel===ix?" sel":""}" data-ix="${ix}" aria-label="${MCH[x.g].gn}，點一下產出${MCH[x.g].it[0][1]}"><span>${MCH[x.g].gen}</span></button>`;
+      const it=MCH[x.c].it[x.t-1];return`<button type="button" class="mg-c${x.lk?" lk":""}${mgSel===ix?" sel":""}${want.has(ix)?" want":""}${mgFlash===ix?" pop":""}" data-ix="${ix}" aria-label="${x.lk?"蜘蛛網格裡的":""}${it[1]}，第 ${x.t} 級"><span>${it[0]}</span><b class="lv">${x.t}</b></button>`}).join("")}</div>`;
+    const s=mgSel!=null?m.b[mgSel]:null;let info;
+    if(s&&s.g)info=`<span class="mg-ii">${MCH[s.g].gen}</span><div><b>${MCH[s.g].gn}</b><small>點一下花 1 ⚡，產出「${MCH[s.g].it[0][1]}」，偶爾會直接產出第 2 級。可以拖到別的格子。</small></div>`;
+    else if(s){const it=MCH[s.c].it[s.t-1],mx=MCH[s.c].it.length;info=`<span class="mg-ii">${it[0]}</span><div><b>${it[1]}<small class="mg-lvl">${MCH[s.c].n}・第 ${s.t}/${mx} 級</small></b><small>${it[2]}${s.lk?"（把相同的物品疊上去就能解開）":s.t<mx?`兩個合成「${MCH[s.c].it[s.t][1]}」。`:""}</small></div>${s.lk?"":`<button type="button" class="mg-rc" data-mgrc="1">回收</button>`}`}
+    else info=`<span class="mg-ii">🧩</span><div><b>怎麼玩</b><small>點發射器（左上角有 ⚡）產出材料，把兩個相同的拖在一起合成高一級；也可以先點一個、再點另一個。交付上面的訂單得 ★。</small></div>`;
+    if(mgUndo)info+=`<button type="button" class="mg-rc" data-mgun="1">復原</button>`;
+    h+=`<div class="mg-info">${info}</div><div class="mg-ft"><button type="button" class="pbtn" data-mgday="1"${m.dd===today()?" disabled":""}>${m.dd===today()?"今天的能量箱已領":"領每日能量箱 ⚡+20"}</button><small>答對練習題 ⚡+2・集章 ⚡+10</small></div>`}
+  else if(mgTab==="k"){const D=i?(st.mgd[i.key]||{}):{},nb=MDECO.filter(d=>D[d.id]!=null).length;
+    h+=i?`<p class="shp-note">用 ★ 布置「${esc(i.name)}」：蓋好的布置走進島就看得到，之後還能免費換外觀；第一次蓋某一種布置，島嶼創作家也會多一種裝飾。每座島可以各自布置（已建造 ${nb}/${MDECO.length}）。</p>
+      <div class="shp-list">${MDECO.map(d=>{const b=D[d.id]!=null;return`<div class="shp-it${b?" own":""}">${mgIc(d)}<div><b>${d.n}</b><small>${b?`外觀：${d.sk[D[d.id]]}（按「換外觀」切換）`:d.d}</small></div>${b?`<button type="button" class="pbtn" data-mgbd="${d.id}">換外觀</button>`:`<button type="button" class="pbtn${mgPend===d.id?" pend":""}" data-mgbd="${d.id}">${mgPend===d.id?"再按一次確認":`★${d.c} 建造`}</button>`}</div>`}).join("")}</div>`
+      :`<p class="shp-note">先打開一座島（重點清單或走進島都可以），再來這裡布置它。</p>`}
+  else{h+=`<p class="shp-note">合成出新的物品就會記進圖鑑；點「領取」拿能量獎勵，順便讀讀它的小知識。</p>`+Object.entries(MCH).map(([c,ch])=>`<h3>${ch.gen} ${ch.n}</h3><div class="shp-list">${ch.it.map((it,k)=>{const key=c+(k+1),s2=m.dx[key];
+      return s2?`<div class="shp-it"><span class="shp-ic" aria-hidden="true">${it[0]}</span><div><b>${it[1]}<small class="mg-lvl">第 ${k+1} 級</small></b><small>${it[2]}</small></div>${s2===1?`<button type="button" class="pbtn" data-mgcl="${key}">領取 ⚡+${2*(k+1)}</button>`:'<span class="mg-ok">✓</span>'}</div>`
+        :`<div class="shp-it lock"><span class="shp-ic" aria-hidden="true">？</span><div><b>第 ${k+1} 級</b><small>還沒合成出來</small></div></div>`}).join("")}</div>`).join("")}
+  return h+`</div>`}
+function mgRender(){const d=$("mg");if(!d||!d.open)return;const y=d.scrollTop,t=$("toast"),p=petCv&&petCv.parentNode===d?petCv:null;d.innerHTML=mgHTML();d.appendChild(t);if(p)d.appendChild(p);d.scrollTop=y;mgFlash=null;mgChips()}
+function openMerge(){const d=$("mg");if(!d)return;MG();mgPend=null;mgUndo=null;d.innerHTML=mgHTML();d.appendChild($("toast"));if(W&&W.keys){W.keys.clear();W.jv=null}
+  try{if(!d.open)d.showModal()}catch(e){d.setAttribute("open","")}d.scrollTop=0;const x=d.querySelector(".shp-x");if(x)x.focus({preventScroll:true});
+  clearInterval(mgTick);mgTick=setInterval(()=>{if(!d.open){clearInterval(mgTick);return}const m=MG(),e=d.querySelector("[data-mge]"),r=d.querySelector("[data-mgrg]");
+    if(e&&+e.textContent!==m.e)e.textContent=m.e;if(r){const s=m.e<EMAX?Math.max(0,Math.ceil((EREG-(Date.now()-m.et))/1000)):0;r.textContent=s?`${Math.floor(s/60)}:${String(s%60).padStart(2,"0")}`:""}},1000)}
+function closeMerge(){const d=$("mg");if(d&&d.open){try{d.close()}catch(e){d.removeAttribute("open")}}}
+{const d=$("mg");let ghost=null;
+  const endDrag=()=>{if(ghost){ghost.remove();ghost=null}d.querySelectorAll(".mg-c.drag").forEach(c=>c.classList.remove("drag"));mgDrag=null};
+  d.addEventListener("pointerdown",e=>{const c=e.target.closest(".mg-c");if(!c||e.button>0)return;const ix=+c.dataset.ix,x=MG().b[ix];mgDrag={ix,x0:e.clientX,y0:e.clientY,on:false,can:!!(x&&!x.lk)}});
+  d.addEventListener("pointermove",e=>{const g=mgDrag;if(!g||!g.can)return;
+    if(!g.on&&Math.hypot(e.clientX-g.x0,e.clientY-g.y0)>8){g.on=true;const c=d.querySelector(`[data-ix="${g.ix}"]`);if(c)c.classList.add("drag");
+      ghost=document.createElement("div");ghost.className="mg-ghost";ghost.textContent=c?c.querySelector("span").textContent:"";d.appendChild(ghost)}
+    if(g.on){ghost.style.left=e.clientX+"px";ghost.style.top=e.clientY+"px";e.preventDefault()}});
+  d.addEventListener("pointerup",e=>{const g=mgDrag;if(!g)return;const on=g.on;endDrag();
+    const t=on?document.elementFromPoint(e.clientX,e.clientY):e.target,c=t&&t.closest&&t.closest(".mg-c");
+    if(on){if(c&&+c.dataset.ix!==g.ix)mgMove(g.ix,+c.dataset.ix);else mgRender()}else if(c&&+c.dataset.ix===g.ix)mgCellTap(g.ix)});
+  d.addEventListener("pointercancel",endDrag);
+  d.addEventListener("click",e=>{if(e.target===d){closeMerge();return}
+    const c=e.target.closest(".mg-c");if(c){if(e.detail===0)mgCellTap(+c.dataset.ix);return}
+    const a=e.target.closest("[data-mg],[data-mgtab],[data-mgdo],[data-mgsk],[data-mgrc],[data-mgun],[data-mgday],[data-mgcl],[data-mgbd]");if(!a)return;const ds=a.dataset;
+    if(ds.mg==="close"){closeMerge();return}
+    if(ds.mgtab){mgTab=ds.mgtab;mgPend=null;mgRender();const t=d.querySelector(`[data-mgtab="${mgTab}"]`);if(t)t.focus({preventScroll:true});return}
+    if(ds.mgdo!=null){mgDeliver(+ds.mgdo);return}
+    if(ds.mgsk!=null){const m=MG(),k=+ds.mgsk;m.od[k]=mgOrder(m,m.od[k].w);save();mgRender();return}
+    if(ds.mgrc){const m=MG(),x=mgSel!=null?m.b[mgSel]:null;if(x&&!x.g&&!x.lk){mgUndo={ix:mgSel,x};m.b[mgSel]=null;mgSel=null;save();mgRender()}return}
+    if(ds.mgun){const m=MG();if(mgUndo&&!m.b[mgUndo.ix]){m.b[mgUndo.ix]=mgUndo.x;mgSel=mgUndo.ix}mgUndo=null;save();mgRender();return}
+    if(ds.mgday){const m=MG();if(m.dd!==today()){m.dd=today();m.e=Math.min(999,m.e+20);save();toast("領到每日能量箱：⚡+20",2400);sfx("coin");mgRender()}return}
+    if(ds.mgcl){mgClaim(ds.mgcl);return}
+    if(ds.mgbd){mgBuild(ds.mgbd);return}});
+  d.addEventListener("close",()=>{clearInterval(mgTick);endDrag();mgSel=null;mgUndo=null;document.body.appendChild($("toast"));if(petCv&&petCv.parentNode===d)document.body.appendChild(petCv);
+    if(i3Open&&W)i3Tools();if(gmOpen)gmRe();else if(!ivOpen&&!wbOpen&&!i3Open)renderPlay()})}
+
 /* ---------- 走進島：3D 島嶼（three.js r128，第一次走進島才載入） ----------
    網址 #<科>-<島>/walk。每一節是一座展覽館（館名、樣式、屋頂裝飾、館主見 halls/*.json，存在 s.h），
    館內擺著這一節的博物館展品；館主的話從這一節的重點和常見迷思來。島民阿嶺／卷卷／阿民當領航員，
@@ -3149,7 +3349,7 @@ const lightCol=h=>{const[r,g,b]=rgb(h);return(r*299+g*587+b*114)/1000>170};
 SFX.talk=[[520,.05,"sine",.07],[700,.07,"sine",.07]];SFX.tap=[[440,.04,"sine",.05]];
 
 function i3Tools(){const el=$("i3tools");if(!el||!wIsle||!i3Open)return;
-  el.innerHTML=`${coinChip()}<button type="button" data-act="xch" aria-label="集章兌換所，章點 ${stampPts().left} 點"><span class="sealic" aria-hidden="true">章</span><b>${stampPts().left}</b></button><button type="button" data-snd></button>`;renderSnd()}
+  el.innerHTML=`${coinChip()}<button type="button" data-act="merge" aria-label="合成工坊，能量 ${MG().e}">🧩 工坊 ⚡<b data-mge>${MG().e}</b></button><button type="button" data-act="xch" aria-label="集章兌換所，章點 ${stampPts().left} 點"><span class="sealic" aria-hidden="true">章</span><b>${stampPts().left}</b></button><button type="button" data-snd></button>`;renderSnd()}
 function busy(){i3.classList.toggle("busy",!!(W&&(W.dlg||W.panel)))}
 function showI3(i){if(i3Open&&wIsle===i&&W)return;disposeWorld();closeSheet(true);i3Open=true;wIsle=i;st.visited[i.key]=1;st.last[cur]=i.id;save();
   const el=i3;el.hidden=false;document.documentElement.classList.add("ivopen","i3open");
@@ -3559,11 +3759,70 @@ function buildWorld(i){
   [0,Math.PI].forEach(rot=>{const pl=new T.Mesh(gk("sign",()=>new T.PlaneGeometry(2.3,.58)),sMat);pl.position.set(0,2.5,rot?-.03:.03);pl.rotation.y=rot;arch.add(pl)});
   [-.8,.8].forEach(s=>cyl(arch,.015,.015,.22,"#3b302a",s,2.78,0,4));
 
+  /* 島嶼布置（合成工坊用 ★ 蓋的）：大型布置放在展覽館之間、環島步道外側的固定位置，先預留位置，營地和樹就不會擋到；
+     花圃圍著廣場、彩旗和燈籠掛在路燈上、小火車沿步道內側繞圈、煙火在天上綻放 */
+  const DSP=[];for(let k=0;k<=n;k++){const a=slot(k)+Dl/2,r=Rp+3.8;DSP.push({a,x:r*Math.cos(a),z:r*Math.sin(a)})}
+  const bigAt={},BIGD=MDECO.filter(d=>d.big);
+  BIGD.forEach((d,j)=>{const s=DSP[Math.round(j*(DSP.length-1)/Math.max(1,BIGD.length-1))];if(Object.values(bigAt).includes(s))return;bigAt[d.id]=s;obs.push({x:s.x,z:s.z,r:1.9})});
+  const decoG=grp(scene,0,0,0);let decoT=[];ticks.push((t,dt)=>{for(const f of decoT)f(t,dt)});
+  const rod=(p,a,b,r,c)=>{const d=new T.Vector3(b[0]-a[0],b[1]-a[1],b[2]-a[2]),L=d.length(),m=put(p,gk("rod",()=>new T.CylinderGeometry(1,1,1,5)),c,(a[0]+b[0])/2,(a[1]+b[1])/2,(a[2]+b[2])/2);
+    m.scale.set(r,L,r);m.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),d.normalize());return m};
+  const lampAt=k=>{const a=slot(k)+Math.PI/N,r=Rp+1.1;return[r*Math.cos(a),r*Math.sin(a),a]};
+  const buildDeco=()=>{while(decoG.children.length)decoG.remove(decoG.children[0]);decoT=[];const D=(st.mgd||{})[i.key]||{};
+    const at=s=>{const g=grp(decoG,s.x,0,s.z);g.rotation.y=Math.atan2(-Math.cos(s.a),-Math.sin(s.a));return g};
+    if(D.flower!=null){const PF=[["#ff9fb6","#ff6b8b","#ffffff"],["#ffd166","#f4a261","#fff1b0"],["#9b6bd1","#4cc9f0","#b28dff"]][D.flower]||[];
+      for(let k=0;k<N;k++)for(const s of [-1,1]){const a=slot(k)+s*Dl/4,g=grp(decoG,6.8*Math.cos(a),0,6.8*Math.sin(a));cyl(g,.55,.6,.18,"#7a5236",0,.09,0,10);ball(g,.2,"#5aa83c",0,.28,0);
+        for(let q=0;q<6;q++){const b=q/6*Math.PI*2;cyl(g,.015,.015,.26,"#4f9a3a",Math.cos(b)*.33,.3,Math.sin(b)*.33,4);ball(g,.1,PF[q%3],Math.cos(b)*.33,.46,Math.sin(b)*.33)}}}
+    if(D.flag!=null){const PF=[["#ff6b6b","#ffd166","#06d6a0","#4cc9f0","#b28dff"],[C,tint(C,.55),"#fffaf3"],["#173a4a","#ffd166","#fffaf3"]][D.flag]||[];
+      const y0=2.05,pt=[];for(let k=0;k<N;k++){const[x,z]=lampAt(k);pt.push([x,z])}
+      for(let k=0;k<N;k++){const[x1,z1]=pt[k],[x2,z2]=pt[(k+1)%N],cnt=Math.max(5,Math.round(Math.hypot(x2-x1,z2-z1)/.8)),P3=f=>[x1+(x2-x1)*f,y0-Math.sin(f*Math.PI)*.22,z1+(z2-z1)*f];
+        for(let q=0;q<cnt;q++){rod(decoG,P3(q/cnt),P3((q+1)/cnt),.012,"#6a4a34");if(q){const[x,y,z]=P3(q/cnt),f=cone(decoG,.13,.24,PF[q%PF.length],x,y-.13,z,3);f.rotation.x=Math.PI;f.rotation.y=Math.atan2(x2-x1,z2-z1)}}}}
+    if(D.lantern!=null){const PL3=[["#d64545"],["#e6b422"],["#d64545","#e6b422","#3fb5a8","#9b6bd1"]][D.lantern]||["#d64545"],lit=night||tod==="dusk";
+      for(let k=0;k<N;k++){const[x,z,a]=lampAt(k),g=grp(decoG,x,0,z);g.rotation.y=-a;box(g,.06,.06,.9,"#3b302a",0,1.72,0);
+        [-.38,.38].forEach((zz,q)=>{const c=PL3[(k*2+q)%PL3.length];cyl(g,.008,.008,.2,"#3b302a",0,1.6,zz,4);
+          const l=put(g,gk("lant",()=>new T.SphereGeometry(.17,10,8)),lit?glow(c,c,.9):mat(c),0,1.36,zz,null,true);l.scale.y=.85;[-1,1].forEach(s=>cyl(g,.09,.09,.05,"#e6b422",0,1.36+s*.15,zz,8))})}}
+    if(D.windmill!=null&&bigAt.windmill){const PW=[["#fffaf3","#d64545"],["#b9834f","#8a5a3c"],["#fffaf3","#2f6fb5"]][D.windmill]||[],g=at(bigAt.windmill);
+      cyl(g,1.05,1.4,3.6,PW[0],0,1.8,0,8);cone(g,1.2,1.1,PW[1],0,4.15,0,8);box(g,.55,.95,.08,"#6a4a34",0,.48,1.28);box(g,.4,.4,.06,"#9fc9dc",0,2.4,1.12);
+      const hub=grp(g,0,3.5,1.15);ball(hub,.2,"#3b302a",0,0,0);for(let k=0;k<4;k++){const b=grp(hub,0,0,0);b.rotation.z=k*Math.PI/2;box(b,.08,2.3,.05,"#6a4a34",0,1.2,0);box(b,.55,1.7,.04,PW[k%2?1:0],.3,1.4,.03)}
+      decoT.push(t=>{hub.rotation.z=t*.8})}
+    if(D.train!=null){const PT=[["#d64545","#2f6fb5"],["#2f6fb5","#f2c94c"],["#2f2a26","#d64545"]][D.train]||[],R=Rp-1.55;
+      const tr=new T.Mesh(gk("track",()=>{const g=new T.RingGeometry(R-.28,R+.28,128,1);g.rotateX(-Math.PI/2);return g}),mat("#8a6a4a"));tr.position.y=.05;tr.receiveShadow=!lite;decoG.add(tr);
+      [-.2,.2].forEach(o=>{const rl=new T.Mesh(gk("rail"+o,()=>{const g=new T.RingGeometry(R+o-.03,R+o+.03,128,1);g.rotateX(-Math.PI/2);return g}),mat("#c0c7cf"));rl.position.y=.07;decoG.add(rl)});
+      const car=(k)=>{const g=grp(decoG,0,0,0),c=k?PT[1]:PT[0];if(!k){cyl(g,.26,.26,.9,c,0,.5,.1,10).rotation.x=Math.PI/2;box(g,.62,.7,.5,c,0,.55,-.4);box(g,.66,.08,.56,"#2f2a26",0,.93,-.4);cyl(g,.08,.1,.32,"#2f2a26",0,.9,.4,8)}
+        else{box(g,.6,.48,1.05,c,0,.45,0);box(g,.64,.06,1.1,"#fffaf3",0,.72,0);[-.3,.3].forEach(z=>box(g,.62,.2,.25,"#9fc9dc",0,.52,z))}
+        [-.32,.32].forEach(z=>[-1,1].forEach(s=>{const w=cyl(g,.13,.13,.06,"#2f2a26",s*.3,.14,z,10);w.rotation.z=Math.PI/2}));return g};
+      const cars=[car(0),car(1),car(2)];
+      decoT.push(t=>{const a0t=t*.16;cars.forEach((g,k)=>{const a=a0t-k*1.25/R;g.position.set(R*Math.cos(a),0,R*Math.sin(a));g.rotation.y=Math.atan2(-Math.sin(a),Math.cos(a))})})}
+    if(D.telescope!=null&&bigAt.telescope){const PS=["#fffaf3","#b87333","#173a4a"][D.telescope]||"#fffaf3",g=at(bigAt.telescope);cyl(g,1.5,1.6,.35,"#d9cdb7",0,.17,0,16);
+      for(let k=0;k<12;k++){const a=k/12*Math.PI*2;cyl(g,.03,.03,.6,"#6a4a34",Math.cos(a)*1.45,.65,Math.sin(a)*1.45,4)}
+      const rl=new T.Mesh(gk("srail",()=>new T.TorusGeometry(1.45,.035,4,32)),mat("#6a4a34"));rl.rotation.x=Math.PI/2;rl.position.y=.95;g.add(rl);
+      [0,1,2].forEach(k=>{const a=k/3*Math.PI*2;rod(g,[0,1.55,0],[Math.cos(a)*.5,.35,Math.sin(a)*.5],.04,"#3b302a")});
+      const hd=grp(g,0,1.6,0),tb=cyl(hd,.16,.22,1.6,PS,0,.35,.25,12);tb.rotation.x=-1.0;cyl(hd,.23,.23,.12,"#3b302a",0,.73,.82,12).rotation.x=-1.0;
+      decoT.push(t=>{hd.rotation.y=Math.sin(t*.3)*1.2})}
+    if(D.column!=null&&bigAt.column){const PC=["#f1ece2","#e2c48a","#e8b7a8"][D.column]||"#f1ece2",g=at(bigAt.column);box(g,3.6,.25,1.6,shade(PC,.08),0,.12,0);
+      [-1.4,-.47,.47,1.4].forEach((x,k)=>{const h=k===3?1.6:2.6;cyl(g,.22,.25,h,PC,x,.25+h/2,0,12);box(g,.62,.18,.62,shade(PC,.05),x,.25+h+.09,0)});
+      box(g,2.6,.3,.7,PC,-.47,3.1,0);box(g,.7,.5,.5,PC,1.55,.5,.75).rotation.y=.6}
+    if(D.globe!=null&&bigAt.globe){const PG=[["#5ea9c0","#6dbb4a","#c9a86a"],["#e8d3a0","#a0703c","#8a5a3c"],["#1e3a5c","#7fd6e6","#e6b422"]][D.globe]||[],g=at(bigAt.globe);
+      cyl(g,.9,1.1,.3,"#8a5a3c",0,.15,0,12);cyl(g,.12,.16,1.4,PG[2],0,.95,0,8);const hd=grp(g,0,2.75,0);hd.rotation.z=.41;
+      put(hd,gk("gball",()=>new T.SphereGeometry(1.25,18,14)),D.globe===2?glow(PG[0],PG[0],.25):mat(PG[0]),0,0,0);
+      [[.5,.55,.95],[-.7,.2,.98],[.15,-.6,1.0],[.9,-.2,-.7],[-.4,.7,-.85]].forEach(([x,y,z])=>{const v=new T.Vector3(x,y,z).normalize().multiplyScalar(1.2);const b=ball(hd,.38,PG[1],v.x,v.y,v.z);b.scale.set(1,.7,.45);b.lookAt(0,0,0)});
+      const rg=new T.Mesh(gk("gring",()=>new T.TorusGeometry(1.45,.05,6,32,Math.PI)),mat(PG[2]));rg.rotation.z=Math.PI/2;hd.add(rg);
+      decoT.push(t=>{hd.rotation.y=t*.35})}
+    if(D.fireworks!=null){const PFw=[["#ff6b6b","#ffd166","#06d6a0","#4cc9f0","#b28dff"],["#ffd166","#f2c94c","#fff1b0"],[C,tint(C,.4),"#fffaf3"]][D.fireworks]||[];
+      const NB=lite?2:3,SP=lite?16:28,bursts=[];
+      for(let b=0;b<NB;b++){const g=grp(decoG,0,0,0),m=new T.MeshBasicMaterial({color:PFw[b%PFw.length],transparent:true,opacity:0,fog:false,depthWrite:false});extra.push(m);
+        const ps=[];for(let q=0;q<SP;q++){const p=new T.Mesh(gk("fwp",()=>new T.SphereGeometry(.34,6,5)),m);g.add(p);const u=Math.random()*Math.PI*2,v=Math.acos(2*Math.random()-1);ps.push({p,d:new T.Vector3(Math.sin(v)*Math.cos(u),Math.cos(v),Math.sin(v)*Math.sin(u))})}
+        bursts.push({g,m,ps,t0:-b*1.4,cx:0,cz:0,cy:14,cyc:-9})}
+      decoT.push(t=>{bursts.forEach((B,b)=>{const u=t-B.t0;if(u<0)return;const f=u%4.2,cyc=Math.floor(u/4.2);if(cyc!==B.cyc){B.cyc=cyc;const a=Math.random()*Math.PI*2,r=Math.random()*SH.maxR*.5;B.cx=r*Math.cos(a);B.cz=r*Math.sin(a);B.cy=6.8+Math.random()*2.2;B.m.color.set(PFw[(Math.floor(t/4.2)+b)%PFw.length])}
+        const k=Math.min(1,f/1.6);B.g.position.set(B.cx,B.cy-k*k*.9,B.cz);B.ps.forEach(o=>o.p.position.copy(o.d).multiplyScalar(5.5*Math.sqrt(k)));B.m.opacity=f<1.6?1-k*.85:0})})}};
+  buildDeco();
   const free=(x,z,m)=>obs.every(o=>Math.hypot(x-o.x,z-o.z)>o.r+m);
   /* 營地：碼頭旁邊，照「營地」頁升級的程度蓋帳篷、小屋、雙層屋或燈塔 */
   let campAt=null;{const lv=campLv(i);
     for(let t=0;t<60&&!campAt;t++){const a=a0+(.25+((t*7)%11)/11*.75)*Dl*(t%2?-1:1)*.9,R0=RI(a),r=Math.min(R0-2.2,Rp+3.8+((t*3)%5)*.9);
       if(r<Rp+3.2)continue;const x=r*Math.cos(a),z=r*Math.sin(a);if(free(x,z,1.9))campAt={a,x,z}}
+    /* 碼頭旁邊被布置占滿時，改在全島海邊找一塊空地，離碼頭愈近愈好 */
+    for(let t=0;t<240&&!campAt;t++){const a=a0+(t%2?-1:1)*(.3+t*.025),R0=RI(a),r=Math.max(Rp+3.4,R0-2.4-(t%3)*.8);if(r>R0-1.8)continue;const x=r*Math.cos(a),z=r*Math.sin(a);if(free(x,z,1.8))campAt={a,x,z}}
     if(campAt){const g=grp(scene,campAt.x,0,campAt.z);g.rotation.y=Math.atan2(-Math.cos(campAt.a),-Math.sin(campAt.a));const W2="#f4ede1",RF=shade(C,.15);
       if(lv===0){cone(g,1.25,1.6,"#e2774a",0,.8,0,4).rotation.y=Math.PI/4;box(g,.5,.8,.05,"#7a3b2e",0,.4,.62)}
       else if(lv===1){box(g,2.0,1.4,1.7,"#b9834f",0,.7,0);prism(g,[[-1.25,0],[1.25,0],[0,.95]],2.0,RF).position.set(0,1.4,0);box(g,.55,.95,.05,"#6a4a34",0,.48,.87);box(g,.45,.4,.05,"#9fc9dc",.6,.9,.87)}
@@ -3701,7 +3960,7 @@ function buildWorld(i){
     t:0,ph:0,lt:performance.now(),w:1,h:1,stk:0,sx:0,sz:0,jv:null,fol:0,hint:1};
   const target=k=>k==="tower"?tower:k==="guide"?guide:typeof k==="string"&&k[0]==="p"?walkers[+k.slice(1)]:booths[k];
   const standOf=t=>{if(t.stand)return t.stand;const q=t.npc.position,p=hero.position,d=Math.hypot(p.x-q.x,p.z-q.z)||1;return{x:q.x+(p.x-q.x)/d*1.1,z:q.z+(p.z-q.z)/d*1.1}};
-  W.target=target;
+  W.target=target;W.deco=buildDeco;
   W.updMarks=()=>{booths.forEach(b=>{const el=labsEl.querySelector(`.i3lab[data-b="${b.k}"]`);if(el)el.innerHTML=boothLab(b)});gm.visible=!WS().met[i.key]};
   W.repaint=s=>{const b=booths.find(x=>x.s===s);if(b)b.repaint()};
   W.updMarks();
@@ -3857,7 +4116,7 @@ i3.addEventListener("click",e=>{
   if(e.target.closest(".figz")){closeFigZ();return}
   const a=e.target.closest("[data-act]");
   if(a){const act=a.dataset.act;if(act==="back"){location.hash=cur;return}if(act==="list"){setWalk(0);location.hash=wIsle.key;return}
-    if(act==="cam"){if(W)W.toggleCam();return}if(act==="pclose"){closePanel();return}if(act==="xch"){openXch();return}}
+    if(act==="cam"){if(W)W.toggleCam();return}if(act==="pclose"){closePanel();return}if(act==="xch"){openXch();return}if(act==="merge"){openMerge();return}}
   const lb=e.target.closest(".i3lab,button.i3tag");if(lb){if(W)W.goTalk(parseK(lb.dataset.b));return}
   if(e.target.closest("#i3talk")){if(W&&W.near!=null)openTalk(W.near);return}
   const d=e.target.closest("[data-d]");if(d){dlgAct(d.dataset.d);return}
