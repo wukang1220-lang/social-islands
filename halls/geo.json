@@ -1,0 +1,16 @@
+{
+"map":["方位館|dome|compass|阿方|#2f6fb5|cap","經緯線館|glass|globe|緯緯|#3fb5a8|none","時差館|tower|clock|小時|#e2774a|beanie","地圖館|gable|scroll|圖圖|#5aa83c|explorer","海陸館|dome|wave|小海|#2f8fbf|straw","臺灣位置館|modern|boat|阿灣|#c2453a|cap","疆域館|vault|flag|小域|#9b6bd1|none"],
+"land":["地形工坊|factory|mountain|阿岩|#8a6f5a|explorer","等高線館|glass|ruler|線線|#3b4a5a|goggles","臺灣地形館|dome|mountain|阿峰|#6a8f5a|straw","海岸館|gable|wave|浪浪|#2f8fbf|cap","漁港館|vault|fish|阿漁|#4a6f8a|straw","離島館|tower|volcano|小嶼|#c9775a|none"],
+"climate":["氣象站|tower|cloud|晴晴|#7fb4ee|cap","氣候館|dome|sun|阿候|#f2a93b|straw","季風館|gable|wind|阿風|#3fb5a8|beanie","防災館|modern|swirl|小颱|#c2453a|goggles","水循環館|glass|drop|滴滴|#5ea9c0|none","流域館|vault|wave|阿溪|#2f6fb5|explorer","河川館|gable|boat|阿河|#6a8f5a|straw","水庫館|factory|drop|小庫|#2f8fbf|cap"],
+"people":["人口館|modern|family|阿丁|#e2774a|none","分布館|dome|globe|小布|#9b6bd1|beanie","遷移館|gable|train|阿遷|#3b4a5a|cap","人口組成館|tower|pyramid|阿齡|#f2c94c|none","族群館|gable|family|阿族|#9b6bd1|flower","產業館|factory|gear|阿業|#8a7a6a|cap","農漁牧館|gable|rice|阿農|#5aa83c|straw","休閒農場|vault|apple|小農|#6dbb4a|straw"],
+"city":["工業館|factory|gear|阿工|#9a5a44|goggles","貿易港|modern|boat|阿貿|#2f6fb5|cap","聚落館|gable|house|阿聚|#c9775a|straw","交通館|vault|train|阿車|#3b4a5a|cap","都市館|modern|city|阿都|#5a6f8a|none","區域館|dome|star|小區|#e2774a|beanie","城鄉館|gable|house|阿鄉|#6a8f5a|straw"],
+"china":["大地館|dome|mountain|阿地|#c2453a|explorer","高原館|tower|mountain|阿原|#8a6f5a|beanie","季風氣候館|gable|wind|小季|#3fb5a8|cap","氣候分區館|glass|sun|阿溫|#f2a93b|straw","傳統生活館|vault|rice|阿牧|#a07a4e|explorer","人口流動館|gable|train|阿流|#5a6f8a|cap","人口政策館|modern|family|阿策|#e2774a|none","農業館|gable|rice|阿穀|#5aa83c|straw","經濟特區館|factory|coin|阿特|#c9775a|goggles","世界工廠|factory|gear|阿廠|#9a5a44|cap"],
+"neasia":["東北亞地景館|dome|volcano|阿櫻|#ef8fb0|flower","稻作館|gable|rice|阿稻|#6dbb4a|straw","日本工業館|factory|train|阿新|#2f6fb5|cap","半島經濟館|modern|phone|阿朝|#3b4a5a|none"],
+"seasia":["氣候漫談館|dome|globe|阿漫|#3fb5a8|beanie","雨林館|glass|tree|阿林|#4f9a3a|explorer","多元文化館|gable|lantern|阿元|#e4572e|flower","東協館|modern|flag|阿協|#2f6fb5|cap","南亞地景館|dome|cloud|阿雨|#5ea9c0|straw","南亞社會館|gable|family|阿社|#9b6bd1|none","南亞經濟館|modern|phone|阿南|#e2774a|cap"],
+"mideast":["沙漠館|dome|sun|阿漠|#e8c37a|explorer","綠洲館|gable|moon|阿洲|#c9a86a|straw","石油館|factory|oil|阿油|#3b302a|goggles","中東經濟館|modern|coin|阿東|#f2c94c|cap"],
+"africa":["莽原館|vault|tree|阿莽|#a07a4e|straw","非洲文化館|gable|drum|阿鼓|#e4572e|flower","礦產館|factory|crystal|阿礦|#8a6f5a|goggles","非洲發展館|modern|arrow|阿展|#3fb5a8|cap"],
+"europe":["峽灣館|glass|mountain|阿峽|#2f6fb5|beanie","歐盟館|modern|star|阿盟|#2b2d6e|none","歐洲風情館|gable|wind|阿荷|#f2a93b|straw","俄羅斯館|dome|snow|阿雪|#c2453a|beanie"],
+"america":["美洲畫分館|vault|compass|阿美|#9b6bd1|cap","北美地景館|dome|mountain|阿洛|#6a8f5a|explorer","矽谷館|modern|phone|阿矽|#3b4a5a|cap","安地斯館|tower|mountain|阿安|#5aa83c|straw","熱帶栽培館|gable|leaf|阿蕉|#f2c94c|straw"],
+"oceania":["群島館|vault|boat|阿島|#3fb5a8|flower","澳紐牧場|gable|sheep|阿羊|#c9a86a|straw","戰略館|tower|flag|阿略|#2f6fb5|cap","極地館|dome|snow|阿冰|#7fb4ee|beanie","暖化館|modern|thermo|阿暖|#e2774a|none"],
+"taiwan":["地名館|gable|scroll|阿名|#c2453a|none","縣市館|vault|flag|阿縣|#2f6fb5|cap","地景地名館|gable|mountain|阿崙|#6a8f5a|straw","族群地名館|eave|house|阿厝|#c9775a|flower","精緻農業館|glass|apple|阿果|#d64545|straw","運銷館|factory|cube|阿運|#8a7a6a|cap","食安館|modern|leaf|阿食|#5aa83c|chef"]
+}

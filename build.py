@@ -124,6 +124,31 @@ mus_i = 0
 numeric = re.compile(r"^[0-9０-９]")
 spread = [0, 0, 0, 0]
 nsec = nq = nfig = nw = nisle = npts = nkey = nc = nm = 0
+# 走進島：每一節一座展覽館。halls/<科>.json = {島 id: ["館名|樣式|屋頂裝飾|館主|衣服顏色|帽子", ...]}，順序和小節一樣
+HSTYLES = {"gable", "dome", "glass", "factory", "vault", "modern", "tower", "temple", "eave", "brick"}
+HORNS = set("globe clock wave boat mountain ruler fish volcano cloud sun wind swirl drop train gear apple tree moon crystal arrow snow leaf thermo cube "
+            "feather bird bulb planet flower heart scale bubble lens compass scroll flag family pyramid rice house city star coin phone lantern oil drum "
+            "sheep pot deer book ballot bell crown shield tablet column lotus gavel".split())
+HHATS = {"cap", "none", "beanie", "explorer", "straw", "goggles", "flower", "chef", "laurel"}
+RESERVED = {"阿嶺", "卷卷", "阿民", "老考", "小禾", "阿樹", "米米", "大熊", "小圓", "阿光", "豆豆", "阿公", "莉莉", "小蔓", "阿凱", "海伯", "小芸", "阿哲"}
+halls = {k: json.load(open(os.path.join(HERE, "halls", f"{k}.json"), encoding="utf-8")) for k in st}
+hall_names, keepers = {}, {}
+for subj, sd in st.items():
+    for isle in sd["isles"]:
+        secs = [s for ch in sd["ch"] if ch["isle"] == isle["id"] for s in ch["secs"]]
+        rows = halls[subj].get(isle["id"], [])
+        assert len(rows) == len(secs), f"halls/{subj}.json {isle['id']}: {len(rows)} halls for {len(secs)} sections"
+        for s, row in zip(secs, rows):
+            n, sty, orn, kp, body, hat = row.split("|")
+            assert 2 <= len(n) <= 7, f"{s['id']}: hall name {n!r} must be 2–7 characters"
+            assert sty in HSTYLES and orn in HORNS and hat in HHATS, f"{s['id']}: unknown style/ornament/hat in {row!r}"
+            assert re.fullmatch(r"#[0-9a-f]{6}", body), f"{s['id']}: colour {body!r}"
+            assert 2 <= len(kp) <= 3 and kp not in RESERVED, f"{s['id']}: keeper name {kp!r}"
+            assert n not in hall_names, f"hall name {n!r} used by {hall_names.get(n)} and {s['id']}"
+            assert kp not in keepers, f"keeper {kp!r} used by {keepers.get(kp)} and {s['id']}"
+            hall_names[n], keepers[kp] = s["id"], s["id"]
+            s["h"] = [n, sty, orn, kp, body, hat]
+    assert set(halls[subj]) == {i["id"] for i in sd["isles"]}, f"halls/{subj}.json island ids differ from structure.json"
 for subj, sd in st.items():
     for isle in sd["isles"]:
         a = svg("isles", f"{subj}-{isle['id']}")
